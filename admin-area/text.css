@@ -1,0 +1,41 @@
+.input-group {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin-bottom: 0.625rem;
+}
+
+.input-inner {
+    flex: 1;
+}
+
+.input-form, .file-label {
+    width: 100%;
+    color: white;
+    background-color: #1a1b1c;
+    padding: 0.625rem 1.25rem;
+    border: 1px solid #313233;
+    transition: border 0.3s;
+    outline: none;
+}
+
+.input-form::placeholder {
+    color: white;
+}
+
+.input-form:focus, .file-label:focus {
+    border-top: 1px solid #7c6c52;
+    border-bottom: 1px solid #7c6c52;
+    border-left: 1px solid #e4c690;
+    border-right: 1px solid #e4c690;
+}
+
+/* Additional style for the file input label */
+.file-label {
+    display: inline-block;
+    text-align: start;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent line break */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for long text */
+}
