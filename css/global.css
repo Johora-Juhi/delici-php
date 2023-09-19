@@ -1,3 +1,15 @@
+/* Primary Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .theme-btn{
     display:inline-block;
     -webkit-transition:all 0.3s ease;

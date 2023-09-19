@@ -8,22 +8,13 @@
     <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .input-inner i {
-            position: absolute;
-        }
 
-        .icon {
-            padding-left: 20px;
-            padding-top: 15px;
-            cursor: pointer;
-            min-width: 20px;
-        }
     </style>
 </head>
 
 <body>
 
-    <p class="topper">Add Menu</p>
+    <p class="header">Add Menu</p>
     <?php
     $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
     $name = $speciality = $price = $category = $image = $description = "";
@@ -119,7 +110,7 @@
         // post operation of fields are not empty 
         if ($name != '' and $speciality != '' and $price != '' and $category != '' and $image != '' and $description != '') {
 
-            $select_menu = "SELECT * FROM `manu_table` where menu_name = '$name' ";
+            $select_menu = "SELECT * FROM `menu-table` where menu_name = '$name' ";
             $result_menu = mysqli_query($con, $select_menu);
             $menu_count = mysqli_num_rows($result_menu);
 
@@ -134,7 +125,7 @@
                       </script>';
             } else {
 
-                $insert_query = "INSERT INTO `manu_table` (menu_name, menu_speciality, menu_price, menu_category, menu_image, menu_description) VALUES ('$name', '$speciality', '$price', '$category', '$image', '$description')";
+                $insert_query = "INSERT INTO `menu-table` (menu_name, menu_speciality, menu_price, menu_category, menu_image, menu_description) VALUES ('$name', '$speciality', '$price', '$category', '$image', '$description')";
                 $result = mysqli_query($con, $insert_query);
                 if ($result) {
                     echo '
@@ -153,22 +144,22 @@
     <form action="" class="form-container" method="post" enctype="multipart/form-data">
         <div class="input-group">
             <div class="input-inner">
-                <input type="text" name="name" class="input-form" placeholder="Name" id="-input" data-original-title="Please enter Name" title="">
+                <input type="text" name="name" class="input-field" placeholder="Name" id="-input" data-original-title="Please enter Name" title="">
                 <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $nameErr; ?></small></p>
             </div>
             <div class="input-inner">
-                <input type="text" name="speciality" class="input-form" placeholder="Speciality">
+                <input type="text" name="speciality" class="input-field" placeholder="Speciality">
                 <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $specialityErr; ?></small></p>
             </div>
             <div class="input-inner">
-                <input type="text" name="price" class="input-form" placeholder="Price">
+                <input type="text" name="price" class="input-field" placeholder="Price">
                 <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $priceErr; ?></small></p>
             </div>
         </div>
         <div class="input-group">
             <div class="input-inner">
                 <i class="fa-solid fa-list icon"></i>
-                <select class="input-form input-field" name="category" style="padding-left: 45px;">
+                <select class="input-field input-select" name="category" style="padding-left: 45px;">
                     <option value=""> Select a Category</option>
                     <option value="Appetizers"> Appetizers</option>
                     <option value="Main Dishes"> Main Dishes</option>
@@ -188,7 +179,7 @@
         </div>
         <div class="input-group">
             <div class="input-inner">
-                <textarea name="description" id="" rows="3" class="input-form" placeholder="Description"></textarea>
+                <textarea name="description" id="" rows="3" class="input-field" placeholder="Description"></textarea>
                 <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $descriptionErr; ?></small></p>
             </div>
         </div>

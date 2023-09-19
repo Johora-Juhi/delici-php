@@ -1,110 +1,155 @@
 @import url("./preloader.css");
-@import url('./global.css');
-
+@import url("./global.css");
 
 .main-container {
   background-color: black;
 }
 
-.dashboard-container {
+/* Layout */
+.s-layout {
   display: flex;
-  /* justify-content: flex-start; */
-  /* align-items: center; */
-}
-.sidebar {
-  background-color: #1a1b1c;
-  padding: 3.125rem;
-}
-.navbar-container {
-  margin: 3.125rem 0;
-  padding: 0;
-}
-
-.nav-list {
-  transition: box-shadow 0.3s;
-  /* border: 1px solid black; */
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  justify-content: center;
-  align-items: center;
-  padding: 1.25rem 0;
-  margin-bottom: 0.625rem;
-}
-.nav-list i {
-  font-size: 1.5625rem;
-}
-.nav-list a {
-  text-decoration: none;
-  color: #a2a2a2;
-}
-.nav-list:hover {
-  /* box-shadow: 0 8px 11px rgba(10, 10, 10, 0.2); */
-  box-shadow: 0 0 7px 1px inset #e4c590;
-  border: 1px solid #e4c590;
-  border-radius: 5px;
-}
-.nav-list:hover {
-  color: whitesmoke!important;
-}
-
-.main-content {
   width: 100%;
+  min-height: 100vh;
   color: white;
 }
 
-/* dashboard header  */
-.dashboard-header {
-  background-color: #1a1b1c;
-  padding: 3.125rem 0 1.875rem 0;
-}
-.dash {
-  font-size: 1.875rem;
-  font-weight: 600;
-  color: whitesmoke;
-}
-.all-content {
+.s-layout__content {
   text-align: center;
+  padding-top: 3.75rem;
+  flex: 1;
 }
 
-.topper{
-  /* font-family: 'Permanent Marker', cursive; */
-  font-family: 'Forum', cursive;
-  
-  font-size: 60px;
+/* Sidebar */
+.s-sidebar__trigger {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #1a1b1c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em 0 1.5em;
 }
+
+.s-sidebar__trigger > div > a > img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.s-sidebar__trigger > a > i {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.s-sidebar__nav {
+  position: fixed;
+  top: 0;
+  left: -15em;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  width: 15em;
+  height: 100%;
+  background: #1a1b1c;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+}
+
+.s-sidebar__nav .logo {
+  display: none;
+}
+
+.s-sidebar__nav--closed {
+  left: 0; /* Adjust the value to match the width of your sidebar */
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+  left: 0;
+}
+
+.s-sidebar__nav ul {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 15em;
+  list-style-type: none;
+}
+
+.s-sidebar__nav ul li {
+  width: 100%;
+}
+
+.s-sidebar__nav-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4em;
+}
+
+.s-sidebar__nav-link p {
+  position: absolute;
+  top: 50%;
+  left: 4em;
+  transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link:hover {
+  box-shadow: 0 0 7px 1px inset #e4c590;
+  background-color: black;
+  color: whitesmoke !important;
+  border: 1px solid #e4c590;
+  border-radius: 5px;
+}
+
+.s-sidebar__nav-link > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+}
+
+.s-sidebar__nav-link > i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  /* font-family: 'Permanent Marker', cursive; */
+  font-family: "Forum", cursive;
+  font-size: 3.75rem;
+}
+
 .form-container {
-  width: 50%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
-.form-content {
-  display: flex;
-  margin-bottom: 1.875rem;
-}
-.form-label {
-  text-align: start;
-  flex: 3;
-}
-.form-input {
-  flex: 9;
-  padding: 0.25rem;
-}
 
 .input-group {
   display: flex;
-  gap: 1.25rem;
+  flex-direction: column;
+  gap: 0;
   align-items: center;
-  margin-bottom: 0.625rem;
-
+  margin-bottom: 0;
 }
+
 .input-inner {
   flex: 1;
 }
-.input-form {
+
+.input-field {
   width: 100%;
   color: white;
   background-color: #1a1b1c;
@@ -112,15 +157,18 @@
   border: 1px solid #313233;
   transition: border 0.3s;
   outline: none;
+  z-index: 0;
 }
 
-.input-field{
+.input-select {
   cursor: pointer;
 }
-.input-form::placeholder {
+
+.input-field::placeholder {
   color: white;
 }
-.input-form:focus {
+
+.input-field:focus {
   border-top: 1px solid #7c6c52; /* Change the top border color when input 2 is focused */
   border-bottom: 1px solid #7c6c52; /* Change the bottom border color when input 2 is focused */
   border-left: 1px solid #e4c690; /* Change the left border color when input 2 is focused */
@@ -147,60 +195,103 @@ input[type="file"] + label {
   cursor: pointer;
 }
 
-input[type="file"]:focus + label[for="file"]{
-  border-top: 1px solid #7c6c52!important;
-  border-bottom: 1px solid #7c6c52!important;
-  border-left: 1px solid #e4c690!important;
-  border-right: 1px solid #e4c690!important;
+input[type="file"]:focus + label[for="file"] {
+  border-top: 1px solid #7c6c52 !important;
+  border-bottom: 1px solid #7c6c52 !important;
+  border-left: 1px solid #e4c690 !important;
+  border-right: 1px solid #e4c690 !important;
 }
 
-.form-btn{
+.form-btn {
   width: 100%;
   text-align: center;
 }
 
-.form-btn span{
+.form-btn span {
   width: 100%;
 }
 
-/* Hide the default file input */
-.custom-file-input {
+/* input with icon  */
+.input-inner i {
   position: absolute;
-  clip: rect(0, 0, 0, 0);
 }
 
-/* Style the custom file input container */
-.custom-file {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
-
-/* Style the label to resemble a button */
-.custom-file-label {
-  color: white;
-  background-color: #1a1b1c;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid #313233;
-  transition: all 0.3s;
-  text-align: start;
+.icon {
+  padding-left: 20px;
+  padding-top: 15px;
   cursor: pointer;
+  min-width: 20px;
 }
 
-/* Style the label on focus */
-.custom-file-input:focus + .custom-file-label {
-  border-top: 1px solid #7c6c52;
-  border-bottom: 1px solid #7c6c52;
-  border-left: 1px solid #e4c690;
-  border-right: 1px solid #e4c690;
+/* tablet  */
+@media (min-width: 42em) {
+  .s-layout__content {
+    margin-left: 4em;
+    padding-top: 0;
+  }
+
+  /* Sidebar */
+  .s-sidebar__trigger {
+    width: 4em;
+    background-color: black;
+  }
+  .s-sidebar__trigger > div {
+    display: none;
+  }
+  .s-sidebar__trigger > a > i {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .s-sidebar__nav {
+    width: 4em;
+    left: 0;
+  }
+
+  .s-sidebar__nav__medium{
+    width: 15em;
+  }
+  .s-sidebar__nav:hover,
+  .s-sidebar__nav:focus,
+  .s-sidebar__trigger:hover + .s-sidebar__nav,
+  .s-sidebar__trigger:focus + .s-sidebar__nav {
+    width: 15em;
+  }
+
+  /* add-menu form  */
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
 }
-/* This code should create a custom-styled file input. It hides the default file input, styles the label to resemble a button, and adjusts the label's appearance when it gains focus. */
 
-/* Please ensure that you have the necessary HTML structure and that the CSS is correctly linked in your HTML document. Additionally, make sure that there are no other conflicting styles or JavaScript interfering with this code. */
+/* desktop  */
+@media (min-width: 62em) {
+  .s-layout__content {
+    margin-left: 15em;
+  }
 
-/* If you continue to experience issues, consider providing more context or details about the problem you're encountering, and I'll do my best to assist you further. */
+  /* Sidebar */
+  .s-sidebar__trigger {
+    display: none;
+  }
 
+  .s-sidebar__nav {
+    width: 15em;
+  }
+  .s-sidebar__nav .logo {
+    display: block;
+    padding-left: 1.3em;
+    padding-top: 1.3em;
+  }
+  .s-sidebar__nav ul {
+    top: 6em;
+  }
 
-
-
-
+  /* add menu  */
+  .form-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
