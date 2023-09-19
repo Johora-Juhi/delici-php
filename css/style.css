@@ -265,3 +265,33 @@ input[type="file"]:focus + label[for="file"] {
   }
 }
 
+/* desktop  */
+@media (min-width: 62em) {
+  .s-layout__content {
+    margin-left: 15em;
+  }
+
+  /* Sidebar */
+  .s-sidebar__trigger {
+    display: none;
+  }
+
+  .s-sidebar__nav {
+    width: 15em;
+  }
+  .s-sidebar__nav .logo {
+    display: block;
+    padding-left: 1.3em;
+    padding-top: 1.3em;
+  }
+  .s-sidebar__nav ul {
+    top: 6em;
+  }
+
+  /* add menu  */
+  .form-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
