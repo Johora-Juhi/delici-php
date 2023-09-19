@@ -223,3 +223,45 @@ input[type="file"]:focus + label[for="file"] {
   min-width: 20px;
 }
 
+/* tablet  */
+@media (min-width: 42em) {
+  .s-layout__content {
+    margin-left: 4em;
+    padding-top: 0;
+  }
+
+  /* Sidebar */
+  .s-sidebar__trigger {
+    width: 4em;
+    background-color: black;
+  }
+  .s-sidebar__trigger > div {
+    display: none;
+  }
+  .s-sidebar__trigger > a > i {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .s-sidebar__nav {
+    width: 4em;
+    left: 0;
+  }
+
+  .s-sidebar__nav__medium{
+    width: 15em;
+  }
+  .s-sidebar__nav:hover,
+  .s-sidebar__nav:focus,
+  .s-sidebar__trigger:hover + .s-sidebar__nav,
+  .s-sidebar__trigger:focus + .s-sidebar__nav {
+    width: 15em;
+  }
+
+  /* add-menu form  */
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+}
+
