@@ -72,7 +72,16 @@ include_once('../includes/connect.php');
             <div class="s-layout">
                 <!-- Sidebar -->
                 <div class="s-layout__sidebar">
-                  
+                <div class="s-sidebar__trigger" onclick="toggleSidebar()">
+                        <div>
+                            <a href="../index.php" title="Delici - Restaurants HTML Template">
+                                <img src="../images/logo.png" class="text-light" alt="" title="Delici - Restaurants HTML Template">
+                            </a>
+                        </div>
+                        <a href="#0">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
 
                     <nav class="s-sidebar__nav">
                         <div class="logo">
