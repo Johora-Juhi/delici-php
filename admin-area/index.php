@@ -72,7 +72,36 @@ include_once('../includes/connect.php');
             <div class="s-layout">
                 <!-- Sidebar -->
                 <div class="s-layout__sidebar">
-                    
+                  
+
+                    <nav class="s-sidebar__nav">
+                        <div class="logo">
+                            <a href="../index.php" title="Delici - Restaurants HTML Template">
+                                <img src="../images/logo.png" class="text-light" alt="" title="Delici - Restaurants HTML Template">
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a class="s-sidebar__nav-link" href="./index.php?add-menu" style=" text-decoration:none; color: #a2a2a2;">
+                                    <i class="fa-solid fa-utensils" style="color: #e4c590;"></i>
+                                    <p>Add Menu</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="s-sidebar__nav-link" href="./index.php?all-menu" style=" text-decoration:none; color: #a2a2a2;">
+                                    <i class="fa-solid fa-plate-wheat" style="color: #e4c590;"></i>
+                                    <p>All Menu</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="s-sidebar__nav-link" href="" style=" text-decoration:none; color: #a2a2a2;">
+                                    <i class="fa-solid fa-list-check" style="color: #e4c590;"></i>
+                                    <p>All Reservation</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
                 <!-- main-content  -->
