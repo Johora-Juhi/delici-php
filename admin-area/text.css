@@ -110,6 +110,32 @@
   transform: translate(-50%, -50%);
 }
 
+/* Style for the user image and name container */
+.user-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1b1c;
+    text-align: center;
+    color: white;
+    z-index: 3; /* Ensure it's above other content */
+}
+
+/* Style for the user image */
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+/* Style for the user name */
+.user-info p {
+    margin: 0;
+}
+
 /* tablet  */
 @media (min-width: 42em) {
   .s-layout__content {

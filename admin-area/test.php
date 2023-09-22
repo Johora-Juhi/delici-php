@@ -112,19 +112,23 @@ include_once('../includes/connect.php');
                                 </a>
                             </li>
                         </ul>
+                        <div class="user-info s-sidebar__nav-link">
+                            <!-- <img src="user-avatar.jpg" alt="User Image"> -->
+                            <i class="fa-solid fa-user" style="color: #e4c590;"></i>
+                            <p>User Name</p>
                     </nav>
                 </div>
 
                 <!-- main-content  -->
                 <div class="s-layout__content">
-                        <?php
-                        if (isset($_GET['add-menu'])) {
-                            include_once('./add-menu.php');
-                        }
-                        if (isset($_GET['all-menu'])) {
-                            include_once('./all-menu.php');
-                        }
-                        ?>
+                    <?php
+                    if (isset($_GET['add-menu'])) {
+                        include_once('./add-menu.php');
+                    }
+                    if (isset($_GET['all-menu'])) {
+                        include_once('./all-menu.php');
+                    }
+                    ?>
                 </div>
 
             </div>

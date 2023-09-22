@@ -35,11 +35,11 @@
         }
 
         // speciality input validation 
-        if (empty($_POST["speciality"])) {
-            $specialityErr = " * Speciality is required";
-        } else {
-            $speciality = $_POST["speciality"];
-        }
+        // if (empty($_POST["speciality"])) {
+        //     $specialityErr = " * Speciality is required";
+        // } else {
+        //     $speciality = $_POST["speciality"];
+        // }
 
         // price input validation 
         if (empty($_POST["price"])) {
@@ -108,7 +108,7 @@
         }
 
         // post operation of fields are not empty 
-        if ($name != '' and $speciality != '' and $price != '' and $category != '' and $image != '' and $description != '') {
+        if ($name != '' and $price != '' and $category != '' and $image != '' and $description != '') {
 
             $select_menu = "SELECT * FROM `menu-table` where menu_name = '$name' ";
             $result_menu = mysqli_query($con, $select_menu);
@@ -125,7 +125,7 @@
                       </script>';
             } else {
 
-                $insert_query = "INSERT INTO `menu-table` (menu_name, menu_speciality, menu_price, menu_category, menu_image, menu_description) VALUES ('$name', '$speciality', '$price', '$category', '$image', '$description')";
+                $insert_query = "INSERT INTO `menu-table` (menu_name, menu_speciality, menu_price, menu_category, menu_image, menu_description, time) VALUES ('$name', '$speciality', '$price', '$category', '$image', '$description', NOW())";
                 $result = mysqli_query($con, $insert_query);
                 if ($result) {
                     echo '

@@ -110,6 +110,13 @@ include_once('../includes/connect.php');
                                 </a>
                             </li>
                         </ul>
+                        <ul class="last-ul">
+        <li class="last-li">
+            <a class="s-sidebar__nav-link" href="" style="text-decoration:none; color: #a2a2a2;">
+                <!-- ... (content for the last li) ... -->
+            </a>
+        </li>
+    </ul>
                     </nav>
                 </div>
 
