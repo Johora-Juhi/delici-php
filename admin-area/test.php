@@ -11,6 +11,7 @@ include_once('../includes/connect.php');
     <title>Admin Dashboard - Delici</title>
     <!-- stylesheet  -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/global.css">
     <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <!-- favicon  -->
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
@@ -36,9 +37,42 @@ include_once('../includes/connect.php');
 <body>
 
     <div class="">
-    <p class="small-heading">All available menu</p>
-    <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
-    <p class="section-heading">Appetizers</p>
+        <p class="small-heading">All available menu</p>
+        <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
+        <p class="section-heading">Appetizers</p>
+
+        <div class="menu-container">
+            <?php
+            $root = "http://localhost/Delici-Client/";
+
+            $category = 'Appetizers';
+            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = 'Desserts'";
+            $result = mysqli_query($con, $select_query);
+            while ($menu = mysqli_fetch_array($result)) {
+                $title = $menu['menu_name'];
+                $menu_speciality = $menu['menu_speciality'];
+                $menu_price = $menu['menu_price'];
+                $menu_category = $menu['menu_category'];
+                $menu_image = $menu['menu_image'];
+                $menu_description = $menu['menu_description'];
+                // echo $title;
+            ?>
+                <div class="menu-box">
+                    <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                    <div class="menu-info">
+                        <div class="title">
+                            <p class="menu-title"><?= $title ?> </p>
+                            <span class="divider"></span>
+                            <p class="price">$<?= $menu_price ?></p>
+                        </div>
+                        <p class="menu-desc"><?= $menu_description?></p>
+                    </div>
+                </div>
+
+            <?php
+            }
+            ?>
+        </div>
     </div>
 
 
