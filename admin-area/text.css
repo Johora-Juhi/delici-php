@@ -1,192 +1,28 @@
-/* Layout */
-.s-layout {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.s-layout__content {
+body{
   text-align: center;
-  padding-top: 60px;
-  flex: 1;
+  padding: 100px 0;
+  background-color: #1a1b1c;
+}
+.small-heading{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #e4c590;
+  font-size: 12px;
+  letter-spacing: 0.40em;
+  line-height: 1em;
+  margin-bottom: 10px;
 }
 
-/* Sidebar */
-.s-sidebar__trigger {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4em;
-  background: #1a1b1c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1.5em 0 1.5em;
+.pattern-image img{
+  max-width: 100px;
+  margin:0 auto;
 }
 
-.s-sidebar__trigger > div > a > img {
-  width: 100px;
-  object-fit: contain;
-}
-.s-sidebar__trigger > a > i {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.s-sidebar__nav {
-  position: fixed;
-  top: 0;
-  left: -15em;
-  overflow: hidden;
-  transition: all 0.3s ease-in;
-  width: 15em;
-  height: 100%;
-  background: #1a1b1c;
-  color: rgba(255, 255, 255, 0.7);
-  z-index: 1; 
-}
-
-.s-sidebar__nav .logo {
-  display: none;
-}
-
-.s-sidebar__nav:hover,
-.s-sidebar__nav:focus,
-.s-sidebar__trigger:focus + .s-sidebar__nav,
-.s-sidebar__trigger:hover + .s-sidebar__nav {
-  left: 0;
-}
-
-.s-sidebar__nav ul {
-  position: absolute;
-  top: 4em;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  width: 15em;
-  list-style-type: none;
-}
-
-.s-sidebar__nav ul li {
-  width: 100%;
-}
-
-.s-sidebar__nav-link {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 4em;
-}
-
-.s-sidebar__nav-link p {
-  position: absolute;
-  top: 50%;
-  left: 4em;
-  transform: translateY(-50%);
-}
-
-.s-sidebar__nav-link:hover {
-  box-shadow: 0 0 7px 1px inset #e4c590;
-  background-color: black;
-  color: whitesmoke!important;
-  border: 1px solid #e4c590;
-  border-radius: 5px;
-}
-
-.s-sidebar__nav-link > i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 4em;
-  height: 4em;
-}
-
-.s-sidebar__nav-link > i::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Style for the user image and name container */
-.user-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: #1a1b1c;
-    text-align: center;
-    color: white;
-    z-index: 3; /* Ensure it's above other content */
-}
-
-/* Style for the user image */
-.user-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-bottom: 5px;
-}
-
-/* Style for the user name */
-.user-info p {
-    margin: 0;
-}
-
-/* tablet  */
-@media (min-width: 42em) {
-  .s-layout__content {
-    margin-left: 4em;
-    padding-top: 0;
-  }
-
-  /* Sidebar */
-  .s-sidebar__trigger {
-    width: 4em;
-    background-color: black;
-  }
-  .s-sidebar__trigger > div {
-    display: none;
-  }
-  .s-sidebar__trigger > a > i {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .s-sidebar__nav {
-    width: 4em;
-    left: 0;
-  }
-
-  .s-sidebar__nav:hover,
-  .s-sidebar__nav:focus,
-  .s-sidebar__trigger:hover + .s-sidebar__nav,
-  .s-sidebar__trigger:focus + .s-sidebar__nav {
-    width: 15em;
-  }
-}
-
-/* desktop  */
-@media (min-width: 62em) {
-  .s-layout__content {
-    margin-left: 15em;
-  }
-
-  /* Sidebar */
-  .s-sidebar__trigger {
-    display: none;
-  }
-
-  .s-sidebar__nav {
-    width: 15em;
-  }
-  .s-sidebar__nav .logo {
-    display: block;
-    padding-left: 1.3em;
-    padding-top: 1.3em;
-  }
-  .s-sidebar__nav ul {
-    top: 6em;
-  }
+.section-heading{
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.20em;
+  font-family: "Forum", cursive;
+  margin: 15px 0 40px 0;
+  color: white;
 }

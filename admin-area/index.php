@@ -11,6 +11,7 @@ include_once('../includes/connect.php');
     <title>Admin Dashboard - Delici</title>
     <!-- stylesheet  -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/global.css">
     <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <!-- favicon  -->
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
@@ -110,13 +111,6 @@ include_once('../includes/connect.php');
                                 </a>
                             </li>
                         </ul>
-                        <ul class="last-ul">
-        <li class="last-li">
-            <a class="s-sidebar__nav-link" href="" style="text-decoration:none; color: #a2a2a2;">
-                <!-- ... (content for the last li) ... -->
-            </a>
-        </li>
-    </ul>
                     </nav>
                 </div>
 

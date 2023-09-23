@@ -35,107 +35,12 @@ include_once('../includes/connect.php');
 
 <body>
 
-    <div>
-        <!-- Preloader -->
-        <!-- <div class="loader-wrap">
-            <div class="preloader">
-                <div class="preloader-close">x</div>
-                <div id="handle-preloader" class="handle-preloader">
-                    <div class="animation-preloader">
-                        <div class="spinner"></div>
-                        <div class="txt-loading">
-                            <span data-text-preloader="D" class="letters-loading">
-                                D
-                            </span>
-                            <span data-text-preloader="E" class="letters-loading">
-                                E
-                            </span>
-                            <span data-text-preloader="L" class="letters-loading">
-                                L
-                            </span>
-                            <span data-text-preloader="I" class="letters-loading">
-                                I
-                            </span>
-                            <span data-text-preloader="C" class="letters-loading">
-                                C
-                            </span>
-                            <span data-text-preloader="I" class="letters-loading">
-                                I
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Preloader End -->
-        <div class="main-container">
-            <!-- side-nav  -->
-            <div class="s-layout">
-                <!-- Sidebar -->
-                <div class="s-layout__sidebar">
-                    <div class="s-sidebar__trigger">
-                        <div>
-                            <a href="../index.php" title="Delici - Restaurants HTML Template">
-                                <img src="../images/logo.png" class="text-light" alt="" title="Delici - Restaurants HTML Template">
-                            </a>
-                        </div>
-
-                        <a href="#0">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-
-                    <nav class="s-sidebar__nav">
-                        <div class="logo">
-                            <a href="../index.php" title="Delici - Restaurants HTML Template">
-                                <img src="../images/logo.png" class="text-light" alt="" title="Delici - Restaurants HTML Template">
-                            </a>
-                        </div>
-
-                        <ul>
-                            <li>
-                                <a class="s-sidebar__nav-link" href="./index.php?add-menu" style=" text-decoration:none; color: #a2a2a2;">
-                                    <i class="fa-solid fa-utensils" style="color: #e4c590;"></i>
-                                    <p>Add Menu</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="s-sidebar__nav-link" href="./index.php?all-menu" style=" text-decoration:none; color: #a2a2a2;">
-                                    <i class="fa-solid fa-plate-wheat" style="color: #e4c590;"></i>
-                                    <p>All Menu</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="s-sidebar__nav-link" href="" style=" text-decoration:none; color: #a2a2a2;">
-                                    <i class="fa-solid fa-list-check" style="color: #e4c590;"></i>
-                                    <p>All Reservation</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="user-info s-sidebar__nav-link">
-                            <!-- <img src="user-avatar.jpg" alt="User Image"> -->
-                            <i class="fa-solid fa-user" style="color: #e4c590;"></i>
-                            <p>User Name</p>
-                    </nav>
-                </div>
-
-                <!-- main-content  -->
-                <div class="s-layout__content">
-                    <?php
-                    if (isset($_GET['add-menu'])) {
-                        include_once('./add-menu.php');
-                    }
-                    if (isset($_GET['all-menu'])) {
-                        include_once('./all-menu.php');
-                    }
-                    ?>
-                </div>
-
-            </div>
-        </div>
-
-
+    <div class="">
+    <p class="small-heading">All available menu</p>
+    <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
+    <p class="section-heading">Appetizers</p>
     </div>
+
 
     <!-- js  -->
     <script src="../js/custom.js"></script>
