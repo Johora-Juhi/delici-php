@@ -368,7 +368,7 @@ input[type="file"]:focus + label[for="file"] {
   border-right: 1px solid var(--white-color-opacity-four);
 }
 
-.menu-two .menu-col:nth-child(2) .inner{
+/* .menu-two .menu-col:nth-child(2) .inner{
   padding-right: 0;
   padding-left: 80px;
   border-right: none;
@@ -376,7 +376,7 @@ input[type="file"]:focus + label[for="file"] {
 
 .menu-two .menu-col:nth-child(2) .inner:after{
   display: none;
-}
+} */
 
 .menu-two .dish-block{
   position: relative;
@@ -447,7 +447,7 @@ input[type="file"]:focus + label[for="file"] {
 }
 
 .menu-two .dish-block .title .ttl a{
-  color: white;
+  color: wh;
 }
 
 .menu-two .dish-block .title .ttl .s-info{

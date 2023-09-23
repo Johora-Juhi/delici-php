@@ -57,6 +57,7 @@ include_once('../includes/connect.php');
                 $menu_description = $menu['menu_description'];
                 // echo $title;
             ?>
+                <div class="menu">
                 <div class="menu-box">
                     <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
                     <div class="menu-info">
@@ -65,8 +66,13 @@ include_once('../includes/connect.php');
                             <span class="divider"></span>
                             <p class="price">$<?= $menu_price ?></p>
                         </div>
-                        <p class="menu-desc"><?= $menu_description?></p>
+                        <p class="menu-desc"><?= $menu_description ?></p>
                     </div>
+                </div>
+                <button class="hover-button btn-style-one"><span class="btn-wrap">
+                        <span class="text-one">add menu</span>
+                        <span class="text-two">add menu</span>
+                    </span></button>
                 </div>
 
             <?php
