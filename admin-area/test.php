@@ -262,6 +262,15 @@ include_once('../includes/connect.php');
                                     </div>
                                 </div>
                             </form>
+                            <div>or</div>
+                            <form action="" class="edit-form-container">
+                            <button type="submit" class="form-btn btn-style-two" name="add-menu" id="submit_btn">
+                                            <span class="btn-wrap">
+                                                <span class="text-one">delete</span>
+                                                <span class="text-two">delete</span>
+                                            </span>
+                                        </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -275,7 +284,7 @@ include_once('../includes/connect.php');
 
     <!-- js  -->
     <script src="./test.js"></script>
-    <!-- <script src="../js/custom.js"></script> -->
+    <script src="../js/custom.js"></script>
 
     <!-- <script src="../js/modal.js"></script> -->
     <!-- jquery  -->
