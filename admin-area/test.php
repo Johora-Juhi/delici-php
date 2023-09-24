@@ -58,32 +58,57 @@ include_once('../includes/connect.php');
                 // echo $title;
             ?>
                 <div class="menu">
-                <div class="menu-box">
-                    <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                    <div class="menu-info">
-                        <div class="title">
-                            <p class="menu-title"><?= $title ?> </p>
-                            <span class="divider"></span>
-                            <p class="price">$<?= $menu_price ?></p>
+                    <div class="menu-box">
+                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-info">
+                            <div class="title">
+                                <p class="menu-title"><?= $title ?> </p>
+                                <span class="divider"></span>
+                                <p class="price">$<?= $menu_price ?></p>
+                            </div>
+                            <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
-                        <p class="menu-desc"><?= $menu_description ?></p>
                     </div>
-                </div>
-                <button class="hover-button btn-style-one"><span class="btn-wrap">
-                        <span class="text-one">add menu</span>
-                        <span class="text-two">add menu</span>
-                    </span></button>
+                    <button id="open-btn" class="hover-button btn-style-one">
+                        <span class="btn-wrap">
+                            <span class="text-one">add menu</span>
+                            <span class="text-two">add menu</span>
+                        </span>
+                    </button>
+                    <!-- Modal Background and Modal -->
+                    <div id="modal-background">
+                        <div id="modal">
+                            <span id="close-btn">&times;</span>
+                            <p><?= $title ?></p>
+                            <div class="buttons">
+                                <button class="yes">
+                                    YES
+                                </button>
+                                <button class="no">
+                                    NO
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             <?php
             }
             ?>
         </div>
+
+        <!-- Modal Open Button -->
+        <button>
+            OPEN THE MODAL
+        </button>
+
+
     </div>
 
 
     <!-- js  -->
     <script src="../js/custom.js"></script>
+    <!-- <script src="../js/modal.js"></script> -->
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
