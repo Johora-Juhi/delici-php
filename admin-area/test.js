@@ -17,7 +17,7 @@ modalTriggers.forEach(trigger => {
     })
     
     // popupModal.addEventListener('click', () => {
-    //   // TODO: Turn into a function to close modal
+    //   // TODO Turn into a function to close modal
     //   popupModal.classList.remove('is--visible')
     //   // bodyBlackout.classList.remove('is-blacked-out')
     // })

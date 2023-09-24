@@ -8,7 +8,7 @@ include_once('../includes/connect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    link
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="./test.css">
     <link rel="stylesheet" href="../css/global.css">
     <title>Modal Popup Box</title>
@@ -60,60 +60,60 @@ include_once('../includes/connect.php');
                 <!-- Modals -->
                 <div class="popup-modal shadow" data-popup-modal="<?= $modal_id ?>">
                     <div class="modal">
-                    <span id="close-btn" class="popup-modal__close">&times;</span>
-                    <form action="" class="form-container" method="post" enctype="multipart/form-data">
-        <div class="input-group">
-            <div class="input-inner">
-                <input type="text" name="name" class="input-field" placeholder="Name" id="-input" data-original-title="Please enter Name" title="">
-                <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $nameErr; ?></small></p>
-            </div>
-            <div class="input-inner">
-                <input type="text" name="speciality" class="input-field" placeholder="Speciality">
-                <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $specialityErr; ?></small></p>
-            </div>
-            <div class="input-inner">
-                <input type="text" name="price" class="input-field" placeholder="Price">
-                <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $priceErr; ?></small></p>
-            </div>
-        </div>
-        <div class="input-group">
-            <div class="input-inner">
-                <i class="fa-solid fa-list icon"></i>
-                <select class="input-field input-select" name="category" style="padding-left: 45px;">
-                    <option value=""> Select a Category</option>
-                    <option value="Appetizers"> Appetizers</option>
-                    <option value="Main Dishes"> Main Dishes</option>
-                    <option value="Desserts"> Desserts</option>
-                    <option value="Drinks Menu"> Drinks Menu</option>
-                </select>
-                <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $categoryErr; ?></small></p>
-            </div>
-            <div class="input-inner">
-                <i class="fa-solid fa-cloud-arrow-up icon"></i>
-                <input id="file" type="file" name="image" />
-                <label for="file" id="fileLabel" style="padding-left: 50px;">
-                    Select Image
-                </label>
-                <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p>
-            </div>
-        </div>
-        <div class="input-group">
-            <div class="input-inner">
-                <textarea name="description" id="" rows="3" class="input-field" placeholder="Description"></textarea>
-                <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $descriptionErr; ?></small></p>
-            </div>
-        </div>
-        <div class="input-group">
-            <div class="input-inner">
-                <button type="submit" class="form-btn btn-style-one" name="add-menu" id="submit_btn">
-                    <span class="btn-wrap">
-                        <span class="text-one">add menu</span>
-                        <span class="text-two">add menu</span>
-                    </span>
-                </button>
-            </div>
-        </div>
-    </form>
+                        <span id="close-btn" class="popup-modal__close">&times;</span>
+                        <form action="" class="edit-form-container" method="post" enctype="multipart/form-data">
+                            <div class="input-group">
+                                <div class="input-inner">
+                                    <input type="text" name="name" class="input-field" placeholder="Name" id="-input" data-original-title="Please enter Name" title="">
+                                    <!-- <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $nameErr; ?></small></p> -->
+                                </div>
+                                <div class="input-inner">
+                                    <input type="text" name="speciality" class="input-field" placeholder="Speciality">
+                                    <!-- <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $specialityErr; ?></small></p> -->
+                                </div>
+                                <div class="input-inner">
+                                    <input type="text" name="price" class="input-field" placeholder="Price">
+                                    <!-- <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $priceErr; ?></small></p> -->
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-inner">
+                                    <i class="fa-solid fa-list icon"></i>
+                                    <select class="input-field input-select" name="category" style="padding-left: 45px;">
+                                        <option value=""> Select a Category</option>
+                                        <option value="Appetizers"> Appetizers</option>
+                                        <option value="Main Dishes"> Main Dishes</option>
+                                        <option value="Desserts"> Desserts</option>
+                                        <option value="Drinks Menu"> Drinks Menu</option>
+                                    </select>
+                                    <!-- <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $categoryErr; ?></small></p> -->
+                                </div>
+                                <div class="input-inner">
+                                    <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                                    <input id="file" type="file" name="image" />
+                                    <label for="file" id="fileLabel" style="padding-left: 50px;">
+                                        Select Image
+                                    </label>
+                                    <!-- <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p> -->
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-inner">
+                                    <textarea name="description" id="" rows="3" class="input-field" placeholder="Description"></textarea>
+                                    <!-- <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $descriptionErr; ?></small></p> -->
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-inner">
+                                    <button type="submit" class="form-btn btn-style-one" name="add-menu" id="submit_btn">
+                                        <span class="btn-wrap">
+                                            <span class="text-one">add menu</span>
+                                            <span class="text-two">add menu</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
@@ -122,8 +122,9 @@ include_once('../includes/connect.php');
         }
             ?>
             </div>
+    </div>
 
-            <script src="./test.js"></script>
+    <script src="./test.js"></script>
 </body>
 
 </html>

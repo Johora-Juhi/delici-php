@@ -12,7 +12,9 @@ include_once('../includes/connect.php');
     <!-- stylesheet  -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/global.css">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="./text.css">
+    <!-- <link rel="stylesheet" href="./test.css"> -->
+
     <!-- favicon  -->
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="icon" href="../images/favicon.png" type="image/x-icon">
@@ -30,13 +32,12 @@ include_once('../includes/connect.php');
     <!-- <link rel="stylesheet" href="sweetalert2.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
     <!-- <script src="sweetalert2.all.min.js"></script> -->
-    <link rel="stylesheet" href="./text.css">
 
 </head>
 
 <body>
 
-    <div class="">
+    <div class="all-menu-container">
         <p class="small-heading">All available menu</p>
         <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
         <p class="section-heading">Appetizers</p>
@@ -44,10 +45,11 @@ include_once('../includes/connect.php');
         <div class="menu-container">
             <?php
             $root = "http://localhost/Delici-Client/";
-
             $category = 'Appetizers';
             $select_query = "SELECT * FROM `menu-table` WHERE menu_category = 'Desserts'";
             $result = mysqli_query($con, $select_query);
+            $counter = 1; // Initialize a counter for generating unique IDs
+
             while ($menu = mysqli_fetch_array($result)) {
                 $title = $menu['menu_name'];
                 $menu_speciality = $menu['menu_speciality'];
@@ -55,7 +57,9 @@ include_once('../includes/connect.php');
                 $menu_category = $menu['menu_category'];
                 $menu_image = $menu['menu_image'];
                 $menu_description = $menu['menu_description'];
-                // echo $title;
+                $modal_id = $counter; // Unique ID for modal background
+                $open_btn_id = "open-btn" . $counter; // Unique ID for open button
+                $close_btn_id = "close-btn" . $counter; // Unique ID for close button
             ?>
                 <div class="menu">
                     <div class="menu-box">
@@ -69,45 +73,210 @@ include_once('../includes/connect.php');
                             <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                    <button id="open-btn" class="hover-button btn-style-one">
+                    <button class="hover-button btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
                         <span class="btn-wrap">
                             <span class="text-one">add menu</span>
                             <span class="text-two">add menu</span>
                         </span>
                     </button>
-                    <!-- Modal Background and Modal -->
-                    <div id="modal-background">
-                        <div id="modal">
-                            <span id="close-btn">&times;</span>
-                            <p><?= $title ?></p>
-                            <div class="buttons">
-                                <button class="yes">
-                                    YES
-                                </button>
-                                <button class="no">
-                                    NO
-                                </button>
-                            </div>
+                    <?php
+                    $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
+                    $name = $speciality = $price = $category = $image = $description = "";
+                    $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
+
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                        // name input validation 
+                        if (empty($_POST["name"])) {
+                            $nameErr = " * Name is required";
+                        } else {
+                            $name = $_POST["name"];
+                            // check if name only contains letters and whitespace
+                            if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+                                $nameErr = " Only letters and white space";
+                                $name = '';
+                            }
+                        }
+
+                        // speciality input validation 
+                        // if (empty($_POST["speciality"])) {
+                        //     $specialityErr = " * Speciality is required";
+                        // } else {
+                        //     $speciality = $_POST["speciality"];
+                        // }
+
+                        // price input validation 
+                        if (empty($_POST["price"])) {
+                            $priceErr = " * Price is required";
+                        } else {
+                            $price = $_POST["price"];
+                            // check if price only contains numbers or number string
+                            if (!is_numeric($price)) {
+                                $priceErr = " Invalid price";
+                                $price = '';
+                            }
+                        }
+
+                        // category input validation 
+                        if (empty($_POST["category"])) {
+                            $categoryErr = " * Category is required";
+                        } else {
+                            $category = $_POST["category"];
+                        }
+
+                        // image field validation 
+                        if (empty($_FILES['image']['name'])) {
+                            $imageErr = " * Image is required";
+                        } else {
+                            $uploadOk = 1;
+                            $fileInfo = getimagesize($_FILES["image"]["tmp_name"]);
+                            if ($fileInfo !== false) {
+                                // It's an image
+                                $mime = $fileInfo["mime"]; // Get the MIME type of the image
+
+                                if ($mime != "image/jpg" && $mime != "image/jpeg" && $mime != "image/png" && $mime != "image/gif") {
+                                    $imageErr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                                    $uploadOk = 0;
+                                }
+
+                                if ($_FILES["image"]["size"] > 500000) { // check image size
+                                    $imageErr = "Sorry, your file is too large.";
+                                    $uploadOk = 0;
+                                }
+                            } else {
+                                $imageErr = "The uploaded file is not an image.";
+                                $uploadOk = 0;
+                            }
+
+                            // picture upload
+                            if ($uploadOk != 0) {
+
+                                $file_name = "IMG_" . time() . "_" . $_FILES['image']['name'];
+                                $_target = $_FILES['image']['tmp_name'];
+                                $destination = $approot . "uploads/" . $file_name;
+                                $is_file_moved = move_uploaded_file($_target, $destination);
+                                if ($is_file_moved) {
+                                    $image = $file_name;
+                                } else {
+                                    $imageErr =  "Sorry, there was an error uploading your file.";
+                                    $uploadOk = 0;
+                                }
+                            }
+                        }
+
+                        // description field validation 
+                        if (empty($_POST["description"])) {
+                            $descriptionErr = " * description is required";
+                        } else {
+                            $description = $_POST["description"];
+                        }
+
+                        // post operation of fields are not empty 
+                        if ($name != '' and $price != '' and $category != '' and $image != '' and $description != '') {
+
+                            $select_menu = "SELECT * FROM `menu-table` where menu_name = '$name' ";
+                            $result_menu = mysqli_query($con, $select_menu);
+                            $menu_count = mysqli_num_rows($result_menu);
+
+                            // check if the menu already exist 
+                            if ($menu_count  > 0) {
+                                echo '<script>
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "This menu already exists!",
+                                icon: "error",
+                            });
+                      </script>';
+                            } else {
+
+                                $insert_query = "INSERT INTO `menu-table` (menu_name, menu_speciality, menu_price, menu_category, menu_image, menu_description, time) VALUES ('$name', '$speciality', '$price', '$category', '$image', '$description', NOW())";
+                                $result = mysqli_query($con, $insert_query);
+                                if ($result) {
+                                    echo '
+                            <script>
+                                Swal.fire({
+                                    title: "Success!",
+                                    text: "Menu added successfully!",
+                                    icon: "success",
+                                });
+                            </script>';
+                                }
+                            }
+                        }
+                    }
+                    ?>
+                    <!-- Modals -->
+                    <div class="popup-modal shadow" data-popup-modal="<?= $modal_id ?>">
+                        <div class="edit-modal">
+                            <span id="close-btn" class="popup-modal__close">&times;</span>
+                            <form action="" class="edit-form-container" method="post" enctype="multipart/form-data">
+                                <div class="input-group">
+                                    <div class="input-inner">
+                                        <input type="text" name="name" class="input-field" placeholder="<?= $title ?>" id="input">
+                                        <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $nameErr; ?></small></p>
+                                    </div>
+                                    <div class="input-inner">
+                                        <input type="text" name="speciality" class="input-field" placeholder="Speciality">
+                                        <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $specialityErr; ?></small></p>
+                                    </div>
+                                    <div class="input-inner">
+                                        <input type="text" name="price" class="input-field" placeholder="Price">
+                                        <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $priceErr; ?></small></p>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-inner">
+                                        <i class="fa-solid fa-list icon"></i>
+                                        <select class="input-field input-select" name="category" style="padding-left: 45px;">
+                                            <option value=""> Select a Category</option>
+                                            <option value="Appetizers"> Appetizers</option>
+                                            <option value="Main Dishes"> Main Dishes</option>
+                                            <option value="Desserts"> Desserts</option>
+                                            <option value="Drinks Menu"> Drinks Menu</option>
+                                        </select>
+                                        <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $categoryErr; ?></small></p>
+                                    </div>
+                                    <div class="input-inner">
+                                        <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                                        <input id="file" type="file" name="image" />
+                                        <label for="file" id="fileLabel" style="padding-left: 50px;">
+                                            Select Image
+                                        </label>
+                                        <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-inner">
+                                        <textarea name="description" id="" rows="3" class="input-field" placeholder="Description"></textarea>
+                                        <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $descriptionErr; ?></small></p>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-inner">
+                                        <button type="submit" class="form-btn btn-style-one" name="add-menu" id="submit_btn">
+                                            <span class="btn-wrap">
+                                                <span class="text-one">Update</span>
+                                                <span class="text-two">Update</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-
             <?php
+                $counter++; // Increment the counter
             }
             ?>
         </div>
-
-        <!-- Modal Open Button -->
-        <button>
-            OPEN THE MODAL
-        </button>
-
-
     </div>
 
 
     <!-- js  -->
-    <script src="../js/custom.js"></script>
+    <script src="./test.js"></script>
+    <!-- <script src="../js/custom.js"></script> -->
+
     <!-- <script src="../js/modal.js"></script> -->
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
