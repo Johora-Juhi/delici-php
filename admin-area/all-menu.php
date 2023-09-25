@@ -33,6 +33,7 @@
                         <p class="menu-desc"><?= $menu_description ?></p>
                     </div>
                 </div>
+                <!-- button for modal  -->
                 <button class="hover-button btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
                     <span class="btn-wrap">
                         <span class="text-one">make changes</span>
@@ -41,7 +42,6 @@
                 </button>
                 <?php
                 $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
-                // $name = $speciality = $price = $category = $image = $description = "";
                 $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
 
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
