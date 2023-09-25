@@ -4,8 +4,8 @@
     <p class="small-heading">All available menu</p>
     <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
     <p class="section-heading">Appetizers</p>
-
     <div class="menu-container">
+        <!-- get all available menu in the category  -->
         <?php
         $root = "http://localhost/Delici-Client/";
         $category = 'Appetizers';
