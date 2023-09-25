@@ -508,6 +508,14 @@ display: none;
     margin-bottom: 0.625rem;
   }
 
+  /* all menu  */
+  .menu-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .menu-box .menu-info .title{
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
 /* desktop  */
