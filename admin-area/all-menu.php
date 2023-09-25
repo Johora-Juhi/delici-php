@@ -85,7 +85,6 @@
                         $category = $_POST["category"];
                     }
 
-                    // echo $image;
                     // image field validation 
                     if (empty($_FILES['image']['name'])) {
                         $image = $menu_image;
@@ -138,11 +137,12 @@
                         $insert_query = "UPDATE `menu-table` SET menu_name = '$name', menu_speciality = '$speciality', menu_price ='$price', menu_category =  '$category', menu_image = '$image', menu_description = '$description', time =  NOW() WHERE menu_id = $edit_id ";
                         $result = mysqli_query($con, $insert_query);
                         if ($result) {
-                            // echo "<script>window.open('./test.php','_self')</script>";
+                            echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             echo '
                             <script>
                                 Swal.fire({
                                     title: "Success!",
+                                    timer: 2000,
                                     text: "Menu added successfully!",
                                     icon: "success",
                                 });
@@ -155,8 +155,8 @@
                 <div class="popup-modal shadow" data-popup-modal="<?= $modal_id ?>">
                     <div class="edit-modal">
                         <span id="close-btn" class="popup-modal__close">&times;</span>
+                        <!-- edit form  -->
                         <form action="" class="edit-form-container" method="post" enctype="multipart/form-data">
-
                             <input type="hidden" name="id" class="input-field" value="<?= $modal_id ?>">
                             <div class="input-group">
                                 <div class="input-inner">
@@ -177,7 +177,6 @@
                                     <i class="fa-solid fa-list icon"></i>
                                     <select class="input-field input-select" name="category" style="padding-left: 45px;">
                                         <option value="<?= $menu_category ?>"> <?= $menu_category ?></option>
-                                        <!-- <option value=""> Select a Category</option> -->
                                         <option value="Appetizers"> Appetizers</option>
                                         <option value="Main Dishes"> Main Dishes</option>
                                         <option value="Desserts"> Desserts</option>

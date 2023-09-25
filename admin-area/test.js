@@ -8,7 +8,7 @@ modalTriggers.forEach(trigger => {
     const popupModal = document.querySelector(`[data-popup-modal="${popupTrigger}"]`)
 
     popupModal.classList.add('is--visible')
-   // Find the file input and label within the modal
+
     const file = document.getElementById(`file${popupTrigger}`);
     console.log(file);
     const fileLabel = document.getElementById(`fileLabel${popupTrigger}`);
@@ -16,7 +16,6 @@ modalTriggers.forEach(trigger => {
    file.addEventListener('change', () => {
        if (file.files.length > 0) {
            const fileName = file.files[0].name;
-           console.log(fileName); // Check if the name is correctly logged
            fileLabel.textContent = fileName; // Try using textContent
        } else {
            fileLabel.textContent = 'Select Image';
