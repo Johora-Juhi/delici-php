@@ -847,7 +847,7 @@
                     }
                     ?>
                     <!-- Modals -->
-                    <div class="popup-modal shadow" data-popup-modal="<?= $modal_id ?>">
+                    <div class="popup-modal shadow" data-popup-modal="<?= $modal_id ?>" >
                         <div class="edit-modal">
                             <span id="close-btn" class="popup-modal__close">&times;</span>
                             <!-- edit form  -->
