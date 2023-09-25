@@ -63,6 +63,17 @@
 .menu-section{
   padding-top: 100px ;
   background-color: #1a1b1c;
+  position: relative;
+}
+.right-bg{
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+.left-bg{
+  position: absolute;
+  left:0;
+  top: 100px;
 }
 .small-heading {
   text-transform: uppercase;

@@ -2,6 +2,7 @@
 <div class="all-menu-container">
     <!-- Appetizers section -->
     <section class="menu-section">
+        <div class="right-bg"><img src="../images/background/bg-19.png" alt="" title=""></div>
         <p class="small-heading">STARTER MENU</p>
         <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
         <p class="section-heading">Appetizers</p>
@@ -232,6 +233,7 @@
     </section>
     <!-- Main Dishes section -->
     <section class="menu-section">
+        <div class="left-bg"><img src="../images/background/bg-20.png" alt="" title=""></div>
         <p class="small-heading">FRESH & HYGINE</p>
         <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
         <p class="section-heading">Main Dishes</p>
@@ -462,6 +464,7 @@
     </section>
     <!-- Desserts section -->
     <section class="menu-section">
+        <div class="right-bg"><img src="../images/background/bg-22.png" alt="" title=""></div>
         <p class="small-heading">SWEET & SWEET</p>
         <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
         <p class="section-heading">Desserts</p>
@@ -692,6 +695,7 @@
     </section>
     <!-- Drinks Menu section -->
     <section class="menu-section">
+        <div class="left-bg"><img src="../images/background/bg-23.png" alt="" title=""></div>
         <p class="small-heading">hot & cold</p>
         <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
         <p class="section-heading">Drinks Menu</p>
