@@ -1,5 +1,6 @@
-<!--Menu Section 1-->
+<!--Menu Section -->
 <div class="all-menu-container">
+    <!-- Appetizers section -->
     <p class="small-heading">All available menu</p>
     <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
     <p class="section-heading">Appetizers</p>
