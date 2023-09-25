@@ -93,6 +93,7 @@
                 $is_file_moved = move_uploaded_file($_target, $destination);
                 if ($is_file_moved) {
                     $image = $file_name;
+                    echp
                 } else {
                     $imageErr =  "Sorry, there was an error uploading your file.";
                     $uploadOk = 0;

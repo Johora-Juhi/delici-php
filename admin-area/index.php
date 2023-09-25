@@ -10,6 +10,7 @@ include_once('../includes/connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Delici</title>
     <!-- stylesheet  -->
+    <link rel="stylesheet" href="./text.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/global.css">
     <!-- <link rel="stylesheet" href="../css/style.css"> -->
@@ -133,7 +134,8 @@ include_once('../includes/connect.php');
     </div>
 
     <!-- js  -->
-    <script src="../js/custom.js"></script>
+    <!-- <script src="../js/custom.js"></script> -->
+    <script src="./test.js"></script>
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
