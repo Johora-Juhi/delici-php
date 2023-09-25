@@ -48,8 +48,6 @@ include_once('../includes/connect.php');
             $category = 'Appetizers';
             $select_query = "SELECT * FROM `menu-table` WHERE menu_category = 'Desserts'";
             $result = mysqli_query($con, $select_query);
-            $counter = 1; // Initialize a counter for generating unique IDs
-
             while ($menu = mysqli_fetch_array($result)) {
                 $title = $menu['menu_name'];
                 $menu_speciality = $menu['menu_speciality'];
@@ -57,9 +55,7 @@ include_once('../includes/connect.php');
                 $menu_category = $menu['menu_category'];
                 $menu_image = $menu['menu_image'];
                 $menu_description = $menu['menu_description'];
-                $modal_id = $counter; // Unique ID for modal background
-                $open_btn_id = "open-btn" . $counter; // Unique ID for open button
-                $close_btn_id = "close-btn" . $counter; // Unique ID for close button
+                $modal_id = $menu['menu_id']; // Unique ID for modal background
             ?>
                 <div class="menu">
                     <div class="menu-box">
@@ -75,20 +71,22 @@ include_once('../includes/connect.php');
                     </div>
                     <button class="hover-button btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
                         <span class="btn-wrap">
-                            <span class="text-one">add menu</span>
-                            <span class="text-two">add menu</span>
+                            <span class="text-one">make changes</span>
+                            <span class="text-two">make changes</span>
                         </span>
                     </button>
                     <?php
                     $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
-                    $name = $speciality = $price = $category = $image = $description = "";
+                    // $name = $speciality = $price = $category = $image = $description = "";
                     $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+                        $edit_id = $_POST['id'];
                         // name input validation 
                         if (empty($_POST["name"])) {
                             $nameErr = " * Name is required";
+                            $name = '';
                         } else {
                             $name = $_POST["name"];
                             // check if name only contains letters and whitespace
@@ -99,15 +97,12 @@ include_once('../includes/connect.php');
                         }
 
                         // speciality input validation 
-                        // if (empty($_POST["speciality"])) {
-                        //     $specialityErr = " * Speciality is required";
-                        // } else {
-                        //     $speciality = $_POST["speciality"];
-                        // }
+                        $speciality = $_POST["speciality"];
 
                         // price input validation 
                         if (empty($_POST["price"])) {
                             $priceErr = " * Price is required";
+                            $price = '';
                         } else {
                             $price = $_POST["price"];
                             // check if price only contains numbers or number string
@@ -124,9 +119,12 @@ include_once('../includes/connect.php');
                             $category = $_POST["category"];
                         }
 
+                        if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+                            echo "File upload failed with error code: " . $_FILES['image']['error'];
+                        }
                         // image field validation 
                         if (empty($_FILES['image']['name'])) {
-                            $imageErr = " * Image is required";
+                            $image = $menu_image;
                         } else {
                             $uploadOk = 1;
                             $fileInfo = getimagesize($_FILES["image"]["tmp_name"]);
@@ -173,26 +171,11 @@ include_once('../includes/connect.php');
 
                         // post operation of fields are not empty 
                         if ($name != '' and $price != '' and $category != '' and $image != '' and $description != '') {
-
-                            $select_menu = "SELECT * FROM `menu-table` where menu_name = '$name' ";
-                            $result_menu = mysqli_query($con, $select_menu);
-                            $menu_count = mysqli_num_rows($result_menu);
-
-                            // check if the menu already exist 
-                            if ($menu_count  > 0) {
-                                echo '<script>
-                            Swal.fire({
-                                title: "Oops!",
-                                text: "This menu already exists!",
-                                icon: "error",
-                            });
-                      </script>';
-                            } else {
-
-                                $insert_query = "INSERT INTO `menu-table` (menu_name, menu_speciality, menu_price, menu_category, menu_image, menu_description, time) VALUES ('$name', '$speciality', '$price', '$category', '$image', '$description', NOW())";
-                                $result = mysqli_query($con, $insert_query);
-                                if ($result) {
-                                    echo '
+                            $insert_query = "UPDATE `menu-table` SET menu_name = '$name', menu_speciality = '$speciality', menu_price ='$price', menu_category =  '$category', menu_image = '$image', menu_description = '$description', time =  NOW() WHERE menu_id = $edit_id ";
+                            $result = mysqli_query($con, $insert_query);
+                            if ($result) {
+                                echo "<script>window.open('./test.php','_self')</script>";
+                                echo '
                             <script>
                                 Swal.fire({
                                     title: "Success!",
@@ -200,7 +183,6 @@ include_once('../includes/connect.php');
                                     icon: "success",
                                 });
                             </script>';
-                                }
                             }
                         }
                     }
@@ -210,17 +192,19 @@ include_once('../includes/connect.php');
                         <div class="edit-modal">
                             <span id="close-btn" class="popup-modal__close">&times;</span>
                             <form action="" class="edit-form-container" method="post" enctype="multipart/form-data">
+
+                                <input type="hidden" name="id" class="input-field" value="<?= $modal_id ?>">
                                 <div class="input-group">
                                     <div class="input-inner">
-                                        <input type="text" name="name" class="input-field" placeholder="<?= $title ?>" id="input">
+                                        <input type="text" name="name" class="input-field" placeholder="<?= $title ?>" value="<?= $title ?>">
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $nameErr; ?></small></p>
                                     </div>
                                     <div class="input-inner">
-                                        <input type="text" name="speciality" class="input-field" placeholder="Speciality">
+                                        <input type="text" name="speciality" class="input-field" placeholder="Speciality" value="<?= $menu_speciality ?>">
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $specialityErr; ?></small></p>
                                     </div>
                                     <div class="input-inner">
-                                        <input type="text" name="price" class="input-field" placeholder="Price">
+                                        <input type="text" name="price" class="input-field" placeholder="Price" value="<?= $menu_price ?>">
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $priceErr; ?></small></p>
                                     </div>
                                 </div>
@@ -228,7 +212,8 @@ include_once('../includes/connect.php');
                                     <div class="input-inner">
                                         <i class="fa-solid fa-list icon"></i>
                                         <select class="input-field input-select" name="category" style="padding-left: 45px;">
-                                            <option value=""> Select a Category</option>
+                                            <option value="<?= $menu_category ?>"> <?= $menu_category ?></option>
+                                            <!-- <option value=""> Select a Category</option> -->
                                             <option value="Appetizers"> Appetizers</option>
                                             <option value="Main Dishes"> Main Dishes</option>
                                             <option value="Desserts"> Desserts</option>
@@ -237,17 +222,20 @@ include_once('../includes/connect.php');
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $categoryErr; ?></small></p>
                                     </div>
                                     <div class="input-inner">
-                                        <i class="fa-solid fa-cloud-arrow-up icon"></i>
-                                        <input id="file" type="file" name="image" />
-                                        <label for="file" id="fileLabel" style="padding-left: 50px;">
-                                            Select Image
-                                        </label>
+                                        <div class="edit-img">
+                                            <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                                            <input id="file" type="file" name="image" />
+                                            <label for="file" id="fileLabel" style="padding-left: 50px;">
+                                                Select Image
+                                            </label>
+                                            <img src="<?= $root ?>uploads/<?= $menu_image ?>">
+                                        </div>
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p>
                                     </div>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-inner">
-                                        <textarea name="description" id="" rows="3" class="input-field" placeholder="Description"></textarea>
+                                        <textarea name="description" id="" rows="3" class="input-field" placeholder="Description"><?= $menu_description ?></textarea>
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $descriptionErr; ?></small></p>
                                     </div>
                                 </div>
@@ -264,18 +252,17 @@ include_once('../includes/connect.php');
                             </form>
                             <div>or</div>
                             <form action="" class="edit-form-container">
-                            <button type="submit" class="form-btn btn-style-two" name="add-menu" id="submit_btn">
-                                            <span class="btn-wrap">
-                                                <span class="text-one">delete</span>
-                                                <span class="text-two">delete</span>
-                                            </span>
-                                        </button>
+                                <button type="submit" class="form-btn btn-style-two" name="add-menu" id="submit_btn">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">delete</span>
+                                        <span class="text-two">delete</span>
+                                    </span>
+                                </button>
                             </form>
                         </div>
                     </div>
                 </div>
             <?php
-                $counter++; // Increment the counter
             }
             ?>
         </div>
@@ -283,8 +270,8 @@ include_once('../includes/connect.php');
 
 
     <!-- js  -->
+    <!-- <script src="../js/custom.js"></script> -->
     <script src="./test.js"></script>
-    <script src="../js/custom.js"></script>
 
     <!-- <script src="../js/modal.js"></script> -->
     <!-- jquery  -->

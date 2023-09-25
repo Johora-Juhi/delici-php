@@ -29,8 +29,8 @@
   align-items: center;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
   /* animation-name: animatemodal;
-  animation-duration: 0.4s; */
- }
+  animation-duration: 0.4s;*/
+} 
 .popup-modal.is--visible {
   display: block;
 }
@@ -43,6 +43,20 @@
   cursor: pointer;
   color: #ff0000;
 } 
+
+/* animation part */
+@keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+/* animation part end */
+
 .all-menu-container {
   text-align: center;
   padding: 100px 0;

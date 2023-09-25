@@ -38,7 +38,7 @@
         // if (empty($_POST["speciality"])) {
         //     $specialityErr = " * Speciality is required";
         // } else {
-        //     $speciality = $_POST["speciality"];
+            $speciality = $_POST["speciality"];
         // }
 
         // price input validation 

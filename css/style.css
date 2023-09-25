@@ -214,7 +214,7 @@ input[type="file"] {
   width: 0;
 }
 
-input[type="file"] + label {
+input[type="file"] + label[for="file"] {
   width: 100%;
   color: white;
   background-color: #1a1b1c;
@@ -230,6 +230,15 @@ input[type="file"]:focus + label[for="file"] {
   border-bottom: 1px solid #7c6c52 !important;
   border-left: 1px solid #e4c690 !important;
   border-right: 1px solid #e4c690 !important;
+}
+
+.edit-img {
+  display: flex;
+}
+.edit-img img{
+  width: 40px;
+  object-fit: contain;
+  border: 1px solid #313233;
 }
 
 .form-btn {
