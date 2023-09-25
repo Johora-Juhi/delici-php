@@ -40,6 +40,8 @@
                         <span class="text-two">make changes</span>
                     </span>
                 </button>
+
+                <!-- menu update  -->
                 <?php
                 $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
                 $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
