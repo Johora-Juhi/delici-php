@@ -18,8 +18,9 @@
             $menu_category = $menu['menu_category'];
             $menu_image = $menu['menu_image'];
             $menu_description = $menu['menu_description'];
-            $modal_id = $menu['menu_id']; // Unique ID for modal background
+            $modal_id = $menu['menu_id']; // Unique ID for modal 
         ?>
+        <!-- each menu card  -->
             <div class="menu">
                 <div class="menu-box">
                     <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
