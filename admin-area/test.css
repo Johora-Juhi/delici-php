@@ -15,7 +15,6 @@
   font-weight: 400;
   line-height: 30px;
 }
-
 .top-header .top-left {
   flex: start;
   display: flex;
@@ -49,3 +48,47 @@
 /*=================================================
                  Main Header 
 =================================================== */
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1b1c;
+  padding: 15px 20px;
+}
+.nav-container{
+  display: flex;
+  column-gap: 50px;
+  color: white;
+  padding-bottom: 10px;
+}
+.nav-container a{
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.nav-container a{
+  position: relative;
+}
+.nav-container a::after{
+content: '';
+position: absolute;
+width: 0px;
+height: 5px;
+left: 50%;
+bottom:-5px;
+border-top:1px solid white;
+border-bottom:1px solid white;
+transition: all ease-in-out .2s;
+}
+.nav-container a:hover::after{
+  width: 100%;
+  left: 0;
+}
+.nav-container a:focus::after{
+  width: 100%;
+  left: 0;
+}

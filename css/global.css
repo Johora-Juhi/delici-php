@@ -48,6 +48,8 @@ ul{
     text-transform: uppercase;
     color: black;
     letter-spacing: 3px;
+    font-family: "DM Sans", sans-serif    ;
+    line-height: 29.6px;
     font-weight: 700;
     padding:11px 45px;
     font-size: 0.75rem;

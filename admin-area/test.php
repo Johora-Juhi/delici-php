@@ -65,8 +65,35 @@ include_once('../includes/connect.php');
             </ul>
         </div>
         <div class="main-header">
-            
+            <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="../images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
+            <nav class="nav-container">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Menu</a>
+                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#">Our Chefs</a>
+                <a class="nav-link" href="#">Contact</a>
+                </ul>
+            </nav>
+            <a href="">
+            <button type="" class="theme-btn btn-style-one">
+                    <span class="btn-wrap">
+                        <span class="text-one">find a table</span>
+                        <span class="text-two">find a table</span>
+                    </span>
+                </button>
+            </a>
+            <!-- Hidden Nav Toggler -->
+            <div class="nav-toggler">
+                            <button class="hidden-bar-opener">
+                                <span class="hamburger">
+                                    <span class="top-bun"></span>
+                                    <span class="meat"></span>
+                                    <span class="bottom-bun"></span>
+                                </span>
+                            </button>
+                        </div>
         </div>
+
     </div>
 
 
