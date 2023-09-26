@@ -1,6 +1,14 @@
 @import url("./preloader.css");
 @import url("./global.css");
 
+
+/* main pagw layout  */
+
+.main-header{
+
+}
+
+
 .main-container {
   background-color: black;
 }
@@ -51,7 +59,7 @@
   transition: all 0.3s ease-in;
   width: 15em;
   height: 100%;
-  background: black;
+  background: #202020;
   color: rgba(255, 255, 255, 0.7);
   z-index: 2;
 }
@@ -78,7 +86,6 @@
   margin: 0;
   padding: 0;
   width: 15em;
-  list-style-type: none;
 }
 
 .s-sidebar__nav ul li {
@@ -184,7 +191,7 @@
 .input-field {
   width: 100%;
   color: white;
-  background-color: #171819;
+  background-color: #1a1b1a;
   padding: 0.625rem 1.25rem;
   border: 1px solid #313233;
   transition: border 0.3s;

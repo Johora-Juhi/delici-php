@@ -9,9 +9,14 @@
 
 a {
   text-decoration: none!important;
-  color: inherit;
+  color: inherit!important;
 }
 
+ul{
+  list-style-type: none;
+  margin: 0!important;
+  padding: 0!important;
+}
 
 .theme-btn{
     display:inline-block;

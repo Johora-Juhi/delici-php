@@ -176,7 +176,7 @@
                                 </div>
                                 <div class="input-group">
                                     <div class="input-inner">
-                                        <i class="fa-solid fa-list icon"></i>
+                                        <i class="fas fa-list icon"></i>
                                         <select class="input-field input-select" name="category" style="padding-left: 45px;">
                                             <option value="<?= $menu_category ?>"> <?= $menu_category ?></option>
                                             <option value="Appetizers"> Appetizers</option>
@@ -188,7 +188,7 @@
                                     </div>
                                     <div class="input-inner">
                                         <div class="edit-img">
-                                            <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                                            <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
                                             <img src="<?= $root ?>uploads/<?= $menu_image ?>">
@@ -407,7 +407,7 @@
                                 </div>
                                 <div class="input-group">
                                     <div class="input-inner">
-                                        <i class="fa-solid fa-list icon"></i>
+                                        <i class="fas fa-list icon"></i>
                                         <select class="input-field input-select" name="category" style="padding-left: 45px;">
                                             <option value="<?= $menu_category ?>"> <?= $menu_category ?></option>
                                             <option value="Appetizers"> Appetizers</option>
@@ -419,7 +419,7 @@
                                     </div>
                                     <div class="input-inner">
                                         <div class="edit-img">
-                                            <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                                            <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
                                             <img src="<?= $root ?>uploads/<?= $menu_image ?>">
@@ -638,7 +638,7 @@
                                 </div>
                                 <div class="input-group">
                                     <div class="input-inner">
-                                        <i class="fa-solid fa-list icon"></i>
+                                        <i class="fas fa-list icon"></i>
                                         <select class="input-field input-select" name="category" style="padding-left: 45px;">
                                             <option value="<?= $menu_category ?>"> <?= $menu_category ?></option>
                                             <option value="Appetizers"> Appetizers</option>
@@ -650,7 +650,7 @@
                                     </div>
                                     <div class="input-inner">
                                         <div class="edit-img">
-                                            <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                                            <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
                                             <img src="<?= $root ?>uploads/<?= $menu_image ?>">
@@ -847,7 +847,7 @@
                     }
                     ?>
                     <!-- Modals -->
-                    <div class="popup-modal shadow" data-popup-modal="<?= $modal_id ?>" >
+                    <div class="popup-modal shadow" data-popup-modal="<?= $modal_id ?>">
                         <div class="edit-modal">
                             <span id="close-btn" class="popup-modal__close">&times;</span>
                             <!-- edit form  -->
@@ -869,7 +869,7 @@
                                 </div>
                                 <div class="input-group">
                                     <div class="input-inner">
-                                        <i class="fa-solid fa-list icon"></i>
+                                        <i class="fas fa-list icon"></i>
                                         <select class="input-field input-select" name="category" style="padding-left: 45px;">
                                             <option value="<?= $menu_category ?>"> <?= $menu_category ?></option>
                                             <option value="Appetizers"> Appetizers</option>
@@ -881,7 +881,7 @@
                                     </div>
                                     <div class="input-inner">
                                         <div class="edit-img">
-                                            <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                                            <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
                                             <img src="<?= $root ?>uploads/<?= $menu_image ?>">

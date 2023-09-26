@@ -38,7 +38,7 @@
         // if (empty($_POST["speciality"])) {
         //     $specialityErr = " * Speciality is required";
         // } else {
-            $speciality = $_POST["speciality"];
+        $speciality = $_POST["speciality"];
         // }
 
         // price input validation 
@@ -158,7 +158,7 @@
         </div>
         <div class="input-group">
             <div class="input-inner">
-                <i class="fa-solid fa-list icon"></i>
+                <i class="fas fa-list icon"></i>
                 <select class="input-field input-select" name="category" style="padding-left: 45px;">
                     <option value=""> Select a Category</option>
                     <option value="Appetizers"> Appetizers</option>
@@ -169,7 +169,7 @@
                 <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $categoryErr; ?></small></p>
             </div>
             <div class="input-inner">
-                <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                <i class="fas fa-cloud-arrow-up icon"></i>
                 <input id="file" type="file" name="image" />
                 <label for="file" id="fileLabel" style="padding-left: 50px;">
                     Select Image

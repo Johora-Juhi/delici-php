@@ -1,14 +1,9 @@
-<!-- database connection  -->
-<?php
-include_once('../includes/connect.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Delici</title>
+    <title>Document</title>
     <!-- stylesheet  -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/global.css">
@@ -27,14 +22,9 @@ include_once('../includes/connect.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
     <!-- <link rel="stylesheet" href="sweetalert2.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
-    <!-- <script src="sweetalert2.all.min.js"></script> -->
-
 </head>
-
 <body>
-
-    <div>
-        <!-- Preloader -->
+            <!-- Preloader -->
         <!-- <div class="loader-wrap">
             <div class="preloader">
                 <div class="preloader-close">x</div>
@@ -66,70 +56,10 @@ include_once('../includes/connect.php');
             </div>
         </div> -->
         <!-- Preloader End -->
-        <div class="main-container">
-            <!-- side-nav  -->
-            <div class="s-layout">
-                <!-- Sidebar -->
-                <div class="s-layout__sidebar">
-                    <div class="s-sidebar__trigger" onclick="toggleSidebar()">
-                        <div>
-                            <a href="../index.php" title="Delici - Restaurants HTML Template">
-                                <img src="../images/logo.png" class="text-light" alt="" title="Delici - Restaurants HTML Template">
-                            </a>
-                        </div>
-                        <a href="#0">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
+<header class="header-container">
 
-                    <nav class="s-sidebar__nav">
-                        <div class="logo">
-                            <a href="../index.php" title="Delici - Restaurants HTML Template">
-                                <img src="../images/logo.png" class="text-light" alt="" title="Delici - Restaurants HTML Template">
-                            </a>
-                        </div>
-
-                        <ul>
-                            <li>
-                                <a class="s-sidebar__nav-link" href="./index.php?add-menu" style=" text-decoration:none; color: #a2a2a2;">
-                                    <i class="fas fa-utensils" style="color: #e4c590;"></i>
-                                    <p>Add Menu</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="s-sidebar__nav-link" href="./index.php?all-menu" style=" text-decoration:none; color: #a2a2a2;">
-                                    <i class="fas fa-plate-wheat" style="color: #e4c590;"></i>
-                                    <p>All Menu</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="s-sidebar__nav-link" href="" style=" text-decoration:none; color: #a2a2a2;">
-                                    <i class="fas fa-list-check" style="color: #e4c590;"></i>
-                                    <p>All Reservation</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- main-content  -->
-                <div class="s-layout__content">
-                    <?php
-                    if (isset($_GET['add-menu'])) {
-                        include_once('./add-menu.php');
-                    }
-                    if (isset($_GET['all-menu'])) {
-                        include_once('./all-menu.php');
-                    }
-                    ?>
-                </div>
-
-            </div>
-        </div>
-
-
-    </div>
-
+</header>
+        
     <!-- js  -->
     <script src="../js/custom.js"></script>
     <!-- jquery  -->
@@ -139,5 +69,4 @@ include_once('../includes/connect.php');
     <!-- bootstrap js  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
-
 </html>
