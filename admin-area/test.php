@@ -74,27 +74,50 @@ include_once('../includes/connect.php');
                 <a class="nav-link" href="#">Contact</a>
                 </ul>
             </nav>
-            <a href="">
-            <button type="" class="theme-btn btn-style-one">
-                    <span class="btn-wrap">
-                        <span class="text-one">find a table</span>
-                        <span class="text-two">find a table</span>
-                    </span>
-                </button>
-            </a>
-            <!-- Hidden Nav Toggler -->
-            <div class="nav-toggler">
-                            <button class="hidden-bar-opener">
-                                <span class="hamburger">
-                                    <span class="top-bun"></span>
-                                    <span class="meat"></span>
-                                    <span class="bottom-bun"></span>
-                                </span>
-                            </button>
-                        </div>
+            <div class="button-container">
+                <a href="">
+                    <button type="" class="theme-btn btn-style-one">
+                        <span class="btn-wrap">
+                            <span class="text-one">find a table</span>
+                            <span class="text-two">find a table</span>
+                        </span>
+                    </button>
+                </a>
+                <!-- Hidden Nav Toggler -->
+                <div class="info-toggler">
+                    <button class="info-bar-opener">
+                        <span class="hamburger">
+                            <span class="top-bun"></span>
+                            <span class="meat"></span>
+                            <span class="bottom-bun"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
         </div>
-
     </div>
+<!--Info Back Drop-->
+<div class="info-back-drop"></div>
+    
+    <!-- Hidden Bar -->
+    <div class="info-bar">
+            <div class="cross-icon"><span class="fa-solid fa-close"></span></div>
+            <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="../images/resource/sidebar-logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
+            <div class="image-box"><img src="../images/resource/sidebar-image.jpg" alt="" title=""></div>
+
+            <p class="side-heading">Visit Us</p>
+                <p>Restaurant St, Delicious City, <br>London 9578, UK</p>
+                <p>Open: 9.30 am - 2.30pm</p>
+                <p><a href="mailto:booking@domainame.com">booking@domainame.com</a></p>
+
+            <div class="separator"><span></span></div>
+            <div class="booking-info">
+                <div class="bk-title">Booking request</div>
+                <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+            </div>
+        <!-- </div> -->
+    </div>
+    <!--End Hidden Bar -->
 
 
     <!-- js  -->

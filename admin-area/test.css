@@ -48,20 +48,22 @@
 /*=================================================
                  Main Header 
 =================================================== */
-.main-header{
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1a1b1c;
-  padding: 15px 20px;
+  /* padding: 15px 20px; */
+  padding: 38px 20px;
 }
-.nav-container{
+.nav-container {
   display: flex;
   column-gap: 50px;
   color: white;
-  padding-bottom: 10px;
+  justify-self: flex-end;
+  /* padding-bottom: 10px; */
 }
-.nav-container a{
+.nav-container a {
   color: white;
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
@@ -70,25 +72,191 @@
   line-height: 30px;
   text-transform: uppercase;
 }
-.nav-container a{
+.nav-container a {
   position: relative;
 }
-.nav-container a::after{
-content: '';
-position: absolute;
-width: 0px;
-height: 5px;
-left: 50%;
-bottom:-5px;
-border-top:1px solid white;
-border-bottom:1px solid white;
-transition: all ease-in-out .2s;
+.nav-container a::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  left: 50%;
+  bottom: -5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: all ease-in-out 0.2s;
 }
-.nav-container a:hover::after{
+.nav-container a:hover::after {
   width: 100%;
   left: 0;
 }
-.nav-container a:focus::after{
+.nav-container a:focus::after {
   width: 100%;
   left: 0;
+}
+.button-container {
+  display: flex;
+  column-gap: 50px;
+}
+
+/*** 
+
+====================================================================
+  Hidden Sidebar style
+====================================================================
+
+***/
+
+.info-bar {
+  position: fixed;
+  right: -440px;
+  top: 0px;
+  width: 100%;
+  max-width: 440px;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 99999;
+  opacity: 0;
+  background: rgb(14, 13, 11) url(../images/background/pattern-7.png) center top
+    repeat;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.info-back-drop {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  z-index: 9990;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.side-content-visible .info-back-drop {
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-content-visible .info-bar {
+  right: 0px;
+  opacity: 1;
+  visibility: visible;
+}
+.info-bar .cross-icon {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.info-bar .cross-icon:hover {
+  color: rgb(228, 197, 144);
+  border-color: rgb(228, 197, 144);
+}
+
+.info-bar .logo-box {
+  position: relative;
+  line-height: 50px;
+  margin-bottom: 45px;
+}
+
+.info-bar .logo-box img {
+  position: relative;
+  max-height: 50px;
+}
+
+.info-bar .image-box {
+  position: relative;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  border-radius: 50%;
+}
+
+.info-bar .image-box img {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+.info-bar .side-heading {
+  margin: 0px 0px 15px 0px;
+  background: none;
+  line-height: 60px;
+  font-family: "Forum", cursive;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+.info-bar p {
+  color: rgb(167, 167, 167);
+  font-family: "DM Sans", sans-serif;
+  line-height: 25.6px;
+  margin-bottom: 10px;
+}
+.info-bar .separator{
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.info-bar .separator span{
+  position: relative;
+  display: block;
+  height: 8px;
+  width: 8px;
+  border: 1px solid rgb(228, 197, 144);
+  margin: 0 auto;
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.info-bar .booking-info .bk-title{
+  font-family: "DM Sans", sans-serif;
+font-weight: 700;
+line-height: 29.6px;
+margin-bottom: 5px;
+}
+.info-bar .booking-info .bk-no a{
+  font-family: "DM Sans", sans-serif;
+font-size: 30px;
+  line-height: 30px;
+  position: relative;
+  color: rgb(228, 197, 144)!important;
+}
+.info-bar .booking-info .bk-no a::after{
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  left: 50%;
+  bottom: 0px;
+  border-top: 1px solid rgb(228, 197, 144);
+  border-bottom: 1px solid rgb(228, 197, 144);
+  transition: all ease-in-out 0.3s;
+}
+.info-bar .booking-info .bk-no a:hover::after{
+  width: 100%;
+left: 0;
 }

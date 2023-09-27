@@ -18,6 +18,13 @@ ul{
   padding: 0!important;
 }
 
+button {
+  all: unset;
+}
+
+button:focus {
+  outline: revert;
+}
 .theme-btn{
     display:inline-block;
     -webkit-transition:all 0.3s ease;
