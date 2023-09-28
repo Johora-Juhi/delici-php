@@ -119,6 +119,20 @@ include_once('../includes/connect.php');
     </div>
     <!--End Hidden Bar -->
 
+    
+    <!-- Inner Banner Section -->
+    <section class="inner-banner">
+        <div class="image-layer" style="background-image: url(../images/background/banner-image-2.jpg);"></div>
+        <div class="auto-container">
+            <div class="inner">
+                <div class="subtitle"><span>delicious & amazing</span></div>
+                <div class="pattern-image"><img src="../images/icons/separator.svg" alt="" title=""></div>
+                <h1><span>Our Menu 3</span></h1>
+            </div>
+        </div>
+    </section>
+    <!--End Banner Section -->
+
 
     <!-- js  -->
     <!-- <script src="../js/custom.js"></script> -->
