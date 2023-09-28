@@ -951,6 +951,13 @@ display: block;
   .button-container{
     column-gap: 50px;
   }
+  .inner-banner{
+    padding-top: 300px;
+    padding-bottom: 150px;
+  }
+  .inner-banner .inner h1{
+    font-size: 80px;
+  }
   .s-layout__content {
     margin-left: 15em;
   }
