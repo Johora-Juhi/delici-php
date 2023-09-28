@@ -39,6 +39,7 @@ include_once('../includes/connect.php');
 
     <div class="header-container">
         <div class="top-header">
+            <div class="top-header-info">
             <ul class="top-left">
                 <li>
                     <i class="icon fas fa-map-marker-alt" style="padding: 0; color:white; min-width:14px"></i>
@@ -63,6 +64,9 @@ include_once('../includes/connect.php');
                     </a>
                 </li>
             </ul>
+            </div>
+           
+            
         </div>
         <div class="main-header">
             <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="../images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
@@ -75,7 +79,7 @@ include_once('../includes/connect.php');
                 </ul>
             </nav>
             <div class="button-container">
-                <a href="">
+                <a href="" class="nav-button">
                     <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
                             <span class="text-one">find a table</span>
@@ -104,6 +108,15 @@ include_once('../includes/connect.php');
             <div class="cross-icon"><span class="fa-solid fa-close"></span></div>
             <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="../images/resource/sidebar-logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
             <div class="image-box"><img src="../images/resource/sidebar-image.jpg" alt="" title=""></div>
+
+            <nav class="nav-container">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Menu</a>
+                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#">Our Chefs</a>
+                <a class="nav-link" href="#">Contact</a>
+                </ul>
+            </nav>
 
             <p class="side-heading">Visit Us</p>
                 <p>Restaurant St, Delicious City, <br>London 9578, UK</p>
