@@ -36,37 +36,37 @@ include_once('./includes/connect.php');
 </head>
 
 <body>
-<!-- Main Header  -->
+    <!-- Main Header  -->
     <div class="header-container">
         <div class="top-header">
             <div class="top-header-info">
-            <ul class="top-left">
-                <li>
-                    <i class="icon fas fa-map-marker-alt" style="padding: 0; color:white; min-width:14px"></i>
-                    Restaurant St, Delicious City, London 9578, UK
-                </li>
-                <li>
-                    <i class="icon far fa-clock" style="padding: 0; color:white;"></i>
-                    Daily : 8.00 am to 10.00 pm
-                </li>
-            </ul>
-            <ul class="top-right">
-                <li>
-                    <a href="tel:+11234567890">
-                        <i class="icon fas fa-phone" style="padding: 0; color:white;"></i>
-                        +1 123 456 7890
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:booking@restaurant.com">
-                        <i class="icon far fa-envelope" style="padding: 0; color:white;"></i>
-                        booking@restaurant.com
-                    </a>
-                </li>
-            </ul>
+                <ul class="top-left">
+                    <li>
+                        <i class="icon fas fa-map-marker-alt" style="padding: 0; color:white; min-width:14px"></i>
+                        Restaurant St, Delicious City, London 9578, UK
+                    </li>
+                    <li>
+                        <i class="icon far fa-clock" style="padding: 0; color:white;"></i>
+                        Daily : 8.00 am to 10.00 pm
+                    </li>
+                </ul>
+                <ul class="top-right">
+                    <li>
+                        <a href="tel:+11234567890">
+                            <i class="icon fas fa-phone" style="padding: 0; color:white;"></i>
+                            +1 123 456 7890
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:booking@restaurant.com">
+                            <i class="icon far fa-envelope" style="padding: 0; color:white;"></i>
+                            booking@restaurant.com
+                        </a>
+                    </li>
+                </ul>
             </div>
-           
-            
+
+
         </div>
         <div class="main-header">
             <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
@@ -100,39 +100,38 @@ include_once('./includes/connect.php');
             </div>
         </div>
     </div>
-<!--Info Back Drop-->
-<div class="info-back-drop"></div>
-    
+    <!--Info Back Drop-->
+    <div class="info-back-drop"></div>
+
     <!-- Hidden Bar -->
     <div class="info-bar">
-            <div class="cross-icon"><span class="fa-solid fa-close"></span></div>
-            <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="./images/resource/sidebar-logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
-            <div class="image-box"><img src="./images/resource/sidebar-image.jpg" alt="" title=""></div>
+        <div class="cross-icon"><span class="fa-solid fa-close"></span></div>
+        <div class="logo-box"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="./images/resource/sidebar-logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
+        <div class="image-box"><img src="./images/resource/sidebar-image.jpg" alt="" title=""></div>
 
-            <nav class="nav-container">
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="#">Menu</a>
-                <a class="nav-link" href="#">About Us</a>
-                <a class="nav-link" href="#">Our Chefs</a>
-                <a class="nav-link" href="#">Contact</a>
-                </ul>
-            </nav>
+        <nav class="nav-container">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#">Our Chefs</a>
+            <a class="nav-link" href="#">Contact</a>
+            </ul>
+        </nav>
 
-            <p class="side-heading">Visit Us</p>
-                <p>Restaurant St, Delicious City, <br>London 9578, UK</p>
-                <p>Open: 9.30 am - 2.30pm</p>
-                <p><a href="mailto:booking@domainame.com">booking@domainame.com</a></p>
+        <p class="side-heading">Visit Us</p>
+        <p>Restaurant St, Delicious City, <br>London 9578, UK</p>
+        <p>Open: 9.30 am - 2.30pm</p>
+        <p><a href="mailto:booking@domainame.com">booking@domainame.com</a></p>
 
-            <div class="separator"><span></span></div>
-            <div class="booking-info">
-                <div class="bk-title">Booking request</div>
-                <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
-            </div>
+        <div class="separator"><span></span></div>
+        <div class="booking-info">
+            <div class="bk-title">Booking request</div>
+            <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+        </div>
         <!-- </div> -->
     </div>
     <!--End Hidden Bar -->
 
-    
     <!-- Inner Banner Section -->
     <section class="inner-banner">
         <div class="image-layer" style="background-image: url(./images/background/banner-image-2.jpg);"></div>
@@ -145,177 +144,178 @@ include_once('./includes/connect.php');
         </div>
     </section>
     <!--End Banner Section -->
-<!--Menu Section -->
-<div class="all-menu-container">
-    <!-- Appetizers section -->
-    <section class="menu-section">
-        <div class="right-bg"><img src="./images/background/bg-19.png" alt="" title=""></div>
-        <p class="small-heading">STARTER MENU</p>
-        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
-        <p class="section-heading">Appetizers</p>
-        <div class="menu-container">
-            <!-- get all available menu in the category  -->
-            <?php
-            $root = "http://localhost/Delici-Client/";
-            $category = 'Appetizers';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = 'Desserts'";
-            $result = mysqli_query($con, $select_query);
-            while ($menu = mysqli_fetch_array($result)) {
-                $title = $menu['menu_name'];
-                $menu_speciality = $menu['menu_speciality'];
-                $menu_price = $menu['menu_price'];
-                $menu_category = $menu['menu_category'];
-                $menu_image = $menu['menu_image'];
-                $menu_description = $menu['menu_description'];
-                $modal_id = $menu['menu_id']; // Unique ID for modal 
-            ?>
-                <!-- each menu card  -->
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                        <div class="menu-info">
-                            <div class="title">
-                                <p class="menu-title"><?= $title ?> </p>
-                                <span class="divider"></span>
-                                <p class="price">$<?= $menu_price ?></p>
+
+    <!--Menu Section -->
+        <!-- Appetizers section -->
+        <section class="menu-section menu-two">
+            <div class="right-bg"><img src="./images/background/bg-19.png" alt="" title=""></div>
+            <p class="small-heading">STARTER MENU</p>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <p class="section-heading">Appetizers</p>
+            <div class="menu-container ">
+                <!-- get all available menu in the category  -->
+                <?php
+                $root = "http://localhost/Delici-Client/";
+                $category = 'Appetizers';
+                $select_query = "SELECT * FROM `menu-table` WHERE menu_category = 'Desserts'";
+                $result = mysqli_query($con, $select_query);
+                while ($menu = mysqli_fetch_array($result)) {
+                    $title = $menu['menu_name'];
+                    $menu_speciality = $menu['menu_speciality'];
+                    $menu_price = $menu['menu_price'];
+                    $menu_category = $menu['menu_category'];
+                    $menu_image = $menu['menu_image'];
+                    $menu_description = $menu['menu_description'];
+                    $modal_id = $menu['menu_id']; // Unique ID for modal 
+                ?>
+                    <!-- each menu card  -->
+                    <div class="menu">
+                        <div class="menu-box">
+                            <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                            <div class="menu-info">
+                                <div class="title">
+                                    <p class="menu-title"><?= $title ?> </p>
+                                    <span class="divider"></span>
+                                    <p class="price">$<?= $menu_price ?></p>
+                                </div>
+                                <p class="menu-desc"><?= $menu_description ?></p>
                             </div>
-                            <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                </div>
-                <!-- end of while loop  -->
-            <?php
-            }
-            ?>
-        </div>
-    </section>
-    <!-- Main Dishes section -->
-    <section class="menu-section">
-        <div class="left-bg"><img src="./images/background/bg-20.png" alt="" title=""></div>
-        <p class="small-heading">FRESH & HYGINE</p>
-        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
-        <p class="section-heading">Main Dishes</p>
-        <div class="menu-container">
-            <!-- get all available menu in the category  -->
-            <?php
-            $root = "http://localhost/Delici-Client/";
-            $category = 'Main Dishes';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
-            $result = mysqli_query($con, $select_query);
-            while ($menu = mysqli_fetch_array($result)) {
-                $title = $menu['menu_name'];
-                $menu_speciality = $menu['menu_speciality'];
-                $menu_price = $menu['menu_price'];
-                $menu_category = $menu['menu_category'];
-                $menu_image = $menu['menu_image'];
-                $menu_description = $menu['menu_description'];
-                $modal_id = $menu['menu_id']; // Unique ID for modal 
-            ?>
-                <!-- each menu card  -->
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                        <div class="menu-info">
-                            <div class="title">
-                                <p class="menu-title"><?= $title ?> </p>
-                                <span class="divider"></span>
-                                <p class="price">$<?= $menu_price ?></p>
+                    <!-- end of while loop  -->
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+        <!-- end Appetizers section  -->
+        <!-- Main Dishes section -->
+        <section class="menu-section menu-two">
+            <div class="left-bg"><img src="./images/background/bg-20.png" alt="" title=""></div>
+            <p class="small-heading">FRESH & HYGINE</p>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <p class="section-heading">Main Dishes</p>
+            <div class="menu-container ">
+                <!-- get all available menu in the category  -->
+                <?php
+                $root = "http://localhost/Delici-Client/";
+                $category = 'Main Dishes';
+                $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+                $result = mysqli_query($con, $select_query);
+                while ($menu = mysqli_fetch_array($result)) {
+                    $title = $menu['menu_name'];
+                    $menu_speciality = $menu['menu_speciality'];
+                    $menu_price = $menu['menu_price'];
+                    $menu_category = $menu['menu_category'];
+                    $menu_image = $menu['menu_image'];
+                    $menu_description = $menu['menu_description'];
+                    $modal_id = $menu['menu_id']; // Unique ID for modal 
+                ?>
+                    <!-- each menu card  -->
+                    <div class="menu">
+                        <div class="menu-box">
+                            <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                            <div class="menu-info">
+                                <div class="title">
+                                    <p class="menu-title"><?= $title ?> </p>
+                                    <span class="divider"></span>
+                                    <p class="price">$<?= $menu_price ?></p>
+                                </div>
+                                <p class="menu-desc"><?= $menu_description ?></p>
                             </div>
-                            <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                </div>
-                <!-- end of while loop  -->
-            <?php
-            }
-            ?>
-        </div>
-    </section>
-    <!-- Desserts section -->
-    <section class="menu-section">
-        <div class="right-bg"><img src="./images/background/bg-22.png" alt="" title=""></div>
-        <p class="small-heading">SWEET & SWEET</p>
-        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
-        <p class="section-heading">Desserts</p>
-        <div class="menu-container">
-            <!-- get all available menu in the category  -->
-            <?php
-            $root = "http://localhost/Delici-Client/";
-            $category = 'Desserts';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
-            $result = mysqli_query($con, $select_query);
-            while ($menu = mysqli_fetch_array($result)) {
-                $title = $menu['menu_name'];
-                $menu_speciality = $menu['menu_speciality'];
-                $menu_price = $menu['menu_price'];
-                $menu_category = $menu['menu_category'];
-                $menu_image = $menu['menu_image'];
-                $menu_description = $menu['menu_description'];
-                $modal_id = $menu['menu_id']; // Unique ID for modal 
-            ?>
-                <!-- each menu card  -->
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                        <div class="menu-info">
-                            <div class="title">
-                                <p class="menu-title"><?= $title ?> </p>
-                                <span class="divider"></span>
-                                <p class="price">$<?= $menu_price ?></p>
+                    <!-- end of while loop  -->
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+        End
+        <!-- Desserts section -->
+        <section class="menu-section menu-two">
+            <div class="right-bg"><img src="./images/background/bg-22.png" alt="" title=""></div>
+            <p class="small-heading">SWEET & SWEET</p>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <p class="section-heading">Desserts</p>
+            <div class="menu-container ">
+                <!-- get all available menu in the category  -->
+                <?php
+                $root = "http://localhost/Delici-Client/";
+                $category = 'Desserts';
+                $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+                $result = mysqli_query($con, $select_query);
+                while ($menu = mysqli_fetch_array($result)) {
+                    $title = $menu['menu_name'];
+                    $menu_speciality = $menu['menu_speciality'];
+                    $menu_price = $menu['menu_price'];
+                    $menu_category = $menu['menu_category'];
+                    $menu_image = $menu['menu_image'];
+                    $menu_description = $menu['menu_description'];
+                    $modal_id = $menu['menu_id']; // Unique ID for modal 
+                ?>
+                    <!-- each menu card  -->
+                    <div class="menu">
+                        <div class="menu-box">
+                            <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                            <div class="menu-info">
+                                <div class="title">
+                                    <p class="menu-title"><?= $title ?> </p>
+                                    <span class="divider"></span>
+                                    <p class="price">$<?= $menu_price ?></p>
+                                </div>
+                                <p class="menu-desc"><?= $menu_description ?></p>
                             </div>
-                            <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                </div>
-                <!-- end of while loop  -->
-            <?php
-            }
-            ?>
-        </div>
-    </section>
-    <!-- Drinks Menu section -->
-    <section class="menu-section">
-        <div class="left-bg"><img src="./images/background/bg-23.png" alt="" title=""></div>
-        <p class="small-heading">hot & cold</p>
-        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
-        <p class="section-heading">Drinks Menu</p>
-        <div class="menu-container">
-            <!-- get all available menu in the category  -->
-            <?php
-            $root = "http://localhost/Delici-Client/";
-            $category = 'Drinks Menu';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
-            $result = mysqli_query($con, $select_query);
-            while ($menu = mysqli_fetch_array($result)) {
-                $title = $menu['menu_name'];
-                $menu_speciality = $menu['menu_speciality'];
-                $menu_price = $menu['menu_price'];
-                $menu_category = $menu['menu_category'];
-                $menu_image = $menu['menu_image'];
-                $menu_description = $menu['menu_description'];
-                $modal_id = $menu['menu_id']; // Unique ID for modal 
-            ?>
-                <!-- each menu card  -->
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                        <div class="menu-info">
-                            <div class="title">
-                                <p class="menu-title"><?= $title ?> </p>
-                                <span class="divider"></span>
-                                <p class="price">$<?= $menu_price ?></p>
+                    <!-- end of while loop  -->
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+        <!-- Drinks Menu section -->
+        <section class="menu-section menu-two">
+            <div class="left-bg"><img src="./images/background/bg-23.png" alt="" title=""></div>
+            <p class="small-heading">hot & cold</p>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <p class="section-heading">Drinks Menu</p>
+            <div class="menu-container ">
+                <!-- get all available menu in the category  -->
+                <?php
+                $root = "http://localhost/Delici-Client/";
+                $category = 'Drinks Menu';
+                $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+                $result = mysqli_query($con, $select_query);
+                while ($menu = mysqli_fetch_array($result)) {
+                    $title = $menu['menu_name'];
+                    $menu_speciality = $menu['menu_speciality'];
+                    $menu_price = $menu['menu_price'];
+                    $menu_category = $menu['menu_category'];
+                    $menu_image = $menu['menu_image'];
+                    $menu_description = $menu['menu_description'];
+                    $modal_id = $menu['menu_id']; // Unique ID for modal 
+                ?>
+                    <!-- each menu card  -->
+                    <div class="menu">
+                        <div class="menu-box">
+                            <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                            <div class="menu-info">
+                                <div class="title">
+                                    <p class="menu-title"><?= $title ?> </p>
+                                    <span class="divider"></span>
+                                    <p class="price">$<?= $menu_price ?></p>
+                                </div>
+                                <p class="menu-desc"><?= $menu_description ?></p>
                             </div>
-                            <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                </div>
-                <!-- end of while loop  -->
-            <?php
-            }
-            ?>
-        </div>
-    </section>
-</div>
+                    <!-- end of while loop  -->
+                <?php
+                }
+                ?>
+            </div>
+        </section>
 
     <!-- js  -->
     <!-- <script src="./js/custom.js"></script> -->

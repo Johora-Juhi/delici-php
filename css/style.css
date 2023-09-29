@@ -663,6 +663,7 @@ input[type="file"]:focus + label {
 
 /* category section  */
 .menu-section {
+  text-align: center;
   padding-top: 100px;
   background-color: #171819;
   position: relative;
@@ -697,6 +698,7 @@ input[type="file"]:focus + label {
 }
 
 /* menu section */
+
 .menu-container {
   position: relative;
   display: grid;
@@ -986,6 +988,9 @@ display: block;
   }
 
   /* all menu  */
+  .menu-two .menu-container{
+    width: 77%;
+  }
   .menu-container {
     grid-template-columns: repeat(2, 1fr);
   }
