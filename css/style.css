@@ -393,10 +393,46 @@ left: 0;
   vertical-align: top;
 }
 
+
 /*** 
-/* main pagw layout  */
 
+====================================================================
+  Private Event Section
+====================================================================
 
+***/
+.private-events-container{
+  margin-top: 55px;
+  position: relative;
+  width: 77%;
+  margin-left: auto;
+  margin-right: auto;
+display: grid;
+grid-template-columns: repeat(3,auto);
+gap: 20;
+box-sizing: border-box;
+}
+.private-events{
+  padding: 30px 25px 50px 25px;
+  background: url(../images/background/pattern-5.png) left top repeat;
+  background-color: rgb(14,13,12);
+}
+.private-events-container .private-events::before{
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: url(../images/background/pattern-9.svg) center top repeat;
+}
+.section-heading{
+  font-family: "Forum", cursive;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 60px;
+  text-transform: capitalize;
+}
 .main-container {
   background-color: black;
 }

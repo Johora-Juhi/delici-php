@@ -231,7 +231,14 @@ include_once('./includes/connect.php');
                 ?>
             </div>
         </section>
-        End
+        <!-- End Main dishes section  -->
+
+        <!-- Private events Section  -->
+        <section class="private-events-container">
+<div class="private-events">
+    <p class="section-heading">private events</p>
+</div>
+        </section>
         <!-- Desserts section -->
         <section class="menu-section menu-two">
             <div class="right-bg"><img src="./images/background/bg-22.png" alt="" title=""></div>
