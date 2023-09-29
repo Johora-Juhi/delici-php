@@ -185,7 +185,7 @@
         </div>
         <div class="input-group">
             <div class="input-inner">
-                <button type="submit" class="form-btn btn-style-one" name="add-menu" id="submit_btn">
+                <button type="submit" class="form-btn btn-style-one" name="add-menu" id="submit_btn" style="box-sizing: border-box;">
                     <span class="btn-wrap">
                         <span class="text-one">add menu</span>
                         <span class="text-two">add menu</span>

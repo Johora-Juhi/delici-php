@@ -105,6 +105,7 @@
 }
 .fixed-header .main-header{
   position: relative;
+  padding: 15px 20px;
   /*top: 0;*/
   background: #202020;
   border-bottom-color: rgba(0,0,0,0.15);
@@ -113,6 +114,7 @@
 display: none;
 }
 .nav-container a {
+  position: relative;
   color: white;
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
@@ -120,9 +122,6 @@ display: none;
   letter-spacing: 0.15em;
   line-height: 30px;
   text-transform: uppercase;
-}
-.nav-container a {
-  position: relative;
 }
 .nav-container a::after {
   content: "";
@@ -140,10 +139,10 @@ display: none;
   left: 0;
 }
 .nav-container a:hover{
-  color: rgb(228, 197, 144);
+  color: rgb(228, 197, 144)!important;
 }
 .nav-container a:focus{
-  color: rgb(228, 197, 144);
+  color: rgb(228, 197, 144)!important;
 }
 .nav-container a:focus::after {
   width: 100%;
