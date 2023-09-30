@@ -404,7 +404,7 @@
   margin-top: 3.438rem;
   position: relative;
   width: 100%;
-  padding-left: 15px;
+  padding:0 15px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -492,7 +492,7 @@
   margin-top: 3.438rem;
   position: relative;
   width: 100%;
-  padding-right: 15px;
+  padding:0 15px;
   margin-left: auto;
   margin-right: auto;
   display: flex;

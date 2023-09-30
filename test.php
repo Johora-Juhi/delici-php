@@ -258,7 +258,7 @@ include_once('./includes/connect.php');
         </div>
 
     </section>
-    <!-- Private events Section  -->
+    <!-- Banquet Hall Section  -->
     <section class="banquet-hall-container">
         <div class="image-section">
             <div class="image"><img src="./images/resource/featured-8.jpg" alt=""></div>
