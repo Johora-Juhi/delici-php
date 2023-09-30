@@ -1041,6 +1041,9 @@ input[type="file"]:focus + label {
 
 /* desktop  */
 @media (min-width: 62em) {
+  /*==========================
+   Navbar style 
+   =========================== */
   .main-header .nav-container {
     display: flex;
     column-gap: 50px;
