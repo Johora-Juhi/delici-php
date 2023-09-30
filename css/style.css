@@ -485,7 +485,67 @@
 .main-container {
   background-color: black;
 }
-
+/*=============================
+ Banquet Hall style  
+ ===============================*/
+ .banquet-hall-container {
+  margin-top: 3.438rem;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.25rem;
+  box-sizing: border-box;
+}
+ .banquet-hall {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 25px;
+  background: url(../images/background/pattern-5.png) left top repeat;
+  background-color: rgb(14, 13, 12);
+}
+.banquet-hall .inner {
+  flex: 1;
+  max-width: 21.875rem;
+  /* margin:auto 1.875rem; */
+}
+.banquet-hall-container .banquet-hall::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: url(../images/background/pattern-9.svg) center top repeat;
+}
+.banquet-hall .separator {
+  position: relative;
+  margin: 1.25rem 0;
+}
+.banquet-hall .booking-info {
+  margin-bottom: 1.563rem;
+}
+.banquet-hall .booking-info .bk-no a::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  left: 50%;
+  bottom: 0px;
+  background-color: rgb(228, 197, 144);
+  transition: all ease-in-out 0.3s;
+}
+.banquet-hall .booking-info .bk-no a:hover::after {
+  width: 100%;
+  left: 0;
+}
 /*=============================
  admin page Layout
  ============================== */
@@ -1075,6 +1135,9 @@ input[type="file"]:focus + label {
   .inner-banner .inner h1 {
     font-size: 80px;
   }
+  /*===========================
+   private events section  
+   ============================*/
   .private-events-container {
     width: 77%;
     grid-template-columns: repeat(2, auto);
@@ -1090,15 +1153,26 @@ input[type="file"]:focus + label {
     font-size: 30px;
     line-height: 30px;
   }
+   /*===========================
+   banquet hall section  
+   ============================*/
+  .banquet-hall-container{
+    width: 77%;
+    flex-direction: row;
+  }
+  .banquet-hall{
+    padding: 1.875rem 2.5rem 3.125rem 2.5rem;
+  }
+  /*==============================
+   admin page layout  
+   ===============================*/
   .s-layout__content {
     margin-left: 15em;
   }
-
   /* Sidebar */
   .s-sidebar__trigger {
     display: none;
   }
-
   .s-sidebar__nav {
     width: 15em;
   }
@@ -1111,14 +1185,18 @@ input[type="file"]:focus + label {
     top: 6em;
   }
 
-  /* add menu  */
+  /*=====================
+   add menu  
+   ======================*/
   .form-container {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* all menu  */
+  /*======================
+   all menu  
+   =========================*/
   .menu-two .menu-container {
     width: 77%;
   }
@@ -1151,7 +1229,7 @@ input[type="file"]:focus + label {
 /*** 
 
 ====================================================================
-  section
+  hamburger section
 ====================================================================
 
 ***/

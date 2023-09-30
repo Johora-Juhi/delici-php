@@ -258,6 +258,31 @@ include_once('./includes/connect.php');
         </div>
 
     </section>
+    <!-- Private events Section  -->
+    <section class="banquet-hall-container">
+        <div class="image-section">
+            <div class="image"><img src="./images/resource/featured-8.jpg" alt=""></div>
+            <div class="image"><img src="./images/resource/featured-9.jpg" alt=""></div>
+        </div>
+        <div class="banquet-hall">
+            <div class="inner">
+                <p class="section-heading-two">banquet hall</p>
+                <p class="section-info">Book your special day with us to create a great memory to cherish forever.</p>
+                <div class="separator"><span></span></div>
+                <div class="booking-info">
+                    <div class="bk-title">Booking request</div>
+                    <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+                </div>
+                <button type="" class="theme-btn btn-style-one">
+                        <span class="btn-wrap">
+                            <span class="text-one">book now</span>
+                            <span class="text-two">book now</span>
+                        </span>
+                    </button>
+            </div>
+        </div>
+
+    </section>
     <!-- Desserts section -->
     <section class="menu-section menu-two">
         <div class="right-bg"><img src="./images/background/bg-22.png" alt="" title=""></div>
