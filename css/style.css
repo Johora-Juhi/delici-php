@@ -1139,6 +1139,7 @@ input[type="file"]:focus + label {
    private events section  
    ============================*/
   .private-events-container {
+    padding: 0 0 0 15px;
     width: 77%;
     grid-template-columns: repeat(2, auto);
   }
@@ -1157,6 +1158,7 @@ input[type="file"]:focus + label {
    banquet hall section  
    ============================*/
   .banquet-hall-container{
+    padding: 0 15px 0 0;
     width: 77%;
     flex-direction: row;
   }
