@@ -963,6 +963,14 @@ display: block;
   }
   .section-heading-two{
     font-size: 40px;
+    line-height: 48px;
+  }
+  .booking-info .bk-no a{
+    font-size:26px;
+    line-height:26px;
+  }
+  .image-section{
+    grid-template-columns: repeat(2,1fr);
   }
   .s-layout__content {
     margin-left: 4em;
@@ -1057,9 +1065,6 @@ display: block;
   .booking-info .bk-no a{
     font-size: 30px;
     line-height: 30px;
-  }
-  .image-section{
-    grid-template-columns: repeat(2,1fr);
   }
   .s-layout__content {
     margin-left: 15em;
