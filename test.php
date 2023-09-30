@@ -100,6 +100,8 @@ include_once('./includes/connect.php');
             </div>
         </div>
     </div>
+    <!-- End Main Header  -->
+
     <!--Info Back Drop-->
     <div class="info-back-drop"></div>
 
@@ -189,6 +191,7 @@ include_once('./includes/connect.php');
         </div>
     </section>
     <!-- end Appetizers section  -->
+
     <!-- Main Dishes section -->
     <section class="menu-section menu-two">
         <div class="left-bg"><img src="./images/background/bg-20.png" alt="" title=""></div>
@@ -259,6 +262,7 @@ include_once('./includes/connect.php');
 
     </section>
     <!-- End Private events Section  -->
+
     <!-- Banquet Hall Section  -->
     <section class="banquet-hall-container">
         <div class="image-section">
@@ -285,6 +289,7 @@ include_once('./includes/connect.php');
 
     </section>
     <!-- End Banquet Hall Section  -->
+
     <!-- Desserts section -->
     <section class="menu-section menu-two">
         <div class="right-bg"><img src="./images/background/bg-22.png" alt="" title=""></div>
@@ -369,6 +374,12 @@ include_once('./includes/connect.php');
             ?>
         </div>
     </section>
+
+    <div class="footer">
+        <div class="top-footer">
+            
+        </div>
+    </div>
 
     <!-- js  -->
     <!-- <script src="./js/custom.js"></script> -->
