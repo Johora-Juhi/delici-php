@@ -165,10 +165,10 @@
 
 .info-bar {
   position: fixed;
-  right: -440px;
+  left: -440px;
   top: 0px;
   width: 100%;
-  max-width: 440px;
+  max-width: 360px;
   height: 100%;
   overflow-y: auto;
   z-index: 99999;
@@ -208,7 +208,7 @@
 }
 
 .side-content-visible .info-bar {
-  right: 0px;
+  left: 0px;
   opacity: 1;
   visibility: visible;
 }
@@ -257,19 +257,19 @@
   width: 100%;
   border-radius: 50%;
 }
-.info-bar .nav-container{
-  border-top: 1px solid rgba(255, 255, 255, 0.2)  ;
-  margin: 0 30px 100px 30px ;
+.info-bar .nav-container {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 30px 100px 30px;
 }
-.info-bar .nav-container a{
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2)  ;
+.info-bar .nav-container a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 0;
   text-align: start;
   position: relative;
 }
 
-.info-bar .nav-container a:before{
-  content: '';
+.info-bar .nav-container a:before {
+  content: "";
   position: absolute;
   left: 0px;
   top: 50%;
@@ -281,22 +281,22 @@
   visibility: hidden;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -moz-transition:all 300ms ease;
-  -webkit-transition:all 300ms ease;
-  -ms-transition:all 300ms ease;
-  -o-transition:all 300ms ease;
-  transition:all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .info-bar .nav-container a:hover:before,
-.info-bar .nav-container a.current:before{
+.info-bar .nav-container a.current:before {
   opacity: 1;
   visibility: visible;
 }
 
 .info-bar .nav-container a:hover,
-.info-bar .nav-container a.current{
-  color: rgb(228, 197, 144)!important;
+.info-bar .nav-container a.current {
+  color: rgb(228, 197, 144) !important;
   padding-left: 20px;
 }
 .info-bar .side-heading {
@@ -446,7 +446,7 @@
   margin-top: 3.438rem;
   position: relative;
   width: 100%;
-  padding:0 15px;
+  padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -530,11 +530,11 @@
 /*=============================
  Banquet Hall style  
  ===============================*/
- .banquet-hall-container {
+.banquet-hall-container {
   margin-top: 3.438rem;
   position: relative;
   width: 100%;
-  padding:0 15px;
+  padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -542,7 +542,7 @@
   gap: 1.25rem;
   box-sizing: border-box;
 }
- .banquet-hall {
+.banquet-hall {
   flex: 1;
   position: relative;
   text-align: center;
@@ -1063,7 +1063,7 @@ input[type="file"]:focus + label {
   .top-header-info {
     justify-content: center;
   }
-  .info-bar .nav-container{
+  .info-bar .nav-container {
     margin: 0 30px 100px 30px;
   }
   .inner-banner {
@@ -1170,10 +1170,13 @@ input[type="file"]:focus + label {
   .button-container {
     column-gap: 50px;
   }
-  .info-bar .image-box{
+  .info-bar{
+    max-width: 440px;
+  }
+  .info-bar .image-box {
     display: block;
   }
-  .info-bar .nav-container{
+  .info-bar .nav-container {
     display: none;
   }
   /*=======================
@@ -1205,15 +1208,15 @@ input[type="file"]:focus + label {
     font-size: 30px;
     line-height: 30px;
   }
-   /*===========================
+  /*===========================
    banquet hall section  
    ============================*/
-  .banquet-hall-container{
+  .banquet-hall-container {
     padding: 0 15px 0 0;
     width: 77%;
     flex-direction: row;
   }
-  .banquet-hall{
+  .banquet-hall {
     padding: 1.875rem 2.5rem 3.125rem 2.5rem;
   }
   /*==============================
