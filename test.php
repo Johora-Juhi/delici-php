@@ -245,11 +245,11 @@ include_once('./includes/connect.php');
                     <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
                 </div>
                 <button type="" class="theme-btn btn-style-one">
-                        <span class="btn-wrap">
-                            <span class="text-one">book now</span>
-                            <span class="text-two">book now</span>
-                        </span>
-                    </button>
+                    <span class="btn-wrap">
+                        <span class="text-one">book now</span>
+                        <span class="text-two">book now</span>
+                    </span>
+                </button>
             </div>
         </div>
         <div class="image-section">
@@ -258,6 +258,7 @@ include_once('./includes/connect.php');
         </div>
 
     </section>
+    <!-- End Private events Section  -->
     <!-- Banquet Hall Section  -->
     <section class="banquet-hall-container">
         <div class="image-section">
@@ -274,15 +275,16 @@ include_once('./includes/connect.php');
                     <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
                 </div>
                 <button type="" class="theme-btn btn-style-one">
-                        <span class="btn-wrap">
-                            <span class="text-one">book now</span>
-                            <span class="text-two">book now</span>
-                        </span>
-                    </button>
+                    <span class="btn-wrap">
+                        <span class="text-one">book now</span>
+                        <span class="text-two">book now</span>
+                    </span>
+                </button>
             </div>
         </div>
 
     </section>
+    <!-- End Banquet Hall Section  -->
     <!-- Desserts section -->
     <section class="menu-section menu-two">
         <div class="right-bg"><img src="./images/background/bg-22.png" alt="" title=""></div>
