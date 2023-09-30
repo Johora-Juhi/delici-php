@@ -259,7 +259,7 @@
 }
 .info-bar .nav-container{
   border-top: 1px solid rgba(255, 255, 255, 0.2)  ;
-  margin-bottom: 0 60px 100px 60px ;
+  margin: 0 30px 100px 30px ;
 }
 .info-bar .nav-container a{
   border-bottom: 1px solid rgba(255, 255, 255, 0.2)  ;
@@ -1062,6 +1062,9 @@ input[type="file"]:focus + label {
   }
   .top-header-info {
     justify-content: center;
+  }
+  .info-bar .nav-container{
+    margin: 0 30px 100px 30px;
   }
   .inner-banner {
     padding-top: 200px;
