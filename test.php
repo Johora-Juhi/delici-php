@@ -381,8 +381,34 @@ include_once('./includes/connect.php');
         <div class="inner">
             <div class="reservation-section">
                 <p class="section-heading">online reservation</p>
-                <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form
-                </p>
+                <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
+                <form action="" method="post">
+                    <div class="input-group">
+                        <div class="input-inner">
+                            <input type="text" name="name" class="input-field" placeholder="Your Name">
+                        </div>
+                        <div class="input-inner">
+                            <input type="text" name="phone" class="input-field" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-inner">
+                        <i class="far fa-user icon"></i>
+<select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
+<option value="1">1 Person</option>
+<option value="2">2 Person</option>
+<option value="3">3 Person</option>
+<option value="4">4 Person</option>
+<option value="5">5 Person</option>
+<option value="6">6 Person</option>
+<option value="7">7 Person</option>
+</select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="hot-deal">
+
             </div>
         </div>
 
