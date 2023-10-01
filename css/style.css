@@ -1,7 +1,6 @@
 @import url("./preloader.css");
 @import url("./global.css");
-@import url('font-awesome.css');
-
+@import url("font-awesome.css");
 
 /*** 
 
@@ -757,14 +756,16 @@
 }
 .input-inner {
   flex: 1;
+  position: relative;
 }
 .input-field {
   width: 100%;
+  height: 56px;
   color: white;
-  background-color: rgb(26,27,28);
+  background-color: rgb(26, 27, 28);
   line-height: 34px;
   padding: 0.625rem 1.25rem;
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 300ms ease;
   outline: none;
   z-index: 0;
@@ -772,9 +773,6 @@
 .input-select {
   height: 56px;
   cursor: pointer;
-}
-.input-select option{
-
 }
 .input-field::placeholder {
   color: white;
@@ -792,6 +790,8 @@ input[type="file"] {
 }
 input[type="file"] + label {
   width: 100%;
+  height: 56px;
+  line-height: 34px;
   color: white;
   background-color: #171819;
   padding: 0.625rem 1.25rem;
@@ -801,7 +801,7 @@ input[type="file"] + label {
   cursor: pointer;
 }
 input[type="file"]:focus + label {
-  border-color: rgb(228, 197, 144)!important;
+  border-color: rgb(228, 197, 144) !important;
 }
 .edit-img {
   display: flex;
@@ -821,16 +821,15 @@ input[type="file"]:focus + label {
 /* input with icon  */
 .input-inner i {
   position: absolute;
-top: 40%;
-left: 15px;
+  top: 38%;
+  left: 15px;
+  /* margin-top: -15px; */
 }
 .icon {
-  /* padding-left: 20px;
-  padding-top: 15px; */
-  cursor: pointer;
   min-width: 20px;
   font-size: 12px;
   line-height: 30px;
+  pointer-events: none;
 }
 /* end add menu style  */
 /*** 
@@ -1072,7 +1071,7 @@ left: 15px;
   cursor: pointer;
   color: rgb(228, 197, 144) !important;
 }
-.hot-deal{
+.hot-deal {
   flex: 4;
 }
 .footer {
