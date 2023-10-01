@@ -374,10 +374,23 @@ include_once('./includes/connect.php');
             ?>
         </div>
     </section>
+    <!-- End Drinks Mene Section  -->
+
+    <!-- Reservation Section -->
+    <section class="reservation-container">
+        <div class="inner">
+            <div class="reservation-section">
+                <p class="section-heading">online reservation</p>
+                <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form
+                </p>
+            </div>
+        </div>
+
+    </section>
 
     <div class="footer">
         <div class="top-footer">
-            
+
         </div>
     </div>
 
