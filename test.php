@@ -456,7 +456,28 @@ include_once('./includes/connect.php');
                 </form>
             </div>
             <div class="hot-deal">
-
+                <p class="small-heading-two">hot deal</p>
+                <p class="section-heading-three">Lunch & Dinner Specials</p>
+                <div class="data">
+                    <div class="discount-info">
+                        <div class="s-ttl">up to</div>
+                        <div class="num">45%</div>
+                        <div class="s-ttl">discount</div>
+                    </div>
+                    <div class="instruction">
+                        • Not valid for online order <br>
+                        • Non-refundable <br>
+                        • Offer end on 25 Jan <br>
+                    </div>
+                    <div class="link-box">
+                        <a href="reservation-opentable.html" class="theme-btn btn-style-one clearfix">
+                            <span class="btn-wrap">
+                                <span class="text-one">book now</span>
+                                <span class="text-two">book now</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
