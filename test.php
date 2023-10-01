@@ -414,7 +414,28 @@ include_once('./includes/connect.php');
                         </div>
                         <div class="input-inner">
                         <i class="far fa-calendar icon"></i>
-                            <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY"  style="padding-left: 45px;">
+                            <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly  style="padding-left: 45px;">
+                            <span class="fas fa-angle-down icon"></span>
+                        </div>
+                        <div class="input-inner">
+                            <i class="far fa-clock icon"></i>
+                            <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
+                                <option value="8am">08 : 00 am</option>
+                                <option value="9am">09 : 00 am</option>
+                                <option value="10am">10 : 00 am</option>
+                                <option value="11am">11 : 00 am</option>
+                                <option value="12am">12 : 00 am</option>
+                                <option value="1pm">01 : 00 pm</option>
+                                <option value="2pm">02 : 00 pm</option>
+                                <option value="3pm">03 : 00 pm</option>
+                                <option value="4pm">04 : 00 pm</option>
+                                <option value="5pm">05 : 00 pm</option>
+                                <option value="6pm">06 : 00 pm</option>
+                                <option value="7pm">07 : 00 pm</option>
+                                <option value="8pm">08 : 00 pm</option>
+                                <option value="9pm">09 : 00 pm</option>
+                                <option value="10pm">10 : 00 pm</option>
+                            </select>
                         </div>
                     </div>
                 </form>

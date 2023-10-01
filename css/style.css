@@ -774,6 +774,9 @@
   height: 56px;
   cursor: pointer;
 }
+#datepicker{
+  cursor: pointer;
+}
 .input-field::placeholder {
   color: white;
 }
@@ -830,6 +833,12 @@ input[type="file"]:focus + label {
   font-size: 12px;
   line-height: 30px;
   pointer-events: none;
+}
+.input-inner span{
+  position: absolute;
+  top: 38%;
+  right: 15px;
+
 }
 /* end add menu style  */
 /*** 
