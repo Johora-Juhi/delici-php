@@ -32,7 +32,15 @@ include_once('./includes/connect.php');
     <!-- <link rel="stylesheet" href="sweetalert2.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
     <!-- <script src="sweetalert2.all.min.js"></script> -->
-
+    <!-- datepicker  -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
 </head>
 
 <body>
@@ -393,16 +401,20 @@ include_once('./includes/connect.php');
                     </div>
                     <div class="input-group">
                         <div class="input-inner">
-                        <i class="far fa-user icon"></i>
-<select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
-<option value="1">1 Person</option>
-<option value="2">2 Person</option>
-<option value="3">3 Person</option>
-<option value="4">4 Person</option>
-<option value="5">5 Person</option>
-<option value="6">6 Person</option>
-<option value="7">7 Person</option>
-</select>
+                            <i class="far fa-user icon"></i>
+                            <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Person</option>
+                                <option value="3">3 Person</option>
+                                <option value="4">4 Person</option>
+                                <option value="5">5 Person</option>
+                                <option value="6">6 Person</option>
+                                <option value="7">7 Person</option>
+                            </select>
+                        </div>
+                        <div class="input-inner">
+                        <i class="far fa-calendar icon"></i>
+                            <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY"  style="padding-left: 45px;">
                         </div>
                     </div>
                 </form>
@@ -426,7 +438,7 @@ include_once('./includes/connect.php');
 
     <!-- <script src="./js/modal.js"></script> -->
     <!-- jquery  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
     <!-- preloader js  -->
     <script src="./js/preloarder.js"></script>
