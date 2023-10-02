@@ -522,7 +522,27 @@ include_once('./includes/connect.php');
 
     <div class="footer">
         <div class="top-footer">
+            <div class="info-box">
 
+            </div>
+            <div class="nav-box">
+                <ul class="nav-container">
+                    <li class="nav-link"><a href="">Home</a></li>
+                    <li class="nav-link"><a href="">Menus</a></li>
+                    <li class="nav-link"><a href="">About Us</a></li>
+                    <li class="nav-link"><a href="">Our Chefs</a></li>
+                    <li class="nav-link"><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-box last">
+                <ul class="nav-container">
+                    <li class="nav-link"><a href="">Home</a></li>
+                    <li class="nav-link"><a href="">Menus</a></li>
+                    <li class="nav-link"><a href="">About Us</a></li>
+                    <li class="nav-link"><a href="">Our Chefs</a></li>
+                    <li class="nav-link"><a href="">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 

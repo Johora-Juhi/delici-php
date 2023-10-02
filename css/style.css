@@ -1209,10 +1209,24 @@ input[type="file"]:focus + label {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.4;
+  color:rgb(167, 167, 167)
 }
 .top-footer {
   width: 77%;
+  margin: auto;
+  text-align: center;
   display: flex;
+}
+.top-footer .info-box{
+  flex:6;
+  order: 4;
+}
+.top-footer .nav-box{
+  flex:3;
+  width: 100%;
+}
+.top-footer .nav-box.last{
+order: 12;
 }
 /*====================
  end modal part  
