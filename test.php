@@ -417,7 +417,6 @@ include_once('./includes/connect.php');
                             <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
                             <span class="fas fa-angle-down icon"></span>
                         </div>
-
                         <script>
                             $(document).ready(function() {
                                 $('#datepicker').on('change', function() {
