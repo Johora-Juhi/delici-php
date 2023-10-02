@@ -420,21 +420,16 @@ include_once('./includes/connect.php');
                         <div class="input-inner">
                             <i class="far fa-clock icon"></i>
                             <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
-                                <option value="8am">08 : 00 am</option>
-                                <option value="9am">09 : 00 am</option>
-                                <option value="10am">10 : 00 am</option>
-                                <option value="11am">11 : 00 am</option>
-                                <option value="12am">12 : 00 am</option>
-                                <option value="1pm">01 : 00 pm</option>
-                                <option value="2pm">02 : 00 pm</option>
-                                <option value="3pm">03 : 00 pm</option>
-                                <option value="4pm">04 : 00 pm</option>
-                                <option value="5pm">05 : 00 pm</option>
-                                <option value="6pm">06 : 00 pm</option>
-                                <option value="7pm">07 : 00 pm</option>
-                                <option value="8pm">08 : 00 pm</option>
-                                <option value="9pm">09 : 00 pm</option>
-                                <option value="10pm">10 : 00 pm</option>
+                                <?php
+                                $select_query = "SELECT * FROM `slots` WHERE 1";
+                                $result_options = mysqli_query($con, $select_query);
+                                $row_num = mysqli_num_rows($result_options);
+                                while ($menues = mysqli_fetch_assoc($result_options)) {
+                                    $id = $menues['slot_id'];
+                                    $slot = $menues['slot_time'];
+                                    echo "<option value='$id'>$slot</option>";
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>
