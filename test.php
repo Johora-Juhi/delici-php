@@ -396,7 +396,7 @@ include_once('./includes/connect.php');
                             <input type="text" name="name" class="input-field" placeholder="Your Name">
                         </div>
                         <div class="input-inner">
-                            <input type="text" name="phone" class="input-field" placeholder="Phone Number">
+                            <input type="tel" name="phone" class="input-field" placeholder="Phone Number">
                         </div>
                     </div>
                     <div class="input-group">
@@ -417,11 +417,57 @@ include_once('./includes/connect.php');
                             <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
                             <span class="fas fa-angle-down icon"></span>
                         </div>
+                        <!-- <script>
+                            document.getElementById("datepicker").addEventListener("change", function() {
+                                var selectedDate = this.value;
+                                console.log('Selected Date: ' + selectedDate);
+
+                                // Store the value in a cookie
+                                document.cookie = "selectedDate=" + selectedDate;
+                            });
+                            
+                        </script> -->
+                        <script>
+                            $(document).ready(function() {
+                                // Add event listener for change event on datepicker input
+                                $('#datepicker').on('input', function() {
+                                    var selectedDate = $(this).val();
+                                document.cookie = "selectedDate=" + selectedDate;
+
+                                    <?php
+                                     // Access the value from the cookie
+                            if (isset($_COOKIE['selectedDate'])) {
+                                $selected_date = $_COOKIE['selectedDate'];
+                                // Now you can use $selectedDate in your PHP code
+                                // ...
+                                echo "Received input value: " . $selected_date;
+                            }
+                                    // if (isset($_POST['selected_date'])) {
+                                    //     $selectedDate = $_POST['selected_date'];
+                                    //     echo $selectedDate;
+                                    //     $update_query = "UPDATE `slots` SET is_available= 1 where is_available= 0";
+                                    //     $result_update = mysqli_query($con, $update_query);
+                                    //     $select_reservation = "SELECT * FROM `reservation_table` where `date`= $selectedDate ";
+                                    // }
+                                    // $result= mysqli_query($con,$select_reservation);
+                                    // $count = mysqli_num_rows($result);
+                                    // echo $count;
+
+                                    ?>
+                                    // Get the selected date value
+                                    // Log the selected date to the console (you can replace this with your desired action)
+                                    console.log('Selected Date: ' + selectedDate);
+
+                                    // If you want to update a hidden form field with the selected date, you can do this:
+                                    // $('#hidden_date_field').val(selectedDate);
+                                });
+                            });
+                        </script>
                         <div class="input-inner">
                             <i class="far fa-clock icon"></i>
-                            <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
+                            <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
                                 <?php
-                                $select_query = "SELECT * FROM `slots` WHERE 1";
+                                $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
                                 $result_options = mysqli_query($con, $select_query);
                                 $row_num = mysqli_num_rows($result_options);
                                 while ($menues = mysqli_fetch_assoc($result_options)) {
@@ -449,6 +495,18 @@ include_once('./includes/connect.php');
                         </div>
                     </div>
                 </form>
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $name = $_POST['name'];
+                    $phone = $_POST['phone'];
+                    $person = $_POST['person'];
+                    $selected_date = $_POST['selected_date'];
+                    $slot = $_POST['slot'];
+                    $message = $_POST['message'];
+                    $insert_reservation = "INSERT INTO `reservation_table`(`username`, `phone`, `person`, `date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot,'$message')";
+                    $result_reservation = mysqli_query($con, $insert_reservation);
+                }
+                ?>
             </div>
             <div class="hot-deal">
                 <p class="small-heading-two">hot deal</p>
