@@ -1064,8 +1064,9 @@ input[type="file"]:focus + label {
   /* opacity: 0.40; */
 }
 .reservation-container .inner {
-  width: 77%;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1077,7 +1078,7 @@ input[type="file"]:focus + label {
   flex: 1;
   background-color: black;
   color: white;
-  padding: 75px 60px 60px 60px;
+  padding: 40px 20px 30px 20px;
 }
 .reservation-section .section-heading {
   margin: 0;
@@ -1418,10 +1419,13 @@ margin-bottom: 30px;
     padding: 100px 0;
    }
    .reservation-container .inner{
+    width: 77%;
+    padding: 0;
     flex-direction: row;
    }
    .reservation-section {
     flex: 8;
+    padding: 75px 60px 60px 60px;
    }
    .hot-deal{
     flex: 4;
