@@ -1076,6 +1076,7 @@ input[type="file"]:focus + label {
 }
 .reservation-section {
   flex: 1;
+  width: 100%;
   background-color: black;
   color: white;
   padding: 40px 20px 30px 20px;
@@ -1330,6 +1331,10 @@ margin-bottom: 30px;
     flex-direction: row;
     gap: 0;
   }
+  .section-heading{
+    font-size: 40px;
+line-height: 1.2em;
+   }
 }
 
 /* desktop  */
@@ -1432,7 +1437,6 @@ margin-bottom: 30px;
    }
    .section-heading{
     font-size: 60px;
-line-height: 1.2em;
    }
   /*==============================
    admin page layout  
