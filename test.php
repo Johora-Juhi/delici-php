@@ -523,7 +523,7 @@ include_once('./includes/connect.php');
     <div class="footer">
         <div class="top-footer">
             <div class="info-box">
-
+hellu
             </div>
             <div class="nav-box">
                 <ul class="nav-container">

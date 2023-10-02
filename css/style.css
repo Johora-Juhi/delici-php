@@ -1216,10 +1216,12 @@ input[type="file"]:focus + label {
   margin: auto;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
 }
 .top-footer .info-box{
-  flex:6;
-  order: 4;
+  flex: 0 0 100%;
+    max-width: 100%;
+  /* order: 4; */
 }
 .top-footer .nav-box{
   flex:3;
@@ -1345,6 +1347,7 @@ order: 12;
     font-size: 40px;
     line-height: 1.2em;
   }
+ 
 }
 
 /* desktop  */
@@ -1508,6 +1511,14 @@ order: 12;
     top: 100px;
     left: 0;
   }
+   /*=====================
+   footer  
+   =====================*/
+   .top-footer .info-box{
+    flex: 0 0 50%;
+    max-width: 50%;
+    order: 4;
+   }
 }
 
 /*** 
