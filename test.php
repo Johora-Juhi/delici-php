@@ -417,45 +417,30 @@ include_once('./includes/connect.php');
                             <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
                             <span class="fas fa-angle-down icon"></span>
                         </div>
-                        <!-- <script>
-                            document.getElementById("datepicker").addEventListener("change", function() {
-                                var selectedDate = this.value;
-                                console.log('Selected Date: ' + selectedDate);
 
-                                // Store the value in a cookie
-                                document.cookie = "selectedDate=" + selectedDate;
-                            });
-                            
-                        </script> -->
                         <script>
                             $(document).ready(function() {
-                                // Add event listener for change event on datepicker input
-                                $('#datepicker').on('input', function() {
+                                $('#datepicker').on('change', function() {
                                     var selectedDate = $(this).val();
-                                document.cookie = "selectedDate=" + selectedDate;
+                                    // document.cookie = "selectedDate=" + selectedDate;
 
-                                    <?php
-                                     // Access the value from the cookie
-                            if (isset($_COOKIE['selectedDate'])) {
-                                $selected_date = $_COOKIE['selectedDate'];
-                                // Now you can use $selectedDate in your PHP code
-                                // ...
-                                echo "Received input value: " . $selected_date;
-                            }
-                                    // if (isset($_POST['selected_date'])) {
-                                    //     $selectedDate = $_POST['selected_date'];
-                                    //     echo $selectedDate;
-                                    //     $update_query = "UPDATE `slots` SET is_available= 1 where is_available= 0";
-                                    //     $result_update = mysqli_query($con, $update_query);
-                                    //     $select_reservation = "SELECT * FROM `reservation_table` where `date`= $selectedDate ";
-                                    // }
-                                    // $result= mysqli_query($con,$select_reservation);
-                                    // $count = mysqli_num_rows($result);
-                                    // echo $count;
+                                    // <?php
+                                        // if (isset($_COOKIE['selectedDate'])) {
+                                        //     $selected_date = $_COOKIE['selectedDate'];
+                                        //     echo "Received input value: " . $selected_date;
+                                        // }
+                                        if (isset($_POST['selected_date'])) {
+                                            $selectedDate = $_POST['selected_date'];
+                                            echo $selectedDate;
+                                            $update_query = "UPDATE `slots` SET is_available= 1 where is_available= 0";
+                                            $result_update = mysqli_query($con, $update_query);
+                                            $select_reservation = "SELECT * FROM `reservation_table` where `date`= $selectedDate ";
 
-                                    ?>
-                                    // Get the selected date value
-                                    // Log the selected date to the console (you can replace this with your desired action)
+                                            $result = mysqli_query($con, $select_reservation);
+                                            $count = mysqli_num_rows($result);
+                                            echo $count;
+                                        }
+                                        ?>
                                     console.log('Selected Date: ' + selectedDate);
 
                                     // If you want to update a hidden form field with the selected date, you can do this:
