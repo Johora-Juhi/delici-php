@@ -1202,7 +1202,7 @@ input[type="file"]:focus + label {
 
 .footer {
   background-image: url(../images/background/image-4.jpg);
-  padding: 100px 0 70px 0;
+  padding: 100px 15px 70px ;
   width: 100%;
   height: 100%;
   background-position: right top;
@@ -1217,6 +1217,7 @@ input[type="file"]:focus + label {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  gap: 50px;
 }
 .top-footer .info-box{
   flex: 0 0 100%;
@@ -1522,6 +1523,10 @@ order: 12;
    /*=====================
    footer  
    =====================*/
+   .top-footer{
+    width: 100%;
+    gap:30px;
+   }
    .top-footer .info-box{
     flex: 0 0 50%;
     max-width: 50%;
