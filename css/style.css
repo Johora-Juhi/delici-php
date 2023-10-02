@@ -1199,7 +1199,9 @@ input[type="file"]:focus + label {
   cursor: pointer;
   color: #e4c590;
 }
-
+ /*=====================
+   footer  
+   =====================*/
 .footer {
   background-image: url(../images/background/image-4.jpg);
   padding: 100px 0px 70px ;
