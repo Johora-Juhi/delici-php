@@ -1221,11 +1221,10 @@ input[type="file"]:focus + label {
 .top-footer .info-box{
   flex: 0 0 100%;
     max-width: 100%;
-  /* order: 4; */
 }
 .top-footer .nav-box{
-  flex:3;
-  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 .top-footer .nav-box.last{
 order: 12;
@@ -1347,7 +1346,16 @@ order: 12;
     font-size: 40px;
     line-height: 1.2em;
   }
- 
+  /*=====================
+   footer  
+   =====================*/
+    /*=====================
+   footer  
+   =====================*/
+   .top-footer .nav-box{
+    flex: 0 0 50%;
+    max-width: 50%;
+   }
 }
 
 /* desktop  */
@@ -1518,6 +1526,10 @@ order: 12;
     flex: 0 0 50%;
     max-width: 50%;
     order: 4;
+   }
+   .top-footer .info-box{
+    flex: 0 0 25%;
+    max-width: 25%;
    }
 }
 
