@@ -1202,7 +1202,7 @@ input[type="file"]:focus + label {
 
 .footer {
   background-image: url(../images/background/image-4.jpg);
-  padding: 100px 15px 70px ;
+  padding: 100px 0px 70px ;
   width: 100%;
   height: 100%;
   background-position: right top;
@@ -1212,20 +1212,23 @@ input[type="file"]:focus + label {
   color:rgb(167, 167, 167)
 }
 .top-footer {
-  width: 77%;
+  width: 100%;
   margin: auto;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
 }
 .top-footer .info-box{
   flex: 0 0 100%;
     max-width: 100%;
+    padding: 0 15px;
+    margin-bottom: 50px;
 }
 .top-footer .nav-box{
   flex: 0 0 100%;
   max-width: 100%;
+  padding: 0 15px;
+  margin-bottom: 50px;
 }
 .top-footer .nav-box.last{
 order: 12;
@@ -1524,18 +1527,18 @@ order: 12;
    footer  
    =====================*/
    .top-footer{
-    width: 100%;
-    gap:30px;
+    width: 77%;
    }
    .top-footer .info-box{
     flex: 0 0 50%;
     max-width: 50%;
     order: 4;
    }
-   .top-footer .info-box{
+   .top-footer .nav-box{
     flex: 0 0 25%;
     max-width: 25%;
    }
+
 }
 
 /*** 
