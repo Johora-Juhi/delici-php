@@ -517,9 +517,10 @@ include_once('./includes/connect.php');
                 </div>
             </div>
         </div>
-
     </section>
-
+ <!-- =============================================
+ Footer section  
+=====================================================-->
     <div class="footer">
         <div class="image-layer"></div>
         <div class="top-footer">
