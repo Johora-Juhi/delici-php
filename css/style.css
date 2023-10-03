@@ -1205,6 +1205,7 @@ input[type="file"]:focus + label {
 .footer {
   padding: 100px 0px 70px ;
   position: relative;
+  font-family: "DM Sans", sans-serif  ;
 }
 .footer .image-layer{
   position: absolute;
@@ -1219,6 +1220,7 @@ input[type="file"]:focus + label {
   opacity: 0.4;
 }
 .top-footer {
+  position: relative;
   width: 100%;
   margin: auto;
   text-align: center;
@@ -1233,6 +1235,49 @@ input[type="file"]:focus + label {
     max-width: 100%;
     padding: 0 15px;
     margin-bottom: 50px;
+}
+.top-footer .info-box .inner{
+  position: relative;
+    margin: 0 auto;
+    padding: 50px 30px;
+    opacity: 1;
+    background: rgb(14, 13, 12) url(../images/background/pattern-4.png) center top repeat;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.top-footer .info-box .inner .logo{
+  margin-bottom: 40px;
+}
+.top-footer .info-box .inner .info ul li{
+  line-height: 1.5em;
+    margin-bottom: 5px;
+}
+.top-footer .info-box .inner .info ul li a:hover,.top-footer .info-box .inner .info ul li a:focus{
+  color: rgb(228, 197, 144)!important;
+}
+.top-footer .info-box .inner:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: url(../images/background/pattern-9.svg) center repeat;
+}
+.top-footer .info-box .inner:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: url(../images/background/pattern-9.svg) center repeat;
+}
+.top-footer .separator{
+  position: relative;
+  
 }
 .top-footer .nav-box{
   flex: 0 0 100%;
@@ -1579,6 +1624,9 @@ order: 12;
     flex: 0 0 50%;
     max-width: 50%;
     order: 4;
+   }
+   .top-footer .info-box .inner {
+    padding: 100px 30px 90px;
    }
    .top-footer .nav-box{
     flex: 0 0 25%;

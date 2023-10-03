@@ -526,7 +526,20 @@ include_once('./includes/connect.php');
         </div>
         <div class="top-footer">
             <div class="info-box">
-hellu
+                <div class="inner">
+                <div class="logo"><a href="index.php" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>               
+            <div class="info">
+                <ul>
+                    <li>Restaurant St, Delicious City, London 9578, UK</li>
+                    <li><a href="mailto:booking@domainname.com">booking@domainname.com</a></li>
+                    <li><a href="tel:+88-123-123456">Booking Request : +88-123-123456</a></li>
+                    <li>Open : 09:00 am - 01:00 pm</li>
+                </ul>
+            </div>
+            <div class="separator">
+                <span></span><span></span><span></span>
+            </div>
+            </div>
             </div>
             <div class="nav-box">
                 <ul class="nav-container">
