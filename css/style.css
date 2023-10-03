@@ -728,7 +728,7 @@
 
 .story-section .image-col .round-stamp:before,
 .banner-section .book-btn:before,
-.main-footer .info-col .separator span,
+.top-footer .info-box .separator span,
 .intro-section .separator span,
 .testimonials-section .separator span,
 .menu-tabs .buttons .tab-buttons .tab-btn:after,
@@ -1282,6 +1282,29 @@ input[type="file"]:focus + label {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+.heading-three{
+  font-size: 20px;
+  line-height: 1.20em;
+    color: white;
+    font-family: "Forum", cursive;
+}
+.text{
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.text span{
+  color: white;
+  font-family: "Forum", cursive;
+}
+.subscribe-form{
+  margin-top: 30px;
+  width: 100%;
+}
+.subscribe-form .input-group{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+}
 .top-footer .nav-box {
   flex: 0 0 100%;
   max-width: 100%;
@@ -1453,6 +1476,12 @@ input[type="file"]:focus + label {
   .top-footer .nav-box {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+  .heading-three{
+    font-size: 26px;
+  }
+  .subscribe-form .input-group button{
+    width: 180px;
   }
 }
 
@@ -1634,6 +1663,9 @@ input[type="file"]:focus + label {
   .top-footer .nav-box {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+  .heading-three{
+    font-size: 35px;
   }
 }
 

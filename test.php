@@ -527,19 +527,40 @@ include_once('./includes/connect.php');
         <div class="top-footer">
             <div class="info-box">
                 <div class="inner">
-                <div class="logo"><a href="index.php" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>               
-            <div class="info">
-                <ul>
-                    <li>Restaurant St, Delicious City, London 9578, UK</li>
-                    <li><a href="mailto:booking@domainname.com">booking@domainname.com</a></li>
-                    <li><a href="tel:+88-123-123456">Booking Request : +88-123-123456</a></li>
-                    <li>Open : 09:00 am - 01:00 pm</li>
-                </ul>
-            </div>
-            <div class="separator">
-                <span></span><span></span><span></span>
-            </div>
-            </div>
+                    <div class="logo"><a href="index.php" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
+                    <div class="info">
+                        <ul>
+                            <li>Restaurant St, Delicious City, London 9578, UK</li>
+                            <li><a href="mailto:booking@domainname.com">booking@domainname.com</a></li>
+                            <li><a href="tel:+88-123-123456">Booking Request : +88-123-123456</a></li>
+                            <li>Open : 09:00 am - 01:00 pm</li>
+                        </ul>
+                    </div>
+                    <div class="separator">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="subscribe">
+                        <p class="heading-three">
+                            Get News & Offers
+                        </p>
+                        <p class="text">Subscribe us &amp; Get <span>25% Off.</span></p>
+                    </div>
+<form action="" class="subscribe-form">
+    <div class="input-group">
+        <div class="input-inner">
+            <input name="email" type="text" class="input-field">
+        </div>
+        <div class="input-inner">
+        <button type="submit" class="form-btn btn-style-one" name="subscribe" id="submit_btn">
+                    <span class="btn-wrap">
+                        <span class="text-one">subscribe</span>
+                        <span class="text-two">subscribe</span>
+                    </span>
+                </button>
+        </div>
+    </div>
+</form>
+                </div>
             </div>
             <div class="nav-box">
                 <ul class="nav-container">
