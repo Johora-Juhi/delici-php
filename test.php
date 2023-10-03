@@ -540,24 +540,25 @@ include_once('./includes/connect.php');
                         <span></span><span></span><span></span>
                     </div>
                     <div class="subscribe">
-                        <p class="heading-three">
+                        <div class="heading-three">
                             Get News & Offers
-                        </p>
-                        <p class="text">Subscribe us &amp; Get <span>25% Off.</span></p>
+                        </div>
+                        <div class="text">Subscribe us &amp; Get <span>25% Off.</span></div>
                     </div>
 <form action="" class="subscribe-form">
     <div class="input-group">
-        <div class="input-inner">
-            <input name="email" type="text" class="input-field">
+        <div class="input-icon">
+        <i class="icon far fa-envelope"></i>
+            <input name="email" type="email" class="input-field" placeholder="Your email" style="padding-left: 45px;">
         </div>
-        <div class="input-inner">
-        <button type="submit" class="form-btn btn-style-one" name="subscribe" id="submit_btn">
+        <!-- <div class="input-inner"> -->
+        <button type="submit" class="btn-style-one" name="subscribe" id="submit_btn">
                     <span class="btn-wrap">
                         <span class="text-one">subscribe</span>
                         <span class="text-two">subscribe</span>
                     </span>
                 </button>
-        </div>
+        <!-- </div> -->
     </div>
 </form>
                 </div>

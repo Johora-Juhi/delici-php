@@ -1303,7 +1303,23 @@ input[type="file"]:focus + label {
 .subscribe-form .input-group{
   display: flex;
   flex-wrap: nowrap;
-  gap: 0;
+  gap: 20px;
+}
+.subscribe-form .input-group .input-icon{
+  position: relative;
+}
+.input-icon i {
+  position: absolute;
+  top: 38%;
+  left: 15px;}
+.subscribe-form .btn-style-one{
+  box-sizing: unset!important;
+}
+.subscribe-form .input-field::placeholder{
+  color: rgb(167, 167, 167);
+}
+.subscribe-form button span{
+  width: 100%;
 }
 .top-footer .nav-box {
   flex: 0 0 100%;
@@ -1480,9 +1496,13 @@ input[type="file"]:focus + label {
   .heading-three{
     font-size: 26px;
   }
-  .subscribe-form .input-group button{
-    width: 180px;
+  .subscribe-form{
+    width: 70%;
   }
+  .subscribe-form .input-group{
+    gap: 0;
+  }
+ 
 }
 
 /* desktop  */
@@ -1667,6 +1687,11 @@ input[type="file"]:focus + label {
   .heading-three{
     font-size: 35px;
   }
+  .subscribe-form{
+    width: 100%;
+    padding: 0 25PX;
+  }
+ 
 }
 
 /*** 
