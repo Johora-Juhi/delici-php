@@ -1205,6 +1205,7 @@ input[type="file"]:focus + label {
 .footer {
   padding: 100px 0px 70px;
   position: relative;
+  text-align: center;
   font-family: "DM Sans", sans-serif;
 }
 .footer .image-layer {
@@ -1228,6 +1229,7 @@ input[type="file"]:focus + label {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 20px;
   color: rgb(167, 167, 167);
 }
 .top-footer .info-box {
@@ -1282,43 +1284,44 @@ input[type="file"]:focus + label {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.heading-three{
+.heading-three {
   font-size: 20px;
-  line-height: 1.20em;
-    color: white;
-    font-family: "Forum", cursive;
-}
-.text{
-  font-size: 14px;
-  line-height: 1.5em;
-}
-.text span{
+  line-height: 1.2em;
   color: white;
   font-family: "Forum", cursive;
 }
-.subscribe-form{
+.text {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.text span {
+  color: white;
+  font-family: "Forum", cursive;
+}
+.subscribe-form {
   margin-top: 30px;
   width: 100%;
 }
-.subscribe-form .input-group{
+.subscribe-form .input-group {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
 }
-.subscribe-form .input-group .input-icon{
+.subscribe-form .input-group .input-icon {
   position: relative;
 }
 .input-icon i {
   position: absolute;
   top: 38%;
-  left: 15px;}
-.subscribe-form .btn-style-one{
-  box-sizing: unset!important;
+  left: 15px;
 }
-.subscribe-form .input-field::placeholder{
+.subscribe-form .btn-style-one {
+  box-sizing: unset !important;
+}
+.subscribe-form .input-field::placeholder {
   color: rgb(167, 167, 167);
 }
-.subscribe-form button span{
+.subscribe-form button span {
   width: 100%;
 }
 .top-footer .nav-box {
@@ -1365,6 +1368,13 @@ input[type="file"]:focus + label {
 .top-footer .nav-box .nav-container li a:focus::after {
   width: 100%;
   left: 0;
+}
+.bottom-footer{
+  position: relative;
+}
+.bottom-footer .copyright{
+  color: rgb(167, 167, 167);
+    line-height: 1.5em;
 }
 /*====================
  end modal part  
@@ -1489,20 +1499,20 @@ input[type="file"]:focus + label {
   /*=====================
    footer  
    =====================*/
+
   .top-footer .nav-box {
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .heading-three{
+  .heading-three {
     font-size: 26px;
   }
-  .subscribe-form{
+  .subscribe-form {
     width: 70%;
   }
-  .subscribe-form .input-group{
+  .subscribe-form .input-group {
     gap: 0;
   }
- 
 }
 
 /* desktop  */
@@ -1684,14 +1694,13 @@ input[type="file"]:focus + label {
     flex: 0 0 25%;
     max-width: 25%;
   }
-  .heading-three{
+  .heading-three {
     font-size: 35px;
   }
-  .subscribe-form{
+  .subscribe-form {
     width: 100%;
-    padding: 0 25PX;
+    padding: 0 25px;
   }
- 
 }
 
 /*** 

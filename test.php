@@ -521,9 +521,7 @@ include_once('./includes/connect.php');
     </section>
 
     <div class="footer">
-        <div class="image-layer">
-
-        </div>
+        <div class="image-layer"></div>
         <div class="top-footer">
             <div class="info-box">
                 <div class="inner">
@@ -545,22 +543,20 @@ include_once('./includes/connect.php');
                         </div>
                         <div class="text">Subscribe us &amp; Get <span>25% Off.</span></div>
                     </div>
-<form action="" class="subscribe-form">
-    <div class="input-group">
-        <div class="input-icon">
-        <i class="icon far fa-envelope"></i>
-            <input name="email" type="email" class="input-field" placeholder="Your email" style="padding-left: 45px;">
-        </div>
-        <!-- <div class="input-inner"> -->
-        <button type="submit" class="btn-style-one" name="subscribe" id="submit_btn">
-                    <span class="btn-wrap">
-                        <span class="text-one">subscribe</span>
-                        <span class="text-two">subscribe</span>
-                    </span>
-                </button>
-        <!-- </div> -->
-    </div>
-</form>
+                    <form action="" class="subscribe-form">
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i class="icon far fa-envelope"></i>
+                                <input name="email" type="email" class="input-field" placeholder="Your email" style="padding-left: 45px;">
+                            </div>
+                            <button type="submit" class="btn-style-one" name="subscribe" id="submit_btn">
+                                <span class="btn-wrap">
+                                    <span class="text-one">subscribe</span>
+                                    <span class="text-two">subscribe</span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="nav-box">
@@ -581,6 +577,9 @@ include_once('./includes/connect.php');
                     <li class="nav-link"><a href="">google maps</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="bottom-footer">
+                <div class="copyright">© 2023 Delici Restaurent. All Rights Reserved  </div>
         </div>
     </div>
 
