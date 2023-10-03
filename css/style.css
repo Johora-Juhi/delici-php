@@ -1203,22 +1203,30 @@ input[type="file"]:focus + label {
    footer  
    =====================*/
 .footer {
-  background-image: url(../images/background/image-4.jpg);
   padding: 100px 0px 70px ;
+  position: relative;
+}
+.footer .image-layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/background/image-4.jpg);
   width: 100%;
   height: 100%;
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.4;
-  color:rgb(167, 167, 167)
 }
 .top-footer {
   width: 100%;
   margin: auto;
   text-align: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  color:rgb(167, 167, 167)
 }
 .top-footer .info-box{
   flex: 0 0 100%;
@@ -1234,6 +1242,42 @@ input[type="file"]:focus + label {
 }
 .top-footer .nav-box.last{
 order: 12;
+}
+.top-footer .nav-box .nav-container li{
+  margin-bottom: 20px;
+}
+.top-footer .nav-box .nav-container li a{
+  color: rgb(167, 167, 167)!important;
+  line-height: 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.30em;
+}
+.top-footer .nav-box .nav-container li a::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  left: 50%;
+  bottom: -5px;
+  border-top: 1px solid rgb(228, 197, 144);
+  border-bottom: 1px solid rgb(228, 197, 144);
+  transition: all ease-in-out 0.2s;
+}
+.top-footer .nav-box .nav-container li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.top-footer .nav-box .nav-container li a:hover {
+  color: rgb(228, 197, 144) !important;
+}
+.top-footer .nav-box .nav-container li a:focus {
+  color: rgb(228, 197, 144) !important;
+}
+.top-footer .nav-box .nav-container li a:focus::after {
+  width: 100%;
+  left: 0;
 }
 /*====================
  end modal part  

@@ -521,6 +521,9 @@ include_once('./includes/connect.php');
     </section>
 
     <div class="footer">
+        <div class="image-layer">
+
+        </div>
         <div class="top-footer">
             <div class="info-box">
 hellu
@@ -536,11 +539,11 @@ hellu
             </div>
             <div class="nav-box last">
                 <ul class="nav-container">
-                    <li class="nav-link"><a href="">Home</a></li>
-                    <li class="nav-link"><a href="">Menus</a></li>
-                    <li class="nav-link"><a href="">About Us</a></li>
-                    <li class="nav-link"><a href="">Our Chefs</a></li>
-                    <li class="nav-link"><a href="">Contact</a></li>
+                    <li class="nav-link"><a href="#">facebook</a></li>
+                    <li class="nav-link"><a href="">instagram</a></li>
+                    <li class="nav-link"><a href="">twitter</a></li>
+                    <li class="nav-link"><a href="">you tube</a></li>
+                    <li class="nav-link"><a href="">google maps</a></li>
                 </ul>
             </div>
         </div>
