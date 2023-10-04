@@ -751,6 +751,9 @@
 .contact-map {
   position: relative;
 }
+.contact-info-container{
+  position: relative;
+}
 .contact-info-container .left-bg{
   display: block;
   position: absolute;
@@ -767,20 +770,18 @@
   font-family: "DM Sans", sans-serif;
   position: relative;
   width:100%;
-  margin: -40px auto 0px;
+  margin: -40px 15px 0px;
+  padding: 70px 0 40px;
   display: flex;
   flex-direction: column;
   gap: 0px;
+  text-align: center;
   z-index: 333;
   background-color: rgb(23, 24, 25);
 }
-.contact-info-box .lunch-time{
+.contact-info-box .lunch-time, .contact-info-box .contact-info, .contact-info-box .dinner-time{
   flex: 1;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .section-heading-four{
   font-family: "Forum", cursive;
@@ -795,6 +796,12 @@ margin-bottom: 20px;
   color: rgb(167, 167, 167);
   line-height: 1.6em;
   font-size: 16px;
+}
+.contact-info .tel{
+  color: rgb(228, 197, 144);
+  line-height: 1.6em;
+  font-size: 16px;
+  margin-top: 10px;
 }
 /*=============================
  admin page Layout
@@ -1688,6 +1695,8 @@ input[type="file"]:focus + label {
   ============================*/
   .contact-info-box{
     width:77%;
+    margin: -40px auto 0px;
+    padding: 80px 0 40px;
   }
   /*==============================
    admin page layout  
