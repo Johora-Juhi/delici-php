@@ -769,12 +769,11 @@
 .contact-info-box{
   font-family: "DM Sans", sans-serif;
   position: relative;
-  /* width:100%; */
   margin: -40px 15px 0px;
   padding: 70px 0 40px;
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 70px;
   text-align: center;
   z-index: 333;
   background-color: rgb(23, 24, 25);
@@ -782,6 +781,7 @@
 .contact-info-box .lunch-time, .contact-info-box .contact-info, .contact-info-box .dinner-time{
   flex: 1;
   width: 100%;
+  position: relative;
 }
 .section-heading-four{
   font-family: "Forum", cursive;
@@ -796,6 +796,30 @@ margin-bottom: 20px;
   color: rgb(167, 167, 167);
   line-height: 1.6em;
   font-size: 16px;
+}
+.contact-info-box .contact-info::after{
+	content: '';
+	    position: absolute;
+	    left: 50%;
+	    top: 100%;
+	    margin-top: 35px;
+	    height: 8px;
+	    width: 8px;
+	    border: 1px solid rgb(228, 197, 144);
+	    -ms-transform: rotate(45deg);
+	    transform: rotate(45deg);
+}
+.contact-info-box .contact-info::before{
+	content: '';
+	    position: absolute;
+	    right: 50%;
+	    top: 0%;
+	    margin-top: -35px;
+	    height: 8px;
+	    width: 8px;
+	    border: 1px solid rgb(228, 197, 144);
+	    -ms-transform: rotate(45deg);
+	    transform: rotate(45deg);
 }
 .contact-info .tel{
   color: rgb(228, 197, 144);
@@ -1527,11 +1551,36 @@ input[type="file"]:focus + label {
   ============================*/
   .contact-info-box{
     flex-direction: row;
-    /* gap: 30px; */
   }
   .section-heading-four{
   font-size: 25px;
   line-height: 30px;
+  }
+  .contact-info-box .contact-info::after{
+    content: "";
+    position: absolute;
+    left: 120%;
+    /* margin-left: 30px; */
+    top: 50%;
+    margin-top: -4px;
+    height: 8px;
+    width: 8px;
+    border: 1px solid rgb(228, 197, 144);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .contact-info-box .contact-info::before{
+    content: "";
+    position: absolute;
+    right: 120%;
+    /* margin-right: 30px; */
+    top: 50%;
+    margin-top: -4px;
+    height: 8px;
+    width: 8px;
+    border: 1px solid rgb(228, 197, 144);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   /*==============================
    admin page layout  
