@@ -175,13 +175,31 @@ include_once('./includes/connect.php');
                 </div>
                 <div class="tel"><a href="tel:+88-123-123456">Booking : +88-123-123456</a></div>
             </div>
-
-        <div class="dinner-time">
-            <div class="section-heading-four">dinner time</div>
-            <div class="text">Monday to Sunday <br>
-            5.30 pm - 11.30 pm</div>
+            <div class="dinner-time">
+                <div class="section-heading-four">dinner time</div>
+                <div class="text">Monday to Sunday <br>
+                    5.30 pm - 11.30 pm</div>
+            </div>
         </div>
-    </div>
+        <div class="message-conainer">
+            <div class="message-box">
+                <div class="section-heading">message us</div>
+                <div class="text">Have a question about the our service? We're here to help, contact us today</div>
+                <form action="" method="post" class="message-form">
+                    <input type="text" name="name" class="input-field" placeholder="Your Name">
+                    <input type="email" name="email" class="input-field" placeholder="Your Email">
+                    <input type="tel" name="phone" class="input-field" placeholder="Phone Number">
+                    <textarea name="message" id="" cols="" rows="3" class="input-field" placeholder="Special Request"></textarea>
+                    <button type="submit" class="theme-btn btn-style-one" name="send-message" id="submit_btn" style="box-sizing: border-box;">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">send your message</span>
+                                        <span class="text-two">send your message</span>
+                                    </span>
+                                </button>
+                </form>
+            </div>
+            <div class="img-box"><img src="./images/resource/restaurant.png" alt=""></div>
+        </div>
     </div>
     <!-- =============================================
  Footer section  

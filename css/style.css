@@ -764,13 +764,13 @@
   display: block;
   position: absolute;
   bottom: 100px;
-  left: 0;
+  right: 0;
 }
 .contact-info-box{
   font-family: "DM Sans", sans-serif;
   position: relative;
   margin: -40px 15px 0px;
-  padding: 70px 0 40px;
+  padding: 70px 0 80px;
   display: flex;
   flex-direction: column;
   gap: 70px;
@@ -792,10 +792,12 @@ font-weight: 500;
 line-height: 1.2em;
 margin-bottom: 20px;
 }
-.contact-info-box .text{
+.contact-info-container .text{
   color: rgb(167, 167, 167);
   line-height: 1.6em;
   font-size: 16px;
+  max-width: 420px;
+  margin: auto;
 }
 .contact-info-box .contact-info::after{
 	content: '';
@@ -847,6 +849,34 @@ margin-bottom: 20px;
 .contact-info .tel a:hover::after, .contact-info .tel a:focus::after{
   width: 100%;
   left: 0px;
+}
+.contact-info-container .message-conainer{
+  text-align: center;
+  position: relative;
+  margin: 0 auto 100px;
+  padding: 20px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-info-container .message-conainer .message-box,.contact-info-container .message-conainer .img-box{
+  flex: 1;
+  width: 100%;
+}
+.contact-info-container .message-conainer .img-box img{
+  width: 100%;
+  object-fit: contain;
+}
+.contact-info-container .message-conainer .message-box .section-heading{
+margin-bottom: 5px;
+}
+.contact-info-container .message-conainer .message-box .text{
+  line-height: 1.85em;
+  margin-bottom: 30px;
+}
+.contact-info-container .message-conainer .message-box .message-form .input-field{
+  margin-bottom: 20px;
 }
 /*=============================
  admin page Layout
@@ -1582,6 +1612,9 @@ input[type="file"]:focus + label {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  .contact-info-container .message-conainer{
+    padding: 60px;
+  }
   /*==============================
    admin page layout  
    ===============================*/
@@ -1766,7 +1799,12 @@ input[type="file"]:focus + label {
   .contact-info-box{
     width:77%;
     margin: -40px auto 0px;
-    padding: 80px 0 40px;
+    padding: 80px 0 80px;
+  }
+  .contact-info-container .message-conainer{
+    flex-direction: row;
+    padding: 60px;
+    width:77%;
   }
   /*==============================
    admin page layout  
