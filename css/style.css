@@ -738,6 +738,18 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+/*** 
+
+====================================================================
+  Contact Page
+====================================================================
+
+***/
+
+.contact-map {
+  position: relative;
+}
 /*=============================
  admin page Layout
  ============================== */
