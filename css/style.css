@@ -769,7 +769,7 @@
 .contact-info-box{
   font-family: "DM Sans", sans-serif;
   position: relative;
-  width:100%;
+  /* width:100%; */
   margin: -40px 15px 0px;
   padding: 70px 0 40px;
   display: flex;
@@ -802,6 +802,27 @@ margin-bottom: 20px;
   line-height: 1.6em;
   font-size: 16px;
   margin-top: 10px;
+}
+.contact-info .tel a{
+  position: relative;
+}
+.contact-info .tel a::after{
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  left: 50%;
+  bottom: -5px;
+  border-top: 1px solid rgb(228, 197, 144);
+  border-bottom: 1px solid rgb(228, 197, 144);
+  transition: all ease-in-out 0.2s;
+}
+.contact-info .tel a:hover, .contact-info .tel a:focus{
+  color:white!important;
+}
+.contact-info .tel a:hover::after, .contact-info .tel a:focus::after{
+  width: 100%;
+  left: 0px;
 }
 /*=============================
  admin page Layout
@@ -1506,7 +1527,7 @@ input[type="file"]:focus + label {
   ============================*/
   .contact-info-box{
     flex-direction: row;
-    gap: 30px;
+    /* gap: 30px; */
   }
   .section-heading-four{
   font-size: 25px;
