@@ -80,10 +80,10 @@ include_once('./includes/connect.php');
             <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
             <nav class="nav-container">
                 <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="#">Menu</a>
+                <a class="nav-link" href="./menu.php">Menu</a>
                 <a class="nav-link" href="#">About Us</a>
                 <a class="nav-link" href="#">Our Chefs</a>
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="./contact.php">Contact</a>
                 </ul>
             </nav>
             <div class="button-container">
@@ -121,10 +121,10 @@ include_once('./includes/connect.php');
 
         <nav class="nav-container">
             <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link" href="./menu.php">Menu</a>
             <a class="nav-link" href="#">About Us</a>
             <a class="nav-link" href="#">Our Chefs</a>
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="./contact.php">Menu</a>
             </ul>
         </nav>
 
@@ -518,7 +518,7 @@ include_once('./includes/connect.php');
             </div>
         </div>
     </section>
- <!-- =============================================
+    <!-- =============================================
  Footer section  
 =====================================================-->
     <div class="footer">
@@ -580,7 +580,7 @@ include_once('./includes/connect.php');
             </div>
         </div>
         <div class="bottom-footer">
-                <div class="copyright">© 2023 Delici Restaurent. All Rights Reserved  </div>
+            <div class="copyright">© 2023 Delici Restaurent. All Rights Reserved </div>
         </div>
     </div>
 
