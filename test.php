@@ -154,13 +154,33 @@ include_once('./includes/connect.php');
         </div>
     </section>
     <!--End Banner Section -->
- <!--Map Section-->
- <div class="contact-map">
+    <!--Map Section-->
+    <div class="contact-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <!-- End Map Section  -->
-   
- <!-- =============================================
+<div class="contact-info-container">
+    <div class="left-bg"><img src="./images/background/bg-25.png" alt="" title=""></div>
+    <div class="right-bg"><img src="./images/background/bg-6.png" alt="" title=""></div>
+    <div class="contact-info-box">
+        <div class="lunch-time">
+            <div class="section-heading-four">lunch time</div>
+            <div class="text">Monday to Sunday <br>
+11.00 am - 2.30pm</div>
+        </div>
+        <div class="contact-info">
+            <div class="section-heading-four">lunch time</div>
+            <div class="text">Monday to Sunday <br>
+11.00 am - 2.30pm</div>
+        </div>
+        <div class="lunch-time">
+            <div class="section-heading-four">lunch time</div>
+            <div class="text">Monday to Sunday <br>
+11.00 am - 2.30pm</div>
+        </div>
+    </div>
+</div>
+    <!-- =============================================
  Footer section  
 =====================================================-->
     <div class="footer">
@@ -222,7 +242,7 @@ include_once('./includes/connect.php');
             </div>
         </div>
         <div class="bottom-footer">
-                <div class="copyright">© 2023 Delici Restaurent. All Rights Reserved  </div>
+            <div class="copyright">© 2023 Delici Restaurent. All Rights Reserved </div>
         </div>
     </div>
 

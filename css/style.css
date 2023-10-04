@@ -643,6 +643,7 @@
 }
 .section-heading-three {
   font-family: "Forum", cursive;
+  text-transform: capitalize;
   font-size: 21px;
   font-weight: 500;
   line-height: 1.2em;
@@ -749,6 +750,51 @@
 
 .contact-map {
   position: relative;
+}
+.contact-info-container .left-bg{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.contact-info-container .right-bg{
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+}
+.contact-info-box{
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+  width:100%;
+  margin: -40px auto 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  z-index: 333;
+  background-color: rgb(23, 24, 25);
+}
+.contact-info-box .lunch-time{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-heading-four{
+  font-family: "Forum", cursive;
+  text-transform: capitalize;
+  color: white;
+font-size: 22px;
+font-weight: 500;
+line-height: 1.2em;
+margin-bottom: 20px;
+}
+.contact-info-box .text{
+  color: rgb(167, 167, 167);
+  line-height: 1.6em;
+  font-size: 16px;
 }
 /*=============================
  admin page Layout
@@ -1448,7 +1494,17 @@ input[type="file"]:focus + label {
   .image-section {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  /* =========================
+  contact page style 
+  ============================*/
+  .contact-info-box{
+    flex-direction: row;
+    gap: 30px;
+  }
+  .section-heading-four{
+  font-size: 25px;
+  line-height: 30px;
+  }
   /*==============================
    admin page layout  
    ===============================*/
@@ -1626,6 +1682,12 @@ input[type="file"]:focus + label {
   }
   .section-heading {
     font-size: 60px;
+  }
+    /* =========================
+  private-events style 
+  ============================*/
+  .contact-info-box{
+    width:77%;
   }
   /*==============================
    admin page layout  
