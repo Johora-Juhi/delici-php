@@ -87,8 +87,7 @@ include_once('./includes/connect.php');
                 </ul>
             </nav>
             <div class="button-container">
-                <a href="" class="nav-button">
-                    <button type="" class="theme-btn btn-style-one">
+                <a href="./reservation.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
                             <span class="text-one">find a table</span>
                             <span class="text-two">find a table</span>
@@ -251,19 +250,19 @@ include_once('./includes/connect.php');
                 <div class="more-link"><a href="">get direction</a></div>
             </div>
             <div class="location-box">
-                <div class="icon-box"><img src="./images/resource/dubai.png" alt=""></div>
+                <div class="icon-box"><img src="./images/resource/dub" alt=""></div>
                 <div class="section-heading-four">dubai</div>
                 <div class="text">520, Delicious City, Revenu Db. <br>
-                +88-123-123456 <br>
-                booking@domainname.com</div>
+                    +88-123-123456 <br>
+                    booking@domainname.com</div>
                 <div class="more-link"><a href="">get direction</a></div>
             </div>
             <div class="location-box">
                 <div class="icon-box"><img src="./images/resource/paris.png" alt=""></div>
                 <div class="section-heading-four">paris</div>
                 <div class="text">589, Delicious Avenue PS. <br>
-                +88-123-123456 <br>
-                booking@domainname.com</div>
+                    +88-123-123456 <br>
+                    booking@domainname.com</div>
                 <div class="more-link"><a href="">get direction</a></div>
             </div>
             <div class="location-box">

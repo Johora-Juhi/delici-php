@@ -87,8 +87,7 @@ include_once('./includes/connect.php');
                 </ul>
             </nav>
             <div class="button-container">
-                <a href="" class="nav-button">
-                    <button type="" class="theme-btn btn-style-one">
+                <a href="./reservation.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
                             <span class="text-one">find a table</span>
                             <span class="text-two">find a table</span>
