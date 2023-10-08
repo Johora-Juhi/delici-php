@@ -8,7 +8,7 @@ include_once('./includes/connect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Delici</title>
+    <title>Reservation - Delici</title>
     <!-- stylesheet  -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/global.css">
@@ -154,53 +154,32 @@ include_once('./includes/connect.php');
         </div>
     </section>
     <!--End Banner Section -->
-    <!--Map Section-->
-    <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <!-- End Map Section  -->
-    <div class="contact-info-container">
-        <div class="left-bg"><img src="./images/background/bg-25.png" alt="" title=""></div>
-        <div class="right-bg"><img src="./images/background/bg-6.png" alt="" title=""></div>
-        <div class="contact-info-box">
-            <div class="lunch-time">
-                <div class="section-heading-four">lunch time</div>
-                <div class="text">Monday to Sunday <br>
-                    11.00 am - 2.30pm</div>
+    <!--wrapper Section-->
+    <div class="inner-page">
+        <div class="left-bg"><img src="images/background/bg-5.png" alt="" title=""></div>
+        <div class="right-bg"><img src="images/background/bg-6.png" alt="" title=""></div>
+        <div class="reservation">
+            <div class="small-heading">reservation</div>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <div class="section-heading">
+                book a table
             </div>
-            <div class="contact-info">
-                <div class="section-heading-four">Contact Info</div>
-                <div class="text">Restaurant St, Delici City, London 9578, UK <br>
-                    Email : <a href="mailto:booking@domainname.com">booking@domainname.com</a>
-                </div>
-                <div class="tel"><a href="tel:+88-123-123456">Booking : +88-123-123456</a></div>
-            </div>
-            <div class="dinner-time">
-                <div class="section-heading-four">dinner time</div>
-                <div class="text">Monday to Sunday <br>
-                    5.30 pm - 11.30 pm</div>
-            </div>
+            <div class="text">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
+            <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
+<div class="book-table-form">
+    <div class="input-group">
+        <div class="input-inner">
+            <input type="text" class="input-field">
         </div>
-        <div class="message-conainer">
-            <div class="message-box">
-                <div class="section-heading">message us</div>
-                <div class="text">Have a question about the our service? We're here to help, contact us today</div>
-                <form action="" method="post" class="message-form">
-                    <input type="text" name="name" class="input-field" placeholder="Your Name">
-                    <input type="email" name="email" class="input-field" placeholder="Your Email">
-                    <input type="tel" name="phone" class="input-field" placeholder="Phone Number">
-                    <textarea name="message" id="" cols="" rows="3" class="input-field" placeholder="Special Request"></textarea>
-                    <button type="submit" class="theme-btn btn-style-one" name="send-message" id="submit_btn" style="box-sizing: border-box;">
-                        <span class="btn-wrap">
-                            <span class="text-one">send your message</span>
-                            <span class="text-two">send your message</span>
-                        </span>
-                    </button>
-                </form>
-            </div>
-            <div class="img-box"><img src="./images/resource/restaurant.png" alt=""></div>
+        <div class="input-inner"></div>
+        <div class="input-inner"></div>
+        <div class="input-inner"></div>
+    </div>
+</div>
         </div>
     </div>
+    <!-- End wrapper Section  -->
+
     <!-- =============================================
  Footer section  
 =====================================================-->

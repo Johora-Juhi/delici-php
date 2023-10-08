@@ -751,22 +751,22 @@
 .contact-map {
   position: relative;
 }
-.contact-info-container{
+.contact-info-container {
   position: relative;
 }
-.contact-info-container .left-bg{
+.contact-info-container .left-bg {
   display: block;
   position: absolute;
   top: 0px;
   left: 0;
 }
-.contact-info-container .right-bg{
+.contact-info-container .right-bg {
   display: block;
   position: absolute;
   bottom: 100px;
   right: 0;
 }
-.contact-info-box{
+.contact-info-box {
   font-family: "DM Sans", sans-serif;
   position: relative;
   margin: -40px 15px 0px;
@@ -778,61 +778,63 @@
   z-index: 333;
   background-color: rgb(23, 24, 25);
 }
-.contact-info-box .lunch-time, .contact-info-box .contact-info, .contact-info-box .dinner-time{
+.contact-info-box .lunch-time,
+.contact-info-box .contact-info,
+.contact-info-box .dinner-time {
   flex: 1;
   width: 100%;
   position: relative;
 }
-.section-heading-four{
+.section-heading-four {
   font-family: "Forum", cursive;
   text-transform: capitalize;
   color: white;
-font-size: 22px;
-font-weight: 500;
-line-height: 1.2em;
-margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-bottom: 20px;
 }
-.contact-info-container .text{
+.contact-info-container .text {
   color: rgb(167, 167, 167);
   line-height: 1.6em;
   font-size: 16px;
   max-width: 420px;
   margin: auto;
 }
-.contact-info-box .contact-info::after{
-	content: '';
-	    position: absolute;
-	    left: 50%;
-	    top: 100%;
-	    margin-top: 35px;
-	    height: 8px;
-	    width: 8px;
-	    border: 1px solid rgb(228, 197, 144);
-	    -ms-transform: rotate(45deg);
-	    transform: rotate(45deg);
+.contact-info-box .contact-info::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-top: 35px;
+  height: 8px;
+  width: 8px;
+  border: 1px solid rgb(228, 197, 144);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-.contact-info-box .contact-info::before{
-	content: '';
-	    position: absolute;
-	    right: 50%;
-	    top: 0%;
-	    margin-top: -35px;
-	    height: 8px;
-	    width: 8px;
-	    border: 1px solid rgb(228, 197, 144);
-	    -ms-transform: rotate(45deg);
-	    transform: rotate(45deg);
+.contact-info-box .contact-info::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 0%;
+  margin-top: -35px;
+  height: 8px;
+  width: 8px;
+  border: 1px solid rgb(228, 197, 144);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-.contact-info .tel{
+.contact-info .tel {
   color: rgb(228, 197, 144);
   line-height: 1.6em;
   font-size: 16px;
   margin-top: 10px;
 }
-.contact-info .tel a{
+.contact-info .tel a {
   position: relative;
 }
-.contact-info .tel a::after{
+.contact-info .tel a::after {
   content: "";
   position: absolute;
   width: 0px;
@@ -843,14 +845,16 @@ margin-bottom: 20px;
   border-bottom: 1px solid rgb(228, 197, 144);
   transition: all ease-in-out 0.2s;
 }
-.contact-info .tel a:hover, .contact-info .tel a:focus{
-  color:white!important;
+.contact-info .tel a:hover,
+.contact-info .tel a:focus {
+  color: white !important;
 }
-.contact-info .tel a:hover::after, .contact-info .tel a:focus::after{
+.contact-info .tel a:hover::after,
+.contact-info .tel a:focus::after {
   width: 100%;
   left: 0px;
 }
-.contact-info-container .message-conainer{
+.contact-info-container .message-conainer {
   text-align: center;
   position: relative;
   margin: 0 auto 100px;
@@ -860,22 +864,27 @@ margin-bottom: 20px;
   flex-direction: column;
   gap: 30px;
 }
-.contact-info-container .message-conainer .message-box,.contact-info-container .message-conainer .img-box{
+.contact-info-container .message-conainer .message-box,
+.contact-info-container .message-conainer .img-box {
   flex: 1;
   width: 100%;
 }
-.contact-info-container .message-conainer .img-box img{
+.contact-info-container .message-conainer .img-box img {
   width: 100%;
   object-fit: contain;
 }
-.contact-info-container .message-conainer .message-box .section-heading{
-margin-bottom: 5px;
+.contact-info-container .message-conainer .message-box .section-heading {
+  margin-bottom: 5px;
 }
-.contact-info-container .message-conainer .message-box .text{
+.contact-info-container .message-conainer .message-box .text {
   line-height: 1.85em;
   margin-bottom: 30px;
 }
-.contact-info-container .message-conainer .message-box .message-form .input-field{
+.contact-info-container
+  .message-conainer
+  .message-box
+  .message-form
+  .input-field {
   margin-bottom: 20px;
 }
 /*=============================
@@ -1339,6 +1348,45 @@ input[type="file"]:focus + label {
   cursor: pointer;
   color: #e4c590;
 }
+/* =========================
+reservation page 
+============================ */
+.inner-page {
+  position: relative;
+  padding: 70px 0;
+  text-align: center;
+}
+.inner-page .left-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.inner-page .right-bg {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+}
+.reservation {
+  position: relative;
+}
+.reservation .section-heading {
+  margin-bottom: 0;
+}
+.reservation .text {
+  color: rgb(167, 167, 167);
+  line-height: 1.85em;
+  font-size: 16px;
+  max-width: 770px;
+  margin: auto auto 15px;
+}
+.reservation .booking-info {
+  margin-bottom: 40px;
+  color: white;
+}
+.reservation .booking-info a {
+  cursor: pointer;
+  color: rgb(228, 197, 144) !important;
+}
 /*=====================
    footer  
    =====================*/
@@ -1509,12 +1557,12 @@ input[type="file"]:focus + label {
   width: 100%;
   left: 0;
 }
-.bottom-footer{
+.bottom-footer {
   position: relative;
 }
-.bottom-footer .copyright{
+.bottom-footer .copyright {
   color: rgb(167, 167, 167);
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 /*====================
  end modal part  
@@ -1580,14 +1628,14 @@ input[type="file"]:focus + label {
   /* =========================
   contact page style 
   ============================*/
-  .contact-info-box{
+  .contact-info-box {
     flex-direction: row;
   }
-  .section-heading-four{
-  font-size: 25px;
-  line-height: 30px;
+  .section-heading-four {
+    font-size: 25px;
+    line-height: 30px;
   }
-  .contact-info-box .contact-info::after{
+  .contact-info-box .contact-info::after {
     content: "";
     position: absolute;
     left: 120%;
@@ -1600,7 +1648,7 @@ input[type="file"]:focus + label {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .contact-info-box .contact-info::before{
+  .contact-info-box .contact-info::before {
     content: "";
     position: absolute;
     right: 120%;
@@ -1613,7 +1661,7 @@ input[type="file"]:focus + label {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .contact-info-container .message-conainer{
+  .contact-info-container .message-conainer {
     padding: 60px;
   }
   /*==============================
@@ -1794,18 +1842,24 @@ input[type="file"]:focus + label {
   .section-heading {
     font-size: 60px;
   }
-    /* =========================
+  /* =========================
   private-events style 
   ============================*/
-  .contact-info-box{
-    width:77%;
+  .contact-info-box {
+    width: 77%;
     margin: -40px auto 0px;
     padding: 80px 0 80px;
   }
-  .contact-info-container .message-conainer{
+  .contact-info-container .message-conainer {
     flex-direction: row;
     padding: 60px;
-    width:77%;
+    width: 77%;
+  }
+  /* =========================
+reservation page 
+============================ */
+  .inner-page {
+    padding: 100px 0;
   }
   /*==============================
    admin page layout  
@@ -1868,6 +1922,7 @@ input[type="file"]:focus + label {
     top: 100px;
     left: 0;
   }
+
   /*=====================
    footer  
    =====================*/
