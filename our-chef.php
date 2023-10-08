@@ -122,7 +122,7 @@ include_once('./includes/connect.php');
             <a class="nav-link" href="#">Home</a>
             <a class="nav-link" href="./menu.php">Menu</a>
             <a class="nav-link" href="#">About Us</a>
-            <a class="nav-link" href="#">Our Chefs</a>
+            <a class="nav-link" href="./our-chef.php">Our Chefs</a>
             <a class="nav-link" href="./contact.php">Menu</a>
             </ul>
         </nav>
@@ -153,7 +153,7 @@ include_once('./includes/connect.php');
         </div>
     </section>
     <!--End Banner Section -->
-    
+
     <!-- =============================================
  Footer section  
 =====================================================-->
