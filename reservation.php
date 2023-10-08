@@ -158,6 +158,7 @@ include_once('./includes/connect.php');
     <div class="inner-page">
         <div class="left-bg"><img src="images/background/bg-5.png" alt="" title=""></div>
         <div class="right-bg"><img src="images/background/bg-6.png" alt="" title=""></div>
+       <!-- reservation section  -->
         <div class="reservation">
             <div class="small-heading">reservation</div>
             <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
@@ -166,7 +167,7 @@ include_once('./includes/connect.php');
             </div>
             <div class="text">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
             <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
-            <div class="book-table-form">
+            <form method="post" class="book-table-form">
                 <div class="input-group">
                     <div class="input-inner">
                         <i class="far fa-user icon"></i>
@@ -206,8 +207,20 @@ include_once('./includes/connect.php');
                         </button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
+
+        <!-- map section  -->
+<div class="map-container">
+    <div class="map-section">
+    <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="contact-us">
+        
+    </div>
+    </div>
+</div>
     </div>
     <!-- End wrapper Section  -->
 

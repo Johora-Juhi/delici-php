@@ -1217,7 +1217,6 @@ input[type="file"]:focus + label {
 .menu-box p {
   margin: 0 !important;
 }
-
 .menu-box .menu-info {
   width: 100%;
   padding-top: 10px;
@@ -1390,6 +1389,9 @@ reservation page
 .reservation .booking-info a {
   cursor: pointer;
   color: rgb(228, 197, 144) !important;
+}
+.map-container{
+  padding: 100px 0;
 }
 /*=====================
    footer  
@@ -1868,6 +1870,19 @@ reservation page
   .reservation{
     width: 77%;
     margin: auto;
+  }
+  .map-container{
+    width: 77%;
+    margin: auto;
+  }
+  .map-section{
+    flex-direction: column;
+  }
+  .contact-map{
+    flex: 8;
+  }
+  .contact-us{
+    flex: 4;
   }
   /*==============================
    admin page layout  
