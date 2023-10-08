@@ -1558,6 +1558,7 @@ input[type="file"]:focus + label {
   }
   .inner-banner .inner h1 {
     font-size: 54px;
+    text-transform: capitalize;
   }
   .button-container .nav-button {
     display: block;

@@ -475,16 +475,36 @@ include_once('./includes/connect.php');
                         <div class="input-inner">
                             <i class="far fa-clock icon"></i>
                             <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
-                                <?php
-                                $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
-                                $result_options = mysqli_query($con, $select_query);
-                                $row_num = mysqli_num_rows($result_options);
-                                while ($menues = mysqli_fetch_assoc($result_options)) {
-                                    $id = $menues['slot_id'];
-                                    $slot = $menues['slot_time'];
-                                    echo "<option value='$id'>$slot</option>";
-                                }
-                                ?>
+                                <!-- <?php
+                                // $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
+                                // $result_options = mysqli_query($con, $select_query);
+                                // $row_num = mysqli_num_rows($result_options);
+                                // while ($menues = mysqli_fetch_assoc($result_options)) {
+                                //     $id = $menues['slot_id'];
+                                //     $slot = $menues['slot_time'];
+                                //     echo "<option value='$id'>$slot</option>";
+                                // }
+                                ?> -->
+                                                        <script>
+    $(document).ready(function() {
+        $('#datepicker').on('change', function() {
+            var selectedDate = $(this).val();
+            console.log('Selected Date: ' + selectedDate);
+
+            // Send the selected date to a PHP script using AJAX
+            $.ajax({
+                type: 'POST',
+                url: 'process.php', // Replace with the actual URL of your PHP script
+                data: { selected_date: selectedDate },
+                success: function(response) {
+                    // Handle the response from the PHP script if needed
+                    console.log('Response from PHP: ' + response);
+                }
+            });
+        });
+    });
+</script>
+<?php include_once('./process.php')?>
                             </select>
                         </div>
                     </div>
@@ -512,7 +532,7 @@ include_once('./includes/connect.php');
                     $selected_date = $_POST['selected_date'];
                     $slot = $_POST['slot'];
                     $message = $_POST['message'];
-                    $insert_reservation = "INSERT INTO `reservation_table`(`username`, `phone`, `person`, `date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot,'$message')";
+                    $insert_reservation = "INSERT INTO `reservation_table`(`username`, `phone`, `person`, `reservation_date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot,'$message')";
                     $result_reservation = mysqli_query($con, $insert_reservation);
                 }
                 ?>
