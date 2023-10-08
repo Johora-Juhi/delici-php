@@ -161,57 +161,56 @@ include_once('./includes/connect.php');
         <!-- reservation section  -->
         <div class="reservation">
             <div class="inner">
-            <div class="small-heading">reservation</div>
-            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
-            <div class="section-heading">
-                book a table
-            </div>
-            <div class="text">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
-            <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
-            <form method="post" class="book-table-form">
-                <div class="input-group">
-                    <div class="input-inner">
-                        <i class="far fa-user icon"></i>
-                        <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
-                            <option value="1">1 Person</option>
-                            <option value="2">2 Person</option>
-                            <option value="3">3 Person</option>
-                            <option value="4">4 Person</option>
-                            <option value="5">5 Person</option>
-                            <option value="6">6 Person</option>
-                            <option value="7">7 Person</option>
-                        </select>
-                    </div>
-                    <div class="input-inner">
-                        <i class="far fa-calendar icon"></i>
-                        <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
-                        <span class="fas fa-angle-down icon arrow-icon"></span>
-                    </div>
-                    <div class="input-inner">
-                        <i class="far fa-clock icon"></i>
-                        <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
-                            <option value="1">1 Person</option>
-                            <option value="2">2 Person</option>
-                            <option value="3">3 Person</option>
-                            <option value="4">4 Person</option>
-                            <option value="5">5 Person</option>
-                            <option value="6">6 Person</option>
-                            <option value="7">7 Person</option>
-                        </select>
-                    </div>
-                    <div class="input-inner">
-                        <button type="submit" class="form-btn btn-style-one" name="book-table" id="submit_btn" style="box-sizing: border-box;">
-                            <span class="btn-wrap">
-                                <span class="text-one">book a table</span>
-                                <span class="text-two">book a table</span>
-                            </span>
-                        </button>
-                    </div>
+                <div class="small-heading">reservation</div>
+                <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+                <div class="section-heading">
+                    book a table
                 </div>
-            </form>
+                <div class="text">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
+                <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
+                <form method="post" class="book-table-form">
+                    <div class="input-group">
+                        <div class="input-inner">
+                            <i class="far fa-user icon"></i>
+                            <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Person</option>
+                                <option value="3">3 Person</option>
+                                <option value="4">4 Person</option>
+                                <option value="5">5 Person</option>
+                                <option value="6">6 Person</option>
+                                <option value="7">7 Person</option>
+                            </select>
+                        </div>
+                        <div class="input-inner">
+                            <i class="far fa-calendar icon"></i>
+                            <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
+                            <span class="fas fa-angle-down icon arrow-icon"></span>
+                        </div>
+                        <div class="input-inner">
+                            <i class="far fa-clock icon"></i>
+                            <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Person</option>
+                                <option value="3">3 Person</option>
+                                <option value="4">4 Person</option>
+                                <option value="5">5 Person</option>
+                                <option value="6">6 Person</option>
+                                <option value="7">7 Person</option>
+                            </select>
+                        </div>
+                        <div class="input-inner">
+                            <button type="submit" class="form-btn btn-style-one" name="book-table" id="submit_btn" style="box-sizing: border-box;">
+                                <span class="btn-wrap">
+                                    <span class="text-one">book a table</span>
+                                    <span class="text-two">book a table</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-
         <!-- map section  -->
         <div class="map-container">
             <div class="map-section">
@@ -240,6 +239,40 @@ include_once('./includes/connect.php');
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="location-container">
+            <div class="location-box">
+                <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>
+                <div class="section-heading-four">new york</div>
+                <div class="text">Restaurant St, Delicious City, NY. <br>
+                    +88-123-123456 <br>
+                    booking@domainname.com</div>
+                <div class="more-link"><a href="">get direction</a></div>
+            </div>
+            <div class="location-box">
+                <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>
+                <div class="section-heading-four">new york</div>
+                <div class="text">Restaurant St, Delicious City, NY. <br>
+                    +88-123-123456 <br>
+                    booking@domainname.com</div>
+                <div class="more-link"><a href="">get direction</a></div>
+            </div>
+            <div class="location-box">
+                <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>
+                <div class="section-heading-four">new york</div>
+                <div class="text">Restaurant St, Delicious City, NY. <br>
+                    +88-123-123456 <br>
+                    booking@domainname.com</div>
+                <div class="more-link"><a href="">get direction</a></div>
+            </div>
+            <div class="location-box">
+                <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>
+                <div class="section-heading-four">new york</div>
+                <div class="text">Restaurant St, Delicious City, NY. <br>
+                    +88-123-123456 <br>
+                    booking@domainname.com</div>
+                <div class="more-link"><a href="">get direction</a></div>
             </div>
         </div>
     </div>

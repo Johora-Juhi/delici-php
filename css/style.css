@@ -1460,7 +1460,55 @@ reservation page
 .contact-info, .lunch-time, .dinner-time{
   margin-bottom: 20px;
 }
+.location-container{
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+.location-box{
+  flex: 1;
+}
+.location-container .icon-box{
+  position: relative;
+  display: block;
+  line-height: 90px;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  margin-bottom: 20px;
+}
+.location-box:hover .icon-box{
+  -webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
 
+.location-box .icon-box img{
+  position: relative;
+  max-height: 127px;
+}
+
+.location-container .text{
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+  line-height: 1.6em;
+}
+.more-link{
+  margin-top: 30px;
+}
+.more-link a{
+  font-size: 12px;
+  color: rgb(228, 197, 144)!important;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  padding-bottom: 4px;
+}
 /*=====================
    footer  
    =====================*/
@@ -1956,6 +2004,12 @@ reservation page
   .contact-us {
     order: 12;
     flex: 4;
+  }
+  .location-container{
+    width: 77%;
+    margin: auto;
+    padding: 0;
+    flex-direction: row;
   }
 
   /*==============================
