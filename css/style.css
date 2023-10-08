@@ -763,7 +763,8 @@
 .contact-info-container .right-bg {
   display: block;
   position: absolute;
-  bottom: 100px;
+  /* bottom: 100px; */
+  top: 50%;
   right: 0;
 }
 .contact-info-box {
@@ -1368,7 +1369,8 @@ reservation page
 .inner-page .right-bg {
   position: absolute;
   right: 0;
-  bottom: 100px;
+  /* bottom: 100px; */
+  top:70%
 }
 .reservation {
   padding: 0 15px;
@@ -1463,6 +1465,7 @@ reservation page
   margin-bottom: 20px;
 }
 .location-container {
+  position: relative;
   padding: 0 15px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
