@@ -1371,8 +1371,11 @@ reservation page
   bottom: 100px;
 }
 .reservation {
-  position: relative;
   padding: 0 15px;
+  position: static;
+}
+.reservation .inner{
+  position: relative;
 }
 .reservation .section-heading {
   margin-bottom: 0;
@@ -1394,10 +1397,12 @@ reservation page
 }
 .map-container {
   padding: 100px 15px;
+  position: relative;
 }
 .map-section {
   display: flex;
   flex-direction: column;
+  gap: 50px;
 }
 .map-section .contact-map{
   min-height: 100%;
@@ -1942,19 +1947,14 @@ reservation page
   }
   .map-section {
     flex-direction: row;
+    gap: 90px;
   }
   .map-section .contact-map {
-    flex: 8;
-    min-height: 100%;
-    position: relative;
-    padding-right: 60px;
+    flex: 7;
+    /* padding-right: 60px; */
   }
-  .map-section .contact-map .inner{
-    height: 100%;
-    position: relative;
-  }
-  .map-section .contact-map .inner if
   .contact-us {
+    order: 12;
     flex: 4;
   }
 
