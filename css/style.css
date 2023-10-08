@@ -1118,7 +1118,7 @@ input[type="file"]:focus + label {
 .form-btn span {
   text-align: center;
   width: 100%;
-  margin: auto!important
+  margin: auto !important;
 }
 /* input with icon  */
 .input-inner i {
@@ -1358,6 +1358,7 @@ reservation page
   text-align: center;
   color: white;
   text-align: center;
+  font-family: "DM Sans", sans-serif;
 }
 .inner-page .left-bg {
   position: absolute;
@@ -1371,6 +1372,7 @@ reservation page
 }
 .reservation {
   position: relative;
+  padding: 0 15px;
 }
 .reservation .section-heading {
   margin-bottom: 0;
@@ -1390,9 +1392,70 @@ reservation page
   cursor: pointer;
   color: rgb(228, 197, 144) !important;
 }
-.map-container{
-  padding: 100px 0;
+.map-container {
+  padding: 100px 15px;
 }
+.map-section {
+  display: flex;
+  flex-direction: column;
+}
+.map-section .contact-map{
+  min-height: 100%;
+  position: relative;
+}
+.contact-us {
+  position: relative;
+  padding: 0 0;
+  text-align: center;
+  background: url(../images/background/pattern-2.png) left top repeat;
+  background-color: rgb(14, 13, 12);
+}
+.map-section .contact-us .inner {
+  position: relative;
+  padding: 75px 20px 55px;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-height: 100%;
+  border: 1px solid rgb(228, 197, 144);
+}
+.map-section .contact-us .inner:before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 12px;
+  right: -14px;
+  bottom: 12px;
+  border: 1px solid rgb(228, 197, 144);
+}
+.contact-us .section-heading{
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.heading {
+  font-weight: 700;
+  font-family: "Forum", cursive;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+.contact-us .text {
+  color: rgb(167, 167, 167);
+  font-size: 16px;
+  line-height: 24px;
+}
+.contact-us a{
+  cursor: pointer;
+}
+.contact-us .text a:hover {
+  color: rgb(228, 197, 144)!important;
+}
+.contact-us .separator{
+  margin-bottom: 20px;
+}
+.contact-info, .lunch-time, .dinner-time{
+  margin-bottom: 20px;
+}
+
 /*=====================
    footer  
    =====================*/
@@ -1867,23 +1930,34 @@ reservation page
   .inner-page {
     padding: 100px 0;
   }
-  .reservation{
+  .reservation {
     width: 77%;
     margin: auto;
+    padding: 0px;
   }
-  .map-container{
+  .map-container {
     width: 77%;
     margin: auto;
+    padding: 100px 0;
   }
-  .map-section{
-    flex-direction: column;
+  .map-section {
+    flex-direction: row;
   }
-  .contact-map{
+  .map-section .contact-map {
     flex: 8;
+    min-height: 100%;
+    position: relative;
+    padding-right: 60px;
   }
-  .contact-us{
+  .map-section .contact-map .inner{
+    height: 100%;
+    position: relative;
+  }
+  .map-section .contact-map .inner if
+  .contact-us {
     flex: 4;
   }
+
   /*==============================
    admin page layout  
    ===============================*/

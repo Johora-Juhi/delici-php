@@ -214,10 +214,29 @@ include_once('./includes/connect.php');
 <div class="map-container">
     <div class="map-section">
     <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="contact-us">
-        
+        <div class="inner">
+            <div class="section-heading">new york</div>
+            <div class="contact-info">
+                <div class="heading">Contact us</div>
+                <div class="text">Restaurant St, Delici City, <br> London 9578, UK <br>
+                Call :  <a href="tel:+88-123-123456">+88-123-123456</a> <br>  Email : <a href="mailto:booking@domainname.com">booking@domainname.com</a> 
+                </div>
+            </div>
+            <div class="separator"><span></span></div>
+            <div class="lunch-time">
+                <div class="heading">lunch time</div>
+                <div class="text">Monday to Sunday <br>
+                    11.00 am - 2.30pm</div>
+            </div>
+            <div class="dinner-time">
+                <div class="heading">dinner time</div>
+                <div class="text">Monday to Sunday <br>
+                    5.30 pm - 11.30 pm</div>
+            </div>
+        </div>
     </div>
     </div>
 </div>
