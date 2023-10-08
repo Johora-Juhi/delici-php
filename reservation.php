@@ -251,25 +251,25 @@ include_once('./includes/connect.php');
                 <div class="more-link"><a href="">get direction</a></div>
             </div>
             <div class="location-box">
-                <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>
-                <div class="section-heading-four">new york</div>
-                <div class="text">Restaurant St, Delicious City, NY. <br>
-                    +88-123-123456 <br>
-                    booking@domainname.com</div>
+                <div class="icon-box"><img src="./images/resource/dubai.png" alt=""></div>
+                <div class="section-heading-four">dubai</div>
+                <div class="text">520, Delicious City, Revenu Db. <br>
+                +88-123-123456 <br>
+                booking@domainname.com</div>
                 <div class="more-link"><a href="">get direction</a></div>
             </div>
             <div class="location-box">
-                <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>
-                <div class="section-heading-four">new york</div>
-                <div class="text">Restaurant St, Delicious City, NY. <br>
-                    +88-123-123456 <br>
-                    booking@domainname.com</div>
+                <div class="icon-box"><img src="./images/resource/paris.png" alt=""></div>
+                <div class="section-heading-four">paris</div>
+                <div class="text">589, Delicious Avenue PS. <br>
+                +88-123-123456 <br>
+                booking@domainname.com</div>
                 <div class="more-link"><a href="">get direction</a></div>
             </div>
             <div class="location-box">
-                <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>
-                <div class="section-heading-four">new york</div>
-                <div class="text">Restaurant St, Delicious City, NY. <br>
+                <div class="icon-box"><img src="./images/resource/toronto.png" alt=""></div>
+                <div class="section-heading-four">toronto</div>
+                <div class="text">Restaurant St, Delicious City, CA. <br>
                     +88-123-123456 <br>
                     booking@domainname.com</div>
                 <div class="more-link"><a href="">get direction</a></div>
