@@ -166,16 +166,47 @@ include_once('./includes/connect.php');
             </div>
             <div class="text">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
             <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
-<div class="book-table-form">
-    <div class="input-group">
-        <div class="input-inner">
-            <input type="text" class="input-field">
-        </div>
-        <div class="input-inner"></div>
-        <div class="input-inner"></div>
-        <div class="input-inner"></div>
-    </div>
-</div>
+            <div class="book-table-form">
+                <div class="input-group">
+                    <div class="input-inner">
+                        <i class="far fa-user icon"></i>
+                        <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Person</option>
+                            <option value="3">3 Person</option>
+                            <option value="4">4 Person</option>
+                            <option value="5">5 Person</option>
+                            <option value="6">6 Person</option>
+                            <option value="7">7 Person</option>
+                        </select>
+                    </div>
+                    <div class="input-inner">
+                        <i class="far fa-calendar icon"></i>
+                        <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
+                        <span class="fas fa-angle-down icon arrow-icon"></span>
+                    </div>
+                    <div class="input-inner">
+                        <i class="far fa-clock icon"></i>
+                        <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Person</option>
+                            <option value="3">3 Person</option>
+                            <option value="4">4 Person</option>
+                            <option value="5">5 Person</option>
+                            <option value="6">6 Person</option>
+                            <option value="7">7 Person</option>
+                        </select>
+                    </div>
+                    <div class="input-inner">
+                        <button type="submit" class="form-btn btn-style-one" name="book-table" id="submit_btn" style="box-sizing: border-box;">
+                            <span class="btn-wrap">
+                                <span class="text-one">book a table</span>
+                                <span class="text-two">book a table</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End wrapper Section  -->

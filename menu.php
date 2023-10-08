@@ -415,31 +415,34 @@ include_once('./includes/connect.php');
                         <div class="input-inner">
                             <i class="far fa-calendar icon"></i>
                             <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
-                            <span class="fas fa-angle-down icon"></span>
+                            <span class="fas fa-angle-down icon arrow-icon"></span>
+
                         </div>
                         <script>
-    $(document).ready(function() {
-        $('#datepicker').on('change', function() {
-            var selectedDate = $(this).val();
-            console.log('Selected Date: ' + selectedDate);
+                            $(document).ready(function() {
+                                $('#datepicker').on('change', function() {
+                                    var selectedDate = $(this).val();
+                                    console.log('Selected Date: ' + selectedDate);
 
-            // Send the selected date to a PHP script using AJAX
-            $.ajax({
-                type: 'POST',
-                url: 'process.php', // Replace with the actual URL of your PHP script
-                data: { selected_date: selectedDate },
-                success: function(response) {
-                    // Handle the response from the PHP script if needed
-                    console.log('Response from PHP: ' + response);
-                }
-            });
-          <?php
-            $update_query = "UPDATE `slots` SET is_available = 1 where is_available = 0";
-            $result_update = mysqli_query($con, $update_query);
-            ?>
-        });
-    });
-</script>
+                                    // Send the selected date to a PHP script using AJAX
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: 'process.php', // Replace with the actual URL of your PHP script
+                                        data: {
+                                            selected_date: selectedDate
+                                        },
+                                        success: function(response) {
+                                            // Handle the response from the PHP script if needed
+                                            console.log('Response from PHP: ' + response);
+                                        }
+                                    });
+                                    <?php
+                                    $update_query = "UPDATE `slots` SET is_available = 1 where is_available = 0";
+                                    $result_update = mysqli_query($con, $update_query);
+                                    ?>
+                                });
+                            });
+                        </script>
 
                         <script>
                             $(document).ready(function() {
@@ -449,23 +452,23 @@ include_once('./includes/connect.php');
 
                                     // document.cookie = "selectedDate=" + selectedDate;
 
-                                     <?php
-                                        // if (isset($_COOKIE['selectedDate'])) {
-                                        //     $selected_date = $_COOKIE['selectedDate'];
-                                        //     echo "Received input value: " . $selected_date;
-                                        // }
-                                        if (isset($_POST['selected_date'])) {
-                                            $selected_date = $_POST['selected_date'];
-                                            echo $selected_date;
-                                            $update_query = "UPDATE `slots` SET is_available= 1 where is_available= 0";
-                                            $result_update = mysqli_query($con, $update_query);
-                                            $select_reservation = "SELECT * FROM `reservation_table` where `date`= $selected_date ";
+                                    <?php
+                                    // if (isset($_COOKIE['selectedDate'])) {
+                                    //     $selected_date = $_COOKIE['selectedDate'];
+                                    //     echo "Received input value: " . $selected_date;
+                                    // }
+                                    if (isset($_POST['selected_date'])) {
+                                        $selected_date = $_POST['selected_date'];
+                                        echo $selected_date;
+                                        $update_query = "UPDATE `slots` SET is_available= 1 where is_available= 0";
+                                        $result_update = mysqli_query($con, $update_query);
+                                        $select_reservation = "SELECT * FROM `reservation_table` where `date`= $selected_date ";
 
-                                            $result = mysqli_query($con, $select_reservation);
-                                            $count = mysqli_num_rows($result);
-                                            echo $count;
-                                        }
-                                        ?>
+                                        $result = mysqli_query($con, $select_reservation);
+                                        $count = mysqli_num_rows($result);
+                                        echo $count;
+                                    }
+                                    ?>
 
                                     // If you want to update a hidden form field with the selected date, you can do this:
                                     // $('#hidden_date_field').val(selectedDate);
@@ -476,35 +479,37 @@ include_once('./includes/connect.php');
                             <i class="far fa-clock icon"></i>
                             <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
                                 <!-- <?php
-                                // $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
-                                // $result_options = mysqli_query($con, $select_query);
-                                // $row_num = mysqli_num_rows($result_options);
-                                // while ($menues = mysqli_fetch_assoc($result_options)) {
-                                //     $id = $menues['slot_id'];
-                                //     $slot = $menues['slot_time'];
-                                //     echo "<option value='$id'>$slot</option>";
-                                // }
-                                ?> -->
-                                                        <script>
-    $(document).ready(function() {
-        $('#datepicker').on('change', function() {
-            var selectedDate = $(this).val();
-            console.log('Selected Date: ' + selectedDate);
+                                        // $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
+                                        // $result_options = mysqli_query($con, $select_query);
+                                        // $row_num = mysqli_num_rows($result_options);
+                                        // while ($menues = mysqli_fetch_assoc($result_options)) {
+                                        //     $id = $menues['slot_id'];
+                                        //     $slot = $menues['slot_time'];
+                                        //     echo "<option value='$id'>$slot</option>";
+                                        // }
+                                        ?> -->
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#datepicker').on('change', function() {
+                                            var selectedDate = $(this).val();
+                                            console.log('Selected Date: ' + selectedDate);
 
-            // Send the selected date to a PHP script using AJAX
-            $.ajax({
-                type: 'POST',
-                url: 'process.php', // Replace with the actual URL of your PHP script
-                data: { selected_date: selectedDate },
-                success: function(response) {
-                    // Handle the response from the PHP script if needed
-                    console.log('Response from PHP: ' + response);
-                }
-            });
-        });
-    });
-</script>
-<?php include_once('./process.php')?>
+                                            // Send the selected date to a PHP script using AJAX
+                                            $.ajax({
+                                                type: 'POST',
+                                                url: 'process.php', // Replace with the actual URL of your PHP script
+                                                data: {
+                                                    selected_date: selectedDate
+                                                },
+                                                success: function(response) {
+                                                    // Handle the response from the PHP script if needed
+                                                    console.log('Response from PHP: ' + response);
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script>
+                                <?php include_once('./process.php') ?>
                             </select>
                         </div>
                     </div>

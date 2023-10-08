@@ -1116,7 +1116,9 @@ input[type="file"]:focus + label {
   text-align: center;
 }
 .form-btn span {
+  text-align: center;
   width: 100%;
+  margin: auto!important
 }
 /* input with icon  */
 .input-inner i {
@@ -1131,7 +1133,7 @@ input[type="file"]:focus + label {
   line-height: 30px;
   pointer-events: none;
 }
-.input-inner span {
+.input-inner .arrow-icon {
   position: absolute;
   top: 38%;
   right: 15px;
@@ -1354,6 +1356,8 @@ reservation page
 .inner-page {
   position: relative;
   padding: 70px 0;
+  text-align: center;
+  color: white;
   text-align: center;
 }
 .inner-page .left-bg {
@@ -1860,6 +1864,10 @@ reservation page
 ============================ */
   .inner-page {
     padding: 100px 0;
+  }
+  .reservation{
+    width: 77%;
+    margin: auto;
   }
   /*==============================
    admin page layout  
