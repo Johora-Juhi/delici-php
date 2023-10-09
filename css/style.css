@@ -730,7 +730,7 @@
 .story-section .image-col .round-stamp:before,
 .banner-section .book-btn:before,
 .top-footer .info-box .separator span,
-.intro-section .separator span,
+.quote-section .separator span,
 .testimonials-section .separator span,
 .menu-tabs .buttons .tab-buttons .tab-btn:after,
 .hot-deal .discount-info:before {
@@ -1092,6 +1092,42 @@ reservation page
     letter-spacing: 0.20em;
     margin-top: 5px;
  }
+ .quote-section{
+  padding: 100px 0;
+  position: relative;
+ }
+ .quote-section .image-layer{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.80;
+ }
+ .quote-box{
+  position: relative;
+  padding: 0 15px;
+  text-align: center;
+ }
+.quote-box .side-heading{
+  margin: 0px 0px 30px 0px;
+  background: none;
+  line-height: 33.6px;
+  font-family: "Forum", cursive;
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+}
+.quote-box .separator{
+  margin: 20px 0;
+}
+.quote-box .chef{
+  letter-spacing: 0.4em;
+}
 /*=============================
  admin page Layout
  ============================== */
@@ -1836,7 +1872,14 @@ input[type="file"]:focus + label {
   .location-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
+/* our cafe page  */
+.quote-box .side-heading{
+  font-size: 40px;
+  line-height: 48px;
+}
+.quote-box .separator{
+  margin: 50px 0 40px;
+}
   /*==============================
    admin page layout  
    ===============================*/
@@ -2106,6 +2149,19 @@ reservation page
  .img-col img{
   width: auto;
  }
+ .quote-section{
+  padding: 200px 0;
+ }
+.quote-box{
+  width: 58%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+.quote-box .side-heading{
+  font-size: 50px;
+  line-height: 60px;
+}
   /*==============================
    admin page layout  
    ===============================*/
