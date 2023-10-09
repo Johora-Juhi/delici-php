@@ -1033,6 +1033,8 @@ reservation page
  =============================*/
  .chef-container{
   position: relative;
+  padding: 100px 15px;
+  background-color: rgb(14, 13, 12);
  }
 
  .chef-box{
@@ -2033,6 +2035,9 @@ reservation page
     grid-template-columns: repeat(4, 1fr);
   }
 /* our chef page  */
+.chef-container{
+  padding: 100px 0;
+}
 .chef-box{
   width: 77%;
   margin: auto;
