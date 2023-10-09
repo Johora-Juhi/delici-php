@@ -160,7 +160,12 @@ include_once('./includes/connect.php');
 <div class="chef-box">
     <div class="img-col"><img src="./images/resource/mainchef.jpg" alt=""></div>
     <div class="award-section">
-        <div class="subtitle"></div>
+        <div class="subtitle">35 YEAR OF EXPERIENCE</div>
+        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+        <div class="section-heading">Award Winning Chef</div>
+        <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type.</div>
+        <div class="signature"><img src="./images/resource/signature-2.png" alt=""></div>
+        <div class="chef">HENRY - EXCUTIVE CHEF</div>
     </div>
 </div>
 </div>

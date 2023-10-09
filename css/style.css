@@ -1035,12 +1035,49 @@ reservation page
   position: relative;
   padding: 100px 15px;
   background-color: rgb(14, 13, 12);
+  color: white;
+  font-family: "DM Sans", sans-serif;
  }
-
  .chef-box{
   display: grid;
   grid-template-columns: repeat(1,1fr);
-  place-items: center;
+  gap: 80px;
+  align-items: center;
+ }
+ .img-col{
+  text-align: start;
+ }
+ .img-col img{
+  width: 100%;
+  object-fit: contain;
+ }
+ .award-section .subtitle{
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  line-height: 1em;
+  margin-bottom: 10px;
+ }
+ .award-section .section-heading{
+  margin: 0px;
+ }
+ .award-section .text{
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 1.85em;
+  color: rgb(167, 167, 167);
+  margin-bottom: 40px;
+ }
+ .chef{
+  text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(228, 197, 144);
+    font-size: 12px;
+    letter-spacing: 0.20em;
+    margin-top: 5px;
  }
 /*=============================
  admin page Layout
@@ -2042,6 +2079,7 @@ reservation page
   width: 77%;
   margin: auto;
   grid-template-columns: repeat(2,1fr);
+  gap: 30px;
 }
 .chef-container .right-bg{
   display: block;
@@ -2049,7 +2087,27 @@ reservation page
   right: 0;
   bottom: 0;
  }
- 
+ .award-section .text{
+  padding-right: 120px;
+ }
+ .img-col{
+  position: relative;
+ }
+ .img-col::before{
+  content: '';
+  position: absolute;
+  left: -20px;
+  /* margin-left: -70px; */
+  width: 140px;
+  top: 250px;
+  bottom: 0;
+  transition: all 500ms ease;
+  background: url(../images/background/pattern-8.svg) center repeat;
+}
+ }
+ .img-col img{
+  width: auto;
+ }
   /*==============================
    admin page layout  
    ===============================*/
