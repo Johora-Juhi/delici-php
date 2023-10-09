@@ -169,6 +169,7 @@ include_once('./includes/connect.php');
             </div>
         </div>
     </div>
+    <!-- quote section  -->
     <div class="quote-section">
         <div class="image-layer" style="background-image: url(images/background/image-12.jpg);"></div>
         <div class="quote-box">
@@ -178,6 +179,35 @@ include_once('./includes/connect.php');
             </div>
             <div class="chef">HENRY - EXCUTIVE CHEF</div>
         </div>
+    </div>
+    <!-- meet our chef   -->
+    <div class="meet-chef-container">
+        <div class="left-bg"><img src="./images/background/bg-27.png" alt="" title=""></div>
+        <div class="small-heading">EXPERIENCED TEAM</div>
+        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+        <div class="section-heading">Meet Our Chef</div>
+        <div class="team-container">
+            <div class="team-block">
+                <div class="image">
+                    <img src="images/resource/team-2.jpg" alt="">
+                    <div class="overlay-box">
+                        <div class="overlay-inner">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="https://www.facebook.com/" class="fab fa-facebook-f"></a></li>
+                                <li><a href="https://www.twitter.com/" class="fab fa-twitter"></a></li>
+                                <li><a href="https://dribbble.com/" class="fab fa-dribbble"></a></li>
+                                <li><a href="https://www.linkedin.com/" class="fab fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h3><a href="menu-list.html">Steave Den</a></h3>
+                <div class="designation">Master chef</div>
+                <div class="text desc">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer section  -->

@@ -1128,6 +1128,98 @@ reservation page
 .quote-box .chef{
   letter-spacing: 0.4em;
 }
+.meet-chef-container{
+  position: relative;
+  text-align: center;
+  padding: 70px 0 30px 0;
+}
+.team-container{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 40px;
+  padding: 0 15px;
+}
+.team-block{
+  position: relative;
+  display: block;
+}
+.team-block .image{
+  position: relative;
+  display: block;
+}
+.team-block .image img{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.team-block .overlay-box{
+  position:absolute;
+  content:'';
+  left:0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  transition: all 900ms ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  transform: scale(0, 1);
+  transform-origin: right center;
+  background-position:center center;
+}
+
+.team-block .overlay-box:before{
+  position:absolute;
+  content:'';
+  left:0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  opacity:0.40;
+  background-color:rgb(228, 197, 144);
+}
+
+.team-block .overlay-box .overlay-inner{
+  position:relative;
+  text-align:center;
+}
+
+.team-block:hover .overlay-box{
+  transform: scale(1, 1);
+  transform-origin: left center;
+}
+
+.team-block .social-box{
+  position:relative;
+}
+
+.team-block .social-box li{
+  position:relative;
+  margin:0px 1px;
+  display:inline-block;
+  font-family: 'Font Awesome 6 Pro';
+}
+
+.team-block .social-box li a{
+  position:relative;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+  display:inline-block;
+  color:var(--white-color);
+  background-color:var(--black-color)
+}
+
+.team-block .social-box li a:hover{
+  background: var(--main-color);
+  color: var(--color-five);
+}
 /*=============================
  admin page Layout
  ============================== */
@@ -1880,6 +1972,10 @@ input[type="file"]:focus + label {
 .quote-box .separator{
   margin: 50px 0 40px;
 }
+.team-container{
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+}
   /*==============================
    admin page layout  
    ===============================*/
@@ -2161,6 +2257,22 @@ reservation page
 .quote-box .side-heading{
   font-size: 50px;
   line-height: 60px;
+}
+.meet-chef-container{
+  padding: 100px 0 60px 0;
+}
+.meet-chef-container .left-bg{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.team-container{
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
+  width: 77%;
+  padding: 0;
+  margin: auto;
 }
   /*==============================
    admin page layout  
