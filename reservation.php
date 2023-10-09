@@ -240,6 +240,7 @@ include_once('./includes/connect.php');
                 </div>
             </div>
         </div>
+        <!-- location section  -->
         <div class="location-container">
             <div class="location-box">
                 <div class="icon-box"><img src="./images/resource/ny.png" alt=""></div>

@@ -154,9 +154,17 @@ include_once('./includes/connect.php');
     </section>
     <!--End Banner Section -->
 
-    <!-- =============================================
- Footer section  
-=====================================================-->
+    <!-- Award Winiing Chef  -->
+<div class="chef-container">
+<div class="right-bg"><img src="images/background/bg-26.png" alt="" title=""></div>
+<div class="chef-box">
+    <div class="img-col"><img src="./images/resource/mainchef.jpg" alt=""></div>
+    <div class="award-section">
+        <div class="subtitle"></div>
+    </div>
+</div>
+</div>
+    <!-- Footer section  -->
     <div class="footer">
         <div class="image-layer"></div>
         <div class="top-footer">

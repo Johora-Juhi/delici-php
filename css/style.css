@@ -754,19 +754,7 @@
 .contact-info-container {
   position: relative;
 }
-.contact-info-container .left-bg {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0;
-}
-.contact-info-container .right-bg {
-  display: block;
-  position: absolute;
-  /* bottom: 100px; */
-  top: 50%;
-  right: 0;
-}
+
 .contact-info-box {
   font-family: "DM Sans", sans-serif;
   position: relative;
@@ -888,6 +876,170 @@
   .input-field {
   margin-bottom: 20px;
 }
+/* =========================
+reservation page 
+============================ */
+.inner-page {
+  position: relative;
+  padding: 70px 0;
+  text-align: center;
+  color: white;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.reservation {
+  padding: 0 15px;
+  position: static;
+}
+.reservation .inner {
+  position: relative;
+}
+.reservation .section-heading {
+  margin-bottom: 0;
+}
+.reservation .text {
+  color: rgb(167, 167, 167);
+  line-height: 1.85em;
+  font-size: 16px;
+  max-width: 770px;
+  margin: auto auto 15px;
+}
+.reservation .booking-info {
+  margin-bottom: 40px;
+  color: white;
+}
+.reservation .booking-info a {
+  cursor: pointer;
+  color: rgb(228, 197, 144) !important;
+}
+.map-container {
+  padding: 100px 15px;
+  position: relative;
+}
+.map-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.map-section .contact-map {
+  min-height: 100%;
+  position: relative;
+}
+.contact-us {
+  position: relative;
+  padding: 0 0;
+  text-align: center;
+  background: url(../images/background/pattern-2.png) left top repeat;
+  background-color: rgb(14, 13, 12);
+}
+.map-section .contact-us .inner {
+  position: relative;
+  padding: 75px 20px 55px;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-height: 100%;
+  border: 1px solid rgb(228, 197, 144);
+}
+.map-section .contact-us .inner:before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 12px;
+  right: -14px;
+  bottom: 12px;
+  border: 1px solid rgb(228, 197, 144);
+}
+.contact-us .section-heading {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.heading {
+  font-weight: 700;
+  font-family: "Forum", cursive;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+.contact-us .text {
+  color: rgb(167, 167, 167);
+  font-size: 16px;
+  line-height: 24px;
+}
+.contact-us a {
+  cursor: pointer;
+}
+.contact-us .text a:hover {
+  color: rgb(228, 197, 144) !important;
+}
+.contact-us .separator {
+  margin-bottom: 20px;
+}
+.contact-info,
+.lunch-time,
+.dinner-time {
+  margin-bottom: 20px;
+}
+.location-container {
+  position: relative;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 70px;
+}
+.location-container .icon-box {
+  position: relative;
+  display: block;
+  line-height: 90px;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  margin-bottom: 20px;
+}
+.location-box:hover .icon-box {
+  -webkit-transform: scale(-1) rotate(180deg);
+  -moz-transform: scale(-1) rotate(180deg);
+  -ms-transform: scale(-1) rotate(180deg);
+  -o-transform: scale(-1) rotate(180deg);
+  transform: scale(-1) rotate(180deg);
+}
+
+.location-box .icon-box img {
+  position: relative;
+  max-height: 127px;
+}
+
+.location-container .text {
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+  line-height: 1.6em;
+}
+.more-link {
+  margin-top: 30px;
+}
+.more-link a {
+  font-size: 12px;
+  color: rgb(228, 197, 144) !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  padding-bottom: 4px;
+}
+/*============================
+ our chef page  
+ =============================*/
+ .chef-container{
+  position: relative;
+ }
+
+ .chef-box{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  place-items: center;
+ }
 /*=============================
  admin page Layout
  ============================== */
@@ -1350,168 +1502,7 @@ input[type="file"]:focus + label {
   cursor: pointer;
   color: #e4c590;
 }
-/* =========================
-reservation page 
-============================ */
-.inner-page {
-  position: relative;
-  padding: 70px 0;
-  text-align: center;
-  color: white;
-  text-align: center;
-  font-family: "DM Sans", sans-serif;
-}
-.inner-page .left-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.inner-page .right-bg {
-  position: absolute;
-  right: 0;
-  /* bottom: 100px; */
-  top:70%
-}
-.reservation {
-  padding: 0 15px;
-  position: static;
-}
-.reservation .inner {
-  position: relative;
-}
-.reservation .section-heading {
-  margin-bottom: 0;
-}
-.reservation .text {
-  color: rgb(167, 167, 167);
-  line-height: 1.85em;
-  font-size: 16px;
-  max-width: 770px;
-  margin: auto auto 15px;
-}
-.reservation .booking-info {
-  margin-bottom: 40px;
-  color: white;
-}
-.reservation .booking-info a {
-  cursor: pointer;
-  color: rgb(228, 197, 144) !important;
-}
-.map-container {
-  padding: 100px 15px;
-  position: relative;
-}
-.map-section {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-.map-section .contact-map {
-  min-height: 100%;
-  position: relative;
-}
-.contact-us {
-  position: relative;
-  padding: 0 0;
-  text-align: center;
-  background: url(../images/background/pattern-2.png) left top repeat;
-  background-color: rgb(14, 13, 12);
-}
-.map-section .contact-us .inner {
-  position: relative;
-  padding: 75px 20px 55px;
-  margin-left: 15px;
-  margin-right: 15px;
-  min-height: 100%;
-  border: 1px solid rgb(228, 197, 144);
-}
-.map-section .contact-us .inner:before {
-  content: "";
-  position: absolute;
-  left: -14px;
-  top: 12px;
-  right: -14px;
-  bottom: 12px;
-  border: 1px solid rgb(228, 197, 144);
-}
-.contact-us .section-heading {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-.heading {
-  font-weight: 700;
-  font-family: "Forum", cursive;
-  text-transform: capitalize;
-  margin-bottom: 5px;
-  line-height: 24px;
-}
-.contact-us .text {
-  color: rgb(167, 167, 167);
-  font-size: 16px;
-  line-height: 24px;
-}
-.contact-us a {
-  cursor: pointer;
-}
-.contact-us .text a:hover {
-  color: rgb(228, 197, 144) !important;
-}
-.contact-us .separator {
-  margin-bottom: 20px;
-}
-.contact-info,
-.lunch-time,
-.dinner-time {
-  margin-bottom: 20px;
-}
-.location-container {
-  position: relative;
-  padding: 0 15px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 70px;
-}
-.location-container .icon-box {
-  position: relative;
-  display: block;
-  line-height: 90px;
-  transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  margin-bottom: 20px;
-}
-.location-box:hover .icon-box {
-  -webkit-transform: scale(-1) rotate(180deg);
-  -moz-transform: scale(-1) rotate(180deg);
-  -ms-transform: scale(-1) rotate(180deg);
-  -o-transform: scale(-1) rotate(180deg);
-  transform: scale(-1) rotate(180deg);
-}
 
-.location-box .icon-box img {
-  position: relative;
-  max-height: 127px;
-}
-
-.location-container .text {
-  color: rgb(167, 167, 167);
-  font-size: 14px;
-  line-height: 1.6em;
-}
-.more-link {
-  margin-top: 30px;
-}
-.more-link a {
-  font-size: 12px;
-  color: rgb(228, 197, 144) !important;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  line-height: 1.5em;
-  padding-bottom: 4px;
-}
 /*=====================
    footer  
    =====================*/
@@ -1793,6 +1784,7 @@ reservation page
   .location-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   /*==============================
    admin page layout  
    ===============================*/
@@ -1849,9 +1841,6 @@ reservation page
     font-size: 40px;
     line-height: 1.2em;
   }
-  /*=====================
-   footer  
-   =====================*/
   /*=====================
    footer  
    =====================*/
@@ -1979,6 +1968,19 @@ reservation page
     margin: -40px auto 0px;
     padding: 80px 0 80px;
   }
+  .contact-info-container .left-bg {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
+  .contact-info-container .right-bg {
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    /* top: 50%; */
+    right: 0;
+  }
   .contact-info-container .message-conainer {
     flex-direction: row;
     padding: 60px;
@@ -1989,6 +1991,18 @@ reservation page
 ============================ */
   .inner-page {
     padding: 100px 0;
+  }
+  .inner-page .left-bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .inner-page .right-bg {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
   }
   .reservation {
     width: 77%;
@@ -2018,7 +2032,19 @@ reservation page
     padding: 0;
     grid-template-columns: repeat(4, 1fr);
   }
-
+/* our chef page  */
+.chef-box{
+  width: 77%;
+  margin: auto;
+  grid-template-columns: repeat(2,1fr);
+}
+.chef-container .right-bg{
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+ }
+ 
   /*==============================
    admin page layout  
    ===============================*/
@@ -2068,13 +2094,13 @@ reservation page
     width: 0.8px;
     background-color: #383434;
   }
-  .right-bg {
+  .menu-section .right-bg {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
   }
-  .left-bg {
+ .menu-section .left-bg {
     display: block;
     position: absolute;
     top: 100px;
