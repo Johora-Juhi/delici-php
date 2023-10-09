@@ -1129,6 +1129,7 @@ reservation page
   letter-spacing: 0.4em;
 }
 .meet-chef-container{
+  font-family: "DM Sans", sans-serif;
   position: relative;
   text-align: center;
   padding: 70px 0 30px 0;
@@ -1141,12 +1142,15 @@ reservation page
   padding: 0 15px;
 }
 .team-block{
+  text-align: center;
   position: relative;
   display: block;
+  margin-bottom:40px;
 }
 .team-block .image{
   position: relative;
   display: block;
+  margin-bottom: 15px;
 }
 .team-block .image img{
   position: relative;
@@ -1202,7 +1206,6 @@ reservation page
   position:relative;
   margin:0px 1px;
   display:inline-block;
-  font-family: 'Font Awesome 6 Pro';
 }
 
 .team-block .social-box li a{
@@ -1212,13 +1215,35 @@ reservation page
   line-height:40px;
   text-align:center;
   display:inline-block;
-  color:var(--white-color);
-  background-color:var(--black-color)
+  color: white!important;;
+  background-color:black
 }
 
 .team-block .social-box li a:hover{
-  background: var(--main-color);
-  color: var(--color-five);
+  background: rgb(228, 197, 144);
+  color: rgb(14, 13, 11)!important;
+}
+.designation{
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.40em;
+  margin-bottom: 5px;
+  line-height: 29.6px;
+}
+.heading-three a{
+  transition: all 300ms ease;
+}
+.team-block:hover .heading-three a{
+  color: rgb(228, 197, 144)!important;
+}
+.team-block .text{
+  position: relative;
+  font-size: 14px;
+  color: rgb(167, 167, 167);
+  line-height: 1.6em;
 }
 /*=============================
  admin page Layout
@@ -1975,6 +2000,9 @@ input[type="file"]:focus + label {
 .team-container{
   grid-template-columns: repeat(2,1fr);
   gap: 30px;
+}
+.team-block{
+  text-align: start;
 }
   /*==============================
    admin page layout  

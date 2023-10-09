@@ -189,6 +189,25 @@ include_once('./includes/connect.php');
         <div class="team-container">
             <div class="team-block">
                 <div class="image">
+                    <img src="images/resource/team-1.jpg" alt="">
+                    <div class="overlay-box">
+                        <div class="overlay-inner">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="https://www.facebook.com/" class="fab fa-facebook-f"></a></li>
+                                <li><a href="https://www.twitter.com/" class="fab fa-twitter"></a></li>
+                                <li><a href="https://dribbble.com/" class="fab fa-dribbble"></a></li>
+                                <li><a href="https://www.linkedin.com/" class="fab fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="heading-three"><a href="#">Willium Joe</a></div>
+                <div class="designation">Master chef</div>
+                <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</div>
+            </div>
+            <div class="team-block">
+                <div class="image">
                     <img src="images/resource/team-2.jpg" alt="">
                     <div class="overlay-box">
                         <div class="overlay-inner">
@@ -202,9 +221,28 @@ include_once('./includes/connect.php');
                         </div>
                     </div>
                 </div>
-                <h3><a href="menu-list.html">Steave Den</a></h3>
+                <div class="heading-three"><a href="#">Steave Den</a></div>
                 <div class="designation">Master chef</div>
-                <div class="text desc">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</div>
+                <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</div>
+            </div>
+            <div class="team-block">
+                <div class="image">
+                    <img src="images/resource/team-3.jpg" alt="">
+                    <div class="overlay-box">
+                        <div class="overlay-inner">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="https://www.facebook.com/" class="fab fa-facebook-f"></a></li>
+                                <li><a href="https://www.twitter.com/" class="fab fa-twitter"></a></li>
+                                <li><a href="https://dribbble.com/" class="fab fa-dribbble"></a></li>
+                                <li><a href="https://www.linkedin.com/" class="fab fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="heading-three"><a href="#">Lily Sopy</a></div>
+                <div class="designation">Master chef</div>
+                <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</div>
             </div>
         </div>
 
