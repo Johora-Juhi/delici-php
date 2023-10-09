@@ -1033,7 +1033,7 @@ reservation page
  =============================*/
  .chef-container{
   position: relative;
-  padding: 100px 15px;
+  padding: 100px 30px;
   background-color: rgb(14, 13, 12);
   color: white;
   font-family: "DM Sans", sans-serif;
@@ -1045,12 +1045,25 @@ reservation page
   align-items: center;
  }
  .img-col{
-  text-align: start;
- }
+  position: relative;
+  padding-bottom: 20px; }
  .img-col img{
+  position: relative;
   width: 100%;
   object-fit: contain;
  }
+
+ .img-col::before{
+  content: '';
+  position: absolute;
+  left: -20px;
+  /* margin-left: -70px; */
+  width: 140px;
+  top: 250px;
+  bottom: 0;
+  transition: all 500ms ease;
+  background: url(../images/background/pattern-8.svg) center repeat;
+}
  .award-section .subtitle{
   position: relative;
   text-transform: uppercase;
@@ -2089,21 +2102,6 @@ reservation page
  }
  .award-section .text{
   padding-right: 120px;
- }
- .img-col{
-  position: relative;
- }
- .img-col::before{
-  content: '';
-  position: absolute;
-  left: -20px;
-  /* margin-left: -70px; */
-  width: 140px;
-  top: 250px;
-  bottom: 0;
-  transition: all 500ms ease;
-  background: url(../images/background/pattern-8.svg) center repeat;
-}
  }
  .img-col img{
   width: auto;
