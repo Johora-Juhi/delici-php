@@ -175,6 +175,28 @@ include_once('./includes/connect.php');
                     <img src="./images/resource/about-image-2.jpg" alt="">
                 </div>
             </div>
+            <div class="contact-us">
+                <div class="inner">
+                <div class="lunch-time">
+                        <div class="heading">lunch time</div>
+                        <div class="text">Monday to Sunday <br>
+                            11.00 am - 2.30pm</div>
+                    </div>
+                    <div class="dinner-time">
+                        <div class="heading">dinner time</div>
+                        <div class="text">Monday to Sunday <br>
+                            5.30 pm - 11.30 pm</div>
+                    </div>
+                    <div class="separator"><span></span></div>
+                    <div class="contact-info">
+                        <div class="heading">Contact us</div>
+                        <div class="text">Restaurant St, Delici City, <br> London 9578, UK <br>
+                            <a href="tel:+88-123-123456">+88-123-123456</a> <br> <a href="mailto:booking@domainname.com">booking@domainname.com</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </div>
     <!-- quote section  -->

@@ -926,7 +926,7 @@ reservation page
   min-height: 100%;
   position: relative;
 }
-.contact-us {
+.map-section .contact-us {
   position: relative;
   padding: 0 0;
   text-align: center;
@@ -1031,29 +1031,30 @@ reservation page
 /*============================
  our chef page  
  =============================*/
- .chef-container{
+.chef-container {
   position: relative;
   padding: 100px 30px;
   background-color: rgb(14, 13, 12);
   color: white;
   font-family: "DM Sans", sans-serif;
- }
- .chef-box{
+}
+.chef-box {
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 80px;
   align-items: center;
- }
- .img-col{
+}
+.img-col {
   position: relative;
-  padding-bottom: 20px; }
- .img-col img{
+  padding-bottom: 20px;
+}
+.img-col img {
   position: relative;
   width: 100%;
   object-fit: contain;
- }
- .img-col::before{
-  content: '';
+}
+.img-col::before {
+  content: "";
   position: absolute;
   left: -20px;
   /* margin-left: -70px; */
@@ -1063,7 +1064,7 @@ reservation page
   transition: all 500ms ease;
   background: url(../images/background/pattern-8.svg) center repeat;
 }
- .award-section .subtitle{
+.award-section .subtitle {
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
@@ -1072,30 +1073,30 @@ reservation page
   letter-spacing: 0.4em;
   line-height: 1em;
   margin-bottom: 10px;
- }
- .award-section .section-heading{
+}
+.award-section .section-heading {
   margin: 0px;
- }
- .award-section .text{
+}
+.award-section .text {
   padding-top: 15px;
   font-size: 16px;
   line-height: 1.85em;
   color: rgb(167, 167, 167);
   margin-bottom: 40px;
- }
- .chef{
+}
+.chef {
   text-transform: uppercase;
-    font-weight: 700;
-    color: rgb(228, 197, 144);
-    font-size: 12px;
-    letter-spacing: 0.20em;
-    margin-top: 5px;
- }
- .quote-section{
+  font-weight: 700;
+  color: rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  margin-top: 5px;
+}
+.quote-section {
   padding: 100px 0;
   position: relative;
- }
- .quote-section .image-layer{
+}
+.quote-section .image-layer {
   position: absolute;
   left: 0;
   top: 0;
@@ -1105,14 +1106,14 @@ reservation page
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  opacity: 0.80;
- }
- .quote-box{
+  opacity: 0.8;
+}
+.quote-box {
   position: relative;
   padding: 0 15px;
   text-align: center;
- }
-.quote-box .side-heading{
+}
+.quote-box .side-heading {
   margin: 0px 0px 30px 0px;
   background: none;
   line-height: 33.6px;
@@ -1121,131 +1122,131 @@ reservation page
   font-weight: 500;
   color: white;
 }
-.quote-box .separator{
+.quote-box .separator {
   margin: 20px 0;
 }
-.quote-box .chef{
+.quote-box .chef {
   letter-spacing: 0.4em;
 }
-.meet-chef-container{
+.meet-chef-container {
   font-family: "DM Sans", sans-serif;
   position: relative;
   text-align: center;
   padding: 70px 0 30px 0;
 }
-.team-container{
+.team-container {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 40px;
   padding: 0 15px;
 }
-.team-block{
+.team-block {
   text-align: center;
   position: relative;
   display: block;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
-.team-block .image{
+.team-block .image {
   position: relative;
   display: block;
   margin-bottom: 15px;
 }
-.team-block .image img{
+.team-block .image img {
   position: relative;
   display: block;
   width: 100%;
 }
-.team-block .overlay-box{
-  position:absolute;
-  content:'';
-  left:0px;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  
-  display:flex;
-  justify-content:center;
+.team-block .overlay-box {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
+
   transition: all 900ms ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   transform: scale(0, 1);
   transform-origin: right center;
-  background-position:center center;
+  background-position: center center;
 }
-.team-block .overlay-box:before{
-  position:absolute;
-  content:'';
-  left:0px;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  opacity:0.40;
-  background-color:rgb(228, 197, 144);
+.team-block .overlay-box:before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0.4;
+  background-color: rgb(228, 197, 144);
 }
-.team-block .overlay-box .overlay-inner{
-  position:relative;
-  text-align:center;
+.team-block .overlay-box .overlay-inner {
+  position: relative;
+  text-align: center;
 }
-.team-block:hover .overlay-box{
+.team-block:hover .overlay-box {
   transform: scale(1, 1);
   transform-origin: left center;
 }
-.team-block .social-box{
-  position:relative;
+.team-block .social-box {
+  position: relative;
 }
-.team-block .social-box li{
-  position:relative;
-  margin:0px 1px;
-  display:inline-block;
+.team-block .social-box li {
+  position: relative;
+  margin: 0px 1px;
+  display: inline-block;
 }
-.team-block .social-box li a{
-  position:relative;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  text-align:center;
-  display:inline-block;
-  color: white!important;;
-  background-color:black
+.team-block .social-box li a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  color: white !important;
+  background-color: black;
 }
-.team-block .social-box li a:hover{
+.team-block .social-box li a:hover {
   background: rgb(228, 197, 144);
-  color: rgb(14, 13, 11)!important;
+  color: rgb(14, 13, 11) !important;
 }
-.designation{
+.designation {
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
   color: rgb(228, 197, 144);
   font-size: 12px;
-  letter-spacing: 0.40em;
+  letter-spacing: 0.4em;
   margin-bottom: 5px;
   line-height: 29.6px;
 }
-.heading-three a{
+.heading-three a {
   transition: all 300ms ease;
 }
-.team-block:hover .heading-three a{
-  color: rgb(228, 197, 144)!important;
+.team-block:hover .heading-three a {
+  color: rgb(228, 197, 144) !important;
 }
-.team-block .text{
+.team-block .text {
   position: relative;
   font-size: 14px;
   color: rgb(167, 167, 167);
   line-height: 1.6em;
 }
 /* About Us Page  */
-.about-container{
+.about-container {
   font-family: "DM Sans", sans-serif;
   position: relative;
   padding: 70px 15px 20px 15px;
   text-align: center;
   color: white;
 }
-.about-container .side-heading{
+.about-container .side-heading {
   font-family: "Forum", cursive;
   font-size: 20px;
   font-weight: 500;
@@ -1253,28 +1254,28 @@ reservation page
   margin-top: 15px;
   margin-bottom: 50px;
 }
-.about-container .side-heading span{
+.about-container .side-heading span {
   color: rgb(228, 197, 144);
 }
-.about-box{
+.about-box {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 40px;
 }
-.about-box .image{
+.about-box .image {
   position: relative;
   display: block;
 }
 
-.about-box .image img{
+.about-box .image img {
   display: block;
   width: 100%;
 }
-.about-box .content-box{
+.about-box .content-box {
   /* position: relative; */
 }
-.content-box .text{
+.content-box .text {
   text-align: start;
   position: relative;
   font-size: 14px;
@@ -1282,36 +1283,36 @@ reservation page
   margin-bottom: 30px;
 }
 
-.content-box .signature{
+.content-box .signature {
   position: relative;
   text-align: start;
 }
 
-.content-box .author{
+.content-box .author {
   text-align: start;
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
   color: rgb(228, 197, 144);
   font-size: 12px;
-  letter-spacing: 0.20em;
+  letter-spacing: 0.2em;
   margin-top: 5px;
   line-height: 29.6px;
 }
 
-.content-box .video-box{
+.content-box .video-box {
   position: relative;
   margin-top: 100px;
 }
-.content-box .video-box .lightbox-image{
+.content-box .video-box .lightbox-image {
   /* position: relative; */
-} 
-.content-box .video-box img{
+}
+.content-box .video-box img {
   /* position: relative; */
-  opacity: 0.70;
+  opacity: 0.7;
 }
 
-.content-box .video-box .play-btn{
+.content-box .video-box .play-btn {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1326,64 +1327,78 @@ reservation page
   border: 1px solid white;
   border-radius: 50%;
 }
-
-
-
 .content-box .video-box .play-btn .ripple,
 .content-box .video-box .play-btn .ripple:before,
 .content-box .video-box .play-btn .ripple:after {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 82px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 82px;
   height: 82px;
-  border-radius:50%;
-  margin-top:-1px;
-  margin-left:-1px;
-    /* -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
-    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
-    -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
-    -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
-    -webkit-animation: ripple 3s infinite;
-    -moz-animation: ripple 3s infinite;
-    -ms-animation: ripple 3s infinite;
-    -o-animation: ripple 3s infinite;
-    animation: ripple 3s infinite;
+  border-radius: 50%;
+  margin-top: -1px;
+  margin-left: -1px;
+  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  -webkit-animation: ripple 3s infinite;
+  -moz-animation: ripple 3s infinite;
+  -ms-animation: ripple 3s infinite;
+  -o-animation: ripple 3s infinite;
+  animation: ripple 3s infinite;
 }
 
 .content-box .video-box .play-btn .ripple:before {
-    -webkit-animation-delay: .9s;
-    -moz-animation-delay: .9s;
-    -ms-animation-delay: .9s;
-    -o-animation-delay: .9s;
-    animation-delay: .9s;
-    content: "";
-    position: absolute;
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  -ms-animation-delay: 0.9s;
+  -o-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  content: "";
+  position: absolute;
 }
 
-.content-box .video-box .play-btn .ripple:after{
-    -webkit-animation-delay: .6s;
-    -moz-animation-delay: .6s;
-    -ms-animation-delay: .6s;
-    -o-animation-delay: .6s;
-    animation-delay: .6s;
-    content: "";
-    position: absolute;
+.content-box .video-box .play-btn .ripple:after {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  content: "";
+  position: absolute;
 }
 
-.content-box .video-box .play-btn:hover{
-  color: rgb(228, 197, 144)!important;
+.content-box .video-box .play-btn:hover {
+  color: rgb(228, 197, 144) !important;
   border-color: rgb(228, 197, 144);
 }
 @keyframes ripple {
-  70% {box-shadow: 0 0 0 70px rgba(253, 167, 0, 0);}
-  100% {box-shadow: 0 0 0 0 rgba(253, 167, 0, 0);}
+  70% {
+    box-shadow: 0 0 0 70px rgba(253, 167, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(253, 167, 0, 0);
+  }
+}
+
+.about-box .contact-us .inner {
+  position: relative;
+  padding: 60px 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-height: 100%;
+  border: 1px solid rgb(228, 197, 144);
+}
+.about-box .contact-us .inner:before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 12px;
+  right: -14px;
+  bottom: 12px;
+  border: 1px solid rgb(228, 197, 144);
 }
 /*=============================
  admin page Layout
@@ -2129,33 +2144,44 @@ input[type="file"]:focus + label {
   .location-container {
     grid-template-columns: repeat(2, 1fr);
   }
-/* our cafe page  */
-.quote-box .side-heading{
-  font-size: 40px;
-  line-height: 48px;
-}
-.quote-box .separator{
-  margin: 50px 0 40px;
-}
-.team-container{
-  grid-template-columns: repeat(2,1fr);
-  gap: 30px;
-}
-.team-block{
-  text-align: start;
-}
-/* About Us Page  */
-.about-container .side-heading{
-  font-size: 26px;
-  line-height: 31.2px;
-}
-.about-box{
-  grid-template-columns: repeat(2,1fr);
-}
-.about-box .info-col {
-  grid-column: span 2;
-  margin: 0 auto;
-}
+  /* our cafe page  */
+  .quote-box .side-heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .quote-box .separator {
+    margin: 50px 0 40px;
+  }
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .team-block {
+    text-align: start;
+  }
+  /* About Us Page  */
+  .about-container .side-heading {
+    font-size: 26px;
+    line-height: 31.2px;
+  }
+  .about-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-box .contact-us {
+    grid-column: span 2;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .about-box .contact-us .inner {
+    padding: 90px 0 50px 0;
+  }
+  .contact-info .text a{
+    position: relative;
+    transition: all 300ms ease;
+  }
+  .contact-info .text a:hover{
+    color:rgb(228, 197, 144)!important
+  }
   /*==============================
    admin page layout  
    ===============================*/
@@ -2403,86 +2429,89 @@ reservation page
     padding: 0;
     grid-template-columns: repeat(4, 1fr);
   }
-/* our chef page  */
-.chef-container{
-  padding: 100px 0;
-}
-.chef-box{
-  width: 77%;
-  margin: auto;
-  grid-template-columns: repeat(2,1fr);
-  gap: 30px;
-}
-.chef-container .right-bg{
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
- }
- .award-section .text{
-  padding-right: 120px;
- }
- .img-col img{
-  width: auto;
- }
- .quote-section{
-  padding: 200px 0;
- }
-.quote-box{
-  width: 58%;
-  margin: auto;
-  padding: 0;
-  text-align: center;
-}
-.quote-box .side-heading{
-  font-size: 50px;
-  line-height: 60px;
-}
-.meet-chef-container{
-  padding: 100px 0 60px 0;
-}
-.meet-chef-container .left-bg{
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.team-container{
-  grid-template-columns: repeat(3,1fr);
-  gap: 50px;
-  width: 77%;
-  padding: 0;
-  margin: auto;
-}
-/* About Ua page  */
-.about-container{
-  padding: 100px 0 50px 0;
-}
-.about-container .left-bg{
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 40%;
-}
-.about-container .right-bg{
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 100px;
-}
-.about-container .side-heading{
-  font-size: 35px;
-  line-height: 42px;
-  width: 59%;
-  margin: 15px auto 90px auto;
-}
-.about-box{
-  grid-template-columns: repeat(3,1fr);
-  gap: 60px;
-  width: 77%;
-  margin: 0 auto 40px auto;
-}
-
+  /* our chef page  */
+  .chef-container {
+    padding: 100px 0;
+  }
+  .chef-box {
+    width: 77%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .chef-container .right-bg {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .award-section .text {
+    padding-right: 120px;
+  }
+  .img-col img {
+    width: auto;
+  }
+  .quote-section {
+    padding: 200px 0;
+  }
+  .quote-box {
+    width: 58%;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+  }
+  .quote-box .side-heading {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .meet-chef-container {
+    padding: 100px 0 60px 0;
+  }
+  .meet-chef-container .left-bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .team-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 77%;
+    padding: 0;
+    margin: auto;
+  }
+  /* About Ua page  */
+  .about-container {
+    padding: 100px 0 50px 0;
+  }
+  .about-container .left-bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 40%;
+  }
+  .about-container .right-bg {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+  .about-container .side-heading {
+    font-size: 35px;
+    line-height: 42px;
+    width: 59%;
+    margin: 15px auto 90px auto;
+  }
+  .about-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    width: 77%;
+    margin: 0 auto 40px auto;
+  }
+  .about-box .contact-us {
+    grid-column: span 1;
+    margin: 0 auto;
+  }
   /*==============================
    admin page layout  
    ===============================*/
@@ -2538,7 +2567,7 @@ reservation page
     top: 0;
     right: 0;
   }
- .menu-section .left-bg {
+  .menu-section .left-bg {
     display: block;
     position: absolute;
     top: 100px;
