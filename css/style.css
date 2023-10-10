@@ -1052,7 +1052,6 @@ reservation page
   width: 100%;
   object-fit: contain;
  }
-
  .img-col::before{
   content: '';
   position: absolute;
@@ -1176,7 +1175,6 @@ reservation page
   transform-origin: right center;
   background-position:center center;
 }
-
 .team-block .overlay-box:before{
   position:absolute;
   content:'';
@@ -1187,27 +1185,22 @@ reservation page
   opacity:0.40;
   background-color:rgb(228, 197, 144);
 }
-
 .team-block .overlay-box .overlay-inner{
   position:relative;
   text-align:center;
 }
-
 .team-block:hover .overlay-box{
   transform: scale(1, 1);
   transform-origin: left center;
 }
-
 .team-block .social-box{
   position:relative;
 }
-
 .team-block .social-box li{
   position:relative;
   margin:0px 1px;
   display:inline-block;
 }
-
 .team-block .social-box li a{
   position:relative;
   width:40px;
@@ -1218,7 +1211,6 @@ reservation page
   color: white!important;;
   background-color:black
 }
-
 .team-block .social-box li a:hover{
   background: rgb(228, 197, 144);
   color: rgb(14, 13, 11)!important;
@@ -1244,6 +1236,154 @@ reservation page
   font-size: 14px;
   color: rgb(167, 167, 167);
   line-height: 1.6em;
+}
+/* About Us Page  */
+.about-container{
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+  padding: 70px 15px 20px 15px;
+  text-align: center;
+  color: white;
+}
+.about-container .side-heading{
+  font-family: "Forum", cursive;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+.about-container .side-heading span{
+  color: rgb(228, 197, 144);
+}
+.about-box{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 40px;
+}
+.about-box .image{
+  position: relative;
+  display: block;
+}
+
+.about-box .image img{
+  display: block;
+  width: 100%;
+}
+.about-box .content-box{
+  /* position: relative; */
+}
+.content-box .text{
+  text-align: start;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.85em;
+  margin-bottom: 30px;
+}
+
+.content-box .signature{
+  position: relative;
+  text-align: start;
+}
+
+.content-box .author{
+  text-align: start;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  margin-top: 5px;
+  line-height: 29.6px;
+}
+
+.content-box .video-box{
+  position: relative;
+  margin-top: 100px;
+}
+.content-box .video-box .lightbox-image{
+  /* position: relative; */
+} 
+.content-box .video-box img{
+  /* position: relative; */
+  opacity: 0.70;
+}
+
+.content-box .video-box .play-btn{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -41px 0 0 -41px;
+  display: block;
+  width: 82px;
+  height: 82px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 18px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+
+
+.content-box .video-box .play-btn .ripple,
+.content-box .video-box .play-btn .ripple:before,
+.content-box .video-box .play-btn .ripple:after {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 82px;
+  height: 82px;
+  border-radius:50%;
+  margin-top:-1px;
+  margin-left:-1px;
+    /* -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -webkit-animation: ripple 3s infinite;
+    -moz-animation: ripple 3s infinite;
+    -ms-animation: ripple 3s infinite;
+    -o-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+}
+
+.content-box .video-box .play-btn .ripple:before {
+    -webkit-animation-delay: .9s;
+    -moz-animation-delay: .9s;
+    -ms-animation-delay: .9s;
+    -o-animation-delay: .9s;
+    animation-delay: .9s;
+    content: "";
+    position: absolute;
+}
+
+.content-box .video-box .play-btn .ripple:after{
+    -webkit-animation-delay: .6s;
+    -moz-animation-delay: .6s;
+    -ms-animation-delay: .6s;
+    -o-animation-delay: .6s;
+    animation-delay: .6s;
+    content: "";
+    position: absolute;
+}
+
+.content-box .video-box .play-btn:hover{
+  color: rgb(228, 197, 144)!important;
+  border-color: rgb(228, 197, 144);
+}
+@keyframes ripple {
+  70% {box-shadow: 0 0 0 70px rgba(253, 167, 0, 0);}
+  100% {box-shadow: 0 0 0 0 rgba(253, 167, 0, 0);}
 }
 /*=============================
  admin page Layout
@@ -2004,6 +2144,18 @@ input[type="file"]:focus + label {
 .team-block{
   text-align: start;
 }
+/* About Us Page  */
+.about-container .side-heading{
+  font-size: 26px;
+  line-height: 31.2px;
+}
+.about-box{
+  grid-template-columns: repeat(2,1fr);
+}
+.about-box .info-col {
+  grid-column: span 2;
+  margin: 0 auto;
+}
   /*==============================
    admin page layout  
    ===============================*/
@@ -2302,6 +2454,35 @@ reservation page
   padding: 0;
   margin: auto;
 }
+/* About Ua page  */
+.about-container{
+  padding: 100px 0 50px 0;
+}
+.about-container .left-bg{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+.about-container .right-bg{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+.about-container .side-heading{
+  font-size: 35px;
+  line-height: 42px;
+  width: 59%;
+  margin: 15px auto 90px auto;
+}
+.about-box{
+  grid-template-columns: repeat(3,1fr);
+  gap: 60px;
+  width: 77%;
+  margin: 0 auto 40px auto;
+}
+
   /*==============================
    admin page layout  
    ===============================*/

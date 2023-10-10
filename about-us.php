@@ -152,8 +152,31 @@ include_once('./includes/connect.php');
     </section>
     <!--End Banner Section -->
 
-    <!-- Award Winiing Chef  -->
-
+    <!-- Who we are   -->
+    <div class="about-container">
+        <div class="left-bg"><img src="images/background/bg-10.png" alt="" title=""></div>
+        <div class="right-bg"><img src="images/background/bg-11.png" alt="" title=""></div>
+        <div class="small-heading">who we are</div>
+        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+        <div class="side-heading">A modern restaurant with a menu that will make your mouth water. Servicing delicious food <span> since 45 years</span>. Enjoy our seasonal menu and experience the beauty of naturalness</div>
+        <div class="about-box">
+            <div class="content-box">
+                <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived.</div>
+                <div class="signature"><img src="./images/resource/signature-1.png" alt="" title=""></div>
+                <div class="author">andrew joe - founder</div>
+                <div class="video-box">
+                    <div class="image"><a href="https://www.youtube.com/watch?v=ZETY_l3GVQg" class="lightbox-image"><img src="images/resource/about-image-1.jpg" alt=""></a>
+                        <a href="https://www.youtube.com/watch?v=ZETY_l3GVQg" class="lightbox-image play-btn"><span class=" fas fa-play"><i class="ripple"></i></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box">
+                <div class="image">
+                    <img src="./images/resource/about-image-2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- quote section  -->
 
     <!-- meet our chef   -->
