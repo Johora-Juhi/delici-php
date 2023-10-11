@@ -295,7 +295,6 @@ include_once('./includes/connect.php');
             </div>
             <div class="service-col alternate">
                 <div class="service-box alternate">
-            
                     <div class="info-box">
                         <div class="section-heading-four">Outdoor Catering</div>
                         <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
