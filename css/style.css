@@ -1449,26 +1449,17 @@ reservation page
   font-family: "DM Sans", sans-serif;
   background-color: rgb(14, 13, 11);
 }
-.experience-container.alternate{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "DM Sans", sans-serif;
-  background-color: rgb(14, 13, 11);
-}
 .experience-container .image {
-  flex: 1;
   width: 100%;
+  height: 100%;
 }
 .experience-container .image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   overflow: hidden;
-  object-fit: contain;
 }
 .experience-section {
-  flex: 1;
   padding: 70px 20px;
 }
 .experience-section .section-heading {
@@ -2610,12 +2601,24 @@ reservation page
   .experience-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .experience-container.alternate{
-    flex-direction: row-reverse;
+  .experience-container .right-bg{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .experience-container .left-bg{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .experience-container.alternate .image{
+    order: 2;
   }
   .experience-section {
-    padding-right: 0;
-    padding-left: 0;
+   padding: 230px 0;
+
   }
   /*==============================
    admin page layout  
