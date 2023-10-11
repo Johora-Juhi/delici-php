@@ -280,7 +280,7 @@ include_once('./includes/connect.php');
                     </div>
                     <div class="info-box">
                         <div class="section-heading-four">Door Delivery</div>
-                        <div class="text"></div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
                     </div>
                 </div>
             </div>

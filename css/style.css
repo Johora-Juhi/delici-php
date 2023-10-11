@@ -1480,6 +1480,7 @@ reservation page
   text-align: center;
   padding: 70px 0 70px 0;
   position: relative;
+  font-family: "DM Sans", sans-serif
 }
 .services-container .services-section {
   display: grid;
@@ -1502,6 +1503,32 @@ reservation page
 }
 .services-section .image-col img {
   position: relative;
+}
+.services-section .service-col{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+.services-section .service-col .service-box{
+  display:grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+}
+.services-section .service-col .service-box .text{
+font-size :14px;
+line-height: 22.4px
+}
+.services-section .service-col .service-box .image-box{
+  position: relative;
+  width: 100px;
+  height: 100px;
+display:grid ;
+place-items: center;
+border-radius: 50%;
+  background-color:rgb(14, 13, 12) ;
+ } 
+
+.services-section .service-col .service-box.alternate .image-box{
+  order: 2;
 }
 /*=============================
  admin page Layout
@@ -2668,7 +2695,7 @@ reservation page
     right: 0;
     bottom: 0;
   }
-  .services-section {
+  .services-container .services-section {
     padding-top: 30px;
     width: 77%;
     margin: auto;
