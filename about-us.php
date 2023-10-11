@@ -199,31 +199,44 @@ include_once('./includes/connect.php');
             </div>
         </div>
         <div class="fact-counter">
-                    <div class="fact-block">
-                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="150" data-speed="2000">0</span><i>+</i></div></div>
-                            <div class="fact-title">daily order</div>
-                    </div>
-                    <div class="fact-block">
-                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="82" data-speed="1500">0</span><i>+</i></div></div>
-                            <div class="fact-title">Special Dishes</div>
-                    </div>
-                    <div class="fact-block">
-                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="35" data-speed="1000">0</span><i>+</i></div></div>
-                            <div class="fact-title">expert chef</div>
-                    </div>
-                    <div class="fact-block">
-                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="10" data-speed="1000">0</span><i>+</i></div></div>
-                            <div class="fact-title">awards won</div>
-                    </div>
+            <div class="fact-block">
+                <div class="fact-count">
+                    <div class="count-box"><span class="count-text" data-stop="150" data-speed="2000">0</span><i>+</i></div>
+                </div>
+                <div class="fact-title">daily order</div>
             </div>
+            <div class="fact-block">
+                <div class="fact-count">
+                    <div class="count-box"><span class="count-text" data-stop="82" data-speed="1500">0</span><i>+</i></div>
+                </div>
+                <div class="fact-title">Special Dishes</div>
+            </div>
+            <div class="fact-block">
+                <div class="fact-count">
+                    <div class="count-box"><span class="count-text" data-stop="35" data-speed="1000">0</span><i>+</i></div>
+                </div>
+                <div class="fact-title">expert chef</div>
+            </div>
+            <div class="fact-block">
+                <div class="fact-count">
+                    <div class="count-box"><span class="count-text" data-stop="10" data-speed="1000">0</span><i>+</i></div>
+                </div>
+                <div class="fact-title">awards won</div>
+            </div>
+        </div>
     </div>
     <!-- experience Section  -->
     <div class="experience-container">
-        
+        <div class="image">
+            <img src="./images/background/image-5.jpg" alt="">
+        </div>
+        <div class="experience-section">
+            <div class="small-heading">35 YEAR OF EXPERIENCE</div>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <div class="section-heading">Award Winning Chef</div>
+        </div>
     </div>
-    <!-- quote section  -->
 
-    <!-- meet our chef   -->
     <!-- Footer section  -->
     <div class="footer">
         <div class="image-layer"></div>

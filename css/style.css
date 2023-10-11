@@ -1406,35 +1406,29 @@ reservation page
 .contact-info .text a:hover {
   color: rgb(228, 197, 144) !important;
 }
-
 .about-container .fact-counter {
   position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   padding-top: 60px;
 }
-
 .about-container .fact-counter .fact-block {
   position: relative;
   text-align: center;
   margin-bottom: 50px;
 }
-
 .about-container .fact-counter .fact-count {
   position: relative;
   line-height: 60px;
   font-size: 34px;
   font-family: "Forum", cursive;
 }
-
 .about-container .fact-counter .count-box {
   position: relative;
 }
-
 .about-container .fact-counter .count-box i {
   font-style: normal;
 }
-
 .about-container .fact-counter .fact-title {
   position: relative;
   display: block;
@@ -1445,6 +1439,21 @@ reservation page
   color: rgb(228, 197, 144);
   font-size: 12px;
   letter-spacing: 0.4em;
+}
+.experience-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  place-items: center;
+  position: relative;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+.experience-container .image{
+  width: 100%;
+}
+.experience-container .image img{
+  width: 100%;
+  object-fit: contain;
 }
 /*=============================
  admin page Layout
@@ -2567,6 +2576,9 @@ reservation page
   }
   .about-container .fact-counter .fact-count {
     font-size: 60px;
+  }
+  .experience-container{
+    grid-template-columns: repeat(2,1fr);
   }
   /*==============================
    admin page layout  
