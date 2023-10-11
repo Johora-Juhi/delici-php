@@ -109,4 +109,33 @@ if (document.querySelectorAll('.header-container .info-toggler .info-bar-opener'
 	// 		}
 	// 	}
 	// }
-	// headerStyle();
+// headerStyle();
+	// Get all elements with the class "count-box"
+var countBoxes = document.querySelectorAll('.count-box');
+
+// Iterate over each count box element
+countBoxes.forEach(function(countBox) {
+    if (!countBox.classList.contains('counted')) {
+        countBox.classList.add('counted');
+
+        var countText = countBox.querySelector('.count-text');
+        var targetNumber = parseInt(countText.getAttribute('data-stop'), 10);
+        var duration = parseInt(countText.getAttribute('data-speed'), 10);
+        var currentNumber = parseInt(countText.textContent, 10);
+        var increment = targetNumber / (duration / 10); // Increment to be added in each step of the animation
+
+        // Function to update the count text with animation
+        function updateCount() {
+            currentNumber += increment;
+            if (currentNumber < targetNumber) {
+                countText.textContent = Math.floor(currentNumber);
+                requestAnimationFrame(updateCount);
+            } else {
+                countText.textContent = targetNumber;
+            }
+        }
+
+        // Start the animation
+        updateCount();
+    }
+});

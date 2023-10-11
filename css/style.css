@@ -424,8 +424,9 @@
   position: relative;
   font-weight: 400;
   font-size: 34px;
+
   /* font-size: 80px; */
-  text-transform: none;
+  text-transform: capitalize;
   line-height: 1em;
   margin: 0px 0px;
 }
@@ -1273,10 +1274,10 @@ reservation page
   width: 100%;
 }
 .about-box .content-box {
+  text-align: center;
   /* position: relative; */
 }
 .content-box .text {
-  text-align: start;
   position: relative;
   font-size: 14px;
   line-height: 1.85em;
@@ -1285,11 +1286,9 @@ reservation page
 
 .content-box .signature {
   position: relative;
-  text-align: start;
 }
 
 .content-box .author {
-  text-align: start;
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
@@ -1399,6 +1398,53 @@ reservation page
   right: -14px;
   bottom: 12px;
   border: 1px solid rgb(228, 197, 144);
+}
+.contact-info .text a {
+  position: relative;
+  transition: all 300ms ease;
+}
+.contact-info .text a:hover {
+  color: rgb(228, 197, 144) !important;
+}
+
+.about-container .fact-counter {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 60px;
+}
+
+.about-container .fact-counter .fact-block {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-container .fact-counter .fact-count {
+  position: relative;
+  line-height: 60px;
+  font-size: 34px;
+  font-family: "Forum", cursive;
+}
+
+.about-container .fact-counter .count-box {
+  position: relative;
+}
+
+.about-container .fact-counter .count-box i {
+  font-style: normal;
+}
+
+.about-container .fact-counter .fact-title {
+  position: relative;
+  display: block;
+  padding-top: 5px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.4em;
 }
 /*=============================
  admin page Layout
@@ -2167,6 +2213,9 @@ input[type="file"]:focus + label {
   .about-box {
     grid-template-columns: repeat(2, 1fr);
   }
+  .about-box .content-box {
+    text-align: start;
+  }
   .about-box .contact-us {
     grid-column: span 2;
     margin: 0 auto;
@@ -2175,12 +2224,11 @@ input[type="file"]:focus + label {
   .about-box .contact-us .inner {
     padding: 90px 0 50px 0;
   }
-  .contact-info .text a{
-    position: relative;
-    transition: all 300ms ease;
+  .about-container .fact-counter {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .contact-info .text a:hover{
-    color:rgb(228, 197, 144)!important
+  .about-container .fact-counter .fact-count {
+    font-size: 40px;
   }
   /*==============================
    admin page layout  
@@ -2511,6 +2559,14 @@ reservation page
   .about-box .contact-us {
     grid-column: span 1;
     margin: 0 auto;
+  }
+  .about-container .fact-counter {
+    width: 77%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .about-container .fact-counter .fact-count {
+    font-size: 60px;
   }
   /*==============================
    admin page layout  

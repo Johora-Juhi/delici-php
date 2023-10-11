@@ -177,7 +177,7 @@ include_once('./includes/connect.php');
             </div>
             <div class="contact-us">
                 <div class="inner">
-                <div class="lunch-time">
+                    <div class="lunch-time">
                         <div class="heading">lunch time</div>
                         <div class="text">Monday to Sunday <br>
                             11.00 am - 2.30pm</div>
@@ -194,10 +194,32 @@ include_once('./includes/connect.php');
                             <a href="tel:+88-123-123456">+88-123-123456</a> <br> <a href="mailto:booking@domainname.com">booking@domainname.com</a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
+        <div class="fact-counter">
+                    <div class="fact-block">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="150" data-speed="2000">0</span><i>+</i></div></div>
+                            <div class="fact-title">daily order</div>
+                    </div>
+                    <div class="fact-block">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="82" data-speed="1500">0</span><i>+</i></div></div>
+                            <div class="fact-title">Special Dishes</div>
+                    </div>
+                    <div class="fact-block">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="35" data-speed="1000">0</span><i>+</i></div></div>
+                            <div class="fact-title">expert chef</div>
+                    </div>
+                    <div class="fact-block">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="10" data-speed="1000">0</span><i>+</i></div></div>
+                            <div class="fact-title">awards won</div>
+                    </div>
+            </div>
+    </div>
+    <!-- experience Section  -->
+    <div class="experience-container">
+        
     </div>
     <!-- quote section  -->
 
