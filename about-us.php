@@ -283,8 +283,38 @@ include_once('./includes/connect.php');
                         <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
                     </div>
                 </div>
+                <div class="service-box alternate">
+                    <div class="info-box">
+                        <div class="section-heading-four">fine dining</div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/resource/s-icon-2.png" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="service-col alternate"></div>
+            <div class="service-col alternate">
+                <div class="service-box alternate">
+            
+                    <div class="info-box">
+                        <div class="section-heading-four">Outdoor Catering</div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/resource/s-icon-3.png" alt="">
+                    </div>
+                </div>
+                <div class="service-box">
+                <div class="image-box">
+                        <img src="./images/resource/s-icon-4.png" alt="">
+                    </div>
+                    <div class="info-box">
+                        <div class="section-heading-four">Banquets Hall</div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
+                    </div>
+                    
+                </div>
+            </div>
             <div class="image-col"><img src="./images/resource/service-image.png" alt=""></div>
         </div>
     </div>

@@ -1486,6 +1486,7 @@ reservation page
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   place-items: center;
+  gap: 30px;
 }
 .services-section .image-col {
   padding-top: 20px;
@@ -1512,10 +1513,22 @@ reservation page
   display:grid;
   grid-template-columns: 100px 1fr;
   gap: 20px;
+  margin-bottom: 50px;
+}
+.services-section .service-col .service-box.alternate{
+  display:grid;
+  grid-template-columns: 1fr 100px ;
+  gap: 20px;
+}
+
+
+.services-section .service-col .service-box .section-heading-four{
+  margin-bottom: 5px;
 }
 .services-section .service-col .service-box .text{
 font-size :14px;
-line-height: 22.4px
+line-height: 22.4px;
+color: rgb(167, 167, 167);
 }
 .services-section .service-col .service-box .image-box{
   position: relative;
@@ -2321,6 +2334,16 @@ input[type="file"]:focus + label {
     grid-column: span 2;
     margin: 0 auto;
   }
+  .services-section .service-col .service-box{
+    margin-bottom: 70px;
+  }
+  .services-section .service-col .service-box .info-box{
+    text-align: start;
+  }
+  .services-section .service-col .service-box.alternate .info-box{
+    text-align: end;
+  }
+
   /*==============================
    admin page layout  
    ===============================*/
@@ -2707,6 +2730,9 @@ reservation page
   }
   .services-section .service-col.alternate {
     order: 2;
+  }
+  .services-section .service-col .service-box{
+    margin-bottom: 100px;
   }
   /*==============================
    admin page layout  
