@@ -1440,37 +1440,49 @@ reservation page
   font-size: 12px;
   letter-spacing: 0.4em;
 }
-.experience-container{
+.experience-container {
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   place-items: center;
   position: relative;
   text-align: center;
   font-family: "DM Sans", sans-serif;
   background-color: rgb(14, 13, 11);
 }
-.experience-container .image{
+.experience-container.alternate{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  background-color: rgb(14, 13, 11);
+}
+.experience-container .image {
+  flex: 1;
   width: 100%;
 }
-.experience-container .image img{
+.experience-container .image img {
   width: 100%;
+  overflow: hidden;
   object-fit: contain;
 }
-.experience-section{
+.experience-section {
+  flex: 1;
   padding: 70px 20px;
 }
-.experience-section .section-heading{
+.experience-section .section-heading {
   margin-bottom: 15px;
 }
-.experience-section .text{
+.experience-section .text {
   font-size: 16px;
   line-height: 29.6px;
   color: white;
-max-width: 420px;
-margin: auto;
-margin-bottom: 40px;
+  max-width: 420px;
+  margin: auto;
+  margin-bottom: 40px;
 }
-.experience-section .author{
+.experience-section .author {
   margin-bottom: 30px;
 }
 /*=============================
@@ -2595,8 +2607,15 @@ reservation page
   .about-container .fact-counter .fact-count {
     font-size: 60px;
   }
-  .experience-container{
-    grid-template-columns: repeat(2,1fr);
+  .experience-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .experience-container.alternate{
+    flex-direction: row-reverse;
+  }
+  .experience-section {
+    padding-right: 0;
+    padding-left: 0;
   }
   /*==============================
    admin page layout  
