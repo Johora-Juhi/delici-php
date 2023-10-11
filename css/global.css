@@ -154,6 +154,7 @@ button:focus {
     background-color: black;
     letter-spacing: 3px;
     font-weight: 700;
+    line-height: 29.6px;
     padding:11px 45px;
     font-size:0.75rem;
     border: 2px solid rgb(228,197,144);

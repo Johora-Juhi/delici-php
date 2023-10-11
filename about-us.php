@@ -234,6 +234,15 @@ include_once('./includes/connect.php');
             <div class="small-heading">35 YEAR OF EXPERIENCE</div>
             <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
             <div class="section-heading">Award Winning Chef</div>
+            <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type.</div>
+            <div class="signature"><img src="./images/resource/signature-2.png" alt="" title=""></div>
+                <div class="author">HENRY - EXCUTIVE CHEF</div>
+                <a href="./our-chef.php" class="theme-btn btn-style-two" style="box-sizing: border-box;">
+                                <span class="btn-wrap">
+                                    <span class="text-one">meet out team</span>
+                                    <span class="text-two">meet out team</span>
+                                </span>
+                            </a>
         </div>
     </div>
 

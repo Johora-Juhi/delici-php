@@ -1284,11 +1284,11 @@ reservation page
   margin-bottom: 30px;
 }
 
-.content-box .signature {
+.signature {
   position: relative;
 }
 
-.content-box .author {
+.author {
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
@@ -1447,6 +1447,7 @@ reservation page
   position: relative;
   text-align: center;
   font-family: "DM Sans", sans-serif;
+  background-color: rgb(14, 13, 11);
 }
 .experience-container .image{
   width: 100%;
@@ -1454,6 +1455,23 @@ reservation page
 .experience-container .image img{
   width: 100%;
   object-fit: contain;
+}
+.experience-section{
+  padding: 70px 20px;
+}
+.experience-section .section-heading{
+  margin-bottom: 15px;
+}
+.experience-section .text{
+  font-size: 16px;
+  line-height: 29.6px;
+  color: white;
+max-width: 420px;
+margin: auto;
+margin-bottom: 40px;
+}
+.experience-section .author{
+  margin-bottom: 30px;
 }
 /*=============================
  admin page Layout
