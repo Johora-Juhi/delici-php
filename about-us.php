@@ -227,7 +227,7 @@ include_once('./includes/connect.php');
     </div>
     <!-- experience Section  -->
     <div class="experience-container">
-    <div class="right-bg"><img src="images/background/bg-12.png" alt="" title=""></div>
+        <div class="right-bg"><img src="images/background/bg-12.png" alt="" title=""></div>
         <div class="image">
             <img src="./images/background/image-5.jpg" alt="">
         </div>
@@ -247,7 +247,7 @@ include_once('./includes/connect.php');
         </div>
     </div>
     <div class="experience-container alternate">
-    <div class="left-bg"><img src="images/background/bg-13.png" alt="" title=""></div>
+        <div class="left-bg"><img src="images/background/bg-13.png" alt="" title=""></div>
         <div class="image">
             <img src="./images/background/image-6.jpg" alt="">
         </div>
@@ -256,16 +256,38 @@ include_once('./includes/connect.php');
             <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
             <div class="section-heading">Dinner, Event or Party?</div>
             <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type.</div>
-            
-            <a href="./our-chef.php" class="theme-btn btn-style-two" style="box-sizing: border-box;">
+
+            <a href="./menu.php" class="theme-btn btn-style-two" style="box-sizing: border-box;">
                 <span class="btn-wrap">
-                    <span class="text-one">meet out team</span>
-                    <span class="text-two">meet out team</span>
+                    <span class="text-one">discover now</span>
+                    <span class="text-two">discover now</span>
                 </span>
             </a>
         </div>
     </div>
-
+    <!-- Services section  -->
+    <div class="services-container">
+        <div class="left-bg"><img src="images/background/bg-14.png" alt="" title=""></div>
+        <div class="right-bg"><img src="images/background/bg-15.png" alt="" title=""></div>
+        <div class="small-heading">OUR SERVICES</div>
+        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+        <div class="section-heading">Exquisite Restaurant in City</div>
+        <div class="services-section">
+            <div class="service-col">
+                <div class="service-box">
+                    <div class="image-box">
+                        <img src="./images/resource/s-icon-1.png" alt="">
+                    </div>
+                    <div class="info-box">
+                        <div class="section-heading-four">Door Delivery</div>
+                        <div class="text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-col alternate"></div>
+            <div class="image-col"><img src="./images/resource/service-image.png" alt=""></div>
+        </div>
+    </div>
     <!-- Footer section  -->
     <div class="footer">
         <div class="image-layer"></div>

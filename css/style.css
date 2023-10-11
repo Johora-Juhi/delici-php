@@ -1476,6 +1476,33 @@ reservation page
 .experience-section .author {
   margin-bottom: 30px;
 }
+.services-container {
+  text-align: center;
+  padding: 70px 0 70px 0;
+  position: relative;
+}
+.services-container .services-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+}
+.services-section .image-col {
+  padding-top: 20px;
+  position: relative;
+  width: 100%;
+}
+.services-section .image-col:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: 90px;
+  background: url(../images/background/pattern-8.svg) center top no-repeat;
+}
+.services-section .image-col img {
+  position: relative;
+}
 /*=============================
  admin page Layout
  ============================== */
@@ -2260,6 +2287,13 @@ input[type="file"]:focus + label {
   .about-container .fact-counter .fact-count {
     font-size: 40px;
   }
+  .services-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-section .image-col {
+    grid-column: span 2;
+    margin: 0 auto;
+  }
   /*==============================
    admin page layout  
    ===============================*/
@@ -2601,24 +2635,51 @@ reservation page
   .experience-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .experience-container .right-bg{
+  .experience-container .right-bg {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
   }
-  .experience-container .left-bg{
+  .experience-container .left-bg {
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
   }
-  .experience-container.alternate .image{
+  .experience-container.alternate .image {
     order: 2;
   }
   .experience-section {
-   padding: 230px 0;
-
+    padding: 230px 0;
+  }
+  .services-container {
+    padding: 100px 0 100px 0;
+  }
+  .services-container .left-bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -130px;
+  }
+  .services-container .right-bg {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .services-section {
+    padding-top: 30px;
+    width: 77%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services-section .image-col {
+    grid-column: span 1;
+    margin: 0 auto;
+  }
+  .services-section .service-col.alternate {
+    order: 2;
   }
   /*==============================
    admin page layout  
