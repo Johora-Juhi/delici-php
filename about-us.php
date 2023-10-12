@@ -324,14 +324,14 @@ include_once('./includes/connect.php');
         </div>
     </div>
     <!-- Testimonial section  -->
-    <div class="testimonial-container" style="box-sizing: border-box;">
+    <div class="testimonial-container">
         <div class="image-layer"></div>
         <div class="title-box">
             <div class="small-heading">TESTIMONIALS</div>
             <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
             <div class="section-heading">What People Are Saying</div>
         </div>
-        <div class="carousel-box" style="box-sizing: border-box;">
+        <div class="carousel-box">
             <div class="testimonial-slider owl-theme owl-carousel">
                 <!--Slide Item-->
                 <div class="testi-block">
@@ -347,7 +347,6 @@ include_once('./includes/connect.php');
 
                 <!--Slide Item-->
                <div class="testi-block">
-                        
                             <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
                             <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
                             <div class="text">Hygienic food &amp; fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
@@ -358,7 +357,6 @@ include_once('./includes/connect.php');
                             </div>
                         
                     </div>
-
                 <!--Slide Item-->
                 <div class="testi-block">
                     <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
@@ -385,7 +383,6 @@ include_once('./includes/connect.php');
 
                 <!--Slide Item-->
                <div class="testi-block">
-                        
                             <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
                             <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
                             <div class="text">Hygienic food &amp; fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
@@ -394,7 +391,6 @@ include_once('./includes/connect.php');
                                 <div class="auth-title">Theresa Tin</div>
                                 <div class="location">Chicago</div>
                             </div>
-                        
                     </div>
 
                 <!--Slide Item-->
@@ -410,6 +406,14 @@ include_once('./includes/connect.php');
                 </div>
 
             </div>
+        </div>
+    </div>
+    <!-- Why us Section  -->
+    <div class="why-us-container">
+    <div class="title-box">
+            <div class="small-heading">why choose us</div>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <div class="section-heading">our strenth</div>
         </div>
     </div>
     <!-- Footer section  -->

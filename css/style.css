@@ -1720,6 +1720,15 @@ reservation page
   background: rgb(228, 197, 144);
   border: 1px solid black;
 }
+.why-us-container{
+  position: relative;
+  padding: 70px 15px 40px 15px;
+  font-family: "DM", sans-serif;
+  text-align: center;
+}
+.why-us-container .section-heading{
+  margin-bottom: 40px;
+}
 /*=============================
  admin page Layout
  ============================== */
@@ -2938,6 +2947,9 @@ reservation page
   }
   .testimonial-slider.owl-theme .owl-nav{
     display: block;
+  }
+  .why-us-container{
+    padding: 100px 0 70px 0;
   }
   /*==============================
    admin page layout  
