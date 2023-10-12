@@ -410,11 +410,12 @@ include_once('./includes/connect.php');
     </div>
     <!-- Why us Section  -->
     <div class="why-us-container">
-    <div class="title-box">
             <div class="small-heading">why choose us</div>
             <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
             <div class="section-heading">our strenth</div>
-        </div>
+            <div class="why-us-box">
+                <div class="image-box"><img src="./images/resource/featured-4.jpg" alt=""></div>
+            </div>
     </div>
     <!-- Footer section  -->
     <div class="footer">
