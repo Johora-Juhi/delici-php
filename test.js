@@ -1,3 +1,35 @@
+//Testimonials Carousel
+	if ($('.testimonial-slider').length) {
+		$('.testimonial-slider').owlCarousel({
+			loop:true,
+			margin:50,
+			nav:true,
+			smartSpeed: 700,
+			autoplay: true,
+			autoplayTimeout:7000,
+			navText: [ '<span class="icon fa-light fa-angle-left"></span>', '<span class="icon fa-light fa-angle-right"></span>' ],
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:1
+				},
+				768:{
+					items:2,
+					margin:30
+				},
+				992:{
+					items:2,
+					margin:30
+				},
+				1200:{
+					items:3
+				}
+			}
+		});    		
+	}
+
 // Hide Header on Scroll Down
 if (document.querySelectorAll('.header-container').length) {
 	// Hide Header on Scroll Down

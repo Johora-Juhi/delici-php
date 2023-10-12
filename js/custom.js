@@ -251,31 +251,62 @@ if (document.querySelectorAll('.header-container .info-toggler .info-bar-opener'
 var countBoxes = document.querySelectorAll('.count-box');
 
 // Iterate over each count box element
-countBoxes.forEach(function(countBox) {
-    if (!countBox.classList.contains('counted')) {
-        countBox.classList.add('counted');
+countBoxes.forEach(function (countBox) {
+	if (!countBox.classList.contains('counted')) {
+		countBox.classList.add('counted');
 
-        var countText = countBox.querySelector('.count-text');
-        var targetNumber = parseInt(countText.getAttribute('data-stop'), 10);
-        var duration = parseInt(countText.getAttribute('data-speed'), 10);
-        var currentNumber = parseInt(countText.textContent, 10);
-        var increment = targetNumber / (duration / 10); // Increment to be added in each step of the animation
+		var countText = countBox.querySelector('.count-text');
+		var targetNumber = parseInt(countText.getAttribute('data-stop'), 10);
+		var duration = parseInt(countText.getAttribute('data-speed'), 10);
+		var currentNumber = parseInt(countText.textContent, 10);
+		var increment = targetNumber / (duration / 10); // Increment to be added in each step of the animation
 
-        // Function to update the count text with animation
-        function updateCount() {
-            currentNumber += increment;
-            if (currentNumber < targetNumber) {
-                countText.textContent = Math.floor(currentNumber);
-                requestAnimationFrame(updateCount);
-            } else {
-                countText.textContent = targetNumber;
-            }
-        }
+		// Function to update the count text with animation
+		function updateCount() {
+			currentNumber += increment;
+			if (currentNumber < targetNumber) {
+				countText.textContent = Math.floor(currentNumber);
+				requestAnimationFrame(updateCount);
+			} else {
+				countText.textContent = targetNumber;
+			}
+		}
 
-        // Start the animation
-        updateCount();
-    }
+		// Start the animation
+		updateCount();
+	}
 });
+//Testimonials Carousel
+if ($('.testimonial-slider').length) {
+	$('.testimonial-slider').owlCarousel({
+		loop: true,
+		margin: 50,
+		nav: true,
+		smartSpeed: 700,
+		autoplay: true,
+		autoplayTimeout: 7000,
+		navText: ['<span class="icon fa-light fa-angle-left"></span>', '<span class="icon fa-light fa-angle-right"></span>'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			768: {
+				items: 2,
+				margin: 30
+			},
+			992: {
+				items: 2,
+				margin: 30
+			},
+			1200: {
+				items: 3
+			}
+		}
+	});
+}
 
 //Update Header Style and Scroll to Top
 // function headerStyle() {

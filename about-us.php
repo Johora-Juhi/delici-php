@@ -41,6 +41,12 @@ include_once('./includes/connect.php');
             $("#datepicker").datepicker();
         });
     </script>
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Include Owl Carousel JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </head>
 
 <body>
@@ -304,17 +310,35 @@ include_once('./includes/connect.php');
                     </div>
                 </div>
                 <div class="service-box">
-                <div class="image-box">
+                    <div class="image-box">
                         <img src="./images/resource/s-icon-4.png" alt="">
                     </div>
                     <div class="info-box">
                         <div class="section-heading-four">Banquets Hall</div>
                         <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="image-col"><img src="./images/resource/service-image.png" alt=""></div>
+        </div>
+    </div>
+    <!-- Testimonial section  -->
+    <div class="testimonial-container">
+        <div class="image-layer"></div>
+        <div class="title-box">
+            <div class="small-heading">TESTIMONIALS</div>
+            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+            <div class="section-heading">What People Are Saying</div>
+        </div>
+        <div class="carousel-box">
+            <div class="testimonial-slider owl-carousel owl-theme">
+                <div class="testi-block">hello1</div>
+                <div class="testi-block">hello2</div>
+                <div class="testi-block">hello3</div>
+                <div class="testi-block">hello4</div>
+                <div class="testi-block">hello5</div>
+            </div>
         </div>
     </div>
     <!-- Footer section  -->
@@ -383,6 +407,7 @@ include_once('./includes/connect.php');
 
     <!-- js  -->
     <script src="./js/custom.js"></script>
+
     <!-- <script src="./test.js"></script> -->
 
     <!-- <script src="./js/modal.js"></script> -->
