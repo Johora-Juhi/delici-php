@@ -333,11 +333,36 @@ include_once('./includes/connect.php');
         </div>
         <div class="carousel-box">
             <div class="testimonial-slider owl-carousel owl-theme">
-                <div class="testi-block">hello1</div>
-                <div class="testi-block">hello2</div>
-                <div class="testi-block">hello3</div>
-                <div class="testi-block">hello4</div>
-                <div class="testi-block">hello5</div>
+            <div class="testi-block">
+                            <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">Special treat to dine, It was wow experience food was really delicious! outstanding dinner made by Mater chef, food experience was unfogetable!</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="images/resource/author-thumb-6.jpg" alt=""></div>
+                                <div class="auth-title">Michel Byrd</div>
+                                <div class="location">Denmark</div>
+                            </div>
+                    </div>
+                    <div class="testi-block">
+                            <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">Special treat to dine, It was wow experience food was really delicious! outstanding dinner made by Mater chef, food experience was unfogetable!</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="images/resource/author-thumb-6.jpg" alt=""></div>
+                                <div class="auth-title">Michel Byrd</div>
+                                <div class="location">Denmark</div>
+                            </div>
+                    </div>
+                    <div class="testi-block">
+                            <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">Special treat to dine, It was wow experience food was really delicious! outstanding dinner made by Mater chef, food experience was unfogetable!</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="images/resource/author-thumb-6.jpg" alt=""></div>
+                                <div class="auth-title">Michel Byrd</div>
+                                <div class="location">Denmark</div>
+                            </div>
+                    </div>
             </div>
         </div>
     </div>

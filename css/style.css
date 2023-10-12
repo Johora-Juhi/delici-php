@@ -1540,8 +1540,176 @@ reservation page
 .testimonial-container {
   padding: 70px 15px;
   text-align: center;
+  font-family: "DM" ,sans-serif;
+}
+.testimonial-container .image-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/background/image-7.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.testimonial-container .title-box {
+  position: relative;
+}
+.testimonial-container .section-heading {
+  margin-bottom: 40px;
+}
+.testimonial-container .carousel-box {
+  position: relative;
+}
+.testimonial-slider .testi-block{
+  position: relative;
+  padding: 40px 25px;
+  background: rgb(14, 13, 12);
+  text-align: start;
+  color: white;
 }
 
+.testimonial-slider .testi-block .quote-icon{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 74px;
+}
+
+.testimonial-slider .testi-block .rating{
+  position: relative;
+  font-size: 12px;
+  color: rgb(228, 197, 144);
+  letter-spacing: 1px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.testimonial-slider .testi-block .text{
+  position: relative;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-family:"Forum", cursive;
+  margin-bottom: 35px;
+}
+
+.testimonial-slider .testi-block .auth-info{
+  position: relative;
+  min-height: 84px;
+  line-height: 20px;
+  padding-top: 20px;
+  padding-left: 105px;
+}
+
+.testimonial-slider .testi-block .auth-info .auth-title{
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.20em;
+}
+
+.testimonial-slider .testi-block .auth-info .location{
+  position: relative;
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+}
+
+.testimonial-slider .testi-block .auth-info .image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonial-slider .testi-block .auth-info .image img{
+  display: block;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+}
+
+.testimonial-slider .owl-theme .owl-dots{
+  display: none;
+}
+
+.testimonial-slider .owl-theme .owl-nav{
+  position: absolute;
+  left: -100px;
+  right: -100px;
+  height: 0;
+  top: 50%;
+  margin-top: -22px;
+}
+
+.testimonial-slider .owl-theme .owl-nav .owl-next,
+.testimonial-slider .owl-theme .owl-nav .owl-prev{
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  vertical-align: top;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 24px;
+  text-align: center;
+  background: transparent;
+  color: rgb(228, 197, 144);
+  border-radius: 0%;
+  -webkit-transition:all 400ms ease;
+  -moz-transition:all 400ms ease;
+  -ms-transition:all 400ms ease;
+  -o-transition:all 400ms ease;
+  transition:all 400ms ease;
+}
+
+.testimonial-slider .owl-theme .owl-nav .owl-next span,
+.testimonial-slider .owl-theme .owl-nav .owl-prev span{
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-slider .owl-theme .owl-nav .owl-next:before,
+.testimonial-slider .owl-theme .owl-nav .owl-prev:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(228, 197, 144);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition:all 400ms ease;
+  -moz-transition:all 400ms ease;
+  -ms-transition:all 400ms ease;
+  -o-transition:all 400ms ease;
+  transition:all 400ms ease;
+}
+
+.testimonial-slider .owl-theme .owl-nav .owl-next{
+  right: 15px;
+}
+
+.testimonial-slider .owl-theme .owl-nav .owl-prev{
+  left: 15px;
+}
+
+.testimonial-slider .owl-theme .owl-nav .owl-next:hover,
+.testimonial-slider .owl-theme .owl-nav .owl-prev:hover{
+  color: black;
+}
+
+.testimonial-slider .owl-theme .owl-nav .owl-next:hover:before,
+.testimonial-slider .owl-theme .owl-nav .owl-prev:hover:before{
+  background: rgb(228, 197, 144);
+}
 /*=============================
  admin page Layout
  ============================== */
@@ -2352,6 +2520,14 @@ input[type="file"]:focus + label {
   .services-section .service-col .service-box.alternate .info-box {
     order: -1;
   }
+  .testimonial-slider .testi-block .text{
+		font-size: 20px;
+	}
+
+	.testimonial-slider .testi-block .inner-box{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
   /*==============================
    admin page layout  
    ===============================*/
@@ -2746,26 +2922,9 @@ reservation page
     padding: 100px 0;
     position: relative;
   }
-  .testimonial-container .image-layer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/background/image-7.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  .testimonial-container .title-box {
-    position: relative;
-  }
-  .testimonial-container .section-heading {
-    margin-bottom: 40px;
-  }
-  .testimonial-container .carousel-box {
-    position: relative;
+  .testimonial-container .carousel-box{
+    width: 77%;
+    margin: auto;
   }
   /*==============================
    admin page layout  
