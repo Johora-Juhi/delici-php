@@ -1538,6 +1538,7 @@ reservation page
 }
 /* Testimonial Style  */
 .testimonial-container {
+  position: relative;
   padding: 70px 15px;
   text-align: center;
   font-family: "DM" ,sans-serif;
@@ -1561,6 +1562,10 @@ reservation page
   margin-bottom: 40px;
 }
 .testimonial-container .carousel-box {
+  position: relative;
+  /* padding: 0 15px; */
+}
+.testimonial-container .testimonial-slider{
   position: relative;
 }
 .testimonial-slider .testi-block{
@@ -1635,11 +1640,14 @@ reservation page
   border-radius: 50%;
 }
 
-.testimonial-slider .owl-theme .owl-dots{
+.testimonial-slider.owl-theme .owl-dots{
+  display: none;
+}
+.testimonial-slider.owl-theme .owl-nav{
   display: none;
 }
 
-.testimonial-slider .owl-theme .owl-nav{
+.testimonial-slider.owl-theme .owl-nav{
   position: absolute;
   left: -100px;
   right: -100px;
@@ -1648,8 +1656,8 @@ reservation page
   margin-top: -22px;
 }
 
-.testimonial-slider .owl-theme .owl-nav .owl-next,
-.testimonial-slider .owl-theme .owl-nav .owl-prev{
+.testimonial-slider.owl-theme .owl-nav .owl-next,
+.testimonial-slider.owl-theme .owl-nav .owl-prev{
   position: absolute;
   top: 50%;
   display: inline-block;
@@ -1669,14 +1677,14 @@ reservation page
   transition:all 400ms ease;
 }
 
-.testimonial-slider .owl-theme .owl-nav .owl-next span,
-.testimonial-slider .owl-theme .owl-nav .owl-prev span{
+.testimonial-slider.owl-theme .owl-nav .owl-next span,
+.testimonial-slider.owl-theme .owl-nav .owl-prev span{
   position: relative;
   z-index: 1;
 }
 
-.testimonial-slider .owl-theme .owl-nav .owl-next:before,
-.testimonial-slider .owl-theme .owl-nav .owl-prev:before{
+.testimonial-slider.owl-theme .owl-nav .owl-next:before,
+.testimonial-slider.owl-theme .owl-nav .owl-prev:before{
   content: '';
   position: absolute;
   left: 0;
@@ -1693,22 +1701,24 @@ reservation page
   transition:all 400ms ease;
 }
 
-.testimonial-slider .owl-theme .owl-nav .owl-next{
+.testimonial-slider.owl-theme .owl-nav .owl-next{
   right: 15px;
 }
 
-.testimonial-slider .owl-theme .owl-nav .owl-prev{
+.testimonial-slider.owl-theme .owl-nav .owl-prev{
   left: 15px;
 }
 
-.testimonial-slider .owl-theme .owl-nav .owl-next:hover,
-.testimonial-slider .owl-theme .owl-nav .owl-prev:hover{
+.testimonial-slider.owl-theme .owl-nav .owl-next:hover,
+.testimonial-slider.owl-theme .owl-nav .owl-prev:hover{
   color: black;
+  background: none;
 }
 
-.testimonial-slider .owl-theme .owl-nav .owl-next:hover:before,
-.testimonial-slider .owl-theme .owl-nav .owl-prev:hover:before{
+.testimonial-slider.owl-theme .owl-nav .owl-next:hover:before,
+.testimonial-slider.owl-theme .owl-nav .owl-prev:hover:before{
   background: rgb(228, 197, 144);
+  border: 1px solid black;
 }
 /*=============================
  admin page Layout
@@ -2523,11 +2533,11 @@ input[type="file"]:focus + label {
   .testimonial-slider .testi-block .text{
 		font-size: 20px;
 	}
-
-	.testimonial-slider .testi-block .inner-box{
+	.testimonial-slider .testi-block{
 		padding-left: 40px;
 		padding-right: 40px;
 	}
+
   /*==============================
    admin page layout  
    ===============================*/
@@ -2925,6 +2935,9 @@ reservation page
   .testimonial-container .carousel-box{
     width: 77%;
     margin: auto;
+  }
+  .testimonial-slider.owl-theme .owl-nav{
+    display: block;
   }
   /*==============================
    admin page layout  

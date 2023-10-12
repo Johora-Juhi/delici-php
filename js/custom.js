@@ -281,10 +281,10 @@ if ($('.testimonial-slider').length) {
 	$('.testimonial-slider').owlCarousel({
 		loop: true,
 		margin: 50,
-		// nav: true,
+		nav: true,
 		smartSpeed: 700,
 		autoplay: true,
-		navigation:	false,
+		// navigation:	false,
 		autoplayTimeout: 7000,
 		navText: ['<span class="icon fa-solid fa-angle-left"></span>', '<span class="icon fa-solid fa-angle-right"></span>'],
 		responsive: {
