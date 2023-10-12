@@ -346,17 +346,17 @@ include_once('./includes/connect.php');
                 </div>
 
                 <!--Slide Item-->
-               <div class="testi-block">
-                            <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
-                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                            <div class="text">Hygienic food &amp; fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
-                            <div class="auth-info">
-                                <div class="image"><img src="images/resource/author-thumb-5.jpg" alt=""></div>
-                                <div class="auth-title">Theresa Tin</div>
-                                <div class="location">Chicago</div>
-                            </div>
-                        
+                <div class="testi-block">
+                    <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
+                    <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                    <div class="text">Hygienic food &amp; fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
+                    <div class="auth-info">
+                        <div class="image"><img src="images/resource/author-thumb-5.jpg" alt=""></div>
+                        <div class="auth-title">Theresa Tin</div>
+                        <div class="location">Chicago</div>
                     </div>
+
+                </div>
                 <!--Slide Item-->
                 <div class="testi-block">
                     <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
@@ -382,16 +382,16 @@ include_once('./includes/connect.php');
                 </div>
 
                 <!--Slide Item-->
-               <div class="testi-block">
-                            <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
-                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                            <div class="text">Hygienic food &amp; fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
-                            <div class="auth-info">
-                                <div class="image"><img src="images/resource/author-thumb-5.jpg" alt=""></div>
-                                <div class="auth-title">Theresa Tin</div>
-                                <div class="location">Chicago</div>
-                            </div>
+                <div class="testi-block">
+                    <div class="quote-icon"><img src="images/icons/quotes-1.png" alt="" title=""></div>
+                    <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                    <div class="text">Hygienic food &amp; fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
+                    <div class="auth-info">
+                        <div class="image"><img src="images/resource/author-thumb-5.jpg" alt=""></div>
+                        <div class="auth-title">Theresa Tin</div>
+                        <div class="location">Chicago</div>
                     </div>
+                </div>
 
                 <!--Slide Item-->
                 <div class="testi-block">
@@ -410,12 +410,19 @@ include_once('./includes/connect.php');
     </div>
     <!-- Why us Section  -->
     <div class="why-us-container">
-            <div class="small-heading">why choose us</div>
-            <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
-            <div class="section-heading">our strenth</div>
+        <div class="small-heading">why choose us</div>
+        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+        <div class="section-heading">our strenth</div>
+        <div class="why-us-section">
             <div class="why-us-box">
-                <div class="image-box"><img src="./images/resource/featured-4.jpg" alt=""></div>
+            <div class="image-box"><img src="./images/resource/featured-4.jpg" alt=""></div>
+            <div class="strength-box">
+                <div class="icon-box"><img src="./images/resource/why-icon-1.png" alt=""></div>
+                <div class="section-heading-four">Hygienic Food
+                </div>
             </div>
+            </div>
+        </div>
     </div>
     <!-- Footer section  -->
     <div class="footer">
