@@ -82,7 +82,7 @@ include_once('./includes/connect.php');
                 <a class="nav-link" href="#">Home</a>
                 <a class="nav-link" href="./menu.php">Menu</a>
                 <a class="nav-link" href="./about-us.php">About Us</a>
-                <a class="nav-link" href="./our-chef.php">Our Chefs</a>
+                <a class="nav-link active" href="./our-chef.php">Our Chefs</a>
                 <a class="nav-link" href="./contact.php">Contact</a>
                 </ul>
             </nav>
@@ -122,7 +122,7 @@ include_once('./includes/connect.php');
             <a class="nav-link" href="#">Home</a>
             <a class="nav-link" href="./menu.php">Menu</a>
             <a class="nav-link" href="./about-us.php">About Us</a>
-            <a class="nav-link" href="./our-chef.php">Our Chefs</a>
+            <a class="nav-link active" href="./our-chef.php">Our Chefs</a>
             <a class="nav-link" href="./contact.php">Menu</a>
             </ul>
         </nav>

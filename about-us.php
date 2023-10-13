@@ -85,7 +85,7 @@ include_once('./includes/connect.php');
             <nav class="nav-container">
                 <a class="nav-link" href="#">Home</a>
                 <a class="nav-link" href="./menu.php">Menu</a>
-                <a class="nav-link" href="./about-us.php">About Us</a>
+                <a class="nav-link active" href="./about-us.php">About Us</a>
                 <a class="nav-link" href="./our-chef.php">Our Chefs</a>
                 <a class="nav-link" href="./contact.php">Contact</a>
                 </ul>
@@ -460,9 +460,8 @@ include_once('./includes/connect.php');
 
     <!-- Image gallery Section  -->
     <section class="image-gallery">
-        <!-- <div class="inner"> -->
-            <div class="carousel-box">
-                <div class="inner">
+        <div class="carousel-box">
+            <div class="inner">
                 <div class="image-gallery-slider owl-theme owl-carousel">
                     <!--Slide Item-->
                     <div class="gallery-block">
@@ -495,9 +494,8 @@ include_once('./includes/connect.php');
                     </div>
 
                 </div>
-                </div>
             </div>
-        <!-- </div> -->
+        </div>
     </section>
     <!-- Footer section  -->
     <div class="footer">

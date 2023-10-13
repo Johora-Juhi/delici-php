@@ -113,9 +113,11 @@
 }
 .main-header .nav-container {
   display: none;
+  text-align: center;
 }
 .nav-container a {
   position: relative;
+  text-align: center;
   color: white;
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
@@ -135,10 +137,12 @@
   border-bottom: 1px solid rgb(228, 197, 144);
   transition: all ease-in-out 0.2s;
 }
+.main-header .nav-container a.active::after,
 .main-header .nav-container a:hover::after {
   width: 100%;
   left: 0;
 }
+.main-header .nav-container a.active,
 .main-header .nav-container a:hover {
   color: rgb(228, 197, 144) !important;
 }
@@ -291,13 +295,13 @@
 }
 
 .info-bar .nav-container a:hover:before,
-.info-bar .nav-container a.current:before {
+.info-bar .nav-container a.active:before {
   opacity: 1;
   visibility: visible;
 }
 
 .info-bar .nav-container a:hover,
-.info-bar .nav-container a.current {
+.info-bar .nav-container a.active {
   color: rgb(228, 197, 144) !important;
   padding-left: 20px;
 }
@@ -1882,8 +1886,6 @@ reservation page
 .image-gallery .owl-theme .owl-nav .owl-next span,
 .image-gallery .owl-theme .owl-nav .owl-prev span{
   position: relative;
-  width: 100%;
-  height: 100%;
   z-index: 1;
 }
 
@@ -3151,7 +3153,7 @@ reservation page
     display: block;
   }
   .why-us-container{
-    padding: 100px 0 70px 0;
+    padding: 100px  0;
   }
   .why-us-container .why-us-section{
     width: 77%;

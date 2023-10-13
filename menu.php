@@ -80,7 +80,7 @@ include_once('./includes/connect.php');
             <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
             <nav class="nav-container">
                 <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="./menu.php">Menu</a>
+                <a class="nav-link active" href="./menu.php">Menu</a>
                 <a class="nav-link" href="./about-us.php">About Us</a>
                 <a class="nav-link" href="./our-chef.php">Our Chefs</a>
                 <a class="nav-link" href="./contact.php">Contact</a>
@@ -120,7 +120,7 @@ include_once('./includes/connect.php');
 
         <nav class="nav-container">
             <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="./menu.php">Menu</a>
+            <a class="nav-link active" href="./menu.php">Menu</a>
             <a class="nav-link" href="./about-us.php">About Us</a>
             <a class="nav-link" href="./our-chef.php">Our Chefs</a>
             <a class="nav-link" href="./contact.php">Menu</a>
