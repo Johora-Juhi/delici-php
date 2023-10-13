@@ -159,7 +159,7 @@ include_once('./includes/connect.php');
     <!--End Banner Section -->
 
     <!-- Who we are   -->
-    <div class="about-container">
+    <section class="about-container">
         <div class="left-bg"><img src="images/background/bg-10.png" alt="" title=""></div>
         <div class="right-bg"><img src="images/background/bg-11.png" alt="" title=""></div>
         <div class="small-heading">who we are</div>
@@ -230,9 +230,10 @@ include_once('./includes/connect.php');
                 <div class="fact-title">awards won</div>
             </div>
         </div>
-    </div>
+    </section>
+
     <!-- experience Section  -->
-    <div class="experience-container">
+    <section class="experience-container">
         <div class="right-bg"><img src="images/background/bg-12.png" alt="" title=""></div>
         <div class="image">
             <img src="./images/background/image-5.jpg" alt="">
@@ -251,8 +252,10 @@ include_once('./includes/connect.php');
                 </span>
             </a>
         </div>
-    </div>
-    <div class="experience-container alternate">
+    </section>
+
+    <!-- experience alternate Section  -->
+    <section class="experience-container alternate">
         <div class="left-bg"><img src="images/background/bg-13.png" alt="" title=""></div>
         <div class="image">
             <img src="./images/background/image-6.jpg" alt="">
@@ -270,9 +273,9 @@ include_once('./includes/connect.php');
                 </span>
             </a>
         </div>
-    </div>
+    </section>
     <!-- Services section  -->
-    <div class="services-container">
+    <section class="services-container">
         <div class="left-bg"><img src="images/background/bg-14.png" alt="" title=""></div>
         <div class="right-bg"><img src="images/background/bg-15.png" alt="" title=""></div>
         <div class="small-heading">OUR SERVICES</div>
@@ -322,9 +325,10 @@ include_once('./includes/connect.php');
             </div>
             <div class="image-col"><img src="./images/resource/service-image.png" alt=""></div>
         </div>
-    </div>
+    </section>
+
     <!-- Testimonial section  -->
-    <div class="testimonial-container">
+    <section class="testimonial-container">
         <div class="image-layer"></div>
         <div class="title-box">
             <div class="small-heading">TESTIMONIALS</div>
@@ -407,9 +411,10 @@ include_once('./includes/connect.php');
 
             </div>
         </div>
-    </div>
+    </section>
+
     <!-- Why us Section  -->
-    <div class="why-us-container">
+    <section class="why-us-container">
         <div class="small-heading">why choose us</div>
         <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
         <div class="section-heading">our strenth</div>
@@ -424,13 +429,13 @@ include_once('./includes/connect.php');
                 </div>
             </div>
             <div class="why-us-box m-top">
-            <div class="inner">
-            <div class="image-box"><img src="./images/resource/featured-5.jpg" alt=""></div>
-                <div class="strength-box">
-                    <div class="icon-box"><img src="./images/resource/why-icon-2.png" alt=""></div>
-                    <div class="section-heading-four">fresh enviroment</div>
+                <div class="inner">
+                    <div class="image-box"><img src="./images/resource/featured-5.jpg" alt=""></div>
+                    <div class="strength-box">
+                        <div class="icon-box"><img src="./images/resource/why-icon-2.png" alt=""></div>
+                        <div class="section-heading-four">fresh enviroment</div>
+                    </div>
                 </div>
-            </div>
             </div>
             <div class="why-us-box">
                 <div class="inner">
@@ -443,15 +448,57 @@ include_once('./includes/connect.php');
             </div>
             <div class="why-us-box m-top">
                 <div class="inner">
-                <div class="image-box"><img src="./images/resource/featured-7.jpg" alt=""></div>
-                <div class="strength-box">
-                    <div class="icon-box"><img src="./images/resource/why-icon-4.png" alt=""></div>
-                    <div class="section-heading-four">event and party</div>
-                </div>
+                    <div class="image-box"><img src="./images/resource/featured-7.jpg" alt=""></div>
+                    <div class="strength-box">
+                        <div class="icon-box"><img src="./images/resource/why-icon-4.png" alt=""></div>
+                        <div class="section-heading-four">event and party</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Image gallery Section  -->
+    <section class="image-gallery">
+        <!-- <div class="inner"> -->
+            <div class="carousel-box">
+                <div class="inner">
+                <div class="image-gallery-slider owl-theme owl-carousel">
+                    <!--Slide Item-->
+                    <div class="gallery-block">
+                        <div class="image"><a href="./images/resource/gallery-1.jpg" class="lightbox-image" data-fancybox="gallery"><img src="./images/resource/gallery-1.jpg" alt=""></a></div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="gallery-block">
+                        <div class="image"><a href="./images/resource/gallery-2.jpg" class="lightbox-image" data-fancybox="gallery"><img src="./images/resource/gallery-2.jpg" alt=""></a></div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="gallery-block">
+                        <div class="image"><a href="./images/resource/gallery-3.jpg" class="lightbox-image" data-fancybox="gallery"><img src="./images/resource/gallery-3.jpg" alt=""></a></div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="gallery-block">
+                        <div class="image"><a href="./images/resource/gallery-1.jpg" class="lightbox-image" data-fancybox="gallery"><img src="./images/resource/gallery-1.jpg" alt=""></a></div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="gallery-block">
+                        <div class="image"><a href="./images/resource/gallery-2.jpg" class="lightbox-image" data-fancybox="gallery"><img src="./images/resource/gallery-2.jpg" alt=""></a></div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="gallery-block">
+                        <div class="image"><a href="./images/resource/gallery-3.jpg" class="lightbox-image" data-fancybox="gallery"><img src="./images/resource/gallery-3.jpg" alt=""></a></div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </section>
     <!-- Footer section  -->
     <div class="footer">
         <div class="image-layer"></div>

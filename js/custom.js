@@ -309,6 +309,32 @@ if ($('.testimonial-slider').length) {
 	});
 }
 
+
+	//Gallery Carousel
+	if ($('.image-gallery-slider').length) {
+		$('.image-gallery-slider').owlCarousel({
+			loop:true,
+			margin:50,
+			nav:true,
+			smartSpeed: 700,
+			autoplay: true,
+			autoplayTimeout:5000,
+			navText: [ '<span class="icon fa-solid fa-angle-left"></span>', '<span class="icon fa-solid fa-angle-right"></span>' ],
+			responsive:{
+				0:{
+					items:1
+				},
+				768:{
+					items:1
+				},
+				992:{
+					items:1
+				}
+			}
+		});    		
+	}
+
+
 //Update Header Style and Scroll to Top
 // function headerStyle() {
 // 	if($('.header-container').length){

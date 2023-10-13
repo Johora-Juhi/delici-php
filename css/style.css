@@ -1795,6 +1795,136 @@ reservation page
   opacity:0.70;
   transform:scale(1.05,1.05);
 }
+/*** 
+
+====================================================================
+  Image Gallery Section
+====================================================================
+
+***/
+
+.image-gallery{
+  position: relative;
+  /* background-color:var(--color-four); */
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+
+.image-gallery .carousel-box{
+  position: relative;
+}
+
+.image-gallery .inner{
+  max-width: 860px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.image-gallery .image-gallery-slider{
+  position: static;
+}
+
+.image-gallery .image-gallery-slider .owl-stage-outer{
+  overflow: visible;
+}
+
+.image-gallery .gallery-block{
+  position: relative;
+}
+
+.image-gallery .gallery-block .image{
+  position: relative;
+}
+
+.image-gallery .gallery-block .image img{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.image-gallery .owl-theme .owl-dots{
+  display: none;
+}
+
+.image-gallery .owl-theme .owl-nav{
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  height: 0;
+  top: 50%;
+  margin-top: -22px;
+}
+
+.image-gallery .owl-theme .owl-nav .owl-next,
+.image-gallery .owl-theme .owl-nav .owl-prev{
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  vertical-align: top;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 24px;
+  text-align: center;
+  background: transparent;
+  color: rgb(228, 197, 144);
+  border-radius: 0%;
+  -webkit-transition:all 400ms ease;
+  -moz-transition:all 400ms ease;
+  -ms-transition:all 400ms ease;
+  -o-transition:all 400ms ease;
+  transition:all 400ms ease;
+}
+.image-gallery .owl-theme .owl-nav .owl-prev,
+.image-gallery .owl-theme .owl-nav .owl-next{
+  transform: scale(0.70);
+}
+.image-gallery .owl-theme .owl-nav .owl-next span,
+.image-gallery .owl-theme .owl-nav .owl-prev span{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.image-gallery .owl-theme .owl-nav .owl-next:before,
+.image-gallery .owl-theme .owl-nav .owl-prev:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(228, 197, 144);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition:all 400ms ease;
+  -moz-transition:all 400ms ease;
+  -ms-transition:all 400ms ease;
+  -o-transition:all 400ms ease;
+  transition:all 400ms ease;
+}
+
+.image-gallery .owl-theme .owl-nav .owl-next{
+  right: 15px;
+}
+
+.image-gallery .owl-theme .owl-nav .owl-prev{
+  left: 15px;
+}
+
+.image-gallery .owl-theme .owl-nav .owl-next:hover,
+.image-gallery .owl-theme .owl-nav .owl-prev:hover{
+  color: black;
+  background: none;
+}
+
+.image-gallery .owl-theme .owl-nav .owl-next:hover:before,
+.image-gallery .owl-theme .owl-nav .owl-prev:hover:before{
+  background: rgb(228, 197, 144);
+}
+
+/*** 
 /*=============================
  admin page Layout
  ============================== */
@@ -2615,7 +2745,10 @@ input[type="file"]:focus + label {
 		padding-left: 40px;
 		padding-right: 40px;
 	}
-
+  .image-gallery .owl-theme .owl-nav .owl-prev,
+	.image-gallery .owl-theme .owl-nav .owl-next{
+		transform: scale(1);
+	}
   /*==============================
    admin page layout  
    ===============================*/
@@ -3028,6 +3161,11 @@ reservation page
   .why-us-container .why-us-section .m-top{
     padding-top: 40px;
   }
+  .image-gallery{
+    padding-bottom: 100px;
+  }
+
+
   /*==============================
    admin page layout  
    ===============================*/
