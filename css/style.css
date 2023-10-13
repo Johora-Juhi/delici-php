@@ -25,8 +25,9 @@
 }
 
 .fixed-header.header-down {
-  top: -51px;
+  top: 0px;
 }
+
 
 .fixed-header.header-up {
   top: -175px;
@@ -1732,20 +1733,30 @@ reservation page
 .why-us-container .why-us-section{
   display: grid;
   grid-template-columns: repeat(1,1fr);
-  place-items: center;
+  /* place-items: center; */
   gap: 30px;
 }
 .why-us-container .why-us-section .why-us-box{
   width: 100%;
   position: relative;
 }
+.why-us-container .why-us-section .why-us-box .inner{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+}
+
 .why-us-container .why-us-section .image-box{
   position: relative;
+  overflow: hidden;
+
 }
 .why-us-container .why-us-section .image-box img{
   width: 100%;
   object-fit: contain;
   transition: all 500ms ease;
+  overflow: hidden;
 }
 .why-us-container .why-us-section .image-box:before {
   content: '';
@@ -1774,6 +1785,11 @@ reservation page
 .why-us-container .why-us-section .strength-box .section-heading-four{
   position: relative;
   margin-bottom: 40px;
+}
+
+.why-us-box .inner:hover .image-box img{
+  opacity:0.70;
+  transform:scale(1.05,1.05);
 }
 /*=============================
  admin page Layout
@@ -2443,6 +2459,9 @@ input[type="file"]:focus + label {
   /*=======================
    Navbar style
   =========================  */
+  .fixed-header.header-down {
+    top: -51px;
+  }
   .header-container .top-header {
     display: block;
   }
@@ -3001,6 +3020,9 @@ reservation page
     width: 77%;
     margin: auto;
     grid-template-columns: repeat(4,1fr);
+  }
+  .why-us-container .why-us-section .m-top{
+    padding-top: 40px;
   }
   /*==============================
    admin page layout  

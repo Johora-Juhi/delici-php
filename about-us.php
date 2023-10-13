@@ -415,12 +415,40 @@ include_once('./includes/connect.php');
         <div class="section-heading">our strenth</div>
         <div class="why-us-section">
             <div class="why-us-box">
-            <div class="image-box"><img src="./images/resource/featured-4.jpg" alt=""></div>
-            <div class="strength-box">
-                <div class="icon-box"><img src="./images/resource/why-icon-1.png" alt=""></div>
-                <div class="section-heading-four">Hygienic Food
+                <div class="inner">
+                    <div class="image-box"><img src="./images/resource/featured-4.jpg" alt=""></div>
+                    <div class="strength-box">
+                        <div class="icon-box"><img src="./images/resource/why-icon-1.png" alt=""></div>
+                        <div class="section-heading-four">Hygienic Food</div>
+                    </div>
                 </div>
             </div>
+            <div class="why-us-box m-top">
+            <div class="inner">
+            <div class="image-box"><img src="./images/resource/featured-5.jpg" alt=""></div>
+                <div class="strength-box">
+                    <div class="icon-box"><img src="./images/resource/why-icon-2.png" alt=""></div>
+                    <div class="section-heading-four">fresh enviroment</div>
+                </div>
+            </div>
+            </div>
+            <div class="why-us-box">
+                <div class="inner">
+                    <div class="image-box"><img src="./images/resource/featured-6.jpg" alt=""></div>
+                    <div class="strength-box">
+                        <div class="icon-box"><img src="./images/resource/why-icon-3.png" alt=""></div>
+                        <div class="section-heading-four">skilled chefs</div>
+                    </div>
+                </div>
+            </div>
+            <div class="why-us-box m-top">
+                <div class="inner">
+                <div class="image-box"><img src="./images/resource/featured-7.jpg" alt=""></div>
+                <div class="strength-box">
+                    <div class="icon-box"><img src="./images/resource/why-icon-4.png" alt=""></div>
+                    <div class="section-heading-four">event and party</div>
+                </div>
+                </div>
             </div>
         </div>
     </div>
