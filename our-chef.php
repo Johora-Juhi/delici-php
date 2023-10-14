@@ -169,6 +169,7 @@ include_once('./includes/connect.php');
             </div>
         </div>
     </div>
+
     <!-- quote section  -->
     <div class="quote-section">
         <div class="image-layer" style="background-image: url(images/background/image-12.jpg);"></div>
@@ -180,6 +181,7 @@ include_once('./includes/connect.php');
             <div class="chef">HENRY - EXCUTIVE CHEF</div>
         </div>
     </div>
+    
     <!-- meet our chef   -->
     <div class="meet-chef-container">
         <div class="left-bg"><img src="./images/background/bg-27.png" alt="" title=""></div>
