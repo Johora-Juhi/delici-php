@@ -227,6 +227,8 @@ include_once('./includes/connect.php');
                     </div>
                 </div>
             </div>
+            <div class="swiper-button-prev"><span class="fa-solid icon fa-angle-left"></span></div>
+                <div class="swiper-button-next"><span class="fa-solid icon fa-angle-right"></span></div>
         </div>
     </div>
     <!--End Banner Section -->
