@@ -199,9 +199,9 @@ include_once('./includes/connect.php');
                 <div class="swiper-slide slide-item">
                     <div class="image-layer" style="background-image: url(./images/main-slider/slider-2.jpg);"></div>
                     <div class="content">
-                        <div class="subtitle"><span>delightful experience</span></div>
+                        <div class="subtitle"><span>amazing & delicious</span></div>
                         <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                        <h1><span>Flavors Inspired by <br>the Seasons</span></h1>
+                        <h1><span>Where every flavor <br>tells a story</span></h1>
                         <div class="text">Come with family &amp; feel the joy of mouthwatering food</div>
                         <a href="menu-list.php" class="theme-btn btn-style-two">
                             <span class="btn-wrap">
@@ -214,10 +214,10 @@ include_once('./includes/connect.php');
                 <div class="swiper-slide slide-item">
                     <div class="image-layer" style="background-image: url(./images/main-slider/slider-3.jpg);"></div>
                     <div class="content">
-                        <div class="subtitle"><span>delightful experience</span></div>
+                        <div class="subtitle"><span>Tradational & Hygine</span></div>
                         <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
                         <h1><span>Flavors Inspired by <br>the Seasons</span></h1>
-                        <div class="text">Come with family &amp; feel the joy of mouthwatering food</div>
+                        <div class="text">For the love of <br>delicious food</div>
                         <a href="menu-list.php" class="theme-btn btn-style-two">
                             <span class="btn-wrap">
                                 <span class="text-one">view our menu</span>
