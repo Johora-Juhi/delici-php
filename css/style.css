@@ -635,7 +635,7 @@
   background: rgb(228, 197, 144);
 }
 
-.banner-slider .book-btn{
+.banner-container .book-btn{
   position: absolute;
   right: 50px;
   bottom: 50px;
@@ -644,7 +644,7 @@
   z-index: 10;
 }
 
-.banner-slider .book-btn:before{
+.banner-container .book-btn:before{
   content: '';
   position: absolute;
   left: 0;
@@ -656,34 +656,34 @@
   transform: rotate(45deg);
 }
 
-.banner-slider .book-btn a{
+.banner-container .book-btn a{
   position: relative;
   display: block;
   width: 110px;
   height: 110px;
   color: black;
   background: rgb(228, 197, 144);
-  padding-top: var(--padding-top-12);
-  padding-left: var(--padding-left-10);
-  padding-right: var(--padding-right-10);
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   z-index: 1;
 }
 
-.banner-slider .book-btn a .icon{
+.banner-container .book-btn a .icon{
   position: relative;
   display: block;
-  margin-bottom: var(--margin-bottom-7);
+  margin-bottom: 7px;
 }
 
-.banner-slider .book-btn a .txt{
+.banner-container .book-btn a .txt{
   position: relative;
   display: block;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.5em;
   color: black;
-  font-size: var(--font-12);
+  font-size: 12px;
   letter-spacing: 0.15em;
 }
 /*** 
@@ -1086,7 +1086,7 @@
 }
 
 .story-section .image-col .round-stamp:before,
-.banner-slider .book-btn:before,
+.banner-container .book-btn:before,
 .top-footer .info-box .separator span,
 .quote-section .separator span,
 .testimonials-section .separator span,

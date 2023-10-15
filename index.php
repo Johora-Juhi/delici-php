@@ -230,6 +230,7 @@ include_once('./includes/connect.php');
             <div class="swiper-button-prev"><span class="fa-solid icon fa-angle-left"></span></div>
                 <div class="swiper-button-next"><span class="fa-solid icon fa-angle-right"></span></div>
         </div>
+        <div class="book-btn"><a href="reservation.php" class="theme-btn"><span class="icon"><img src="images/resource/book-icon-1.png" alt="" title=""></span><span class="txt">book a table</span></a></div>
     </div>
     <!--End Banner Section -->
 
