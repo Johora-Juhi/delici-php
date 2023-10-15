@@ -431,11 +431,14 @@
 }
 .banner-container .banner-slider .swiper-slide{
   position: relative;
-  padding-top: 150px 0 50px 0;
   width: 100%;
   height: 880px;
     min-height: 100vh;
     z-index: 10;
+}
+.swiper-slide .content{
+position: relative;
+color: white;
 }
 /*** 
 
@@ -444,7 +447,7 @@
 ====================================================================
 
 ***/
-
+.swiper-slide,
 .inner-banner {
   font-family: "DM Sans", sans-serif;
   position: relative;
@@ -466,13 +469,13 @@
   background-size: cover;
   opacity: 0.4;
 }
-
+.swiper-slide .content .pattern-image,
 .inner-banner .pattern-image {
   width: 100px;
   line-height: 29.6px;
   margin: 0 auto;
 }
-
+.swiper-slide .content,
 .inner-banner .inner {
   position: relative;
   display: block;
@@ -482,7 +485,7 @@
   text-align: center;
   z-index: 5;
 }
-
+.swiper-slide .content .subtitle,
 .inner-banner .inner .subtitle {
   position: relative;
   text-transform: uppercase;
@@ -493,7 +496,7 @@
   margin-bottom: 0;
   line-height: 29.6px;
 }
-
+.swiper-slide .content h1,
 .inner-banner .inner h1 {
   font-family: "Forum", cursive;
   color: white;
@@ -506,7 +509,7 @@
   line-height: 1em;
   margin: 0px 0px;
 }
-
+.swiper-slide .content h1 span,
 .inner-banner .inner h1 span {
   position: relative;
   display: inline-block;
@@ -2914,9 +2917,11 @@ input[type="file"]:focus + label {
   .info-bar .nav-container {
     margin: 0 30px 100px 30px;
   }
+  .swiper-slide,
   .inner-banner {
     padding-top: 200px;
   }
+  .swiper-slide .content h1,
   .inner-banner .inner h1 {
     font-size: 54px;
     text-transform: capitalize;
@@ -3175,10 +3180,12 @@ input[type="file"]:focus + label {
   /*=======================
    banner section 
    =========================== */
+  .swiper-slide,
   .inner-banner {
     padding-top: 300px;
     padding-bottom: 150px;
   }
+  .swiper-slide .content h1,
   .inner-banner .inner h1 {
     font-size: 80px;
   }
