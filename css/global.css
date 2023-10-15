@@ -151,7 +151,7 @@ button:focus {
     text-align: center;
     text-transform: uppercase;
     color: rgb(228,197,144);
-    background-color: black;
+    /* background-color: black; */
     letter-spacing: 3px;
     font-weight: 700;
     line-height: 29.6px;

@@ -412,6 +412,16 @@
   position: relative;
   text-align: center;
 }
+.banner-slider .swiper-slide:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.0);
+  z-index: 1;
+}
 .banner-container .banner-slider .swiper-slide .image-layer{
   position: absolute;
   left: 0;
@@ -429,16 +439,131 @@
   -moz-transition: all 0ms linear 0ms;
   transition: all 0ms linear 0ms;
 }
+.banner-section .slide-item.swiper-slide-active .image-layer{
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition:all 7000ms linear 0ms;
+  -ms-transition:all 7000ms linear 0ms;
+  -o-transition:all 7000ms linear 0ms;
+  -moz-transition:all 7000ms linear 0ms;
+  transition:all 7000ms linear 0ms;
+}
 .banner-container .banner-slider .swiper-slide{
   position: relative;
+  color: white;
   width: 100%;
   height: 880px;
     min-height: 100vh;
     z-index: 10;
 }
-.swiper-slide .content{
-position: relative;
-color: white;
+.swiper-slide .content .subtitle{
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  margin-bottom: 10px;
+  line-height: 29.6px;
+  opacity:0;
+  visibility: hidden;
+  -webkit-transform:translateY(30px);
+  -ms-transform:translateY(30px);
+  transform:translateY(30px);
+}
+.swiper-slide .content .pattern-image{
+  position: relative;
+  width: 100px;
+  line-height: 29.6px;
+  margin: 0 auto 30px auto;
+  opacity:0;
+  visibility: hidden;
+  -webkit-transform:translateY(30px);
+  -ms-transform:translateY(30px);
+  transform:translateY(30px);
+}
+.swiper-slide .content h1{
+  font-family: "Forum", cursive;
+  color: white;
+  position: relative;
+  font-weight: 400;
+  font-size: 34px;
+  text-transform: capitalize;
+  line-height: 1em;
+  margin: 0px 0px;
+  opacity:0;
+  visibility: hidden;
+  -webkit-transform:translateY(30px);
+  -ms-transform:translateY(30px);
+  transform:translateY(30px);
+}
+.swiper-slide .content .text{
+  position: relative;
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    opacity:0;
+    visibility: hidden;
+    -webkit-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    transform:translateY(30px);
+}
+.swiper-slide .content .theme-btn{
+  margin-top: 40px;
+  opacity:0;
+  visibility: hidden;
+  -webkit-transform:translateY(30px);
+  -ms-transform:translateY(30px);
+  transform:translateY(30px);
+}
+.banner-slider .swiper-slide-active .subtitle,
+.banner-slider .swiper-slide-active .pattern-image{
+  opacity:1;
+  visibility: visible;
+  -webkit-transform:translate(0);
+  -ms-transform:translate(0);
+  transform:translate(0);
+  -webkit-transition:all 1000ms ease 500ms;
+  -ms-transition:all 1000ms ease 500ms;
+  -o-transition:all 1000ms ease 500ms;
+  -moz-transition:all 1000ms ease 500ms;
+  transition:all 1000ms ease 500ms;
+}
+.banner-slider .swiper-slide-active h1{
+  opacity:1;
+  visibility: visible;
+  -webkit-transform:translate(0);
+  -ms-transform:translate(0);
+  transform:translate(0);
+  -webkit-transition:all 1000ms ease 1000ms;
+  -ms-transition:all 1000ms ease 1000ms;
+  -o-transition:all 1000ms ease 1000ms;
+  -moz-transition:all 1000ms ease 1000ms;
+  transition:all 1000ms ease 1000ms;
+}
+.banner-slider .swiper-slide-active .text{
+  opacity:1;
+  visibility: visible;
+  -webkit-transform:translate(0);
+  -ms-transform:translate(0);
+  transform:translate(0);
+  -webkit-transition:all 1000ms ease 1500ms;
+  -ms-transition:all 1000ms ease 1500ms;
+  -o-transition:all 1000ms ease 1500ms;
+  -moz-transition:all 1000ms ease 1500ms;
+  transition:all 1000ms ease 1500ms;
+}
+.banner-slider .swiper-slide-active .theme-btn{
+  opacity:1;
+  visibility: visible;
+  -webkit-transform:translate(0);
+  -ms-transform:translate(0);
+  transform:translate(0);
+  -webkit-transition:all 1000ms ease 2000ms;
+  -ms-transition:all 1000ms ease 2000ms;
+  -o-transition:all 1000ms ease 2000ms;
+  -moz-transition:all 1000ms ease 2000ms;
+  transition:all 1000ms ease 2000ms;
 }
 /*** 
 
@@ -469,7 +594,7 @@ color: white;
   background-size: cover;
   opacity: 0.4;
 }
-.swiper-slide .content .pattern-image,
+
 .inner-banner .pattern-image {
   width: 100px;
   line-height: 29.6px;
@@ -485,7 +610,6 @@ color: white;
   text-align: center;
   z-index: 5;
 }
-.swiper-slide .content .subtitle,
 .inner-banner .inner .subtitle {
   position: relative;
   text-transform: uppercase;
@@ -496,7 +620,6 @@ color: white;
   margin-bottom: 0;
   line-height: 29.6px;
 }
-.swiper-slide .content h1,
 .inner-banner .inner h1 {
   font-family: "Forum", cursive;
   color: white;
