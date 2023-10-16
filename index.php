@@ -260,10 +260,11 @@ include_once('./includes/connect.php');
             </div>
 
         </div>
+        <div class="bottom-image"><img src="images/resource/image-3.png" alt="" title=""></div>
     </div>
 
     <!--Menu Section-->
-    <section class="menu-section">
+    <section class="menu-section-one">
         <div class="left-bg"><img src="images/background/bg-5.png" alt="" title=""></div>
         <div class="right-bg"><img src="images/background/bg-6.png" alt="" title=""></div>
         <div class="small-heading"><span>Special selection</span></div>

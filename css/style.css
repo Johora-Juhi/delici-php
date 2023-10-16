@@ -706,6 +706,9 @@
   max-width: 420px;
   margin: 0 auto 40px auto;
 }
+.offer-container .bottom-image {
+  display: none;
+}
 .offer-section{
   display: grid;
   grid-template-columns: repeat(1,1fr);
@@ -830,29 +833,19 @@
 
 ***/
 
-.menu-section{
+.menu-section-one{
+  text-align: center;
   position: relative;
   padding: 70px 15px;
   overflow: hidden;
   color: white;
 }
-.menu-section .menu-container{
+.menu-section-one .menu-container{
   width: 100%;
   row-gap: 55px;
 }
-.menu-section .left-bg{
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 
-.menu-section .right-bg{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.menu-section .section-heading{
+.menu-section-one .section-heading{
   margin-bottom: 40px;
 }
 
@@ -943,14 +936,14 @@
 }
 
 
-.menu-section .open-timing{
+.menu-section-one .open-timing{
   position: relative;
   text-align: center;
   margin-top: 55px;
   font-family: "DM Sans", sans-serif;
 }
 
-.menu-section .open-timing .hours{
+.menu-section-one .open-timing .hours{
   position: relative;
   margin-bottom: 25px;
 }
@@ -4039,8 +4032,16 @@ reservation page
     padding-bottom: 100px;
   }
   .offer-container {
+    position: relative;
     padding: 100px 0;
   }
+  .offer-container .bottom-image {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -170px;
+    z-index: 1;
+}
   /* Bob Up Down*/
 
 @-webkit-keyframes float_up_down {
@@ -4083,8 +4084,8 @@ reservation page
   }
 }
 
-.menu-section .left-bg,
-.menu-section .right-bg,
+.menu-section-one .left-bg,
+.menu-section-one .right-bg,
 .offer-container .right-bg,
 .offer-container .left-bg,
 .special-dish .content-col .badge-icon{
@@ -4141,12 +4142,25 @@ reservation page
   grid-column: span 1;
   margin: auto;
 }
-.menu-section{
+.menu-section-one{
   padding: 100px 0;
 }
-.menu-section .tabs-box{
+.menu-section-one .tabs-box{
   width: 77%;
   margin: auto;
+}
+.menu-section-one .left-bg{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menu-section-one .right-bg{
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
   /*==============================
    admin page layout  
