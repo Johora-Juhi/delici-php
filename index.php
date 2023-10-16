@@ -245,17 +245,17 @@ include_once('./includes/connect.php');
         <div class="offer-section">
             <div class="offer-box">
                 <div class="image"><a href="menu.php"><img src="images/resource/offer-image-1.jpg" alt=""></a></div>
-                <h3><a href="menu.php">Breakfast</a></h3>
+                <div class="heading-three"><a href="menu.php">Breakfast</a></div class="heading-three">
                 <div class="more-link"><a href="menu.php">view menu</a></div>
             </div>
             <div class="offer-box">
-                <div class="image"><a href="menu.php"><img src="images/resource/offer-image-1.jpg" alt=""></a></div>
-                <h3><a href="menu.php">Appetizers</a></h3>
+                <div class="image"><a href="menu.php"><img src="images/resource/offer-image-2.jpg" alt=""></a></div>
+                <div class="heading-three"><a href="menu.php">Appetizers</a></div class="heading-three">
                 <div class="more-link"><a href="menu.php">view menu</a></div>
             </div>
             <div class="offer-box">
-                <div class="image"><a href="menu.php"><img src="images/resource/offer-image-1.jpg" alt=""></a></div>
-                <h3><a href="menu.php">Drinks</a></h3>
+                <div class="image"><a href="menu.php"><img src="images/resource/offer-image-3.jpg" alt=""></a></div>
+                <div class="heading-three"><a href="menu.php">Drinks</a></div class="heading-three">
                 <div class="more-link"><a href="menu.php">view menu</a></div>
             </div>
 

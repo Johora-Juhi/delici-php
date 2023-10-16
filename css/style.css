@@ -784,18 +784,9 @@
   transform:scale(1.04,1.04);
 }
 
-.offer-box h3{
-  position: relative;
-  text-transform: capitalize;
-  margin-bottom: var(--margin-bottom-20);
-}
-
-.offer-box h3 a{
-  color: white;
-}
-
 .offer-box .more-link{
   position: relative;
+  margin-top: 20px;
 }
 
 .offer-box .more-link a{
@@ -3967,11 +3958,18 @@ reservation page
     right: 0;
     top: 0;
   }
+  .offer-container .text{
+    margin-bottom: -90px;
+  }
 .offer-section{
   grid-template-columns: repeat(3,1fr);
   gap: 150px;
+  width: 77%;
+  margin: auto;
 }
-
+.offer-section .offer-box:nth-child(2) {
+  margin-top: 160px;
+}
   /*==============================
    admin page layout  
    ===============================*/
