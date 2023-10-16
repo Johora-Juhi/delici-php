@@ -694,7 +694,7 @@
   position: relative;
   font-family: "DM Sans", sans-serif;
   color: white;
-  padding: 70px 0;
+  padding: 70px 15px;
 }
 .offer-container .section-heading {
   margin-bottom: 0;
@@ -704,7 +704,7 @@
   padding-top: 15px;
   line-height: 29.6px;
   max-width: 420px;
-  margin: auto;
+  margin: 0 auto 40px auto;
 }
 .offer-section{
   display: grid;
