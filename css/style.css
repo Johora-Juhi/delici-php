@@ -3449,6 +3449,13 @@ input[type="file"]:focus + label {
   .image-gallery .owl-theme .owl-nav .owl-next {
     transform: scale(1);
   }
+  .offer-section{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .offer-box:nth-child(3){
+    grid-column: span 2;
+    margin: auto;
+  }
   /*==============================
    admin page layout  
    ===============================*/
@@ -3964,6 +3971,10 @@ reservation page
 }
 .offer-section .offer-box:nth-child(2) {
   margin-top: 160px;
+}
+.offer-box:nth-child(3){
+  grid-column: span 1;
+  margin: auto;
 }
   /*==============================
    admin page layout  
