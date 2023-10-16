@@ -706,6 +706,137 @@
   max-width: 420px;
   margin: auto;
 }
+.offer-section{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 50px;
+}
+.offer-box{
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.offer-box .image{
+  position: relative;
+  display: block;
+  overflow:hidden;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+}
+
+.offer-box .image:after{
+  position: absolute;
+  top: 0;
+  left: -85%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .4)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 100%);
+  -webkit-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+.offer-box .image:before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background: url(../images/background/pattern-8.svg) center repeat;
+}
+
+.offer-box:hover .image:before{
+  transform:rotateY(180deg);
+  -webkit-transition-delay: 300ms;
+  -moz-transition-delay: 300ms;
+  -ms-transition-delay: 300ms;
+  -o-transition-delay: 300ms;
+  transition-delay: 300ms;
+}
+
+.offer-box .image img{
+  position: relative;
+  display: block;
+  width: 100%;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.offer-box:hover .image img{
+  transform:scale(1.04,1.04);
+}
+
+.offer-box h3{
+  position: relative;
+  text-transform: capitalize;
+  margin-bottom: var(--margin-bottom-20);
+}
+
+.offer-box h3 a{
+  color: white;
+}
+
+.offer-box .more-link{
+  position: relative;
+}
+
+.offer-box .more-link a{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  color: rgb(228, 197, 144);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  padding-bottom:4px;
+}
+
+.offer-box .more-link a:before{
+  position:absolute;
+  content:'';
+  left:5px;
+  right:5px;
+  bottom:-4px;
+  height:4px;
+  opacity:0;
+  transform:scale(0.2,1);
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  border-bottom:1px solid rgb(228, 197, 144);
+  border-top:1px solid rgb(228, 197, 144);
+}
+
+.offer-box .more-link a:hover::before{
+  opacity:1;
+  transform:scale(1,1);
+}
+
+.offer-box .more-link a:hover{
+  color: white!important;
+  border-color: white;
+}
 /*** 
 
 ====================================================================
@@ -1455,6 +1586,7 @@ reservation page
   background-color: rgb(14, 13, 12);
   color: white;
   font-family: "DM Sans", sans-serif;
+  z-index: 1;
 }
 
 .chef-box {
@@ -1566,6 +1698,7 @@ reservation page
   position: relative;
   text-align: center;
   padding: 70px 0 30px 0;
+  z-index: 1;
 }
 
 .team-container {
@@ -3750,6 +3883,94 @@ reservation page
   .offer-container {
     padding: 100px 0;
   }
+  /* Bob Up Down*/
+
+@-webkit-keyframes float_up_down {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  50% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes float_up_down {
+  0% {
+    transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.menu-section .left-bg,
+.menu-section .right-bg,
+.offer-container .right-bg,
+.offer-container .left-bg,
+.special-dish .content-col .badge-icon{
+    animation-name: float_up_down; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    -webkit-animation-name: float_up_down; 
+    -webkit-animation-duration: 5s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    
+    -moz-animation-name: float_up_down; 
+    -moz-animation-duration: 5s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    
+    -ms-animation-name: float_up_down; 
+    -ms-animation-duration: 5s; 
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    -o-animation-name: float_left_right; 
+    -o-animation-duration: 5s; 
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
+  .offer-container .left-bg{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .offer-container .right-bg{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+.offer-section{
+  grid-template-columns: repeat(3,1fr);
+  gap: 150px;
+}
 
   /*==============================
    admin page layout  

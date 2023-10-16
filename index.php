@@ -228,19 +228,39 @@ include_once('./includes/connect.php');
                 </div>
             </div>
             <div class="swiper-button-prev"><span class="fa-solid icon fa-angle-left"></span></div>
-                <div class="swiper-button-next"><span class="fa-solid icon fa-angle-right"></span></div>
+            <div class="swiper-button-next"><span class="fa-solid icon fa-angle-right"></span></div>
         </div>
         <div class="book-btn"><a href="reservation.php" class="theme-btn"><span class="icon"><img src="images/resource/book-icon-1.png" alt="" title=""></span><span class="txt">book a table</span></a></div>
     </div>
     <!--End Banner Section -->
 
     <!-- We Offer top notch  -->
-<div class="offer-container">
-    <div class="small-heading">FLAVORS FOR ROYALTY</div>
-    <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
-    <div class="section-heading">we offer top notch</div>
-    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</div>
-</div>
+    <div class="offer-container">
+        <div class="left-bg"><img src="./images/background/bg-1.png" alt=""></div>
+        <div class="right-bg"><img src="./images/background/bg-2.png" alt=""></div>
+        <div class="small-heading">FLAVORS FOR ROYALTY</div>
+        <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+        <div class="section-heading">we offer top notch</div>
+        <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</div>
+        <div class="offer-section">
+            <div class="offer-box">
+                <div class="image"><a href="menu.php"><img src="images/resource/offer-image-1.jpg" alt=""></a></div>
+                <h3><a href="menu.php">Breakfast</a></h3>
+                <div class="more-link"><a href="menu.php">view menu</a></div>
+            </div>
+            <div class="offer-box">
+                <div class="image"><a href="menu.php"><img src="images/resource/offer-image-1.jpg" alt=""></a></div>
+                <h3><a href="menu.php">Appetizers</a></h3>
+                <div class="more-link"><a href="menu.php">view menu</a></div>
+            </div>
+            <div class="offer-box">
+                <div class="image"><a href="menu.php"><img src="images/resource/offer-image-1.jpg" alt=""></a></div>
+                <h3><a href="menu.php">Drinks</a></h3>
+                <div class="more-link"><a href="menu.php">view menu</a></div>
+            </div>
+
+        </div>
+    </div>
 
     <!-- quote section  -->
 
