@@ -275,7 +275,7 @@ include_once('./includes/connect.php');
                 <ul class="tab-buttons clearfix">
                     <li class="tab-btn active-btn" data-tab="#tab-1"><span>MORNING</span></li>
                     <li class="tab-btn" data-tab="#tab-2"><span>LUNCH</span></li>
-                    <li class="tab-btn" data-tab="#tab-3"><span>DINNER</span></li>
+                    <li class="tab-btn" data-tab="#tab-3"><span>Desserts</span></li>
                     <li class="tab-btn" data-tab="#tab-4"><span>Drinks</span></li>
                 </ul>
             </div>
@@ -418,7 +418,7 @@ include_once('./includes/connect.php');
                         <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
                         <div class="menu-info">
                             <div class="title">
-                                <p class="menu-title"><?= $title ?> </p>
+                                <p class="menu-title"><?= $title ?> <?php if($menu_speciality){echo "<span>$menu_speciality</span>";}?> </p>
                                 <span class="divider"></span>
                                 <p class="price">$<?= $menu_price ?></p>
                             </div>
@@ -438,7 +438,7 @@ include_once('./includes/connect.php');
         <div class="open-timing">
             <div class="hours">During winter daily from <span class="theme_color">7:00 pm</span> to <span class="theme_color">9:00 pm</span></div>
             <div class="link-box">
-                <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
+                <a href="menu.php" class="theme-btn btn-style-two clearfix">
                     <span class="btn-wrap">
                         <span class="text-one">view all menu</span>
                         <span class="text-two">view all menu</span>

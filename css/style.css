@@ -946,6 +946,8 @@
 .menu-section .open-timing{
   position: relative;
   text-align: center;
+  margin-top: 55px;
+  font-family: "DM Sans", sans-serif;
 }
 
 .menu-section .open-timing .hours{
