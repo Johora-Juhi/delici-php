@@ -736,7 +736,7 @@
   width: 50%;
   height: 100%;
   background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 100%);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .4)));
+  /* background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .4))); */
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 100%);
   -webkit-transform: skewX(-25deg);
   -ms-transform: skewX(-25deg);
@@ -823,6 +823,138 @@
   color: white!important;
   border-color: white;
 }
+/***
+====================================================================
+  Menu Section
+====================================================================
+
+***/
+
+.menu-section{
+  position: relative;
+  padding: 70px 15px;
+  overflow: hidden;
+  color: white;
+}
+.menu-section .menu-container{
+  width: 100%;
+  row-gap: 55px;
+}
+.menu-section .left-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu-section .right-bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.menu-section .section-heading{
+  margin-bottom: 40px;
+}
+
+.tabs-box{
+  position: relative;
+}
+
+.tabs-box .tab-buttons{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+.tabs-box .tab-buttons .tab-btn{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tabs-box .tabs-content{
+  position: relative;
+}
+
+.tabs-box .tabs-content .tab{
+  position: relative;
+  display: none;
+}
+
+.tabs-box .tabs-content .active-tab{
+  display: block;
+}
+
+.menu-tabs{
+  position: relative;
+}
+
+.menu-tabs .buttons{
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid rgba(255,255,255,0.20);
+  border-bottom: 1px solid rgba(255,255,255,0.20);
+  margin-bottom: 50px;
+}
+
+.menu-tabs .buttons .tab-buttons{
+  position: relative;
+  text-align: center;
+  font-family: "Forum", cursive;
+}
+
+.menu-tabs .buttons .tab-buttons .tab-btn{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.menu-tabs .buttons .tab-buttons .tab-btn:last-child{
+  margin-bottom: 0;
+}
+.menu-tabs .buttons .tab-buttons .tab-btn span{
+  position: relative;
+}
+.menu-tabs .buttons .tab-buttons .tab-btn span:before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 5px;
+  border-top: 1px solid rgb(228, 197, 144);
+  border-bottom: 1px solid rgb(228, 197, 144);
+  transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.menu-tabs .buttons .tab-buttons .tab-btn.active-btn span:before{
+   width: 100%;
+   left: 0;
+}
+
+
+.menu-section .open-timing{
+  position: relative;
+  text-align: center;
+}
+
+.menu-section .open-timing .hours{
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/*** 
+
 /*** 
 
 ====================================================================
@@ -2852,6 +2984,7 @@ input[type="file"]:focus + label {
 }
 
 .small-heading {
+  position: relative;
   text-transform: uppercase;
   font-weight: 700;
   color: #e4c590;
@@ -2872,11 +3005,13 @@ input[type="file"]:focus + label {
 }
 
 .pattern-image img {
+  position: relative;
   max-width: 100px;
   margin: 0 auto;
 }
 
 .section-heading {
+  position: relative;
   font-size: 28px;
   line-height: 33.6px;
   font-weight: 500;
@@ -3456,6 +3591,34 @@ input[type="file"]:focus + label {
     grid-column: span 2;
     margin: auto;
   }
+  .tabs-box .tab-buttons{
+    grid-template-columns: repeat(4,1fr);
+    gap: 0px;
+  }
+  .menu-tabs .buttons .tab-buttons .tab-btn{
+    font-size: 20px;
+  }
+  
+.menu-tabs .buttons .tab-buttons .tab-btn:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  margin-left: 36px;
+  top: 50%;
+  margin-top: -5px;
+  height: 8px;
+  width: 8px;
+  border: 1px solid rgb(228, 197, 144);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu-tabs .buttons .tab-buttons .tab-btn:last-child:after{
+  display: none;
+}
+.menu-tabs .buttons .tab-buttons .tab-btn{
+  margin-bottom: 0;
+}
   /*==============================
    admin page layout  
    ===============================*/
@@ -3974,6 +4137,13 @@ reservation page
 }
 .offer-box:nth-child(3){
   grid-column: span 1;
+  margin: auto;
+}
+.menu-section{
+  padding: 100px 0;
+}
+.menu-section .tabs-box{
+  width: 77%;
   margin: auto;
 }
   /*==============================

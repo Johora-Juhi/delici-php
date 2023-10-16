@@ -27,6 +27,9 @@ button {
 button:focus {
   outline: revert;
 }
+.theme_color{
+  color: rgb(228,197,144);
+}
 .theme-btn{
     display:inline-block;
     -webkit-transition:all 0.3s ease;

@@ -262,8 +262,191 @@ include_once('./includes/connect.php');
         </div>
     </div>
 
-    <!-- quote section  -->
+    <!--Menu Section-->
+    <section class="menu-section">
+        <div class="left-bg"><img src="images/background/bg-5.png" alt="" title=""></div>
+        <div class="right-bg"><img src="images/background/bg-6.png" alt="" title=""></div>
+        <div class="small-heading"><span>Special selection</span></div>
+        <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+        <div class="section-heading">Delicious Menu</div>
 
+        <div class="tabs-box menu-tabs">
+            <div class="buttons">
+                <ul class="tab-buttons clearfix">
+                    <li class="tab-btn active-btn" data-tab="#tab-1"><span>MORNING</span></li>
+                    <li class="tab-btn" data-tab="#tab-2"><span>LUNCH</span></li>
+                    <li class="tab-btn" data-tab="#tab-3"><span>DINNER</span></li>
+                    <li class="tab-btn" data-tab="#tab-4"><span>Drinks</span></li>
+                </ul>
+            </div>
+            <div class="tabs-content">
+                <!--Tab-->
+                <div class="tab active-tab" id="tab-1">
+                    <div class="menu-container ">
+                        <!-- get all available menu in the category  -->
+                        <?php
+                        $root = "http://localhost/Delici-Client/";
+                        $category = 'Appetizers';
+                        $select_query = "SELECT * FROM `menu-table` WHERE menu_category = 'Appetizers'";
+                        $result = mysqli_query($con, $select_query);
+                        while ($menu = mysqli_fetch_array($result)) {
+                            $title = $menu['menu_name'];
+                            $menu_speciality = $menu['menu_speciality'];
+                            $menu_price = $menu['menu_price'];
+                            $menu_category = $menu['menu_category'];
+                            $menu_image = $menu['menu_image'];
+                            $menu_description = $menu['menu_description'];
+                            $modal_id = $menu['menu_id']; // Unique ID for modal 
+                        ?>
+                            <!-- each menu card  -->
+                            <div class="menu">
+                                <div class="menu-box">
+                                    <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                                    <div class="menu-info">
+                                        <div class="title">
+                                            <p class="menu-title"><?= $title ?> </p>
+                                            <span class="divider"></span>
+                                            <p class="price">$<?= $menu_price ?></p>
+                                        </div>
+                                        <p class="menu-desc"><?= $menu_description ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of while loop  -->
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+                <!--Tab-->
+                <div class="tab" id="tab-2">
+                <div class="menu-container ">
+            <!-- get all available menu in the category  -->
+            <?php
+            $root = "http://localhost/Delici-Client/";
+            $category = 'Main Dishes';
+            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+            $result = mysqli_query($con, $select_query);
+            while ($menu = mysqli_fetch_array($result)) {
+                $title = $menu['menu_name'];
+                $menu_speciality = $menu['menu_speciality'];
+                $menu_price = $menu['menu_price'];
+                $menu_category = $menu['menu_category'];
+                $menu_image = $menu['menu_image'];
+                $menu_description = $menu['menu_description'];
+                $modal_id = $menu['menu_id']; // Unique ID for modal 
+            ?>
+                <!-- each menu card  -->
+                <div class="menu">
+                    <div class="menu-box">
+                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-info">
+                            <div class="title">
+                                <p class="menu-title"><?= $title ?> </p>
+                                <span class="divider"></span>
+                                <p class="price">$<?= $menu_price ?></p>
+                            </div>
+                            <p class="menu-desc"><?= $menu_description ?></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of while loop  -->
+            <?php
+            }
+            ?>
+        </div>
+                </div>
+                <!--Tab-->
+                <div class="tab" id="tab-3">
+                <div class="menu-container ">
+            <!-- get all available menu in the category  -->
+            <?php
+            $root = "http://localhost/Delici-Client/";
+            $category = 'Desserts';
+            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+            $result = mysqli_query($con, $select_query);
+            while ($menu = mysqli_fetch_array($result)) {
+                $title = $menu['menu_name'];
+                $menu_speciality = $menu['menu_speciality'];
+                $menu_price = $menu['menu_price'];
+                $menu_category = $menu['menu_category'];
+                $menu_image = $menu['menu_image'];
+                $menu_description = $menu['menu_description'];
+                $modal_id = $menu['menu_id']; // Unique ID for modal 
+            ?>
+                <!-- each menu card  -->
+                <div class="menu">
+                    <div class="menu-box">
+                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-info">
+                            <div class="title">
+                                <p class="menu-title"><?= $title ?> </p>
+                                <span class="divider"></span>
+                                <p class="price">$<?= $menu_price ?></p>
+                            </div>
+                            <p class="menu-desc"><?= $menu_description ?></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of while loop  -->
+            <?php
+            }
+            ?>
+        </div>
+                </div>
+                <!--Tab-->
+                <div class="tab" id="tab-4">
+                <div class="menu-container">
+            <!-- get all available menu in the category  -->
+            <?php
+            $root = "http://localhost/Delici-Client/";
+            $category = 'Drinks Menu';
+            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+            $result = mysqli_query($con, $select_query);
+            while ($menu = mysqli_fetch_array($result)) {
+                $title = $menu['menu_name'];
+                $menu_speciality = $menu['menu_speciality'];
+                $menu_price = $menu['menu_price'];
+                $menu_category = $menu['menu_category'];
+                $menu_image = $menu['menu_image'];
+                $menu_description = $menu['menu_description'];
+                $modal_id = $menu['menu_id']; // Unique ID for modal 
+            ?>
+                <!-- each menu card  -->
+                <div class="menu">
+                    <div class="menu-box">
+                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-info">
+                            <div class="title">
+                                <p class="menu-title"><?= $title ?> </p>
+                                <span class="divider"></span>
+                                <p class="price">$<?= $menu_price ?></p>
+                            </div>
+                            <p class="menu-desc"><?= $menu_description ?></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of while loop  -->
+            <?php
+            }
+            ?>
+        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="open-timing">
+            <div class="hours">During winter daily from <span class="theme_color">7:00 pm</span> to <span class="theme_color">9:00 pm</span></div>
+            <div class="link-box">
+                <a href="menu-list-1.html" class="theme-btn btn-style-two clearfix">
+                    <span class="btn-wrap">
+                        <span class="text-one">view all menu</span>
+                        <span class="text-two">view all menu</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- meet our chef   -->
     <div class="meet-chef-container">
