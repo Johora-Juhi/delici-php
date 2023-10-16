@@ -8,7 +8,7 @@ include_once('./includes/connect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Delici</title>
+    <title>Delici - Restaurant</title>
     <!-- stylesheet  -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/global.css">
@@ -234,8 +234,13 @@ include_once('./includes/connect.php');
     </div>
     <!--End Banner Section -->
 
-    <!-- Award Winiing Chef  -->
-
+    <!-- We Offer top notch  -->
+<div class="offer-container">
+    <div class="small-heading">FLAVORS FOR ROYALTY</div>
+    <div class="pattern-image"><img src="./images/icons/separator.svg" alt="" title=""></div>
+    <div class="section-heading">we offer top notch</div>
+    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</div>
+</div>
 
     <!-- quote section  -->
 

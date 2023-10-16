@@ -400,29 +400,29 @@
 ====================================================================
 
 ***/
-.banner-container{
+.banner-container {
   position: relative;
 }
-.banner-container .banner-slider{
+.banner-container .banner-slider {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-.banner-container .banner-slider .swiper-slide{
+.banner-container .banner-slider .swiper-slide {
   position: relative;
   text-align: center;
 }
-.banner-slider .swiper-slide:before{
-  content: '';
+.banner-slider .swiper-slide:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.0);
+  background: rgba(0, 0, 0, 0);
   z-index: 1;
 }
-.banner-container .banner-slider .swiper-slide .image-layer{
+.banner-container .banner-slider .swiper-slide .image-layer {
   position: absolute;
   left: 0;
   top: 0;
@@ -431,32 +431,32 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  -ms-transform: scale(1.0);
-  transform: scale(1.0);
+  -ms-transform: scale(1);
+  transform: scale(1);
   -webkit-transition: all 0ms linear 0ms;
   -ms-transition: all 0ms linear 0ms;
   -o-transition: all 0ms linear 0ms;
   -moz-transition: all 0ms linear 0ms;
   transition: all 0ms linear 0ms;
 }
-.banner-slider .slide-item.swiper-slide-active .image-layer{
+.banner-slider .slide-item.swiper-slide-active .image-layer {
   -ms-transform: scale(1.15);
   transform: scale(1.15);
-  -webkit-transition:all 7000ms linear 0ms;
-  -ms-transition:all 7000ms linear 0ms;
-  -o-transition:all 7000ms linear 0ms;
-  -moz-transition:all 7000ms linear 0ms;
-  transition:all 7000ms linear 0ms;
+  -webkit-transition: all 7000ms linear 0ms;
+  -ms-transition: all 7000ms linear 0ms;
+  -o-transition: all 7000ms linear 0ms;
+  -moz-transition: all 7000ms linear 0ms;
+  transition: all 7000ms linear 0ms;
 }
-.banner-container .banner-slider .swiper-slide{
+.banner-container .banner-slider .swiper-slide {
   position: relative;
   color: white;
   width: 100%;
   height: 880px;
-    min-height: 100vh;
-    z-index: 10;
+  min-height: 100vh;
+  z-index: 10;
 }
-.swiper-slide .content .subtitle{
+.swiper-slide .content .subtitle {
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
@@ -465,24 +465,24 @@
   letter-spacing: 0.4em;
   margin-bottom: 10px;
   line-height: 29.6px;
-  opacity:0;
+  opacity: 0;
   visibility: hidden;
-  -webkit-transform:translateY(30px);
-  -ms-transform:translateY(30px);
-  transform:translateY(30px);
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
 }
-.swiper-slide .content .pattern-image{
+.swiper-slide .content .pattern-image {
   position: relative;
   width: 100px;
   line-height: 29.6px;
   margin: 0 auto 30px auto;
-  opacity:0;
+  opacity: 0;
   visibility: hidden;
-  -webkit-transform:translateY(30px);
-  -ms-transform:translateY(30px);
-  transform:translateY(30px);
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
 }
-.swiper-slide .content h1{
+.swiper-slide .content h1 {
   font-family: "Forum", cursive;
   color: white;
   position: relative;
@@ -491,83 +491,83 @@
   text-transform: capitalize;
   line-height: 1em;
   margin: 0px 0px;
-  opacity:0;
+  opacity: 0;
   visibility: hidden;
-  -webkit-transform:translateY(30px);
-  -ms-transform:translateY(30px);
-  transform:translateY(30px);
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
 }
-.swiper-slide .content .text{
+.swiper-slide .content .text {
   position: relative;
-    display: block;
-    font-size: 20px;
-    margin-top: 10px;
-    opacity:0;
-    visibility: hidden;
-    -webkit-transform:translateY(30px);
-    -ms-transform:translateY(30px);
-    transform:translateY(30px);
-}
-.swiper-slide .content .theme-btn{
-  margin-top: 40px;
-  opacity:0;
+  display: block;
+  font-size: 20px;
+  margin-top: 10px;
+  opacity: 0;
   visibility: hidden;
-  -webkit-transform:translateY(30px);
-  -ms-transform:translateY(30px);
-  transform:translateY(30px);
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+}
+.swiper-slide .content .theme-btn {
+  margin-top: 40px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
 }
 .banner-slider .swiper-slide-active .subtitle,
-.banner-slider .swiper-slide-active .pattern-image{
-  opacity:1;
+.banner-slider .swiper-slide-active .pattern-image {
+  opacity: 1;
   visibility: visible;
-  -webkit-transform:translate(0);
-  -ms-transform:translate(0);
-  transform:translate(0);
-  -webkit-transition:all 1000ms ease 500ms;
-  -ms-transition:all 1000ms ease 500ms;
-  -o-transition:all 1000ms ease 500ms;
-  -moz-transition:all 1000ms ease 500ms;
-  transition:all 1000ms ease 500ms;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 1000ms ease 500ms;
+  -ms-transition: all 1000ms ease 500ms;
+  -o-transition: all 1000ms ease 500ms;
+  -moz-transition: all 1000ms ease 500ms;
+  transition: all 1000ms ease 500ms;
 }
-.banner-slider .swiper-slide-active h1{
-  opacity:1;
+.banner-slider .swiper-slide-active h1 {
+  opacity: 1;
   visibility: visible;
-  -webkit-transform:translate(0);
-  -ms-transform:translate(0);
-  transform:translate(0);
-  -webkit-transition:all 1000ms ease 1000ms;
-  -ms-transition:all 1000ms ease 1000ms;
-  -o-transition:all 1000ms ease 1000ms;
-  -moz-transition:all 1000ms ease 1000ms;
-  transition:all 1000ms ease 1000ms;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 1000ms ease 1000ms;
+  -ms-transition: all 1000ms ease 1000ms;
+  -o-transition: all 1000ms ease 1000ms;
+  -moz-transition: all 1000ms ease 1000ms;
+  transition: all 1000ms ease 1000ms;
 }
-.banner-slider .swiper-slide-active .text{
-  opacity:1;
+.banner-slider .swiper-slide-active .text {
+  opacity: 1;
   visibility: visible;
-  -webkit-transform:translate(0);
-  -ms-transform:translate(0);
-  transform:translate(0);
-  -webkit-transition:all 1000ms ease 1500ms;
-  -ms-transition:all 1000ms ease 1500ms;
-  -o-transition:all 1000ms ease 1500ms;
-  -moz-transition:all 1000ms ease 1500ms;
-  transition:all 1000ms ease 1500ms;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 1000ms ease 1500ms;
+  -ms-transition: all 1000ms ease 1500ms;
+  -o-transition: all 1000ms ease 1500ms;
+  -moz-transition: all 1000ms ease 1500ms;
+  transition: all 1000ms ease 1500ms;
 }
-.banner-slider .swiper-slide-active .theme-btn{
-  opacity:1;
+.banner-slider .swiper-slide-active .theme-btn {
+  opacity: 1;
   visibility: visible;
-  -webkit-transform:translate(0);
-  -ms-transform:translate(0);
-  transform:translate(0);
-  -webkit-transition:all 1000ms ease 2000ms;
-  -ms-transition:all 1000ms ease 2000ms;
-  -o-transition:all 1000ms ease 2000ms;
-  -moz-transition:all 1000ms ease 2000ms;
-  transition:all 1000ms ease 2000ms;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 1000ms ease 2000ms;
+  -ms-transition: all 1000ms ease 2000ms;
+  -o-transition: all 1000ms ease 2000ms;
+  -moz-transition: all 1000ms ease 2000ms;
+  transition: all 1000ms ease 2000ms;
 }
 
 .banner-slider .swiper-button-next,
-.banner-slider .swiper-button-prev{
+.banner-slider .swiper-button-prev {
   position: absolute;
   top: 50%;
   margin-top: -16px;
@@ -581,27 +581,27 @@
   background: transparent;
   color: rgb(228, 197, 144);
   border-radius: 0%;
-  -webkit-transition:all 400ms ease;
-  -moz-transition:all 400ms ease;
-  -ms-transition:all 400ms ease;
-  -o-transition:all 400ms ease;
-  transition:all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .banner-slider .swiper-button-next span,
-.banner-slider .swiper-button-prev span{
+.banner-slider .swiper-button-prev span {
   position: relative;
   z-index: 1;
 }
 
 .banner-slider .swiper-button-next:after,
-.banner-slider .swiper-button-prev:after{
+.banner-slider .swiper-button-prev:after {
   display: none;
 }
 
 .banner-slider .swiper-button-next:before,
-.banner-slider .swiper-button-prev:before{
-  content: '';
+.banner-slider .swiper-button-prev:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -610,32 +610,32 @@
   border: 1px solid rgb(228, 197, 144);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-transition:all 400ms ease;
-  -moz-transition:all 400ms ease;
-  -ms-transition:all 400ms ease;
-  -o-transition:all 400ms ease;
-  transition:all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
-.banner-slider .swiper-button-next{
+.banner-slider .swiper-button-next {
   right: 30px;
 }
 
-.banner-slider .swiper-button-prev{
+.banner-slider .swiper-button-prev {
   left: 30px;
 }
 
 .banner-slider .swiper-button-next:hover,
-.banner-slider .swiper-button-prev:hover{
+.banner-slider .swiper-button-prev:hover {
   color: black;
 }
 
 .banner-slider .swiper-button-next:hover:before,
-.banner-slider .swiper-button-prev:hover:before{
+.banner-slider .swiper-button-prev:hover:before {
   background: rgb(228, 197, 144);
 }
 
-.banner-container .book-btn{
+.banner-container .book-btn {
   position: absolute;
   right: 50px;
   bottom: 50px;
@@ -644,8 +644,8 @@
   z-index: 10;
 }
 
-.banner-container .book-btn:before{
-  content: '';
+.banner-container .book-btn:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -656,7 +656,7 @@
   transform: rotate(45deg);
 }
 
-.banner-container .book-btn a{
+.banner-container .book-btn a {
   position: relative;
   display: block;
   width: 110px;
@@ -670,13 +670,13 @@
   z-index: 1;
 }
 
-.banner-container .book-btn a .icon{
+.banner-container .book-btn a .icon {
   position: relative;
   display: block;
   margin-bottom: 7px;
 }
 
-.banner-container .book-btn a .txt{
+.banner-container .book-btn a .txt {
   position: relative;
   display: block;
   text-transform: uppercase;
@@ -685,6 +685,26 @@
   color: black;
   font-size: 12px;
   letter-spacing: 0.15em;
+}
+
+/* We Offer Section  */
+.offer-container {
+  text-align: center;
+  background: rgb(14, 13, 11);
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+  color: white;
+  padding: 70px 0;
+}
+.offer-container .section-heading {
+  margin-bottom: 0;
+}
+.offer-container .text {
+  font-size: 16px;
+  padding-top: 15px;
+  line-height: 29.6px;
+  max-width: 420px;
+  margin: auto;
 }
 /*** 
 
@@ -2002,15 +2022,15 @@ reservation page
   transition: all 300ms ease;
 }
 
-.service-col .service-box:hover .image-box{
-  transform:rotateY(180deg);
+.service-col .service-box:hover .image-box {
+  transform: rotateY(180deg);
 }
 /* Testimonial Style  */
 .testimonial-container {
   position: relative;
   padding: 70px 15px;
   text-align: center;
-  font-family: "DM" ,sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .testimonial-container .image-layer {
@@ -2039,11 +2059,11 @@ reservation page
   /* padding: 0 15px; */
 }
 
-.testimonial-container .testimonial-slider{
+.testimonial-container .testimonial-slider {
   position: relative;
 }
 
-.testimonial-slider .testi-block{
+.testimonial-slider .testi-block {
   position: relative;
   padding: 40px 25px;
   background: rgb(14, 13, 12);
@@ -2051,14 +2071,14 @@ reservation page
   color: white;
 }
 
-.testimonial-slider .testi-block .quote-icon{
+.testimonial-slider .testi-block .quote-icon {
   position: absolute;
   left: 12px;
   top: 12px;
   width: 74px;
 }
 
-.testimonial-slider .testi-block .rating{
+.testimonial-slider .testi-block .rating {
   position: relative;
   font-size: 12px;
   color: rgb(228, 197, 144);
@@ -2067,15 +2087,15 @@ reservation page
   margin-bottom: 20px;
 }
 
-.testimonial-slider .testi-block .text{
+.testimonial-slider .testi-block .text {
   position: relative;
   font-size: 18px;
   line-height: 1.5em;
-  font-family:"Forum", cursive;
+  font-family: "Forum", cursive;
   margin-bottom: 35px;
 }
 
-.testimonial-slider .testi-block .auth-info{
+.testimonial-slider .testi-block .auth-info {
   position: relative;
   min-height: 84px;
   line-height: 20px;
@@ -2083,22 +2103,22 @@ reservation page
   padding-left: 105px;
 }
 
-.testimonial-slider .testi-block .auth-info .auth-title{
+.testimonial-slider .testi-block .auth-info .auth-title {
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
   color: rgb(228, 197, 144);
   font-size: 12px;
-  letter-spacing: 0.20em;
+  letter-spacing: 0.2em;
 }
 
-.testimonial-slider .testi-block .auth-info .location{
+.testimonial-slider .testi-block .auth-info .location {
   position: relative;
   color: rgb(167, 167, 167);
   font-size: 14px;
 }
 
-.testimonial-slider .testi-block .auth-info .image{
+.testimonial-slider .testi-block .auth-info .image {
   position: absolute;
   left: 0;
   top: 0;
@@ -2108,22 +2128,22 @@ reservation page
   overflow: hidden;
 }
 
-.testimonial-slider .testi-block .auth-info .image img{
+.testimonial-slider .testi-block .auth-info .image img {
   display: block;
   width: 84px;
   height: 84px;
   border-radius: 50%;
 }
 
-.testimonial-slider.owl-theme .owl-dots{
+.testimonial-slider.owl-theme .owl-dots {
   display: none;
 }
 
-.testimonial-slider.owl-theme .owl-nav{
+.testimonial-slider.owl-theme .owl-nav {
   display: none;
 }
 
-.testimonial-slider.owl-theme .owl-nav{
+.testimonial-slider.owl-theme .owl-nav {
   position: absolute;
   left: -100px;
   right: -100px;
@@ -2133,7 +2153,7 @@ reservation page
 }
 
 .testimonial-slider.owl-theme .owl-nav .owl-next,
-.testimonial-slider.owl-theme .owl-nav .owl-prev{
+.testimonial-slider.owl-theme .owl-nav .owl-prev {
   position: absolute;
   top: 50%;
   display: inline-block;
@@ -2146,22 +2166,22 @@ reservation page
   background: transparent;
   color: rgb(228, 197, 144);
   border-radius: 0%;
-  -webkit-transition:all 400ms ease;
-  -moz-transition:all 400ms ease;
-  -ms-transition:all 400ms ease;
-  -o-transition:all 400ms ease;
-  transition:all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .testimonial-slider.owl-theme .owl-nav .owl-next span,
-.testimonial-slider.owl-theme .owl-nav .owl-prev span{
+.testimonial-slider.owl-theme .owl-nav .owl-prev span {
   position: relative;
   z-index: 1;
 }
 
 .testimonial-slider.owl-theme .owl-nav .owl-next:before,
-.testimonial-slider.owl-theme .owl-nav .owl-prev:before{
-  content: '';
+.testimonial-slider.owl-theme .owl-nav .owl-prev:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -2170,70 +2190,68 @@ reservation page
   border: 1px solid rgb(228, 197, 144);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-transition:all 400ms ease;
-  -moz-transition:all 400ms ease;
-  -ms-transition:all 400ms ease;
-  -o-transition:all 400ms ease;
-  transition:all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
-.testimonial-slider.owl-theme .owl-nav .owl-next{
+.testimonial-slider.owl-theme .owl-nav .owl-next {
   right: 15px;
 }
 
-.testimonial-slider.owl-theme .owl-nav .owl-prev{
+.testimonial-slider.owl-theme .owl-nav .owl-prev {
   left: 15px;
 }
 
 .testimonial-slider.owl-theme .owl-nav .owl-next:hover,
-.testimonial-slider.owl-theme .owl-nav .owl-prev:hover{
+.testimonial-slider.owl-theme .owl-nav .owl-prev:hover {
   color: black;
   background: none;
 }
 
 .testimonial-slider.owl-theme .owl-nav .owl-next:hover:before,
-.testimonial-slider.owl-theme .owl-nav .owl-prev:hover:before{
+.testimonial-slider.owl-theme .owl-nav .owl-prev:hover:before {
   background: rgb(228, 197, 144);
   border: 1px solid black;
 }
 
-.why-us-container{
+.why-us-container {
   position: relative;
   padding: 70px 15px 40px 15px;
-  font-family: "DM", sans-serif;
+  font-family: "DM Sans", sans-serif;
   text-align: center;
 }
 
-.why-us-container .section-heading{
+.why-us-container .section-heading {
   margin-bottom: 40px;
 }
 
-.why-us-container .why-us-section{
+.why-us-container .why-us-section {
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   /* place-items: center; */
   gap: 30px;
 }
 
-.why-us-container .why-us-section .why-us-box{
+.why-us-container .why-us-section .why-us-box {
   width: 100%;
   position: relative;
 }
 
-.why-us-container .why-us-section .why-us-box .inner{
+.why-us-container .why-us-section .why-us-box .inner {
   width: 100%;
   position: relative;
   overflow: hidden;
-
 }
 
-.why-us-container .why-us-section .image-box{
+.why-us-container .why-us-section .image-box {
   position: relative;
   overflow: hidden;
-
 }
 
-.why-us-container .why-us-section .image-box img{
+.why-us-container .why-us-section .image-box img {
   width: 100%;
   object-fit: contain;
   transition: all 500ms ease;
@@ -2241,19 +2259,24 @@ reservation page
 }
 
 .why-us-container .why-us-section .image-box:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 180px;
-  background: rgba(0, 0, 0, 0.70);
-  background: -webkit-linear-gradient(bottom,rgba(0, 0, 0, 0.95),rgba(0, 0, 0, 0.80),rgba(0, 0, 0, 0.05)); 
-  /* background: -ms-linear-gradient(bottom,rgba(0, 0, 0, 0.95),rgba(0, 0, 0, 0.80),rgba(0, 0, 0, 0.05)); */ 
+  background: rgba(0, 0, 0, 0.7);
+  background: -webkit-linear-gradient(
+    bottom,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.05)
+  );
+  /* background: -ms-linear-gradient(bottom,rgba(0, 0, 0, 0.95),rgba(0, 0, 0, 0.80),rgba(0, 0, 0, 0.05)); */
   z-index: 1;
 }
 
-.why-us-container .why-us-section .strength-box{
+.why-us-container .why-us-section .strength-box {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -2262,19 +2285,19 @@ reservation page
   z-index: 2;
 }
 
-.why-us-container .why-us-section .strength-box .icon-box{
+.why-us-container .why-us-section .strength-box .icon-box {
   position: relative;
   margin-bottom: 15px;
 }
 
-.why-us-container .why-us-section .strength-box .section-heading-four{
+.why-us-container .why-us-section .strength-box .section-heading-four {
   position: relative;
   margin-bottom: 40px;
 }
 
-.why-us-box .inner:hover .image-box img{
-  opacity:0.70;
-  transform:scale(1.05,1.05);
+.why-us-box .inner:hover .image-box img {
+  opacity: 0.7;
+  transform: scale(1.05, 1.05);
 }
 /*** 
 
@@ -2284,50 +2307,50 @@ reservation page
 
 ***/
 
-.image-gallery{
+.image-gallery {
   position: relative;
   /* background-color:var(--color-four); */
   padding-bottom: 70px;
   overflow: hidden;
 }
 
-.image-gallery .carousel-box{
+.image-gallery .carousel-box {
   position: relative;
 }
 
-.image-gallery .inner{
+.image-gallery .inner {
   max-width: 860px;
   padding: 0 15px;
   margin: auto;
 }
 
-.image-gallery .image-gallery-slider{
+.image-gallery .image-gallery-slider {
   position: static;
 }
 
-.image-gallery .image-gallery-slider .owl-stage-outer{
+.image-gallery .image-gallery-slider .owl-stage-outer {
   overflow: visible;
 }
 
-.image-gallery .gallery-block{
+.image-gallery .gallery-block {
   position: relative;
 }
 
-.image-gallery .gallery-block .image{
+.image-gallery .gallery-block .image {
   position: relative;
 }
 
-.image-gallery .gallery-block .image img{
+.image-gallery .gallery-block .image img {
   position: relative;
   display: block;
   width: 100%;
 }
 
-.image-gallery .owl-theme .owl-dots{
+.image-gallery .owl-theme .owl-dots {
   display: none;
 }
 
-.image-gallery .owl-theme .owl-nav{
+.image-gallery .owl-theme .owl-nav {
   position: absolute;
   left: 20px;
   right: 20px;
@@ -2337,7 +2360,7 @@ reservation page
 }
 
 .image-gallery .owl-theme .owl-nav .owl-next,
-.image-gallery .owl-theme .owl-nav .owl-prev{
+.image-gallery .owl-theme .owl-nav .owl-prev {
   position: absolute;
   top: 50%;
   display: inline-block;
@@ -2350,27 +2373,27 @@ reservation page
   background: transparent;
   color: rgb(228, 197, 144);
   border-radius: 0%;
-  -webkit-transition:all 400ms ease;
-  -moz-transition:all 400ms ease;
-  -ms-transition:all 400ms ease;
-  -o-transition:all 400ms ease;
-  transition:all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .image-gallery .owl-theme .owl-nav .owl-prev,
-.image-gallery .owl-theme .owl-nav .owl-next{
-  transform: scale(0.70);
+.image-gallery .owl-theme .owl-nav .owl-next {
+  transform: scale(0.7);
 }
 
 .image-gallery .owl-theme .owl-nav .owl-next span,
-.image-gallery .owl-theme .owl-nav .owl-prev span{
+.image-gallery .owl-theme .owl-nav .owl-prev span {
   position: relative;
   z-index: 1;
 }
 
 .image-gallery .owl-theme .owl-nav .owl-next:before,
-.image-gallery .owl-theme .owl-nav .owl-prev:before{
-  content: '';
+.image-gallery .owl-theme .owl-nav .owl-prev:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -2379,29 +2402,29 @@ reservation page
   border: 1px solid rgb(228, 197, 144);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-transition:all 400ms ease;
-  -moz-transition:all 400ms ease;
-  -ms-transition:all 400ms ease;
-  -o-transition:all 400ms ease;
-  transition:all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
-.image-gallery .owl-theme .owl-nav .owl-next{
+.image-gallery .owl-theme .owl-nav .owl-next {
   right: 15px;
 }
 
-.image-gallery .owl-theme .owl-nav .owl-prev{
+.image-gallery .owl-theme .owl-nav .owl-prev {
   left: 15px;
 }
 
 .image-gallery .owl-theme .owl-nav .owl-next:hover,
-.image-gallery .owl-theme .owl-nav .owl-prev:hover{
+.image-gallery .owl-theme .owl-nav .owl-prev:hover {
   color: black;
   background: none;
 }
 
 .image-gallery .owl-theme .owl-nav .owl-next:hover:before,
-.image-gallery .owl-theme .owl-nav .owl-prev:hover:before{
+.image-gallery .owl-theme .owl-nav .owl-prev:hover:before {
   background: rgb(228, 197, 144);
 }
 
@@ -3296,17 +3319,17 @@ input[type="file"]:focus + label {
   .services-section .service-col .service-box.alternate .info-box {
     order: -1;
   }
-  .testimonial-slider .testi-block .text{
-		font-size: 20px;
-	}
-	.testimonial-slider .testi-block{
-		padding-left: 40px;
-		padding-right: 40px;
-	}
+  .testimonial-slider .testi-block .text {
+    font-size: 20px;
+  }
+  .testimonial-slider .testi-block {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .image-gallery .owl-theme .owl-nav .owl-prev,
-	.image-gallery .owl-theme .owl-nav .owl-next{
-		transform: scale(1);
-	}
+  .image-gallery .owl-theme .owl-nav .owl-next {
+    transform: scale(1);
+  }
   /*==============================
    admin page layout  
    ===============================*/
@@ -3703,28 +3726,30 @@ reservation page
     padding: 100px 0;
     position: relative;
   }
-  .testimonial-container .carousel-box{
+  .testimonial-container .carousel-box {
     width: 77%;
     margin: auto;
   }
-  .testimonial-slider.owl-theme .owl-nav{
+  .testimonial-slider.owl-theme .owl-nav {
     display: block;
   }
-  .why-us-container{
-    padding: 100px  0;
+  .why-us-container {
+    padding: 100px 0;
   }
-  .why-us-container .why-us-section{
+  .why-us-container .why-us-section {
     width: 77%;
     margin: auto;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
-  .why-us-container .why-us-section .m-top{
+  .why-us-container .why-us-section .m-top {
     padding-top: 40px;
   }
-  .image-gallery{
+  .image-gallery {
     padding-bottom: 100px;
   }
-
+  .offer-container {
+    padding: 100px 0;
+  }
 
   /*==============================
    admin page layout  
