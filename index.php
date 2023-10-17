@@ -321,117 +321,119 @@ include_once('./includes/connect.php');
                 </div>
                 <!--Tab-->
                 <div class="tab" id="tab-2">
-                <div class="menu-container ">
-            <!-- get all available menu in the category  -->
-            <?php
-            $root = "http://localhost/Delici-Client/";
-            $category = 'Main Dishes';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
-            $result = mysqli_query($con, $select_query);
-            while ($menu = mysqli_fetch_array($result)) {
-                $title = $menu['menu_name'];
-                $menu_speciality = $menu['menu_speciality'];
-                $menu_price = $menu['menu_price'];
-                $menu_category = $menu['menu_category'];
-                $menu_image = $menu['menu_image'];
-                $menu_description = $menu['menu_description'];
-                $modal_id = $menu['menu_id']; // Unique ID for modal 
-            ?>
-                <!-- each menu card  -->
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                        <div class="menu-info">
-                            <div class="title">
-                                <p class="menu-title"><?= $title ?> </p>
-                                <span class="divider"></span>
-                                <p class="price">$<?= $menu_price ?></p>
+                    <div class="menu-container ">
+                        <!-- get all available menu in the category  -->
+                        <?php
+                        $root = "http://localhost/Delici-Client/";
+                        $category = 'Main Dishes';
+                        $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+                        $result = mysqli_query($con, $select_query);
+                        while ($menu = mysqli_fetch_array($result)) {
+                            $title = $menu['menu_name'];
+                            $menu_speciality = $menu['menu_speciality'];
+                            $menu_price = $menu['menu_price'];
+                            $menu_category = $menu['menu_category'];
+                            $menu_image = $menu['menu_image'];
+                            $menu_description = $menu['menu_description'];
+                            $modal_id = $menu['menu_id']; // Unique ID for modal 
+                        ?>
+                            <!-- each menu card  -->
+                            <div class="menu">
+                                <div class="menu-box">
+                                    <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                                    <div class="menu-info">
+                                        <div class="title">
+                                            <p class="menu-title"><?= $title ?> </p>
+                                            <span class="divider"></span>
+                                            <p class="price">$<?= $menu_price ?></p>
+                                        </div>
+                                        <p class="menu-desc"><?= $menu_description ?></p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="menu-desc"><?= $menu_description ?></p>
-                        </div>
+                            <!-- end of while loop  -->
+                        <?php
+                        }
+                        ?>
                     </div>
-                </div>
-                <!-- end of while loop  -->
-            <?php
-            }
-            ?>
-        </div>
                 </div>
                 <!--Tab-->
                 <div class="tab" id="tab-3">
-                <div class="menu-container ">
-            <!-- get all available menu in the category  -->
-            <?php
-            $root = "http://localhost/Delici-Client/";
-            $category = 'Desserts';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
-            $result = mysqli_query($con, $select_query);
-            while ($menu = mysqli_fetch_array($result)) {
-                $title = $menu['menu_name'];
-                $menu_speciality = $menu['menu_speciality'];
-                $menu_price = $menu['menu_price'];
-                $menu_category = $menu['menu_category'];
-                $menu_image = $menu['menu_image'];
-                $menu_description = $menu['menu_description'];
-                $modal_id = $menu['menu_id']; // Unique ID for modal 
-            ?>
-                <!-- each menu card  -->
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                        <div class="menu-info">
-                            <div class="title">
-                                <p class="menu-title"><?= $title ?> </p>
-                                <span class="divider"></span>
-                                <p class="price">$<?= $menu_price ?></p>
+                    <div class="menu-container ">
+                        <!-- get all available menu in the category  -->
+                        <?php
+                        $root = "http://localhost/Delici-Client/";
+                        $category = 'Desserts';
+                        $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+                        $result = mysqli_query($con, $select_query);
+                        while ($menu = mysqli_fetch_array($result)) {
+                            $title = $menu['menu_name'];
+                            $menu_speciality = $menu['menu_speciality'];
+                            $menu_price = $menu['menu_price'];
+                            $menu_category = $menu['menu_category'];
+                            $menu_image = $menu['menu_image'];
+                            $menu_description = $menu['menu_description'];
+                            $modal_id = $menu['menu_id']; // Unique ID for modal 
+                        ?>
+                            <!-- each menu card  -->
+                            <div class="menu">
+                                <div class="menu-box">
+                                    <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                                    <div class="menu-info">
+                                        <div class="title">
+                                            <p class="menu-title"><?= $title ?> </p>
+                                            <span class="divider"></span>
+                                            <p class="price">$<?= $menu_price ?></p>
+                                        </div>
+                                        <p class="menu-desc"><?= $menu_description ?></p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="menu-desc"><?= $menu_description ?></p>
-                        </div>
+                            <!-- end of while loop  -->
+                        <?php
+                        }
+                        ?>
                     </div>
-                </div>
-                <!-- end of while loop  -->
-            <?php
-            }
-            ?>
-        </div>
                 </div>
                 <!--Tab-->
                 <div class="tab" id="tab-4">
-                <div class="menu-container">
-            <!-- get all available menu in the category  -->
-            <?php
-            $root = "http://localhost/Delici-Client/";
-            $category = 'Drinks Menu';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
-            $result = mysqli_query($con, $select_query);
-            while ($menu = mysqli_fetch_array($result)) {
-                $title = $menu['menu_name'];
-                $menu_speciality = $menu['menu_speciality'];
-                $menu_price = $menu['menu_price'];
-                $menu_category = $menu['menu_category'];
-                $menu_image = $menu['menu_image'];
-                $menu_description = $menu['menu_description'];
-                $modal_id = $menu['menu_id']; // Unique ID for modal 
-            ?>
-                <!-- each menu card  -->
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
-                        <div class="menu-info">
-                            <div class="title">
-                                <p class="menu-title"><?= $title ?> <?php if($menu_speciality){echo "<span>$menu_speciality</span>";}?> </p>
-                                <span class="divider"></span>
-                                <p class="price">$<?= $menu_price ?></p>
+                    <div class="menu-container">
+                        <!-- get all available menu in the category  -->
+                        <?php
+                        $root = "http://localhost/Delici-Client/";
+                        $category = 'Drinks Menu';
+                        $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
+                        $result = mysqli_query($con, $select_query);
+                        while ($menu = mysqli_fetch_array($result)) {
+                            $title = $menu['menu_name'];
+                            $menu_speciality = $menu['menu_speciality'];
+                            $menu_price = $menu['menu_price'];
+                            $menu_category = $menu['menu_category'];
+                            $menu_image = $menu['menu_image'];
+                            $menu_description = $menu['menu_description'];
+                            $modal_id = $menu['menu_id']; // Unique ID for modal 
+                        ?>
+                            <!-- each menu card  -->
+                            <div class="menu">
+                                <div class="menu-box">
+                                    <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                                    <div class="menu-info">
+                                        <div class="title">
+                                            <p class="menu-title"><?= $title ?> <?php if ($menu_speciality) {
+                                                                                    echo "<span>$menu_speciality</span>";
+                                                                                } ?> </p>
+                                            <span class="divider"></span>
+                                            <p class="price">$<?= $menu_price ?></p>
+                                        </div>
+                                        <p class="menu-desc"><?= $menu_description ?></p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="menu-desc"><?= $menu_description ?></p>
-                        </div>
+                            <!-- end of while loop  -->
+                        <?php
+                        }
+                        ?>
                     </div>
-                </div>
-                <!-- end of while loop  -->
-            <?php
-            }
-            ?>
-        </div>
                 </div>
             </div>
         </div>
@@ -445,6 +447,80 @@ include_once('./includes/connect.php');
                         <span class="text-two">view all menu</span>
                     </span>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Testimonials Section-->
+    <section class="testimonials-section">
+        <div class="image-layer" style="background-image: url(images/background/image-2.jpg);"></div>
+        <div class="carousel-box">
+            <div class="testi-top owl-theme owl-carousel">
+                <div class="slide-item">
+                    <div class="slide-content">
+                        <div class="quotes">”</div>
+                        <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <div class="slide-content">
+                        <div class="quotes">”</div>
+                        <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <div class="slide-content">
+                        <div class="quotes">”</div>
+                        <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <div class="slide-content">
+                        <div class="quotes">”</div>
+                        <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <div class="slide-content">
+                        <div class="quotes">”</div>
+                        <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <div class="slide-content">
+                        <div class="quotes">”</div>
+                        <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"><span></span><span></span><span></span></div>
+            <div class="thumbs-carousel-box">
+                <div class="testi-thumbs owl-theme owl-carousel">
+                    <div class="slide-item">
+                        <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
+                        <div class="auth-title">Sam Jhonson</div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
+                        <div class="auth-title">Ian Botham</div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="image"><img src="images/resource/author-thumb-3.jpg" alt=""></div>
+                        <div class="auth-title">Dan Bitson</div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
+                        <div class="auth-title">Sam Jhonson</div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
+                        <div class="auth-title">Ian Botham</div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="image"><img src="images/resource/author-thumb-3.jpg" alt=""></div>
+                        <div class="auth-title">Dan Bitson</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -315,6 +315,60 @@ countBoxes.forEach(function (countBox) {
 				$(target).addClass('active-tab');
 			}
 		});
+}
+	
+	// Testimonials Carousel
+	if ($('.testimonials-section .testi-top').length && $('.testimonials-section .testi-thumbs').length) {
+
+		var $sync1 = $(".testimonials-section .testi-top"),
+			$sync2 = $(".testimonials-section .testi-thumbs"),
+			flag = false,
+			duration = 500;
+
+			$sync1
+				.owlCarousel({
+					loop:true,
+					items: 1,
+					margin: 30,
+					nav: true,
+					navText: [ '<span class="prev-btn far fa-angle-left"></span>', '<span class="next-btn far fa-angle-right"></span>' ],
+					dots: false,
+					autoplay: true,
+					autoplayTimeout: 5000
+				})
+				.on('changed.owl.carousel', function (e) {
+					if (!flag) {
+						flag = false;
+						$sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+						flag = false;
+					}
+				});
+
+			$sync2
+				.owlCarousel({
+					loop:true,
+					margin: 0,
+					items: 1,
+					nav: false,
+					navText: [ '<span class="icon far fa-angle-left"></span>', '<span class="icon far fa-angle-right"></span>' ],
+					dots: false,
+					center: false,
+					autoplay: true,
+					centered: true,
+					autoplayTimeout: 5000
+				})
+				
+		.on('click', '.owl-item', function () {
+			$sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+		})
+		.on('changed.owl.carousel', function (e) {
+			if (!flag) {
+				flag = true;		
+				$sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+				flag = false;
+			}
+		});
+
 	}
 //Testimonials Carousel
 if ($('.testimonial-slider').length) {

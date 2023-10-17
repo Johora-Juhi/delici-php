@@ -949,7 +949,149 @@
 }
 
 /*** 
+====================================================================
+  Testimonials Section
+====================================================================
 
+***/
+
+.testimonials-section{
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 340px;
+  background: black;
+  color: white;
+}
+
+.testimonials-section .image-layer{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.30;
+}
+
+.testimonials-section .carousel-box{
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials-section .separator{
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.testimonials-section .separator span{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1px;
+  height: 8px;
+  width: 8px;
+  border: 1px solid rgb(228, 197, 144);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.testimonials-section .testi-top{
+  position: relative;
+  text-align: center;
+}
+
+.testimonials-section .testi-top .quotes{
+  position: relative;
+  line-height: 0.7em;
+  font-size: 70px;
+  font-family:"Forum", cursive;
+}
+
+.testimonials-section .testi-top .quote-text{
+  position: relative;
+  line-height: 1.4em;
+  font-size: 50px;
+  font-family: "Forum", cursive;
+}
+
+.testimonials-section .thumbs-carousel-box{
+  position: relative;
+  max-width: 390px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonials-section .testi-thumbs{
+  position: relative;
+  max-width: 130px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-section .testi-thumbs .owl-stage-outer{
+  overflow: visible;
+}
+
+.testimonials-section .testi-thumbs .image{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  -ms-transform: scale(0.80);
+  transform: scale(0.80);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.testimonials-section .testi-thumbs .image img{
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.testimonials-section .testi-thumbs .active .image{
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.testimonials-section .testi-thumbs .auth-title{
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:rgb(228, 197, 144);
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.testimonials-section .testi-thumbs .active .auth-title{
+  opacity: 1;
+  visibility: visible;
+}
+
+.testimonials-section .owl-theme .owl-nav,
+.testimonials-section .owl-theme .owl-dots{
+  display: none;
+}
 /*** 
 
 ====================================================================
