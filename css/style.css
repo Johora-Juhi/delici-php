@@ -1415,6 +1415,9 @@ border: 1px dotted rgb(228, 197, 144);
   background-attachment: fixed;
   /* opacity: 0.40; */
 }
+.reservation-container-two{
+  position: relative;
+}
 .reservation-container-two > .inner{
   position: relative;
   top: -270px;
@@ -1794,6 +1797,7 @@ reservation page
 }
 .reservation-container-two .contact-us,
 .map-section .contact-us {
+  z-index: 1;
   position: relative;
   width: 100%;
   padding: 0 0;
@@ -1802,6 +1806,7 @@ reservation page
   background-color: rgb(14, 13, 12);
 }
 .reservation-container-two .contact-us .inner{
+  position: relative;
   flex: 1;
   padding: 60px 20px 55px 20px;
   width: 100%;
@@ -1860,6 +1865,7 @@ reservation page
 .booking-info,.contact-info,
 .lunch-time,
 .dinner-time {
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -3980,6 +3986,12 @@ input[type="file"]:focus + label {
     position: absolute;
     left: 0;
     bottom: 80px;
+  }
+  .why-us .right-bg{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -100px;
   }
   .why-container{
     width: 77%;
