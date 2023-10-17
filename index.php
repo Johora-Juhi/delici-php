@@ -531,6 +531,191 @@ include_once('./includes/connect.php');
         </div>
     </section>
 
+    <!-- Reservation Section -->
+    <section class="reservation-container-two">
+        <div class="inner">
+            <div class="reservation-section">
+                <p class="section-heading">online reservation</p>
+                <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
+                <form action="" method="post">
+                    <div class="input-group">
+                        <div class="input-inner">
+                            <input type="text" name="name" class="input-field" placeholder="Your Name">
+                        </div>
+                        <div class="input-inner">
+                            <input type="tel" name="phone" class="input-field" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-inner">
+                            <i class="far fa-user icon"></i>
+                            <select class="input-field input-select" name="person" id="" style="padding-left: 45px;">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Person</option>
+                                <option value="3">3 Person</option>
+                                <option value="4">4 Person</option>
+                                <option value="5">5 Person</option>
+                                <option value="6">6 Person</option>
+                                <option value="7">7 Person</option>
+                            </select>
+                        </div>
+                        <div class="input-inner">
+                            <i class="far fa-calendar icon"></i>
+                            <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
+                            <span class="fas fa-angle-down icon arrow-icon"></span>
+
+                        </div>
+                        <script>
+                            $(document).ready(function() {
+                                $('#datepicker').on('change', function() {
+                                    var selectedDate = $(this).val();
+                                    console.log('Selected Date: ' + selectedDate);
+
+                                    // Send the selected date to a PHP script using AJAX
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: 'process.php', // Replace with the actual URL of your PHP script
+                                        data: {
+                                            selected_date: selectedDate
+                                        },
+                                        success: function(response) {
+                                            // Handle the response from the PHP script if needed
+                                            console.log('Response from PHP: ' + response);
+                                        }
+                                    });
+                                    <?php
+                                    $update_query = "UPDATE `slots` SET is_available = 1 where is_available = 0";
+                                    $result_update = mysqli_query($con, $update_query);
+                                    ?>
+                                });
+                            });
+                        </script>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#datepicker').on('change', function() {
+                                    var selectedDate = $(this).val();
+                                    console.log('Selected Date: ' + selectedDate);
+
+                                    // document.cookie = "selectedDate=" + selectedDate;
+
+                                    <?php
+                                    // if (isset($_COOKIE['selectedDate'])) {
+                                    //     $selected_date = $_COOKIE['selectedDate'];
+                                    //     echo "Received input value: " . $selected_date;
+                                    // }
+                                    if (isset($_POST['selected_date'])) {
+                                        $selected_date = $_POST['selected_date'];
+                                        echo $selected_date;
+                                        $update_query = "UPDATE `slots` SET is_available= 1 where is_available= 0";
+                                        $result_update = mysqli_query($con, $update_query);
+                                        $select_reservation = "SELECT * FROM `reservation_table` where `date`= $selected_date ";
+
+                                        $result = mysqli_query($con, $select_reservation);
+                                        $count = mysqli_num_rows($result);
+                                        echo $count;
+                                    }
+                                    ?>
+
+                                    // If you want to update a hidden form field with the selected date, you can do this:
+                                    // $('#hidden_date_field').val(selectedDate);
+                                });
+                            });
+                        </script>
+                        <div class="input-inner">
+                            <i class="far fa-clock icon"></i>
+                            <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
+                                <!-- <?php
+                                        // $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
+                                        // $result_options = mysqli_query($con, $select_query);
+                                        // $row_num = mysqli_num_rows($result_options);
+                                        // while ($menues = mysqli_fetch_assoc($result_options)) {
+                                        //     $id = $menues['slot_id'];
+                                        //     $slot = $menues['slot_time'];
+                                        //     echo "<option value='$id'>$slot</option>";
+                                        // }
+                                        ?> -->
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#datepicker').on('change', function() {
+                                            var selectedDate = $(this).val();
+                                            console.log('Selected Date: ' + selectedDate);
+
+                                            // Send the selected date to a PHP script using AJAX
+                                            $.ajax({
+                                                type: 'POST',
+                                                url: 'process.php', // Replace with the actual URL of your PHP script
+                                                data: {
+                                                    selected_date: selectedDate
+                                                },
+                                                success: function(response) {
+                                                    // Handle the response from the PHP script if needed
+                                                    console.log('Response from PHP: ' + response);
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script>
+                                <?php include_once('./process.php') ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-inner">
+                            <textarea name="message" id="" rows="3" class="input-field" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-inner">
+                            <button type="submit" class="form-btn btn-style-one" name="book-table" id="submit_btn" style="box-sizing: border-box;">
+                                <span class="btn-wrap">
+                                    <span class="text-one">book a table</span>
+                                    <span class="text-two">book a table</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $name = $_POST['name'];
+                    $phone = $_POST['phone'];
+                    $person = $_POST['person'];
+                    $selected_date = $_POST['selected_date'];
+                    $slot = $_POST['slot'];
+                    $message = $_POST['message'];
+                    $insert_reservation = "INSERT INTO `reservation_table`(`username`, `phone`, `person`, `reservation_date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot,'$message')";
+                    $result_reservation = mysqli_query($con, $insert_reservation);
+                }
+                ?>
+            </div>
+            <div class="contact-us">
+                    <div class="inner">
+                        <div class="section-heading">Contact us</div>
+                        <div class="booking-info">
+                                    <div class="bk-title">Booking request</div>
+                                    <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+                                </div>
+                        <div class="separator"><span></span></div>
+                        <div class="contact-info">
+                            <div class="heading">location</div>
+                            <div class="text">Restaurant St, Delici City, <br> London 9578, UK <br>
+                            </div>
+                        </div>
+                        <div class="lunch-time">
+                            <div class="heading">lunch time</div>
+                            <div class="text">Monday to Sunday <br>
+                                11.00 am - 2.30pm</div>
+                        </div>
+                        <div class="dinner-time">
+                            <div class="heading">dinner time</div>
+                            <div class="text">Monday to Sunday <br>
+                                5.30 pm - 11.30 pm</div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
     <!-- meet our chef   -->
     <div class="meet-chef-container">
         <div class="left-bg"><img src="./images/background/bg-27.png" alt="" title=""></div>
