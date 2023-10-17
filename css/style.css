@@ -957,7 +957,10 @@
 
 .testimonials-section{
   position: relative;
-  padding-top: 120px;
+  padding-top: 70px;
+  padding-left: 15px;
+  padding-right: 15px
+  ;
   padding-bottom: 340px;
   background: black;
   color: white;
@@ -1016,7 +1019,7 @@
 .testimonials-section .testi-top .quote-text{
   position: relative;
   line-height: 1.4em;
-  font-size: 50px;
+  font-size: 20px;
   font-family: "Forum", cursive;
 }
 
@@ -3756,6 +3759,10 @@ input[type="file"]:focus + label {
 .menu-tabs .buttons .tab-buttons .tab-btn{
   margin-bottom: 0;
 }
+/* testimonial  */
+.testimonials-section .testi-top .quote-text{
+  font-size: 30px;
+}
   /*==============================
    admin page layout  
    ===============================*/
@@ -4184,6 +4191,7 @@ reservation page
     bottom: -170px;
     z-index: 1;
 }
+
   /* Bob Up Down*/
 
 @-webkit-keyframes float_up_down {
@@ -4303,6 +4311,14 @@ reservation page
   position: absolute;
   right: 0;
   bottom: 0;
+}
+/* testimonilal section  */
+.testimonials-section{
+  padding-top: 120px;
+}
+
+.testimonials-section .testi-top .quote-text{
+  font-size: 50px;
 }
   /*==============================
    admin page layout  
