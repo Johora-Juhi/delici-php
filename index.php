@@ -690,32 +690,73 @@ include_once('./includes/connect.php');
                 ?>
             </div>
             <div class="contact-us">
-                    <div class="inner">
-                        <div class="section-heading">Contact us</div>
-                        <div class="booking-info">
-                                    <div class="bk-title">Booking request</div>
-                                    <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
-                                </div>
-                        <div class="separator"><span></span></div>
-                        <div class="contact-info">
-                            <div class="heading">location</div>
-                            <div class="text">Restaurant St, Delici City, <br> London 9578, UK <br>
-                            </div>
-                        </div>
-                        <div class="lunch-time">
-                            <div class="heading">lunch time</div>
-                            <div class="text">Monday to Sunday <br>
-                                11.00 am - 2.30pm</div>
-                        </div>
-                        <div class="dinner-time">
-                            <div class="heading">dinner time</div>
-                            <div class="text">Monday to Sunday <br>
-                                5.30 pm - 11.30 pm</div>
+                <div class="inner">
+                    <div class="section-heading">Contact us</div>
+                    <div class="booking-info">
+                        <div class="bk-title">Booking request</div>
+                        <div class="bk-no"><a href="tel:+88-123-123456">+88-123-123456</a></div>
+                    </div>
+                    <div class="separator"><span></span></div>
+                    <div class="contact-info">
+                        <div class="heading">location</div>
+                        <div class="text">Restaurant St, Delici City, <br> London 9578, UK <br>
                         </div>
                     </div>
+                    <div class="lunch-time">
+                        <div class="heading">lunch time</div>
+                        <div class="text">Monday to Sunday <br>
+                            11.00 am - 2.30pm</div>
+                    </div>
+                    <div class="dinner-time">
+                        <div class="heading">dinner time</div>
+                        <div class="text">Monday to Sunday <br>
+                            5.30 pm - 11.30 pm</div>
+                    </div>
                 </div>
+            </div>
         </div>
     </section>
+
+    <!-- Why Us Section  -->
+        <!--Why Us Section-->
+        <section class="why-us">
+        <div class="left-bg"><img src="images/background/bg-8.png" alt="" title=""></div>
+        <div class="right-bg"><img src="images/background/bg-7.png" alt="" title=""></div>
+                <div class="small-heading">why choose us</div>
+                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                <div class="section-heading">Our Strength</div>
+            <div class="why-container">
+                <!--Block-->
+                <div class="why-block">
+                        <div class="icon-box"><img src="images/resource/why-icon-1.png" alt=""></div>
+                        <div class="section-heading-four">Hygienic Food</div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                </div>
+
+                <!--Block-->
+                <div class="why-block">
+                        <div class="icon-box"><img src="images/resource/why-icon-2.png" alt=""></div>
+                        <div class="section-heading-four">Fresh Environment</div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                </div>
+
+                <!--Block-->
+                <div class="why-block">
+                        <div class="icon-box"><img src="images/resource/why-icon-3.png" alt=""></div>
+                        <div class="section-heading-four">Skilled Chefs</div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                </div>
+
+                <!--Block-->
+                <div class="why-block">
+                        <div class="icon-box"><img src="images/resource/why-icon-4.png" alt=""></div>
+                        <div class="section-heading-four">Event & Party</div>
+                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+                </div>
+
+            </div>
+    </section>
+
     <!-- meet our chef   -->
     <div class="meet-chef-container">
         <div class="left-bg"><img src="./images/background/bg-27.png" alt="" title=""></div>

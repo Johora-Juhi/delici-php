@@ -1096,7 +1096,67 @@
   display: none;
 }
 /*** 
+why us Section 
+***/
+.why-us{
+  position: relative;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  padding: 70px 20px 70px 20px;
+  text-align: center;
+}
+.why-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 40px;
+  margin-top: -10px;
+}
+.why-block{
+  position: relative;
+  padding: 30px 20px 40px 20px ;
+  background: rgb(21, 22, 22);
+  text-align: center;
+  min-height: 100%;
+}
 
+.why-us .why-block:nth-child(even){
+  background: rgb(18, 17, 17);
+}
+
+.why-us .why-block:nth-child(odd){
+border: 1px dotted rgb(228, 197, 144);
+}
+
+.why-block .icon-box{
+  position: relative;
+  display: block;
+  line-height: 90px;
+  -webkit-transition:all 500ms ease;
+  -ms-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  -moz-transition:all 500ms ease;
+  margin-bottom: 20px;
+}
+
+.why-block:hover .icon-box{
+  -webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.why-block .icon-box img{
+  position: relative;
+  max-height: 80px;
+}
+
+.why-block .text{
+  position: relative;
+  font-size: 14px;
+  color: rgb(167, 167, 167);
+}
+/*** 
 ====================================================================
   Inner Banner Section
 ====================================================================
@@ -3783,6 +3843,9 @@ input[type="file"]:focus + label {
 .testimonials-section .testi-top .quote-text{
   font-size: 30px;
 }
+.why-container{
+  grid-template-columns: repeat(2, 1fr);
+}
   /*==============================
    admin page layout  
    ===============================*/
@@ -3909,6 +3972,15 @@ input[type="file"]:focus + label {
   .inner-banner .inner h1 {
     font-size: 80px;
   }
+  .why-us{
+    padding: 100px 0 60px 0;
+  }
+  .why-container{
+    width: 77%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
   /*===========================
    private events section  
    ============================*/
