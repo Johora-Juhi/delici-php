@@ -1933,6 +1933,7 @@ reservation page
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   place-items: center;
+  font-family: "DM Sans", sans-serif;
 }
 .best-menu-section .image-block{
   width: 100%;
@@ -1950,6 +1951,12 @@ reservation page
   align-items: center;
   justify-content: center;
   background-color: rgb(14, 13, 12);
+}
+.info-block .text{
+  line-height: 1.5em;
+  color: rgb(167, 167, 167);
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 /*============================
  our chef page  
