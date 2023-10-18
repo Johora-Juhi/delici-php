@@ -767,8 +767,8 @@ include_once('./includes/connect.php');
             <div class="image-block"><img src="./images/resource/featured-1.jpg" alt=""></div>
         </div>
         <div class="latest-section">
-        <div class="image-layer"><img src="" alt=""></div>
-        <div class="image-block" style="box-sizing: border-box;"><img src="./images/resource/featured-2.jpg" alt="" style="box-sizing: border-box;"></div>
+            <div class="image-layer"><img src="" alt=""></div>
+            <div class="image-block"><img src="./images/resource/featured-2.jpg" alt=""></div>
             <div class="info-block">
                 <div class="small-heading">latest</div>
                 <div class="heading-three">upcoming events</div>
