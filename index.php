@@ -718,45 +718,55 @@ include_once('./includes/connect.php');
     </section>
 
     <!-- Why Us Section  -->
-        <!--Why Us Section-->
-        <section class="why-us">
+    <section class="why-us">
         <div class="left-bg"><img src="images/background/bg-8.png" alt="" title=""></div>
         <div class="right-bg"><img src="images/background/bg-7.png" alt="" title=""></div>
-                <div class="small-heading">why choose us</div>
-                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                <div class="section-heading">Our Strength</div>
-            <div class="why-container">
-                <!--Block-->
-                <div class="why-block">
-                        <div class="icon-box"><img src="images/resource/why-icon-1.png" alt=""></div>
-                        <div class="section-heading-four">Hygienic Food</div>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
-                </div>
-
-                <!--Block-->
-                <div class="why-block">
-                        <div class="icon-box"><img src="images/resource/why-icon-2.png" alt=""></div>
-                        <div class="section-heading-four">Fresh Environment</div>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
-                </div>
-
-                <!--Block-->
-                <div class="why-block">
-                        <div class="icon-box"><img src="images/resource/why-icon-3.png" alt=""></div>
-                        <div class="section-heading-four">Skilled Chefs</div>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
-                </div>
-
-                <!--Block-->
-                <div class="why-block">
-                        <div class="icon-box"><img src="images/resource/why-icon-4.png" alt=""></div>
-                        <div class="section-heading-four">Event & Party</div>
-                        <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
-                </div>
-
+        <div class="small-heading">why choose us</div>
+        <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+        <div class="section-heading">Our Strength</div>
+        <div class="why-container">
+            <!--Block-->
+            <div class="why-block">
+                <div class="icon-box"><img src="images/resource/why-icon-1.png" alt=""></div>
+                <div class="section-heading-four">Hygienic Food</div>
+                <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
             </div>
+
+            <!--Block-->
+            <div class="why-block">
+                <div class="icon-box"><img src="images/resource/why-icon-2.png" alt=""></div>
+                <div class="section-heading-four">Fresh Environment</div>
+                <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+            </div>
+
+            <!--Block-->
+            <div class="why-block">
+                <div class="icon-box"><img src="images/resource/why-icon-3.png" alt=""></div>
+                <div class="section-heading-four">Skilled Chefs</div>
+                <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+            </div>
+
+            <!--Block-->
+            <div class="why-block">
+                <div class="icon-box"><img src="images/resource/why-icon-4.png" alt=""></div>
+                <div class="section-heading-four">Event & Party</div>
+                <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div>
+            </div>
+
+        </div>
     </section>
 
+    <section class="special-section">
+        <div class="best-menu-section">
+            <div class="info-block">
+                <div class="small-heading">best menu</div>
+                <div class="heading-three">special dishes</div>
+                <div class="text">Lorem Ipsum is simply dummy printing.</div>
+                <div class="more-link"><a href="menu.php">view menu</a></div>
+            </div>
+            <div class="image-block"><img src="./images/resource/featured-1.jpg" alt=""></div>
+        </div>
+    </section>
     <!-- meet our chef   -->
     <div class="meet-chef-container">
         <div class="left-bg"><img src="./images/background/bg-27.png" alt="" title=""></div>

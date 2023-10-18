@@ -787,11 +787,13 @@
   transform:scale(1.04,1.04);
 }
 
+.info-block .more-link,
 .offer-box .more-link{
   position: relative;
   margin-top: 20px;
 }
 
+.info-block .more-link a,
 .offer-box .more-link a{
   position: relative;
   display: inline-block;
@@ -805,6 +807,7 @@
   padding-bottom:4px;
 }
 
+.info-block .more-link a:before,
 .offer-box .more-link a:before{
   content: "";
   position: absolute;
@@ -817,11 +820,13 @@
   transition: all ease-in-out 0.2s;
 }
 
+.info-block .more-link a:hover::before,
 .offer-box .more-link a:hover::before{
   width: 100%;
   left: 0;
 }
 
+.info-block .more-link a:hover,
 .offer-box .more-link a:hover{
   color: white!important;
   border-color: white;
@@ -1920,6 +1925,31 @@ reservation page
   letter-spacing: 0.2em;
   line-height: 1.5em;
   padding-bottom: 4px;
+}
+/* special section  */
+.special-section{
+  position: relative;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+}
+.best-menu-section .image-block{
+  width: 100%;
+  height: 100%;
+}
+.best-menu-section .image-block img{
+  width: 100%;
+  height: 100%;
+  object-fit: none; 
+}
+.best-menu-section .info-block{
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(14, 13, 12);
 }
 /*============================
  our chef page  
@@ -3517,6 +3547,7 @@ input[type="file"]:focus + label {
   line-height: 1.2em;
   color: white;
   font-family: "Forum", cursive;
+  text-transform: capitalize;
 }
 
 .text {
@@ -3684,6 +3715,10 @@ input[type="file"]:focus + label {
     font-size: 26px;
     line-height: 26px;
   }
+  /* special section  */
+.special-section{
+  grid-template-columns: 1fr 1fr;
+}
   /* =========================
   private-events style 
   ============================*/
@@ -3998,6 +4033,10 @@ input[type="file"]:focus + label {
     margin: auto;
     grid-template-columns: repeat(4, 1fr);
   }
+  /* special section  */
+.special-section{
+  grid-template-columns: repeat(3, 1fr);
+}
   
   /*===========================
    private events section  
