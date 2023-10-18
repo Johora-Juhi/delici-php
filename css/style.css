@@ -1942,15 +1942,31 @@ reservation page
   place-items: center;
   font-family: "DM Sans", sans-serif;
 }
+.latest-section .image-block{
+position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+.selected-section .image-block,
 .best-menu-section .image-block {
   width: 100%;
   height: 100%;
 }
+.latest-section .image-block img{
+  width: 100%;
+  height: 100%;
+  object-position: top;
+  object-fit: cover;
+}
+.selected-section .image-block img,
 .best-menu-section .image-block img {
   width: 100%;
   height: 100%;
   object-fit: none;
 }
+
+.selected-section .info-block,
 .best-menu-section .info-block {
   height: 370px;
   display: flex;
@@ -1965,12 +1981,17 @@ reservation page
   margin-top: 15px;
   margin-bottom: 5px;
 }
+.special-section .selected-section{
+  width: 100%;
+}
 .special-section .latest-section {
+  order: 12;
   position: relative;
   width: 100%;
   height: 100%;
 }
 .latest-section .image-layer {
+  display: none;
   background-image: url(../images/resource/featured-2.jpg);
   position: absolute;
   left: 0;
@@ -1981,15 +2002,20 @@ reservation page
   background-repeat: no-repeat;
   background-size: cover;
 }
+.latest-section .image-block img{
+position: relative;}
 .latest-section .info-block{
-  position: absolute;
+  position: relative;
+  /* position: absolute;
   bottom: 0;
-  height: 250px;
+  height: 250px; */
+  height: 370px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.70);
 }
 /*============================
  our chef page  
@@ -3761,6 +3787,24 @@ input[type="file"]:focus + label {
   .special-section {
     grid-template-columns: 1fr 1fr;
   }
+  .special-section .latest-section{
+    order: unset;
+  }
+  .latest-section .image-layer{
+    display: block;
+  }
+  .latest-section .image-block{
+    display: none;
+  }
+  .latest-section .info-block{
+    position: absolute;
+    bottom: 0;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .selected-section{
+    grid-column: span 2;
+  }
   /* =========================
   private-events style 
   ============================*/
@@ -4078,6 +4122,9 @@ input[type="file"]:focus + label {
   /* special section  */
   .special-section {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .selected-section{
+    grid-column: span 1;
   }
 
   /*===========================

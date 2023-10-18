@@ -768,6 +768,7 @@ include_once('./includes/connect.php');
         </div>
         <div class="latest-section">
         <div class="image-layer"><img src="" alt=""></div>
+        <div class="image-block" style="box-sizing: border-box;"><img src="./images/resource/featured-2.jpg" alt="" style="box-sizing: border-box;"></div>
             <div class="info-block">
                 <div class="small-heading">latest</div>
                 <div class="heading-three">upcoming events</div>
@@ -775,14 +776,14 @@ include_once('./includes/connect.php');
                 <div class="more-link"><a href="contact.php">join event</a></div>
             </div>
         </div>
-        <div class="best-menu-section">
-        <div class="image-block"><img src="./images/resource/featured-1.jpg" alt=""></div>
+        <div class="selected-section">
             <div class="info-block">
-                <div class="small-heading">best menu</div>
-                <div class="heading-three">special dishes</div>
+                <div class="small-heading">selected</div>
+                <div class="heading-three">chef choice</div>
                 <div class="text">Lorem Ipsum is simply dummy printing.</div>
                 <div class="more-link"><a href="menu.php">view menu</a></div>
             </div>
+            <div class="image-block"><img src="./images/resource/featured-3.jpg" alt=""></div>
         </div>
     </section>
     <!-- meet our chef   -->
