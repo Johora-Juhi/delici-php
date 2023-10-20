@@ -40,71 +40,6 @@ include_once('../includes/connect.php');
                     $name = '';
                 }
             }
-
-            if (empty($_POST["email"])) {
-                $emailErr = "Email is required";
-            } else {
-                $email = $_POST["email"];
-                // check if e-mail address is well-formed
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $emailErr = " Invalid email format";
-                }
-            }
-
-            // password input validation 
-            if (empty($_POST["password"])) {
-                $passwordErr = " * Password is required";
-            } else {
-                $password = $_POST["password"];
-                $hash_password = password_hash($password, PASSWORD_DEFAULT);
-            }
-
-            // confirm password input validation 
-            if (empty($_POST["confirm_password"])) {
-                $confirm_passwordErr = " * Confirm password is required";
-            } else {
-                $confirm_password = $_POST["confirm_password"];
-                if ($password !== $confirm_password) {
-                    $confirm_passwordErr = " * Password does not match";
-                    $confirm_password = '';
-                }
-            }
-
-            // phone input validation 
-            if (empty($_POST["phone"])) {
-                $phoneErr = " * Phone number is required";
-            } else {
-                $phone = $_POST["phone"];
-                // check if phone only contains letters and whitespace
-                if (!preg_match("/^(?:\+88|88)?(01[3-9]\d{8})$/", $phone)) {
-                    $phoneErr = " Not valid phone number";
-                    $phone = '';
-                }
-            }
-
-            // post operation of fields are not empty 
-            if ($name != '' and $email != '' and $password != '' and $confirm_password != '' and $phone != '') {
-
-                // sellect query 
-                $select_query = "SELECT * FROM `user_table` WHERE username='$name' or user_email='$email'";
-                $result_user = mysqli_query($con, $select_query);
-                $number = mysqli_num_rows($result_user);
-                if ($number > 0) {
-                    echo "<script>alert('Username and email already exist')</script>";
-                } else if ($password !== $confirm_password) {
-                    echo "<script>alert('Password does not match')</script>";
-                } else {
-                    // insert quert 
-                    $insert_query = "INSERT INTO `user_table` (username,user_email,user_password,user_phone) VALUES ('$name','$email','$hash_password','$phone')";
-                    $result = mysqli_query($con, $insert_query);
-                    if ($result) {
-
-                        $_SESSION['username'] = $name;
-                        $_SESSION['user_email'] = $email;
-                        echo "<script>window.open('../index.php','_self')</script>";
-                    }
-                }
-            }
         }
         ?>
         <form action="" method="post" class="registration-container">
@@ -143,23 +78,6 @@ include_once('../includes/connect.php');
 
         </form>
     </div>
-    <script>
-        function check() {
-            let password = $('#password').val();
-            let confirm_password = $('#confirm_password').val();
-            let submit_btn = $('#submit_btn');
-            console.log(password);
-            console.log(confirm_password);
-            if (password !== confirm_password) {
-                submit_btn.prop('disabled', true);
-                submit_btn.removeClass("btn-style-one").addClass("submit_btn");
-            } else {
-                submit_btn.prop('disabled', false);
-                submit_btn.removeClass("submit_btn").addClass("btn-style-one");
-            }
-        }
-    </script>
-    <script src="../js/custom.js"></script>
-</body>
+    </body>
 
 </html>

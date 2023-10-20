@@ -79,18 +79,19 @@ include_once('./includes/connect.php');
         <div class="main-header">
             <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
             <nav class="nav-container">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="./">Home</a>
                 <a class="nav-link" href="./menu.php">Menu</a>
                 <a class="nav-link" href="./about-us.php">About Us</a>
                 <a class="nav-link active" href="./our-chef.php">Our Chefs</a>
                 <a class="nav-link" href="./contact.php">Contact</a>
+                <a class="nav-link" href="./reservation.php">Booking</a>
                 </ul>
             </nav>
             <div class="button-container">
-                <a href="./reservation.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
+                <a href="./user_area/user-login.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
-                            <span class="text-one">find a table</span>
-                            <span class="text-two">find a table</span>
+                            <span class="text-one">login</span>
+                            <span class="text-two">login</span>
                         </span>
                     </button>
                 </a>
@@ -119,11 +120,12 @@ include_once('./includes/connect.php');
         <div class="image-box"><img src="./images/resource/sidebar-image.jpg" alt="" title=""></div>
 
         <nav class="nav-container">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="./">Home</a>
             <a class="nav-link" href="./menu.php">Menu</a>
             <a class="nav-link" href="./about-us.php">About Us</a>
             <a class="nav-link active" href="./our-chef.php">Our Chefs</a>
-            <a class="nav-link" href="./contact.php">Menu</a>
+            <a class="nav-link" href="./contact.php">Contact</a>
+            <a class="nav-link" href="./reservation.php">Booking</a>
             </ul>
         </nav>
 
@@ -181,7 +183,7 @@ include_once('./includes/connect.php');
             <div class="chef">HENRY - EXCUTIVE CHEF</div>
         </div>
     </div>
-    
+
     <!-- meet our chef   -->
     <div class="meet-chef-container">
         <div class="left-bg"><img src="./images/background/bg-27.png" alt="" title=""></div>
