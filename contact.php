@@ -200,10 +200,10 @@ session_start();
                 <div class="section-heading">message us</div>
                 <div class="text">Have a question about the our service? We're here to help, contact us today</div>
                 <form action="" method="post" class="message-form">
-                    <input type="text" name="name" class="input-field" placeholder="Your Name">
-                    <input type="email" name="email" class="input-field" placeholder="Your Email">
-                    <input type="tel" name="phone" class="input-field" placeholder="Phone Number">
-                    <textarea name="message" id="" cols="" rows="3" class="input-field" placeholder="Special Request"></textarea>
+                    <input type="text" name="name" class="input-field" placeholder="Your Name" required>
+                    <input type="email" name="email" class="input-field" placeholder="Your Email" required>
+                    <input type="tel" name="phone" class="input-field" placeholder="Phone Number" required>
+                    <textarea name="message" id="" cols="" rows="3" class="input-field" placeholder="Special Request" required></textarea>
                     <button type="submit" class="theme-btn btn-style-one" name="send-message" id="submit_btn" style="box-sizing: border-box;">
                         <span class="btn-wrap">
                             <span class="text-one">send your message</span>
@@ -211,6 +211,26 @@ session_start();
                         </span>
                     </button>
                 </form>
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $name = $_POST['name'];
+                    $phone = $_POST['phone'];
+                    $email = $_POST['email'];
+                    $message = $_POST['message'];
+                    $insert_reservation = "INSERT INTO `request_table`(`name`, `email`, `phone`, `message`) VALUES ('$name','$email','$phone','$message')";
+                    $result_reservation = mysqli_query($con, $insert_reservation);
+                    if ($result_reservation) {
+                        echo '
+            <script>
+                Swal.fire({
+                    title: "Success!",
+                    text: "Messege sent!",
+                    icon: "success",
+                });
+            </script>';
+                    }
+                }
+                ?>
             </div>
             <div class="img-box"><img src="./images/resource/restaurant.png" alt=""></div>
         </div>
