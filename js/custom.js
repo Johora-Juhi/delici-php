@@ -428,7 +428,28 @@ if ($('.testimonial-slider').length) {
 		});    		
 	}
 
+	document.addEventListener("DOMContentLoaded", function() {
+        var password = document.getElementById("password");
+        var confirm_password = document.getElementById("confirm_password");
+		var submit_btn = document.getElementById("submit_btn");
+		console.log(password);
+		console.log(confirm_password);
+		console.log('object');
 
+		function validatePassword() {
+			console.log('object');
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords do not match");
+                submit_btn.disabled = true;
+            } else {
+                confirm_password.setCustomValidity("");
+                submit_btn.disabled = false;
+            }
+        }
+
+        password.addEventListener("input", validatePassword);
+        confirm_password.addEventListener("input", validatePassword);
+    });
 //Update Header Style and Scroll to Top
 // function headerStyle() {
 // 	if($('.header-container').length){

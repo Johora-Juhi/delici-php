@@ -222,8 +222,8 @@ include_once('./includes/connect.php');
                     <div class="content">
                         <div class="subtitle"><span>Tradational & Hygine</span></div>
                         <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                        <h1><span>Flavors Inspired by <br>the Seasons</span></h1>
-                        <div class="text">For the love of <br>delicious food</div>
+                        <h1><span>For the love of <br>delicious food</span></h1>
+                        <div class="text">Come with family &amp; feel the joy of mouthwatering food</div>
                         <a href="menu-list.php" class="theme-btn btn-style-two">
                             <span class="btn-wrap">
                                 <span class="text-one">view our menu</span>

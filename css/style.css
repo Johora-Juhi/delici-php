@@ -1,6 +1,6 @@
 @import url("./preloader.css");
 @import url("./global.css");
-@import url("font-awesome.css");
+@import url("./font-awesome.css");
 
 /*** 
 
@@ -3001,6 +3001,63 @@ position: relative;}
   background: rgb(228, 197, 144);
 }
 
+/* user registration  */
+.registration-section{
+  background-image: url(../images/background/login_background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "DM Sans", sans-serif;
+}
+.registration-section .section-heading{
+  margin-top:0px;
+}
+.registration-container{
+  max-width: 400px;
+  margin: auto;
+  padding: 24px;
+  background-color: black;
+  color: white;
+}
+.registration-container .input-icon{
+  position: relative;
+  color: white;
+}
+.registration-container .input-group{
+  justify-content: space-between;
+}
+.registration-container .submit_btn{
+  position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing:  3px;
+    font-family: "DM Sans", sans-serif    ;
+    line-height: 29.6px;
+    font-weight: 700;
+    padding:11px 45px;
+    font-size: 0.75rem;
+    background: rgb(228,197,144);
+    border: 2px solid rgb(288,197,144);
+    border-radius: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+    box-sizing: border-box!important;
+}
+.registration-container .submit_btn .btn-wrap .text-two{
+    position: absolute;
+    top: 100%;
+    display: block;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
 /*** 
 /*=============================
  admin page Layout

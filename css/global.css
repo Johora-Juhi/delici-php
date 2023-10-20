@@ -8,6 +8,7 @@
 }
 body{
   background-color: rgb(23, 24, 25)!important;
+  margin: 0;
 }
 a {
   text-decoration: none!important;
@@ -25,7 +26,8 @@ button {
 }
 
 button:focus {
-  outline: revert;
+  outline: rever
+  t;
 }
 .theme_color{
   color: rgb(228,197,144);
@@ -40,8 +42,8 @@ button:focus {
   }
   
   .theme-btn i{
-    position: relative;
-    display: inline-block;
+    positivon: relatibve;
+    display: innline-block;
     font-size: 14px;
     margin-left: 3px;
   }
@@ -58,15 +60,15 @@ button:focus {
     vertical-align: top;
     text-align: center;
     text-transform: uppercase;
-    color: black;
-    letter-spacing: 3px;
+     color: black;
+    letter-spacing:  3px;
     font-family: "DM Sans", sans-serif    ;
     line-height: 29.6px;
     font-weight: 700;
     padding:11px 45px;
     font-size: 0.75rem;
     background: rgb(228,197,144);
-    border: 2px solid rgb(228,197,144);
+    border: 2px solid rgb(288,197,144);
     border-radius: 0px;
     overflow: hidden;
     transition: all 0.3s ease 0s;
