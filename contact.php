@@ -84,13 +84,14 @@ include_once('./includes/connect.php');
                 <a class="nav-link" href="./about-us.php">About Us</a>
                 <a class="nav-link" href="./our-chef.php">Our Chefs</a>
                 <a class="nav-link active" href="./contact.php">Contact</a>
+                <a class="nav-link" href="./reservation.php">Booking</a>
                 </ul>
             </nav>
             <div class="button-container">
                 <a href="./reservation.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
-                            <span class="text-one">find a table</span>
-                            <span class="text-two">find a table</span>
+                            <span class="text-one">Login</span>
+                            <span class="text-two">Login</span>
                         </span>
                     </button>
                 </a>
@@ -123,7 +124,8 @@ include_once('./includes/connect.php');
             <a class="nav-link" href="./menu.php">Menu</a>
             <a class="nav-link" href="./about-us.php">About Us</a>
             <a class="nav-link" href="./our-chef.php">Our Chefs</a>
-            <a class="nav-link active" href="./contact.php">Menu</a>
+            <a class="nav-link active" href="./contact.php">Contact</a>
+            <a class="nav-link" href="./reservation.php">Booking</a>
             </ul>
         </nav>
 
