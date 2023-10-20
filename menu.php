@@ -89,7 +89,7 @@ session_start();
                 </ul>
             </nav>
             <div class="button-container">
-            <?php
+                <?php
                 if (!isset($_SESSION['user_email'])) {
                     echo  '<a href="./user_area/user-login.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
@@ -404,13 +404,104 @@ session_start();
             <div class="reservation-section">
                 <p class="section-heading">online reservation</p>
                 <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
+                <?php
+                $name = $phone = $person = $selected_date = $slot = $message = "";
+                $nameErr = $personErr = $selected_dateErr = $slotErr = $phoneErr = $messageErr = "";
+
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    if (!isset($_SESSION['user_email'])) {
+                        echo "<script>window.open('./user_area/user-login.php','_self')</script>";
+                    } else {
+
+                        // name input validation 
+                        if (empty($_POST["name"])) {
+                            $nameErr = " * Name is required";
+                        } else {
+                            $name = $_POST["name"];
+                            // check if name only contains letters and whitespace
+                            if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+                                $nameErr = " Only letters and white space";
+                                $name = '';
+                            }
+                        }
+
+                        // phone input validation 
+                        if (empty($_POST["phone"])) {
+                            $phoneErr = " * Phone number is required";
+                        } else {
+                            $phone = $_POST["phone"];
+                            // check if phone only contains letters and whitespace
+                            if (!preg_match("/^(?:\+88|88)?(01[3-9]\d{8})$/", $phone)) {
+                                $phoneErr = " Not valid phone number";
+                                $phone = '';
+                            }
+                        }
+
+                        // person input validation 
+                        if (empty($_POST["person"])) {
+                            $personErr = " * person is required";
+                        } else {
+                            $person = $_POST["person"];
+                        }
+
+                        // selected_date input validation 
+                        if (empty($_POST["selected_date"])) {
+                            $selected_dateErr = " * Select a date";
+                        } else {
+                            $selected_date = $_POST["selected_date"];
+                        }
+
+                        // slot input validation 
+                        if (empty($_POST["slot"])) {
+                            $slotErr = " * slot is required";
+                        } else {
+                            $slot = $_POST["slot"];
+                        }
+                        $message = $_POST['message'];
+                        // post operation of fields are not empty 
+                        if ($name != '' and $person != '' and $selected_date != '' and $slot != '' and $phone != '') {
+
+                            // sellect query 
+                            $select_query = "SELECT * FROM `reservation_table` WHERE reservation_date='$selected_date' and slot_id='$slot'";
+                            $result_reservation = mysqli_query($con, $select_query);
+                            $number = mysqli_num_rows($result_reservation);
+                            if ($number > 0) {
+                                echo '<script>
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "This slot is already booked!",
+                                icon: "error",
+                            });
+                      </script>';
+                            } else {
+                                // insert quert 
+                                $insert_reservation = "INSERT INTO `reservation_table` (`username`, `phone`, `person`, `reservation_date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot,'$message')";
+                                $result = mysqli_query($con, $insert_reservation);
+                                if ($result) {
+                                    echo '
+                        <script>
+                            Swal.fire({
+                                title: "Success!",
+                                text: "Booked successfully!",
+                                icon: "success",
+                            });
+                        </script>';
+                                }
+                            }
+                        }
+                    }
+                }
+                ?>
                 <form action="" method="post">
                     <div class="input-group">
                         <div class="input-inner">
                             <input type="text" name="name" class="input-field" placeholder="Your Name">
+                            <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $nameErr; ?></small></p>
                         </div>
                         <div class="input-inner">
                             <input type="tel" name="phone" class="input-field" placeholder="Phone Number">
+                            <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $phoneErr; ?></small></p>
+
                         </div>
                     </div>
                     <div class="input-group">
@@ -425,106 +516,31 @@ session_start();
                                 <option value="6">6 Person</option>
                                 <option value="7">7 Person</option>
                             </select>
+                            <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $personErr; ?></small></p>
+
                         </div>
                         <div class="input-inner">
                             <i class="far fa-calendar icon"></i>
                             <input type="text" class="input-field datepicker" id="datepicker" name="selected_date" placeholder="DD-MM-YYYY" readonly style="padding-left: 45px;">
                             <span class="fas fa-angle-down icon arrow-icon"></span>
-
+                            <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $selected_dateErr; ?></small></p>
                         </div>
-                        <script>
-                            $(document).ready(function() {
-                                $('#datepicker').on('change', function() {
-                                    var selectedDate = $(this).val();
-                                    console.log('Selected Date: ' + selectedDate);
-
-                                    // Send the selected date to a PHP script using AJAX
-                                    $.ajax({
-                                        type: 'POST',
-                                        url: 'process.php', // Replace with the actual URL of your PHP script
-                                        data: {
-                                            selected_date: selectedDate
-                                        },
-                                        success: function(response) {
-                                            // Handle the response from the PHP script if needed
-                                            console.log('Response from PHP: ' + response);
-                                        }
-                                    });
-                                    <?php
-                                    $update_query = "UPDATE `slots` SET is_available = 1 where is_available = 0";
-                                    $result_update = mysqli_query($con, $update_query);
-                                    ?>
-                                });
-                            });
-                        </script>
-
-                        <script>
-                            $(document).ready(function() {
-                                $('#datepicker').on('change', function() {
-                                    var selectedDate = $(this).val();
-                                    console.log('Selected Date: ' + selectedDate);
-
-                                    // document.cookie = "selectedDate=" + selectedDate;
-
-                                    <?php
-                                    // if (isset($_COOKIE['selectedDate'])) {
-                                    //     $selected_date = $_COOKIE['selectedDate'];
-                                    //     echo "Received input value: " . $selected_date;
-                                    // }
-                                    if (isset($_POST['selected_date'])) {
-                                        $selected_date = $_POST['selected_date'];
-                                        echo $selected_date;
-                                        $update_query = "UPDATE `slots` SET is_available= 1 where is_available= 0";
-                                        $result_update = mysqli_query($con, $update_query);
-                                        $select_reservation = "SELECT * FROM `reservation_table` where `date`= $selected_date ";
-
-                                        $result = mysqli_query($con, $select_reservation);
-                                        $count = mysqli_num_rows($result);
-                                        echo $count;
-                                    }
-                                    ?>
-
-                                    // If you want to update a hidden form field with the selected date, you can do this:
-                                    // $('#hidden_date_field').val(selectedDate);
-                                });
-                            });
-                        </script>
                         <div class="input-inner">
                             <i class="far fa-clock icon"></i>
                             <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
-                                <!-- <?php
-                                        // $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
-                                        // $result_options = mysqli_query($con, $select_query);
-                                        // $row_num = mysqli_num_rows($result_options);
-                                        // while ($menues = mysqli_fetch_assoc($result_options)) {
-                                        //     $id = $menues['slot_id'];
-                                        //     $slot = $menues['slot_time'];
-                                        //     echo "<option value='$id'>$slot</option>";
-                                        // }
-                                        ?> -->
-                                <script>
-                                    $(document).ready(function() {
-                                        $('#datepicker').on('change', function() {
-                                            var selectedDate = $(this).val();
-                                            console.log('Selected Date: ' + selectedDate);
-
-                                            // Send the selected date to a PHP script using AJAX
-                                            $.ajax({
-                                                type: 'POST',
-                                                url: 'process.php', // Replace with the actual URL of your PHP script
-                                                data: {
-                                                    selected_date: selectedDate
-                                                },
-                                                success: function(response) {
-                                                    // Handle the response from the PHP script if needed
-                                                    console.log('Response from PHP: ' + response);
-                                                }
-                                            });
-                                        });
-                                    });
-                                </script>
-                                <?php include_once('./process.php') ?>
+                                <?php
+                                $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
+                                $result_options = mysqli_query($con, $select_query);
+                                $row_num = mysqli_num_rows($result_options);
+                                while ($menues = mysqli_fetch_assoc($result_options)) {
+                                    $id = $menues['slot_id'];
+                                    $slot = $menues['slot_time'];
+                                    echo "<option value='$id'>$slot</option>";
+                                }
+                                ?>
                             </select>
+                            <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $slotErr; ?></small></p>
+
                         </div>
                     </div>
                     <div class="input-group">
@@ -543,18 +559,6 @@ session_start();
                         </div>
                     </div>
                 </form>
-                <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $name = $_POST['name'];
-                    $phone = $_POST['phone'];
-                    $person = $_POST['person'];
-                    $selected_date = $_POST['selected_date'];
-                    $slot = $_POST['slot'];
-                    $message = $_POST['message'];
-                    $insert_reservation = "INSERT INTO `reservation_table`(`username`, `phone`, `person`, `reservation_date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot,'$message')";
-                    $result_reservation = mysqli_query($con, $insert_reservation);
-                }
-                ?>
             </div>
             <div class="hot-deal">
                 <p class="small-heading-two">hot deal</p>

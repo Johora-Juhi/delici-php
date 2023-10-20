@@ -89,7 +89,7 @@ session_start();
                 </ul>
             </nav>
             <div class="button-container">
-            <?php
+                <?php
                 if (!isset($_SESSION['user_email'])) {
                     echo  '<a href="./user_area/user-login.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
@@ -182,6 +182,80 @@ session_start();
                 </div>
                 <div class="text">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
                 <p class="booking-info">Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the order form</p>
+                <?php
+                $name = $phone = $person = $selected_date = $slot = $message = "";
+                $nameErr = $personErr = $selected_dateErr = $slotErr = $phoneErr = $messageErr = "";
+
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    if (!isset($_SESSION['user_email'])) {
+                        echo "<script>window.open('./user_area/user-login.php','_self')</script>";
+                    } else {
+                        $email = $_SESSION['user_email'];
+                        $select_user = "SELECT * FROM `user_table` WHERE user_email='$email'";
+                        $result_user = mysqli_query($con, $select_user);
+                        $user_data = mysqli_fetch_assoc($result_user);
+
+                        $name = $user_data['username'];
+                        $phone = $user_data['user_phone'];
+
+
+                        // person input validation 
+                        if (empty($_POST["person"])) {
+                            $personErr = " * person is required";
+                        } else {
+                            $person = $_POST["person"];
+                        }
+
+                        // selected_date input validation 
+                        if (empty($_POST["selected_date"])) {
+                            $selected_dateErr = " * Select a date";
+                        } else {
+                            $selected_date = $_POST["selected_date"];
+                        }
+
+                        // slot input validation 
+                        if (empty($_POST["slot"])) {
+                            $slotErr = " * slot is required";
+                        } else {
+                            $slot = $_POST["slot"];
+                        }
+                        $message ='';
+                        // post operation of fields are not empty 
+                        if ($name != '' and $person != '' and $selected_date != '' and $slot != '' and $phone != '') {
+
+                            // sellect query 
+                            $select_query = "SELECT * FROM `reservation_table` WHERE reservation_date='$selected_date' and slot_id='$slot'";
+                            // echo $select_query;
+                            // die();
+                            $result_reservation = mysqli_query($con, $select_query);
+                            $number = mysqli_num_rows($result_reservation);
+                            if ($number > 0) {
+                                echo '<script>
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "This slot is already booked!",
+                                icon: "error",
+                            });
+                      </script>';
+                            } else {
+                                // insert quert 
+                                $insert_reservation = "INSERT INTO `reservation_table`(`username`, `phone`, `person`, `reservation_date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot, '$message')";
+                                $result = mysqli_query($con, $insert_reservation);
+                                if ($result) {
+                                    echo '
+                        <script>
+                            Swal.fire({
+                                title: "Success!",
+                                text: "Booked successfully!",
+                                icon: "success",
+                            });
+                        </script>';
+                                }
+                            }
+                        }
+                    }
+                }
+                ?>
                 <form method="post" class="book-table-form">
                     <div class="input-group">
                         <div class="input-inner">
@@ -204,13 +278,16 @@ session_start();
                         <div class="input-inner">
                             <i class="far fa-clock icon"></i>
                             <select class="input-field input-select" name="slot" id="" style="padding-left: 45px;">
-                                <option value="1">1 Person</option>
-                                <option value="2">2 Person</option>
-                                <option value="3">3 Person</option>
-                                <option value="4">4 Person</option>
-                                <option value="5">5 Person</option>
-                                <option value="6">6 Person</option>
-                                <option value="7">7 Person</option>
+                            <?php
+                                $select_query = "SELECT * FROM `slots` WHERE is_available = 1";
+                                $result_options = mysqli_query($con, $select_query);
+                                $row_num = mysqli_num_rows($result_options);
+                                while ($menues = mysqli_fetch_assoc($result_options)) {
+                                    $id = $menues['slot_id'];
+                                    $slot = $menues['slot_time'];
+                                    echo "<option value='$id'>$slot</option>";
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="input-inner">

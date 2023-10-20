@@ -1462,6 +1462,7 @@ why us Section
   background-color: black;
   color: white;
   padding: 40px 20px 30px 20px;
+  height: 100%;
 }
 
 .reservation-section .section-heading {
@@ -3312,12 +3313,25 @@ input[type="file"]:focus + label {
   width: 100%;
   margin: auto !important;
 }
+
 /* input with icon  */
 .input-inner i {
   position: absolute;
-  top: 38%;
+  top: 50%;
   left: 15px;
-  /* margin-top: -15px; */
+  margin-top: -12px;
+}
+.reservation .input-inner i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -7px;
+}
+.input-inner i.error{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -23px;
 }
 
 .icon {
