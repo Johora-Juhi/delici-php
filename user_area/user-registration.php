@@ -124,7 +124,7 @@ include_once('../includes/connect.php');
             </div>
             <p style="margin-top: 0; margin-bottom: 0; padding-bottom:10px; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $passwordErr; ?></small></p>
             <div class="input-icon">
-                <i class="icon fa-solid fa-lock"></i>
+                <i class="icon fa-solid fa-lock-open"></i>
                 <input name="confirm_password" id="confirm_password" type="password" class="input-field" placeholder="Confirm password" style="padding-left: 45px;" onkeyup="check()">
             </div>
             <p style="margin-top: 0; margin-bottom: 0; padding-bottom:10px; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $confirm_passwordErr; ?></small></p>
@@ -139,7 +139,7 @@ include_once('../includes/connect.php');
                     <span class="text-two">register</span>
                 </span>
             </button>
-            <p class="">Already registered? <a href="./login.php">Login</a></p>
+            <p class="">Already registered? <a href="./user-login.php">Login</a></p>
 
         </form>
     </div>

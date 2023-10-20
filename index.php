@@ -1,6 +1,8 @@
 <!-- database connection  -->
 <?php
 include_once('./includes/connect.php');
+session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -126,16 +128,29 @@ include_once('./includes/connect.php');
                 <a class="nav-link" href="./about-us.php">About Us</a>
                 <a class="nav-link" href="./our-chef.php">Our Chefs</a>
                 <a class="nav-link" href="./contact.php">Contact</a>
+                <a class="nav-link" href="./reservation.php">Booking</a>
                 </ul>
             </nav>
             <div class="button-container">
-                <a href="./user_area/user-login.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
+                <?php
+                if (!isset($_SESSION['user_email'])) {
+                    echo  '<a href="./user_area/user-login.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
                             <span class="text-one">login</span>
                             <span class="text-two">login</span>
                         </span>
                     </button>
-                </a>
+                </a>';
+                } else {
+                    echo  '<a href="./user_area/logout.php" class="nav-button"> <button type="" class="theme-btn btn-style-one">
+    <span class="btn-wrap">
+        <span class="text-one">logout</span>
+        <span class="text-two">logout</span>
+    </span>
+</button>
+</a>';
+                }
+                ?>
                 <!-- Hidden Nav Toggler -->
                 <div class="info-toggler">
                     <button class="info-bar-opener">

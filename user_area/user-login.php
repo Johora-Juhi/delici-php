@@ -20,34 +20,50 @@ include_once('../includes/connect.php');
 </head>
 
 <body>
-    <div class="registration-section">
+    <div class="login-section">
     
-        <div class="section-heading">user registration</div>
+        <div class="section-heading">user login</div>
         <?php
-        $name = $email = $password = $confirm_password = $phone = $description = "";
-        $nameErr = $emailErr = $passwordErr = $confirm_passwordErr = $phoneErr = $descriptionErr = "";
+        $name = $email = $password = "";
+        $nameErr = $emailErr = $passwordErr = "";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            // name input validation 
-            if (empty($_POST["name"])) {
-                $nameErr = " * Name is required";
+            if (empty($_POST["email"])) {
+                $emailErr = "Email is required";
             } else {
-                $name = $_POST["name"];
-                // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-                    $nameErr = " Only letters and white space";
-                    $name = '';
+                $email = $_POST["email"];
+                // check if e-mail address is well-formed
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $emailErr = " Invalid email format";
                 }
+            }
+            // name input validation 
+            if (empty($_POST["password"])) {
+                $passwordErr = " * password is required";
+            } else {
+                $password = $_POST["password"];
+            }
+    
+            // check if the user is regidtered 
+            $select_user = "SELECT * FROM `user_table` WHERE user_email='$email'";
+            $result_user = mysqli_query($con, $select_user);
+            $user_data = mysqli_fetch_assoc($result_user);
+            $user_count = mysqli_num_rows($result_user);
+    
+            if ($user_count > 0) {
+                if (password_verify($password, $user_data['user_password'])) {
+                    $_SESSION['user_email'] = $email;
+                        echo "<script>window.open('../index.php','_self')</script>";
+                } else {
+                    echo "<script>alert('Incorrect password')</script>";
+                }
+            } else {
+                echo "<script>alert('User is not registered')</script>";
             }
         }
         ?>
-        <form action="" method="post" class="registration-container">
-            <div class="input-icon">
-                <i class="icon fa-regular fa-user"></i>
-                <input name="name" type="text" class="input-field" placeholder="Your name" style="padding-left: 45px;">
-            </div>
-            <p style="margin-top: 0; margin-bottom: 0; padding-bottom:10px; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $nameErr; ?></small></p>
+        <form action="" method="post" class="login-container">
             <div class="input-icon">
                 <i class="icon fa-regular fa-envelope"></i>
                 <input name="email" type="email" class="input-field" placeholder="Your email" style="padding-left: 45px;">
@@ -55,26 +71,17 @@ include_once('../includes/connect.php');
             <p style="margin-top: 0; margin-bottom: 0; padding-bottom:10px; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $emailErr; ?></small></p>
             <div class="input-icon">
                 <i class="icon fa-solid fa-lock"></i>
-                <input name="password" id="password" type="password" class="input-field" placeholder="Enter your password" style="padding-left: 45px;" onkeyup="check()">
+                <input name="password" type="password" class="input-field" placeholder="Enter your password" style="padding-left: 45px;" onkeyup="check()">
             </div>
             <p style="margin-top: 0; margin-bottom: 0; padding-bottom:10px; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $passwordErr; ?></small></p>
-            <div class="input-icon">
-                <i class="icon fa-solid fa-lock"></i>
-                <input name="confirm_password" id="confirm_password" type="password" class="input-field" placeholder="Confirm password" style="padding-left: 45px;" onkeyup="check()">
-            </div>
-            <p style="margin-top: 0; margin-bottom: 0; padding-bottom:10px; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $confirm_passwordErr; ?></small></p>
-            <div class="input-icon">
-                <i class="icon fa-solid fa-phone"></i>
-                <input name="phone" type="tel" class="input-field" placeholder="Your Phone" style="padding-left: 45px;">
-            </div>
-            <p style="margin-top: 0; margin-bottom: 0; padding-bottom:10px; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $phoneErr; ?></small></p>
-            <button type="submit" class="form-btn submit_btn" id="submit_btn" name="register" id="submit_btn" disabled>
+            
+            <button type="submit" class="form-btn btn-style-one" id="submit_btn" name="login">
                 <span class="btn-wrap">
-                    <span class="text-one">register</span>
-                    <span class="text-two">register</span>
+                    <span class="text-one">login</span>
+                    <span class="text-two">login</span>
                 </span>
             </button>
-            <p class="">Already registered? <a href="./login.php">Login</a></p>
+            <p class="">Don't have an account? <a href="./user-registration.php">Registration</a></p>
 
         </form>
     </div>

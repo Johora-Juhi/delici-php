@@ -3002,6 +3002,7 @@ position: relative;}
 }
 
 /* user registration  */
+.login-section,
 .registration-section{
   background-image: url(../images/background/login_background.png);
   background-size: cover;
@@ -3012,9 +3013,11 @@ position: relative;}
   height: 100vh;
   font-family: "DM Sans", sans-serif;
 }
+.login-section .section-heading,
 .registration-section .section-heading{
   margin-top:0px;
 }
+.login-container,
 .registration-container{
   max-width: 400px;
   margin: auto;
@@ -3022,12 +3025,10 @@ position: relative;}
   background-color: black;
   color: white;
 }
+.login-container .input-icon,
 .registration-container .input-icon{
   position: relative;
   color: white;
-}
-.registration-container .input-group{
-  justify-content: space-between;
 }
 .registration-container .submit_btn{
   position: relative;
