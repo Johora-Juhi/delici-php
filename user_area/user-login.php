@@ -11,9 +11,12 @@ include_once('../includes/connect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delici - Registration</title>
+    <title>Delici - Login</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -87,7 +90,7 @@ include_once('../includes/connect.php');
                     <span class="text-two">login</span>
                 </span>
             </button>
-            <p class="text">Don't have an account? <a class="link" href="./user-registration.php">Registration</a></p>
+            <p class="text">Don't have an account? <a class="link" href="./user-registration.php">Register</a></p>
 
         </form>
     </div>
