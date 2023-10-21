@@ -7,6 +7,7 @@
     <title>Add Menu - Delici</title>
     <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/menu.js"></script>
     <style>
 
     </style>
@@ -196,7 +197,19 @@
                 </div>
             </div>
         </form>
+<script>
+    const file = document.getElementById('file');
+const fileLabel = document.getElementById('fileLabel');
 
+
+file.addEventListener('change', () => {
+	if (file.files.length > 0) {
+		fileLabel.innerHTML = file.files[0].name;
+	} else {
+		fileLabel.innerHTML = 'Select Image';
+	}
+});
+</script>
     </div>
 </body>
 
