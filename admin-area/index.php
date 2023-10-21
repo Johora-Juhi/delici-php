@@ -89,6 +89,7 @@ include_once('../includes/connect.php');
                             </a>
                         </div>
 
+                        <!-- <div class="logout"> -->
                         <ul>
                             <li>
                                 <a class="s-sidebar__nav-link" href="./index.php?add-menu" style=" text-decoration:none; color: #a2a2a2;">
@@ -109,6 +110,17 @@ include_once('../includes/connect.php');
                                 </a>
                             </li>
                         </ul>
+                        <!-- <li class="logout"> -->
+                            <div class="logout">
+
+                                <a class=" s-sidebar__nav-link" href="./index.php?all-reservation" style=" text-decoration:none; color: #a2a2a2;">
+                                    <i class="fas fa-user" style="color: rgba(255, 255, 255, 0.7); background:#e4c590"></i>
+                                    <p>Logout</p>
+                                </a>
+                            </div>
+                            <!-- </li> -->
+                        <!-- </div> -->
+
                     </nav>
                 </div>
 
