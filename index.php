@@ -560,7 +560,6 @@ session_start();
                     if (!isset($_SESSION['user_email'])) {
                         echo "<script>window.open('./user_area/user-login.php','_self')</script>";
                     } else {
-
                         // name input validation 
                         if (empty($_POST["name"])) {
                             $nameErr = " * Name is required";
@@ -707,18 +706,6 @@ session_start();
                         </div>
                     </div>
                 </form>
-                <!-- <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $name = $_POST['name'];
-                            $phone = $_POST['phone'];
-                            $person = $_POST['person'];
-                            $selected_date = $_POST['selected_date'];
-                            $slot = $_POST['slot'];
-                            $message = $_POST['message'];
-                            $insert_reservation = "INSERT INTO `reservation_table`(`username`, `phone`, `person`, `reservation_date`, `slot_id`, `message`) VALUES ('$name','$phone',$person,'$selected_date',$slot,'$message')";
-                            $result_reservation = mysqli_query($con, $insert_reservation);
-                        }
-                        ?> -->
             </div>
             <div class="contact-us">
                 <div class="inner">

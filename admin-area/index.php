@@ -103,7 +103,7 @@ include_once('../includes/connect.php');
                                 </a>
                             </li>
                             <li>
-                                <a class="s-sidebar__nav-link" href="" style=" text-decoration:none; color: #a2a2a2;">
+                                <a class="s-sidebar__nav-link" href="./index.php?all-reservation" style=" text-decoration:none; color: #a2a2a2;">
                                     <i class="fas fa-list-check" style="color: #e4c590;"></i>
                                     <p>All Reservation</p>
                                 </a>
@@ -120,6 +120,12 @@ include_once('../includes/connect.php');
                     }
                     if (isset($_GET['all-menu'])) {
                         include_once('./all-menu.php');
+                    }
+                    if (isset($_GET['all-reservation'])) {
+                        include_once('./all-reservation.php');
+                    }
+                    if (isset($_GET['cancel_reservation'])) {
+                        include_once('./cancel_reservation.php');
                     }
                     if (isset($_GET['delete_menu'])) {
                         include('./delete_menu.php');

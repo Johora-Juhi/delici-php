@@ -81,7 +81,7 @@ include_once('../includes/connect.php');
                     <span class="text-two">login</span>
                 </span>
             </button>
-            <p class="">Don't have an account? <a href="./user-registration.php">Registration</a></p>
+            <p class="text">Don't have an account? <a class="link" href="./user-registration.php">Registration</a></p>
 
         </form>
     </div>
