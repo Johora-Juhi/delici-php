@@ -3025,10 +3025,32 @@ position: relative;}
 .registration-section .section-heading{
   margin-top:0px;
 }
-.login-container .text,
-.registration-container .text{
-
+.login-container .link,
+.registration-container .link{
+  position: relative;
+color: rgb(228, 197, 144)!important;
 }
+.login-container a::after,
+.registration-container a::after{
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  left: 50%;
+  bottom: -10px;
+ background-color: rgb(228, 197, 144);
+  transition: all 400ms ease;
+}
+.login-container a:hover,
+.registration-container a:hover{
+  color: white!important;
+}
+.login-container a:hover:after,
+.registration-container a:hover:after{
+  width: 100%;
+  left: 0;
+}
+
 .login-container,
 .registration-container{
   min-width: 400px;

@@ -95,7 +95,7 @@ include_once('../includes/connect.php');
                     echo "<script>alert('Password does not match')</script>";
                 } else {
                     // insert quert 
-                    $insert_query = "INSERT INTO `user_table` (username,user_email,user_password,user_phone) VALUES ('$name','$email','$hash_password','$phone')";
+                    $insert_query = "INSERT INTO `user_table` (username,user_email,user_password,user_phone,user_role) VALUES ('$name','$email','$hash_password','$phone','')";
                     $result = mysqli_query($con, $insert_query);
                     if ($result) {
 
@@ -139,7 +139,7 @@ include_once('../includes/connect.php');
                     <span class="text-two">register</span>
                 </span>
             </button>
-            <p class="">Already registered? <a href="./user-login.php">Login</a></p>
+            <p class="text">Already registered? <a class="link" href="./user-login.php">Login</a></p>
 
         </form>
     </div>

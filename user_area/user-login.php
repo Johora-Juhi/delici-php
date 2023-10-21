@@ -54,7 +54,11 @@ include_once('../includes/connect.php');
             if ($user_count > 0) {
                 if (password_verify($password, $user_data['user_password'])) {
                     $_SESSION['user_email'] = $email;
+                    if($user_data['user_role'] === 'admin'){
+                        echo "<script>window.open('../admin-area/index.php?add_menu','_self')</script>";
+                    }else{
                         echo "<script>window.open('../index.php','_self')</script>";
+                    }
                 } else {
                     echo "<script>alert('Incorrect password')</script>";
                 }
