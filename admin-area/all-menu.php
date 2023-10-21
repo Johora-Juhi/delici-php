@@ -35,13 +35,39 @@
                             <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                    <!-- button for modal  -->
-                    <button class="hover-button btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
-                        <span class="btn-wrap">
-                            <span class="text-one">make changes</span>
-                            <span class="text-two">make changes</span>
-                        </span>
-                    </button>
+                    <div class="btn-container">
+                        <!-- button for modal  -->
+                        <button class="btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">make changes</span>
+                                <span class="text-two">make changes</span>
+                            </span>
+                        </button>
+                        <button class="btn-style-two" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">delete</span>
+                                <span class="text-two">delete</span>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal_<?php echo $modal_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Delete <?php echo $title ?></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="color: black;">
+                                 Do you want to continue the process?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-danger"><a href="index.php?delete_menu=<?php echo $modal_id ?>" class="text-decoration-none text-light">Yes</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- menu update  -->
                     <?php
@@ -213,15 +239,6 @@
                                     </div>
                                 </div>
                             </form>
-                            <div>or</div>
-                            <form action="" class="edit-form-container">
-                                <button type="submit" class="form-btn btn-style-two" name="add-menu" id="submit_btn">
-                                    <span class="btn-wrap">
-                                        <span class="text-one">delete</span>
-                                        <span class="text-two">delete</span>
-                                    </span>
-                                </button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -266,13 +283,39 @@
                             <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                    <!-- button for modal  -->
-                    <button class="hover-button btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
-                        <span class="btn-wrap">
-                            <span class="text-one">make changes</span>
-                            <span class="text-two">make changes</span>
-                        </span>
-                    </button>
+                    <div class="btn-container">
+                        <!-- button for modal  -->
+                        <button class="btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">make changes</span>
+                                <span class="text-two">make changes</span>
+                            </span>
+                        </button>
+                        <button class="btn-style-two" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">delete</span>
+                                <span class="text-two">delete</span>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal_<?php echo $modal_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Delete <?php echo $title ?></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="color: black;">
+                                 Do you want to continue the process?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-danger"><a href="index.php?delete_menu=<?php echo $modal_id ?>" class="text-decoration-none text-light">Yes</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- menu update  -->
                     <?php
@@ -444,15 +487,6 @@
                                     </div>
                                 </div>
                             </form>
-                            <div>or</div>
-                            <form action="" class="edit-form-container">
-                                <button type="submit" style="box-sizing: border-box;" class="form-btn btn-style-two" name="add-menu" id="submit_btn">
-                                    <span class="btn-wrap">
-                                        <span class="text-one">delete</span>
-                                        <span class="text-two">delete</span>
-                                    </span>
-                                </button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -497,14 +531,39 @@
                             <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                    <!-- button for modal  -->
-                    <button class="hover-button btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
-                        <span class="btn-wrap">
-                            <span class="text-one">make changes</span>
-                            <span class="text-two">make changes</span>
-                        </span>
-                    </button>
-
+                    <div class="btn-container">
+                        <!-- button for modal  -->
+                        <button class="btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">make changes</span>
+                                <span class="text-two">make changes</span>
+                            </span>
+                        </button>
+                        <button class="btn-style-two" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">delete</span>
+                                <span class="text-two">delete</span>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal_<?php echo $modal_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Delete <?php echo $title ?></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="color: black;">
+                                 Do you want to continue the process?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-danger"><a href="index.php?delete_menu=<?php echo $modal_id ?>" class="text-decoration-none text-light">Yes</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- menu update  -->
                     <?php
                     $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
@@ -675,15 +734,6 @@
                                     </div>
                                 </div>
                             </form>
-                            <div>or</div>
-                            <form action="" class="edit-form-container">
-                                <button type="submit" class="form-btn btn-style-two" name="add-menu" id="submit_btn">
-                                    <span class="btn-wrap">
-                                        <span class="text-one">delete</span>
-                                        <span class="text-two">delete</span>
-                                    </span>
-                                </button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -691,6 +741,7 @@
             <?php
             }
             ?>
+
         </div>
     </section>
     <!-- Drinks Menu section -->
@@ -728,14 +779,39 @@
                             <p class="menu-desc"><?= $menu_description ?></p>
                         </div>
                     </div>
-                    <!-- button for modal  -->
-                    <button class="hover-button btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
-                        <span class="btn-wrap">
-                            <span class="text-one">make changes</span>
-                            <span class="text-two">make changes</span>
-                        </span>
-                    </button>
-
+                    <div class="btn-container">
+                        <!-- button for modal  -->
+                        <button class="btn-style-one popup-trigger" data-popup-trigger="<?= $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">make changes</span>
+                                <span class="text-two">make changes</span>
+                            </span>
+                        </button>
+                        <button class="btn-style-two" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $modal_id ?>">
+                            <span class="btn-wrap">
+                                <span class="text-one">delete</span>
+                                <span class="text-two">delete</span>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal_<?php echo $modal_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Delete <?php echo $title ?></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="color: black;">
+                                 Do you want to continue the process?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-danger"><a href="./index.php?delete_menu=<?php echo $modal_id ?>" class="text-decoration-none text-light">Yes</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- menu update  -->
                     <?php
                     $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
@@ -905,15 +981,6 @@
                                         </button>
                                     </div>
                                 </div>
-                            </form>
-                            <div>or</div>
-                            <form action="" class="edit-form-container">
-                                <button type="submit" class="form-btn btn-style-two" name="add-menu" id="submit_btn">
-                                    <span class="btn-wrap">
-                                        <span class="text-one">delete</span>
-                                        <span class="text-two">delete</span>
-                                    </span>
-                                </button>
                             </form>
                         </div>
                     </div>

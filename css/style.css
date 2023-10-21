@@ -1772,6 +1772,7 @@ reservation page
 
 .reservation .section-heading {
   margin-bottom: 0;
+  position: static;
 }
 
 .reservation .text {
@@ -3135,6 +3136,7 @@ position: relative;}
   margin: 0;
   padding: 0;
   width: 15em;
+  /* height: 100%; */
 }
 
 .s-sidebar__nav ul li {
@@ -3360,6 +3362,9 @@ input[type="file"]:focus + label {
 .all-menu-container {
   text-align: center;
 }
+.all-menu-container .section-heading{
+  position: static;
+}
 
 /* category section  */
 .menu-section {
@@ -3513,12 +3518,32 @@ input[type="file"]:focus + label {
   transform: scale(1.05, 1.05);
 }
 /* end menu  */
+.btn-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
 
+}
+.btn-container .btn-style-two{
+  color: #ea5959;
+  border-color: #ea5959;
+}
+.btn-container .btn-style-two:before{
+  background: #ea5959;
+}
+.btn-container .btn-style-two .btn-wrap .text-one{
+  color: #ea5959;
+}
 /* modal trigger button  */
 .hover-button {
-  opacity: 0;
-  height: 0;
-  width: 100%;
+  /* opacity: 0;
+  height: 0; */
+  margin: 20px 0;
+  opacity: 1;
+  height: auto;
+  text-align: center;
+  /* width: 100%; */
   overflow: hidden;
   transition: all 0.3s ease-in;
 }
@@ -4666,7 +4691,22 @@ reservation page
     margin-left: auto;
     margin-right: auto;
   }
-
+.add-container{
+  position: relative;
+  height: 100vh;
+}
+.add-container .left-bg{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.add-container .right-bg{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
   /*======================
    all menu  
    =========================*/

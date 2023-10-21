@@ -121,6 +121,9 @@ include_once('../includes/connect.php');
                     if (isset($_GET['all-menu'])) {
                         include_once('./all-menu.php');
                     }
+                    if (isset($_GET['delete_menu'])) {
+                        include('./delete_menu.php');
+                      }
                     ?>
                 </div>
 
