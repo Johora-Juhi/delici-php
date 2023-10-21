@@ -1,7 +1,7 @@
 <?php
 include_once('../includes/connect.php')
 ?>
-        <p class="header">All Reservetion</p>
+        <p class="header">All Reservation</p>
 
 <div class="datatable-container">
   <!-- ======= Table ======= -->

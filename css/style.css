@@ -3101,6 +3101,15 @@ color: rgb(228, 197, 144)!important;
 /*=============================
  admin page Layout
  ============================== */
+ .access{
+  max-width: 400px;
+  margin: 100px auto 100px auto;
+  padding: 40px;
+  border: 1px dashed brown;
+ }
+ .access.small-heading{
+  line-height: 29.6px;
+ }
 .s-layout {
   display: flex;
   width: 100%;

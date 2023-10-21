@@ -1,6 +1,7 @@
 <!-- database connection  -->
 <?php
 include_once('../includes/connect.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,7 +114,7 @@ include_once('../includes/connect.php');
                         <!-- <li class="logout"> -->
                             <div class="logout">
 
-                                <a class=" s-sidebar__nav-link" href="./index.php?all-reservation" style=" text-decoration:none; color: #a2a2a2;">
+                                <a class=" s-sidebar__nav-link" href="../user_area/logout.php" style=" text-decoration:none; color: #a2a2a2;">
                                     <i class="fas fa-user" style="color: rgba(255, 255, 255, 0.7); background:#e4c590"></i>
                                     <p>Logout</p>
                                 </a>
@@ -127,6 +128,10 @@ include_once('../includes/connect.php');
                 <!-- main-content  -->
                 <div class="s-layout__content">
                     <?php
+                    if (!isset($_SESSION['user_role'])) {
+                       echo '<div class="small-heading access"  >only admin have access to this page</div>';
+                    }
+                    else{
                     if (isset($_GET['add-menu'])) {
                         include_once('./add-menu.php');
                     }
@@ -142,6 +147,7 @@ include_once('../includes/connect.php');
                     if (isset($_GET['delete_menu'])) {
                         include('./delete_menu.php');
                       }
+                    }
                     ?>
                 </div>
 

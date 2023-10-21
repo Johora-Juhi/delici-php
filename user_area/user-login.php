@@ -55,7 +55,9 @@ include_once('../includes/connect.php');
                 if (password_verify($password, $user_data['user_password'])) {
                     $_SESSION['user_email'] = $email;
                     if($user_data['user_role'] === 'admin'){
-                        echo "<script>window.open('../admin-area/index.php?add_menu','_self')</script>";
+                        $_SESSION['user_role'] = 'admin';
+
+                        echo "<script>window.open('../admin-area/index.php?add-menu','_self')</script>";
                     }else{
                         echo "<script>window.open('../index.php','_self')</script>";
                     }

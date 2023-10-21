@@ -80,7 +80,7 @@ session_start();
         <div class="main-header">
             <div class="logo"><a href="index.html" title="Delici - Restaurants HTML Template"><img src="./images/logo.png" alt="" title="Delici - Restaurants HTML Template"></a></div>
             <nav class="nav-container">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="./">Home</a>
                 <a class="nav-link" href="./menu.php">Menu</a>
                 <a class="nav-link" href="./about-us.php">About Us</a>
                 <a class="nav-link" href="./our-chef.php">Our Chefs</a>
@@ -133,7 +133,7 @@ session_start();
         <div class="image-box"><img src="./images/resource/sidebar-image.jpg" alt="" title=""></div>
 
         <nav class="nav-container">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="./">Home</a>
             <a class="nav-link" href="./menu.php">Menu</a>
             <a class="nav-link" href="./about-us.php">About Us</a>
             <a class="nav-link" href="./our-chef.php">Our Chefs</a>
