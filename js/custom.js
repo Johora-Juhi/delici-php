@@ -128,7 +128,7 @@ modalTriggers.forEach(trigger => {
 		file.addEventListener('change', () => {
 			if (file.files.length > 0) {
 				const fileName = file.files[0].name;
-				fileLabel.textContent = fileName; // Try using textContent
+				fileLabel.textContent = fileName; 
 			} else {
 				fileLabel.textContent = 'Select Image';
 			}
@@ -143,7 +143,6 @@ modalTriggers.forEach(trigger => {
 			if (event.target === popupModal) {
 				// hides the modal
 				popupModal.classList.remove('is--visible')
-
 			}
 		});
 	})

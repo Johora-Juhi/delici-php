@@ -11,7 +11,7 @@
             <?php
             $root = "http://localhost/Delici-Client/";
             $category = 'Appetizers';
-            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = 'Desserts'";
+            $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
             $result = mysqli_query($con, $select_query);
             while ($menu = mysqli_fetch_array($result)) {
                 $title = $menu['menu_name'];
@@ -59,7 +59,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" style="color: black;">
-                                 Do you want to continue the process?
+                                    Do you want to continue the process?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -307,7 +307,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" style="color: black;">
-                                 Do you want to continue the process?
+                                    Do you want to continue the process?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -555,7 +555,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" style="color: black;">
-                                 Do you want to continue the process?
+                                    Do you want to continue the process?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -803,7 +803,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" style="color: black;">
-                                 Do you want to continue the process?
+                                    Do you want to continue the process?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -902,13 +902,17 @@
                         } else {
                             $description = $_POST["description"];
                         }
-
+                        echo $name;
+                        echo $price;
+                        echo $category;
+                        echo $description;
                         // post operation of fields are not empty 
                         if ($name != '' and $price != '' and $category != '' and $image != '' and $description != '') {
+
                             $insert_query = "UPDATE `menu-table` SET menu_name = '$name', menu_speciality = '$speciality', menu_price ='$price', menu_category =  '$category', menu_image = '$image', menu_description = '$description', time =  NOW() WHERE menu_id = $edit_id ";
                             $result = mysqli_query($con, $insert_query);
                             if ($result) {
-                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
+
                                 echo '
                             <script>
                                 Swal.fire({
