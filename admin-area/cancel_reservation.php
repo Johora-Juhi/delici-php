@@ -9,7 +9,7 @@ if(isset($_GET['cancel_reservation'])){
         <script>
             Swal.fire({
                 title: "Success!",
-                text: "Booked successfully!",
+                text: "Canceled successfully!",
                 icon: "success",
             });
         </script>';

@@ -55,9 +55,17 @@ include_once('../includes/connect.php')
           } ?></td>
           <td class="<?php if($status == 'Booked'){echo 'available';}else{echo 'away';}?>"></td>
           <td>
-          <?php if($status == 'Booked'){echo '          <button class="btn btn-outline-danger btn-sm rounded-0 " data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $id ?>">Cancel</button></td>
-';}else{echo '          <button class="btn btn-outline-danger btn-sm rounded-0 disabled" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $id ?>" >Cancel</button></td>
-  ';}?>  
+          <?php if($status == 'Booked'){
+            ?>
+            <button class="btn btn-outline-danger btn-sm rounded-0 " data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $id ?>">Cancel</button></td>
+<?php
+}
+
+else{
+  ?>
+<button class="btn btn-outline-danger btn-sm rounded-0 disabled" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $id ?>" >Cancel</button></td>
+  <?php
+}?>  
         </tr>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal_<?php echo $id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

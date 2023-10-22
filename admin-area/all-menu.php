@@ -165,7 +165,6 @@
                             $insert_query = "UPDATE `menu-table` SET menu_name = '$name', menu_speciality = '$speciality', menu_price ='$price', menu_category =  '$category', menu_image = '$image', menu_description = '$description', time =  NOW() WHERE menu_id = $edit_id ";
                             $result = mysqli_query($con, $insert_query);
                             if ($result) {
-                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
                                 echo '
                             <script>
                                 Swal.fire({
@@ -175,7 +174,17 @@
                                     icon: "success",
                                 });
                             </script>';
+                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
+                        }
+                        else{
+                             echo '<script>
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "There was a problem updating this menu. Please check again!",
+                                icon: "error",
+                            });
+                      </script>';
                         }
                     }
                     ?>
@@ -413,7 +422,6 @@
                             $insert_query = "UPDATE `menu-table` SET menu_name = '$name', menu_speciality = '$speciality', menu_price ='$price', menu_category =  '$category', menu_image = '$image', menu_description = '$description', time =  NOW() WHERE menu_id = $edit_id ";
                             $result = mysqli_query($con, $insert_query);
                             if ($result) {
-                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
                                 echo '
                             <script>
                                 Swal.fire({
@@ -423,7 +431,17 @@
                                     icon: "success",
                                 });
                             </script>';
+                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
+                        }
+                        else{
+                             echo '<script>
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "There was a problem updating this menu. Please check again!",
+                                icon: "error",
+                            });
+                      </script>';
                         }
                     }
                     ?>
@@ -660,7 +678,6 @@
                             $insert_query = "UPDATE `menu-table` SET menu_name = '$name', menu_speciality = '$speciality', menu_price ='$price', menu_category =  '$category', menu_image = '$image', menu_description = '$description', time =  NOW() WHERE menu_id = $edit_id ";
                             $result = mysqli_query($con, $insert_query);
                             if ($result) {
-                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
                                 echo '
                             <script>
                                 Swal.fire({
@@ -670,7 +687,17 @@
                                     icon: "success",
                                 });
                             </script>';
+                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
+                        }
+                        else{
+                             echo '<script>
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "There was a problem updating this menu. Please check again!",
+                                icon: "error",
+                            });
+                      </script>';
                         }
                     }
                     ?>
@@ -922,7 +949,17 @@
                                     icon: "success",
                                 });
                             </script>';
+                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
+                        }
+                        else{
+                             echo '<script>
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "There was a problem updating this menu. Please check again!",
+                                icon: "error",
+                            });
+                      </script>';
                         }
                     }
                     ?>
