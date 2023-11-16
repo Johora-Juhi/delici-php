@@ -3305,6 +3305,8 @@ color: rgb(228, 197, 144)!important;
   width: 100%;
   color: white;
   background-color: rgb(26, 27, 28);
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
   line-height: 34px;
   padding: 0.625rem 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -3339,6 +3341,8 @@ input[type="file"] {
 input[type="file"] + label {
   width: 100%;
   height: 56px;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
   line-height: 34px;
   color: white;
   background-color: #171819;
@@ -3380,6 +3384,7 @@ input[type="file"]:focus + label {
   left: 15px;
   margin-top: -12px;
 }
+.popup-modal .input-inner i,
 .reservation .input-inner i {
   position: absolute;
   top: 50%;
@@ -3765,7 +3770,7 @@ input[type="file"]:focus + label {
 }
 
 .datatable-container .datatable tbody tr:hover {
-  background-color: #3282b8;
+  background-color: rgb(167, 167, 167);
 }
 
 .datatable-container .datatable tbody tr .available::after,

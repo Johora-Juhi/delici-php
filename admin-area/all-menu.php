@@ -9,7 +9,7 @@
         <div class="menu-container">
             <!-- get all available menu in the category  -->
             <?php
-            $root = "http://localhost/Delici-Client/";
+
             $category = 'Appetizers';
             $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
             $result = mysqli_query($con, $select_query);
@@ -25,7 +25,7 @@
                 <!-- each menu card  -->
                 <div class="menu">
                     <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-image"><img src="../uploads/<?= $menu_image ?>" alt=""></div>
                         <div class="menu-info">
                             <div class="title">
                                 <p class="menu-title"><?= $title ?> </p>
@@ -71,22 +71,18 @@
 
                     <!-- menu update  -->
                     <?php
-                    $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
-                    $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         $edit_id = $_POST['id'];
                         // name input validation 
                         if (empty($_POST["name"])) {
-                            $nameErr = " * Name is required";
-                            $name = '';
+                            $name = $title;
                         } else {
                             $name = $_POST["name"];
                             // check if name only contains letters and whitespace
                             if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-                                $nameErr = " Only letters and white space";
-                                $name = '';
+                                $name = $title;
                             }
                         }
 
@@ -95,20 +91,18 @@
 
                         // price input validation 
                         if (empty($_POST["price"])) {
-                            $priceErr = " * Price is required";
-                            $price = '';
+                            $price = $menu_price;
                         } else {
                             $price = $_POST["price"];
                             // check if price only contains numbers or number string
                             if (!is_numeric($price)) {
-                                $priceErr = " Invalid price";
-                                $price = '';
+                                $price = $menu_price;
                             }
                         }
 
                         // category input validation 
                         if (empty($_POST["category"])) {
-                            $categoryErr = " * Category is required";
+                            $category = $menu_category;
                         } else {
                             $category = $_POST["category"];
                         }
@@ -142,7 +136,7 @@
 
                                 $file_name = "IMG_" . time() . "_" . $_FILES['image']['name'];
                                 $_target = $_FILES['image']['tmp_name'];
-                                $destination = $approot . "uploads/" . $file_name;
+                                $destination = "../uploads/" . $file_name;
                                 $is_file_moved = move_uploaded_file($_target, $destination);
                                 if ($is_file_moved) {
                                     $image = $file_name;
@@ -156,6 +150,7 @@
                         // description field validation 
                         if (empty($_POST["description"])) {
                             $descriptionErr = " * description is required";
+                            $description = $menu_description;
                         } else {
                             $description = $_POST["description"];
                         }
@@ -174,11 +169,10 @@
                                     icon: "success",
                                 });
                             </script>';
-                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
+                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
-                        }
-                        else{
-                             echo '<script>
+                        } else {
+                            echo '<script>
                             Swal.fire({
                                 title: "Oops!",
                                 text: "There was a problem updating this menu. Please check again!",
@@ -226,7 +220,7 @@
                                             <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
-                                            <img src="<?= $root ?>uploads/<?= $menu_image ?>">
+                                            <img src="../uploads/<?= $menu_image ?>">
                                         </div>
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p>
                                     </div>
@@ -266,7 +260,7 @@
         <div class="menu-container">
             <!-- get all available menu in the category  -->
             <?php
-            $root = "http://localhost/Delici-Client/";
+
             $category = 'Main Dishes';
             $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
             $result = mysqli_query($con, $select_query);
@@ -282,7 +276,7 @@
                 <!-- each menu card  -->
                 <div class="menu">
                     <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-image"><img src="../uploads/<?= $menu_image ?>" alt=""></div>
                         <div class="menu-info">
                             <div class="title">
                                 <p class="menu-title"><?= $title ?> </p>
@@ -328,21 +322,17 @@
 
                     <!-- menu update  -->
                     <?php
-                    $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
-                    $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         $edit_id = $_POST['id'];
                         // name input validation 
                         if (empty($_POST["name"])) {
-                            $nameErr = " * Name is required";
                             $name = '';
                         } else {
                             $name = $_POST["name"];
                             // check if name only contains letters and whitespace
                             if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-                                $nameErr = " Only letters and white space";
                                 $name = '';
                             }
                         }
@@ -352,20 +342,18 @@
 
                         // price input validation 
                         if (empty($_POST["price"])) {
-                            $priceErr = " * Price is required";
                             $price = '';
                         } else {
                             $price = $_POST["price"];
                             // check if price only contains numbers or number string
                             if (!is_numeric($price)) {
-                                $priceErr = " Invalid price";
                                 $price = '';
                             }
                         }
 
                         // category input validation 
                         if (empty($_POST["category"])) {
-                            $categoryErr = " * Category is required";
+                            $category = $menu_category;
                         } else {
                             $category = $_POST["category"];
                         }
@@ -399,7 +387,7 @@
 
                                 $file_name = "IMG_" . time() . "_" . $_FILES['image']['name'];
                                 $_target = $_FILES['image']['tmp_name'];
-                                $destination = $approot . "uploads/" . $file_name;
+                                $destination = "../uploads/" . $file_name;
                                 $is_file_moved = move_uploaded_file($_target, $destination);
                                 if ($is_file_moved) {
                                     $image = $file_name;
@@ -431,11 +419,10 @@
                                     icon: "success",
                                 });
                             </script>';
-                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
+                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
-                        }
-                        else{
-                             echo '<script>
+                        } else {
+                            echo '<script>
                             Swal.fire({
                                 title: "Oops!",
                                 text: "There was a problem updating this menu. Please check again!",
@@ -483,7 +470,7 @@
                                             <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
-                                            <img src="<?= $root ?>uploads/<?= $menu_image ?>">
+                                            <img src="../uploads/<?= $menu_image ?>">
                                         </div>
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p>
                                     </div>
@@ -523,7 +510,7 @@
         <div class="menu-container">
             <!-- get all available menu in the category  -->
             <?php
-            $root = "http://localhost/Delici-Client/";
+
             $category = 'Desserts';
             $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
             $result = mysqli_query($con, $select_query);
@@ -539,7 +526,7 @@
                 <!-- each menu card  -->
                 <div class="menu">
                     <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-image"><img src="../uploads/<?= $menu_image ?>" alt=""></div>
                         <div class="menu-info">
                             <div class="title">
                                 <p class="menu-title"><?= $title ?> </p>
@@ -584,21 +571,17 @@
                     </div>
                     <!-- menu update  -->
                     <?php
-                    $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
-                    $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         $edit_id = $_POST['id'];
                         // name input validation 
                         if (empty($_POST["name"])) {
-                            $nameErr = " * Name is required";
                             $name = '';
                         } else {
                             $name = $_POST["name"];
                             // check if name only contains letters and whitespace
                             if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-                                $nameErr = " Only letters and white space";
                                 $name = '';
                             }
                         }
@@ -608,20 +591,18 @@
 
                         // price input validation 
                         if (empty($_POST["price"])) {
-                            $priceErr = " * Price is required";
                             $price = '';
                         } else {
                             $price = $_POST["price"];
                             // check if price only contains numbers or number string
                             if (!is_numeric($price)) {
-                                $priceErr = " Invalid price";
                                 $price = '';
                             }
                         }
 
                         // category input validation 
                         if (empty($_POST["category"])) {
-                            $categoryErr = " * Category is required";
+                            $category = $menu_category;
                         } else {
                             $category = $_POST["category"];
                         }
@@ -655,7 +636,7 @@
 
                                 $file_name = "IMG_" . time() . "_" . $_FILES['image']['name'];
                                 $_target = $_FILES['image']['tmp_name'];
-                                $destination = $approot . "uploads/" . $file_name;
+                                $destination = "../uploads/" . $file_name;
                                 $is_file_moved = move_uploaded_file($_target, $destination);
                                 if ($is_file_moved) {
                                     $image = $file_name;
@@ -687,11 +668,10 @@
                                     icon: "success",
                                 });
                             </script>';
-                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
+                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
-                        }
-                        else{
-                             echo '<script>
+                        } else {
+                            echo '<script>
                             Swal.fire({
                                 title: "Oops!",
                                 text: "There was a problem updating this menu. Please check again!",
@@ -739,7 +719,7 @@
                                             <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
-                                            <img src="<?= $root ?>uploads/<?= $menu_image ?>">
+                                            <img src="../uploads/<?= $menu_image ?>">
                                         </div>
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p>
                                     </div>
@@ -780,7 +760,7 @@
         <div class="menu-container">
             <!-- get all available menu in the category  -->
             <?php
-            $root = "http://localhost/Delici-Client/";
+
             $category = 'Drinks Menu';
             $select_query = "SELECT * FROM `menu-table` WHERE menu_category = '$category'";
             $result = mysqli_query($con, $select_query);
@@ -796,7 +776,7 @@
                 <!-- each menu card  -->
                 <div class="menu">
                     <div class="menu-box">
-                        <div class="menu-image"><img src="<?= $root ?>uploads/<?= $menu_image ?>" alt=""></div>
+                        <div class="menu-image"><img src="../uploads/<?= $menu_image ?>" alt=""></div>
                         <div class="menu-info">
                             <div class="title">
                                 <p class="menu-title"><?= $title ?> </p>
@@ -841,21 +821,17 @@
                     </div>
                     <!-- menu update  -->
                     <?php
-                    $approot = $_SERVER['DOCUMENT_ROOT'] . "/Delici-Client/";
-                    $nameErr = $specialityErr = $priceErr = $categoryErr = $imageErr = $descriptionErr = "";
 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         $edit_id = $_POST['id'];
                         // name input validation 
                         if (empty($_POST["name"])) {
-                            $nameErr = " * Name is required";
                             $name = '';
                         } else {
                             $name = $_POST["name"];
                             // check if name only contains letters and whitespace
                             if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-                                $nameErr = " Only letters and white space";
                                 $name = '';
                             }
                         }
@@ -865,20 +841,18 @@
 
                         // price input validation 
                         if (empty($_POST["price"])) {
-                            $priceErr = " * Price is required";
                             $price = '';
                         } else {
                             $price = $_POST["price"];
                             // check if price only contains numbers or number string
                             if (!is_numeric($price)) {
-                                $priceErr = " Invalid price";
                                 $price = '';
                             }
                         }
 
                         // category input validation 
                         if (empty($_POST["category"])) {
-                            $categoryErr = " * Category is required";
+                            $category = $menu_category;
                         } else {
                             $category = $_POST["category"];
                         }
@@ -912,7 +886,7 @@
 
                                 $file_name = "IMG_" . time() . "_" . $_FILES['image']['name'];
                                 $_target = $_FILES['image']['tmp_name'];
-                                $destination = $approot . "uploads/" . $file_name;
+                                $destination = "../uploads/" . $file_name;
                                 $is_file_moved = move_uploaded_file($_target, $destination);
                                 if ($is_file_moved) {
                                     $image = $file_name;
@@ -929,17 +903,12 @@
                         } else {
                             $description = $_POST["description"];
                         }
-                        echo $name;
-                        echo $price;
-                        echo $category;
-                        echo $description;
                         // post operation of fields are not empty 
                         if ($name != '' and $price != '' and $category != '' and $image != '' and $description != '') {
 
                             $insert_query = "UPDATE `menu-table` SET menu_name = '$name', menu_speciality = '$speciality', menu_price ='$price', menu_category =  '$category', menu_image = '$image', menu_description = '$description', time =  NOW() WHERE menu_id = $edit_id ";
                             $result = mysqli_query($con, $insert_query);
                             if ($result) {
-
                                 echo '
                             <script>
                                 Swal.fire({
@@ -949,11 +918,10 @@
                                     icon: "success",
                                 });
                             </script>';
-                                    echo "<script>window.open('./index.php?all-menu','_self')</script>";
+                                echo "<script>window.open('./index.php?all-menu','_self')</script>";
                             }
-                        }
-                        else{
-                             echo '<script>
+                        } else {
+                            echo '<script>
                             Swal.fire({
                                 title: "Oops!",
                                 text: "There was a problem updating this menu. Please check again!",
@@ -1001,7 +969,7 @@
                                             <i class="fas fa-cloud-arrow-up icon"></i>
                                             <input id="file<?= $modal_id ?>" type="file" name="image" />
                                             <label for="file<?= $modal_id ?>" id="fileLabel<?= $modal_id ?>" style="padding-left: 50px;">Select Image</label>
-                                            <img src="<?= $root ?>uploads/<?= $menu_image ?>">
+                                            <img src="../uploads/<?= $menu_image ?>">
                                         </div>
                                         <p style="margin-bottom: 0; padding-top: 10px; text-align: start; color: brown"> <small> <?php echo "" . $imageErr; ?></small></p>
                                     </div>

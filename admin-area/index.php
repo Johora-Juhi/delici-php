@@ -105,6 +105,12 @@ session_start();
                                 </a>
                             </li>
                             <li>
+                                <a class="s-sidebar__nav-link" href="./index.php?menu" style=" text-decoration:none; color: #a2a2a2;">
+                                    <i class="fas fa-plate-wheat" style="color: #e4c590;"></i>
+                                    <p>Menu</p>
+                                </a>
+                            </li>
+                            <li>
                                 <a class="s-sidebar__nav-link" href="./index.php?all-reservation" style=" text-decoration:none; color: #a2a2a2;">
                                     <i class="fas fa-list-check" style="color: #e4c590;"></i>
                                     <p>All Reservation</p>
@@ -137,6 +143,9 @@ session_start();
                     }
                     if (isset($_GET['all-menu'])) {
                         include_once('./all-menu.php');
+                    }
+                    if (isset($_GET['menu'])) {
+                        include_once('./menu.php');
                     }
                     if (isset($_GET['all-reservation'])) {
                         include_once('./all-reservation.php');
